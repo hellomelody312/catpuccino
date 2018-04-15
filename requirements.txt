@@ -1,0 +1,5 @@
+discord.py==0.16.8
+git+git://github.com/Rapptz/discord.py.git
+pillow
+imgurpython
+boto3

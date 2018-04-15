@@ -1,0 +1,7 @@
+*.pyc
+__pycache__
+*.exe
+*.dll
+settings.json
+data/red/settings.json
+data/red/red.log

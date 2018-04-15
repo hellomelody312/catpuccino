@@ -1,0 +1,48 @@
+{
+  "charas" : [
+      "Hatsune Miku","Guzma","Milotic","DT","Hello Kitty","Gyarados","Chikapu","Mimikkyu","Madoka","Giovanni","Maxie `:heart:` Archie","Kukui","Lillie","Gladion","Hau","giáo sư Oak","Cynthia","Wallace",
+      "Jynx","Ditto","Pyukumuku","Togedemaru","Doraemon","Eevee","Vaporeon","Touya Kinomoto","Yue","Cerberus","Clow Reed","Li Syaoran","Daidouji Tomoyo","Ryan Raynolds","Alolan Raichu","Dialga",
+      "Giratina","Arceus","Mewtwo","Shaymin","Sakura Kinomoto","Entei","Raikou","Suicune","Primal Groudon", "Kyogre","Zygarde","Solgaleo","Lunala","Bibi","Mèo","Doge",
+      "Taylor Swift","Katy Perry","Iron Man", "Bích Nụ","Mai Ngô","Panda","Donald Trump","Putin","Harry Potter","Lady Gaga","Chị Dậu","Captain America","Người Dơi","Người Nhện","Hulk",
+      "Nicki Minaj","Hermione Granger","Giáo sư McGonnagal","Ron Weasley","RO","Một người nào đó trong chatbox này","Batman","Superman","Loki","Thor","Sakura Kinomoto","Sakura Kinomoto",
+      "Sakura Kinomoto","Sakura Kinomoto","Sakura Kinomoto","Sakura Kinomoto", "Gay Lord"
+],
+  "actions" : [
+    "bán bánh tráng trộn",
+    "hát Anaconda",
+    "bán hàng đa cấp",
+    "đánh nhau với {victim}",
+    "chơi board game với {victim}",
+    "ôm {victim} một cái cho đỡ tội nghiệp",
+    "judge {victim}",
+    "ngoáy đít vài phát rồi chạy mất",
+    "chửi {victim} sml",
+    "khè lửa vào mặt {victim}",
+    "phun nước vào mặt {victim}",
+    "dí bara manga 18+ vào mặt {victim}",
+    "kabedon {victim}",
+    "nựng {victim} một cái",
+    "tát xéo háng {victim}",
+    "nấu mì tôm cho {victim} ăn",
+    "tặng cho {victim} cái quần xì chấm bi",
+    "nói 'rảnh vậy mày?' rồi biến mất"
+],
+  "spells" : [
+    "Stupefy",
+    "Confringo",
+    "Crucio",
+    "Incendio đốt {victim}",
+    "Impedimenta",
+    "Petrificus Totalus",
+    "Experillamus"
+],
+  "cards" : [
+    "Gale chém {victim} tơi tả",
+    "Blaze đốt trụi {victim}",
+    "Aqua nhấn chìm {victim}",
+    "The Mirror cho {victim} thấy bản thân xấu tệ hại tới mức nào",
+    "The Erase xóa bỏ {victim} cho đỡ ngứa mắt",
+    "The Shot bắn bỏ {victim}",
+    "The Fly bay đi để khỏi thấy bản mặt của {victim}"
+]
+}

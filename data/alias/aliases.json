@@ -1,0 +1,23 @@
+{
+    "286243735996596224" : {
+        "cl" : "cleanup messages"
+    },
+    "309622495739248640" : {
+        "aa" : "alias add",
+        "addresponse" : "trigger add",
+        "cl" : "cleanup messages",
+        "ct" : "trigger create",
+        "delresponse" : "trigger remove",
+        "dt" : "trigger delete",
+        "f" : "fortune",
+        "h" : "help",
+        "rl" : "reload",
+        "t" : "trigger",
+        "tl" : "trigger list",
+        "tp" : "triggerset phrase",
+        "ts" : "triggerset"
+    },
+    "378799662557036546" : {
+        "cl" : "cleanup messages"
+    }
+}

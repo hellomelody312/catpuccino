@@ -1,0 +1,32 @@
+[33mcommit c667faaa1d40931f821b0eb9c2342d862c9a7953[m
+Author: Remiccino <remiccino@gmail.com>
+Date:   Mon Nov 20 22:27:27 2017 +0900
+
+    ...
+
+[1mdiff --git a/cogs/duel.py b/cogs/duel.py[m
+[1mindex 3eb6e37..a678b08 100644[m
+[1m--- a/cogs/duel.py[m
+[1m+++ b/cogs/duel.py[m
+[36m@@ -16,7 +16,7 @@[m [mfrom functools import partial[m
+ [m
+ # Constants[m
+ MAX_ROUNDS = 4[m
+[31m-INITIAL_HP = 300[m
+[32m+[m[32mINITIAL_HP = 250[m
+ TARGET_SELF = 'self'[m
+ TARGET_OTHER = 'target'[m
+ [m
+[36m@@ -259,9 +259,9 @@[m [mRECOVERS = ['recovers', 'gains', 'heals'][m
+ [m
+ # Move category target and multiplier (negative is damage)[m
+ MOVES = {'CRITICAL': (CRITICAL, TARGET_OTHER, -50),[m
+[31m-         'ATTACK': (ATTACK, TARGET_OTHER, -12),[m
+[31m-         'FUMBLE': (FUMBLE, TARGET_SELF, -6),[m
+[31m-         'HEAL': (HEAL, TARGET_SELF, 10),[m
+[32m+[m[32m         'ATTACK': (ATTACK, TARGET_OTHER, -21),[m
+[32m+[m[32m         'FUMBLE': (FUMBLE, TARGET_SELF, -14),[m
+[32m+[m[32m         'HEAL': (HEAL, TARGET_SELF, 15),[m
+          'BOT': (BOT, TARGET_OTHER, -9999)}[m
+ [m
+ # Weights of distribution for biased selection of moves[m

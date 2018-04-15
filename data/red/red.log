@@ -1,0 +1,1883 @@
+[04/05/2017 21:22] ERROR owner load 73: __init__() missing 1 required positional argument: 'user'
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 64, in load
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 947, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\DivaBot\Red-DiscordBot\cogs\meow.py", line 22, in setup
+    n = meow(bot)
+TypeError: __init__() missing 1 required positional argument: 'user'
+[04/05/2017 21:23] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 947, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\DivaBot\Red-DiscordBot\cogs\meow.py", line 22, in setup
+    n = meow(bot)
+TypeError: __init__() missing 1 required positional argument: 'user'
+[04/05/2017 21:26] ERROR owner _reload 155: ('invalid syntax', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\meow.py', 22, 24, '    n = meow(bot, user : discord.Member)\n'))
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 946, in _load_cog
+    importlib.reload(mod_obj)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 166, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 626, in _exec
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\meow.py", line 22
+    n = meow(bot, user : discord.Member)
+                       ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 949, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\meow.py', 22, 24, '    n = meow(bot, user : discord.Member)\n'))
+[04/05/2017 21:30] ERROR owner _reload 155: ('unindent does not match any outer indentation level', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\meow.py', 23, 39, '    async def listener(self, message):\n'))
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 946, in _load_cog
+    importlib.reload(mod_obj)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 166, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 626, in _exec
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\meow.py", line 23
+    async def listener(self, message):
+                                     ^
+IndentationError: unindent does not match any outer indentation level
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 949, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('unindent does not match any outer indentation level', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\meow.py', 23, 39, '    async def listener(self, message):\n'))
+[04/05/2017 21:33] ERROR owner _reload 155: ('unindent does not match any outer indentation level', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\meow.py', 22, 39, '    async def listener(self, message):\n'))
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\meow.py", line 22
+    async def listener(self, message):
+                                     ^
+IndentationError: unindent does not match any outer indentation level
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 949, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('unindent does not match any outer indentation level', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\meow.py', 22, 39, '    async def listener(self, message):\n'))
+[05/05/2017 03:17] ERROR owner _reload 155: ('invalid syntax', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 557, 32, '    def __init__(self, **kwargs, message):\n'))
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 557
+    def __init__(self, **kwargs, message):
+                               ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 949, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 557, 32, '    def __init__(self, **kwargs, message):\n'))
+[05/05/2017 03:57] ERROR owner _reload 155: ('unindent does not match any outer indentation level', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 617, 25, '      def payload(self):\n'))
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 617
+    def payload(self):
+                     ^
+IndentationError: unindent does not match any outer indentation level
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 949, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('unindent does not match any outer indentation level', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 617, 25, '      def payload(self):\n'))
+[05/05/2017 03:58] ERROR owner _reload 155: ('invalid syntax', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 618, 17, '      await  self.responses = self.responses.replace("<user>",author.mention)\n'))
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 618
+    await  self.responses = self.responses.replace("<user>",author.mention)
+              ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 949, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 618, 17, '      await  self.responses = self.responses.replace("<user>",author.mention)\n'))
+[05/05/2017 04:08] ERROR owner _reload 155: ('expected an indented block', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 617, 7, '    def payload(self):\n'))
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 617
+    def payload(self):
+      ^
+IndentationError: expected an indented block
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 949, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('expected an indented block', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 617, 7, '    def payload(self):\n'))
+[05/05/2017 04:16] ERROR owner _reload 155: ('expected an indented block', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 620, 16, '            self.triggered += 1\n'))
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 620
+    self.triggered += 1
+       ^
+IndentationError: expected an indented block
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 949, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('expected an indented block', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 620, 16, '            self.triggered += 1\n'))
+[05/05/2017 04:18] ERROR owner _reload 155: ('invalid syntax', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 613, 16, 'class Message()\n'))
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 613
+    class Message()
+                  ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 949, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 613, 16, 'class Message()\n'))
+[05/05/2017 04:28] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 673, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 556, in <module>
+    class TriggerObj:
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 614, in TriggerObj
+    def payload(self, author : message.author):
+NameError: name 'message' is not defined
+[05/05/2017 04:34] ERROR owner _reload 155: ('expected an indented block', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 616, 7, '    def payload(self):\n'))
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 616
+    def payload(self):
+      ^
+IndentationError: expected an indented block
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 949, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('expected an indented block', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 616, 7, '    def payload(self):\n'))
+[05/05/2017 04:43] ERROR owner _reload 155: ('expected an indented block', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 616, 9, '    async def on_message(self, message):\n'))
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 616
+    async def on_message(self, message):
+        ^
+IndentationError: expected an indented block
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 949, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('expected an indented block', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 616, 9, '    async def on_message(self, message):\n'))
+[05/05/2017 05:06] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 673, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 556, in <module>
+    class TriggerObj:
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 614, in TriggerObj
+    @commands.command(pass_context=True, no_pm=True)
+  File "lib\discord\ext\commands\core.py", line 680, in decorator
+    raise TypeError('Callback must be a coroutine.')
+TypeError: Callback must be a coroutine.
+[05/05/2017 05:08] ERROR owner _reload 155: ("can't assign to await expression", ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 617, 8, '        await self.responses = [response.replace("<user>",author.mention) for response in self.responses]\n'))
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 617
+    await self.responses = [response.replace("<user>",author.mention) for response in self.responses]
+    ^
+SyntaxError: can't assign to await expression
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 949, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ("can't assign to await expression", ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 617, 8, '        await self.responses = [response.replace("<user>",author.mention) for response in self.responses]\n'))
+[05/05/2017 05:20] ERROR owner load 73: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 64, in load
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 947, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\DivaBot\Red-DiscordBot\cogs\leveler.py", line 2621, in setup
+    n = Leveler(bot)
+  File "C:\DivaBot\Red-DiscordBot\cogs\leveler.py", line 59, in __init__
+    dbs = client.database_names()
+  File "lib\pymongo\mongo_client.py", line 1149, in database_names
+    "listDatabases")["databases"]]
+  File "lib\pymongo\database.py", line 491, in command
+    with client._socket_for_reads(read_preference) as (sock_info, slave_ok):
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\contextlib.py", line 59, in __enter__
+    return next(self.gen)
+  File "lib\pymongo\mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\contextlib.py", line 59, in __enter__
+    return next(self.gen)
+  File "lib\pymongo\mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "lib\pymongo\topology.py", line 214, in select_server
+    address))
+  File "lib\pymongo\topology.py", line 189, in select_servers
+    self._error_message(selector))
+pymongo.errors.ServerSelectionTimeoutError: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it
+[05/05/2017 05:22] ERROR red load_cogs 573: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it
+Traceback (most recent call last):
+  File "red.py", line 570, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 947, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\DivaBot\Red-DiscordBot\cogs\leveler.py", line 2621, in setup
+    n = Leveler(bot)
+  File "C:\DivaBot\Red-DiscordBot\cogs\leveler.py", line 59, in __init__
+    dbs = client.database_names()
+  File "lib\pymongo\mongo_client.py", line 1149, in database_names
+    "listDatabases")["databases"]]
+  File "lib\pymongo\database.py", line 491, in command
+    with client._socket_for_reads(read_preference) as (sock_info, slave_ok):
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\contextlib.py", line 59, in __enter__
+    return next(self.gen)
+  File "lib\pymongo\mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\contextlib.py", line 59, in __enter__
+    return next(self.gen)
+  File "lib\pymongo\mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "lib\pymongo\topology.py", line 214, in select_server
+    address))
+  File "lib\pymongo\topology.py", line 189, in select_servers
+    self._error_message(selector))
+pymongo.errors.ServerSelectionTimeoutError: localhost:27017: [WinError 10061] No connection could be made because the target machine actively refused it
+[05/05/2017 05:57] ERROR owner _reload 155: ("can't assign to function call", ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 505, 8, '        author() = message.author\n'))
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 505
+    author() = message.author
+    ^
+SyntaxError: can't assign to function call
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 949, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ("can't assign to function call", ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 505, 8, '        author() = message.author\n'))
+[05/05/2017 06:01] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 673, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 556, in <module>
+    class TriggerObj:
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 613, in TriggerObj
+    message = Message()
+NameError: name 'Message' is not defined
+[05/05/2017 06:01] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 673, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 556, in <module>
+    class TriggerObj:
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 613, in TriggerObj
+    message = discord.Message()
+  File "lib\discord\message.py", line 118, in __init__
+    self.reactions = kwargs.pop('reactions')
+KeyError: 'reactions'
+[05/05/2017 06:02] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 673, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 556, in <module>
+    class TriggerObj:
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 613, in TriggerObj
+    msg.author()
+NameError: name 'msg' is not defined
+[05/05/2017 06:28] ERROR owner _reload 155: ('invalid syntax', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 523, 19, '            payload = trigger.payload()\n'))
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 523
+    payload = trigger.payload()
+          ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 949, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 523, 19, '            payload = trigger.payload()\n'))
+[05/05/2017 06:29] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 673, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 556, in <module>
+    class TriggerObj:
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 614, in TriggerObj
+    @on_message.command(pass_context=True)
+NameError: name 'on_message' is not defined
+[05/05/2017 06:37] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 673, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 31, in <module>
+    class Trigger:
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 529, in Trigger
+    @on_message.command(pass_context=True)
+AttributeError: 'function' object has no attribute 'command'
+[05/05/2017 06:42] ERROR owner _reload 155: ("can't assign to await expression", ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 615, 8, '        await user = message.author()\n'))
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 615
+    await user = message.author()
+    ^
+SyntaxError: can't assign to await expression
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 949, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ("can't assign to await expression", ('C:\\DivaBot\\Red-DiscordBot\\cogs\\trigger.py', 615, 8, '        await user = message.author()\n'))
+[05/05/2017 06:50] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 673, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 559, in <module>
+    user.name = author
+NameError: name 'author' is not defined
+[05/05/2017 06:57] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 673, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 556, in <module>
+    class TriggerObj():
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 614, in TriggerObj
+    @on_message(pass_context=True)
+NameError: name 'on_message' is not defined
+[05/05/2017 07:04] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 673, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 31, in <module>
+    class Trigger:
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 529, in Trigger
+    @on_message(pass_context=True)
+TypeError: on_message() got an unexpected keyword argument 'pass_context'
+[05/05/2017 07:05] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 673, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 31, in <module>
+    class Trigger:
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 529, in Trigger
+    @on_message.author(pass_context=True)
+AttributeError: 'function' object has no attribute 'author'
+[06/05/2017 07:39] WARNING audio _play 814: I can't play URL below because it is too long. Use [p]audioset maxlength to change this.
+
+[SEARCH:]sigh
+[10/05/2017 07:47] ERROR red load_cogs 573: HTTPSConnectionPool(host='api.imgur.com', port=443): Max retries exceeded with url: /3/credits (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCC6C07B38>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+Traceback (most recent call last):
+  File "lib\requests\packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "lib\requests\packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\socket.py", line 733, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "lib\requests\packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "lib\requests\packages\urllib3\connectionpool.py", line 345, in _make_request
+    self._validate_conn(conn)
+  File "lib\requests\packages\urllib3\connectionpool.py", line 844, in _validate_conn
+    conn.connect()
+  File "lib\requests\packages\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "lib\requests\packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCC6C07B38>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "lib\requests\adapters.py", line 423, in send
+    timeout=timeout
+  File "lib\requests\packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "lib\requests\packages\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.imgur.com', port=443): Max retries exceeded with url: /3/credits (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCC6C07B38>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\red.py", line 570, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 947, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\DivaBot\Red-DiscordBot\cogs\image.py", line 168, in setup
+    bot.add_cog(Image(bot))
+  File "C:\DivaBot\Red-DiscordBot\cogs\image.py", line 22, in __init__
+    self.imgur = ImgurClient(CLIENT_ID, CLIENT_SECRET)
+  File "lib\imgurpython\client.py", line 85, in __init__
+    self.credits = self.get_credits()
+  File "lib\imgurpython\client.py", line 94, in get_credits
+    return self.make_request('GET', 'credits', None, True)
+  File "lib\imgurpython\client.py", line 131, in make_request
+    response = method_to_call(url, headers=header, params=data, data=data)
+  File "lib\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "lib\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "lib\requests\sessions.py", line 488, in request
+    resp = self.send(prep, **send_kwargs)
+  File "lib\requests\sessions.py", line 609, in send
+    r = adapter.send(request, **kwargs)
+  File "lib\requests\adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.imgur.com', port=443): Max retries exceeded with url: /3/credits (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCC6C07B38>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+[10/05/2017 07:47] ERROR red <module> 634: Fatal exception, attempting graceful logout
+Traceback (most recent call last):
+  File "lib\aiohttp\connector.py", line 304, in connect
+    yield from self._create_connection(req)
+  File "lib\aiohttp\connector.py", line 578, in _create_connection
+    transport, proto = yield from self._create_direct_connection(req)
+  File "lib\aiohttp\connector.py", line 589, in _create_direct_connection
+    hosts = yield from self._resolve_host(req.host, req.port)
+  File "lib\aiohttp\connector.py", line 561, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "lib\aiohttp\resolver.py", line 29, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 380, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\tasks.py", line 304, in _wakeup
+    future.result()
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 293, in result
+    raise self._exception
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\concurrent\futures\thread.py", line 55, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\socket.py", line 733, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\red.py", line 614, in <module>
+    loop.run_until_complete(main(bot))
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 466, in run_until_complete
+    return future.result()
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 293, in result
+    raise self._exception
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\tasks.py", line 241, in _step
+    result = coro.throw(exc)
+  File "C:\DivaBot\Red-DiscordBot\red.py", line 599, in main
+    bot=not bot.settings.self_bot)
+  File "lib\discord\client.py", line 416, in login
+    yield from getattr(self, '_login_' + str(n))(*args, **kwargs)
+  File "lib\discord\client.py", line 346, in _login_1
+    data = yield from self.http.static_login(token, bot=is_bot)
+  File "lib\discord\http.py", line 258, in static_login
+    data = yield from self.request(Route('GET', '/users/@me'))
+  File "lib\discord\http.py", line 137, in request
+    r = yield from self.session.request(method, url, **kwargs)
+  File "lib\aiohttp\client.py", line 555, in __iter__
+    resp = yield from self._coro
+  File "lib\aiohttp\client.py", line 198, in _request
+    conn = yield from self._connector.connect(req)
+  File "lib\aiohttp\connector.py", line 314, in connect
+    .format(key, exc.strerror)) from exc
+aiohttp.errors.ClientOSError: [Errno 11001] Cannot connect to host discordapp.com:443 ssl:True [getaddrinfo failed]
+[14/05/2017 06:36] ERROR red <module> 634: Fatal exception, attempting graceful logout
+Traceback (most recent call last):
+  File "lib\aiohttp\connector.py", line 601, in _create_direct_connection
+    local_addr=self._local_addr)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 775, in create_connection
+    raise exceptions[0]
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 762, in create_connection
+    yield from self.sock_connect(sock, address)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\selector_events.py", line 451, in sock_connect
+    return (yield from fut)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 380, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\tasks.py", line 304, in _wakeup
+    future.result()
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 293, in result
+    raise self._exception
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\selector_events.py", line 481, in _sock_connect_cb
+    raise OSError(err, 'Connect call failed %s' % (address,))
+OSError: [Errno 10051] Connect call failed ('104.16.59.5', 443)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "lib\aiohttp\connector.py", line 304, in connect
+    yield from self._create_connection(req)
+  File "lib\aiohttp\connector.py", line 578, in _create_connection
+    transport, proto = yield from self._create_direct_connection(req)
+  File "lib\aiohttp\connector.py", line 624, in _create_direct_connection
+    (req.host, req.port, exc.strerror)) from exc
+aiohttp.errors.ClientOSError: [Errno 10051] Can not connect to discordapp.com:443 [Connect call failed ('104.16.59.5', 443)]
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\red.py", line 614, in <module>
+    loop.run_until_complete(main(bot))
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 466, in run_until_complete
+    return future.result()
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 293, in result
+    raise self._exception
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\tasks.py", line 241, in _step
+    result = coro.throw(exc)
+  File "C:\DivaBot\Red-DiscordBot\red.py", line 603, in main
+    yield from bot.connect()
+  File "lib\discord\client.py", line 452, in connect
+    self.ws = yield from DiscordWebSocket.from_client(self, resume=resume)
+  File "lib\discord\gateway.py", line 193, in from_client
+    gateway = yield from client.http.get_gateway()
+  File "lib\discord\http.py", line 633, in get_gateway
+    data = yield from self.request(Route('GET', '/gateway'))
+  File "lib\discord\http.py", line 137, in request
+    r = yield from self.session.request(method, url, **kwargs)
+  File "lib\aiohttp\client.py", line 555, in __iter__
+    resp = yield from self._coro
+  File "lib\aiohttp\client.py", line 198, in _request
+    conn = yield from self._connector.connect(req)
+  File "lib\aiohttp\connector.py", line 314, in connect
+    .format(key, exc.strerror)) from exc
+aiohttp.errors.ClientOSError: [Errno 10051] Cannot connect to host discordapp.com:443 ssl:True [Can not connect to discordapp.com:443 [Connect call failed ('104.16.59.5', 443)]]
+[15/05/2017 04:00] ERROR red <module> 634: Fatal exception, attempting graceful logout
+Traceback (most recent call last):
+  File "lib\discord\gateway.py", line 409, in poll_event
+    msg = yield from self.recv()
+  File "lib\websockets\protocol.py", line 299, in recv
+    raise ConnectionClosed(self.close_code, self.close_reason)
+websockets.exceptions.ConnectionClosed: WebSocket connection is closed: code = 1006, no reason.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "lib\discord\client.py", line 448, in connect
+    yield from self.ws.poll_event()
+  File "lib\discord\gateway.py", line 414, in poll_event
+    raise ResumeWebSocket() from e
+discord.gateway.ResumeWebSocket
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "red.py", line 614, in <module>
+    loop.run_until_complete(main(bot))
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 466, in run_until_complete
+    return future.result()
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 293, in result
+    raise self._exception
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\tasks.py", line 239, in _step
+    result = coro.send(None)
+  File "red.py", line 603, in main
+    yield from bot.connect()
+  File "lib\discord\client.py", line 452, in connect
+    self.ws = yield from DiscordWebSocket.from_client(self, resume=resume)
+  File "lib\discord\gateway.py", line 194, in from_client
+    ws = yield from websockets.connect(gateway, loop=client.loop, klass=cls)
+  File "lib\websockets\py35\client.py", line 19, in __await__
+    return (yield from self.client)
+  File "lib\websockets\client.py", line 160, in connect
+    factory, wsuri.host, wsuri.port, **kwds)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 731, in create_connection
+    infos = f1.result()
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 293, in result
+    raise self._exception
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\concurrent\futures\thread.py", line 55, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\socket.py", line 733, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+[22/05/2017 21:03] ERROR red <module> 634: Fatal exception, attempting graceful logout
+Traceback (most recent call last):
+  File "lib\aiohttp\connector.py", line 601, in _create_direct_connection
+    local_addr=self._local_addr)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 775, in create_connection
+    raise exceptions[0]
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 762, in create_connection
+    yield from self.sock_connect(sock, address)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\selector_events.py", line 451, in sock_connect
+    return (yield from fut)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 380, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\tasks.py", line 304, in _wakeup
+    future.result()
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 293, in result
+    raise self._exception
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\selector_events.py", line 481, in _sock_connect_cb
+    raise OSError(err, 'Connect call failed %s' % (address,))
+OSError: [Errno 10065] Connect call failed ('104.16.58.5', 443)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "lib\aiohttp\connector.py", line 304, in connect
+    yield from self._create_connection(req)
+  File "lib\aiohttp\connector.py", line 578, in _create_connection
+    transport, proto = yield from self._create_direct_connection(req)
+  File "lib\aiohttp\connector.py", line 624, in _create_direct_connection
+    (req.host, req.port, exc.strerror)) from exc
+aiohttp.errors.ClientOSError: [Errno 10065] Can not connect to discordapp.com:443 [Connect call failed ('104.16.58.5', 443)]
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\red.py", line 614, in <module>
+    loop.run_until_complete(main(bot))
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 466, in run_until_complete
+    return future.result()
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 293, in result
+    raise self._exception
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\tasks.py", line 241, in _step
+    result = coro.throw(exc)
+  File "C:\DivaBot\Red-DiscordBot\red.py", line 603, in main
+    yield from bot.connect()
+  File "lib\discord\client.py", line 452, in connect
+    self.ws = yield from DiscordWebSocket.from_client(self, resume=resume)
+  File "lib\discord\gateway.py", line 193, in from_client
+    gateway = yield from client.http.get_gateway()
+  File "lib\discord\http.py", line 633, in get_gateway
+    data = yield from self.request(Route('GET', '/gateway'))
+  File "lib\discord\http.py", line 137, in request
+    r = yield from self.session.request(method, url, **kwargs)
+  File "lib\aiohttp\client.py", line 555, in __iter__
+    resp = yield from self._coro
+  File "lib\aiohttp\client.py", line 198, in _request
+    conn = yield from self._connector.connect(req)
+  File "lib\aiohttp\connector.py", line 314, in connect
+    .format(key, exc.strerror)) from exc
+aiohttp.errors.ClientOSError: [Errno 10065] Cannot connect to host discordapp.com:443 ssl:True [Can not connect to discordapp.com:443 [Connect call failed ('104.16.58.5', 443)]]
+[29/05/2017 15:16] ERROR red <module> 634: Fatal exception, attempting graceful logout
+Traceback (most recent call last):
+  File "lib\aiohttp\connector.py", line 601, in _create_direct_connection
+    local_addr=self._local_addr)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 775, in create_connection
+    raise exceptions[0]
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 762, in create_connection
+    yield from self.sock_connect(sock, address)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\selector_events.py", line 451, in sock_connect
+    return (yield from fut)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 380, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\tasks.py", line 304, in _wakeup
+    future.result()
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 293, in result
+    raise self._exception
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\selector_events.py", line 481, in _sock_connect_cb
+    raise OSError(err, 'Connect call failed %s' % (address,))
+OSError: [Errno 10065] Connect call failed ('104.16.59.5', 443)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "lib\aiohttp\connector.py", line 304, in connect
+    yield from self._create_connection(req)
+  File "lib\aiohttp\connector.py", line 578, in _create_connection
+    transport, proto = yield from self._create_direct_connection(req)
+  File "lib\aiohttp\connector.py", line 624, in _create_direct_connection
+    (req.host, req.port, exc.strerror)) from exc
+aiohttp.errors.ClientOSError: [Errno 10065] Can not connect to discordapp.com:443 [Connect call failed ('104.16.59.5', 443)]
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\red.py", line 614, in <module>
+    loop.run_until_complete(main(bot))
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 466, in run_until_complete
+    return future.result()
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 293, in result
+    raise self._exception
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\tasks.py", line 241, in _step
+    result = coro.throw(exc)
+  File "C:\DivaBot\Red-DiscordBot\red.py", line 603, in main
+    yield from bot.connect()
+  File "lib\discord\client.py", line 452, in connect
+    self.ws = yield from DiscordWebSocket.from_client(self, resume=resume)
+  File "lib\discord\gateway.py", line 193, in from_client
+    gateway = yield from client.http.get_gateway()
+  File "lib\discord\http.py", line 633, in get_gateway
+    data = yield from self.request(Route('GET', '/gateway'))
+  File "lib\discord\http.py", line 137, in request
+    r = yield from self.session.request(method, url, **kwargs)
+  File "lib\aiohttp\client.py", line 555, in __iter__
+    resp = yield from self._coro
+  File "lib\aiohttp\client.py", line 198, in _request
+    conn = yield from self._connector.connect(req)
+  File "lib\aiohttp\connector.py", line 314, in connect
+    .format(key, exc.strerror)) from exc
+aiohttp.errors.ClientOSError: [Errno 10065] Cannot connect to host discordapp.com:443 ssl:True [Can not connect to discordapp.com:443 [Connect call failed ('104.16.59.5', 443)]]
+[10/06/2017 14:51] ERROR red <module> 634: Fatal exception, attempting graceful logout
+Traceback (most recent call last):
+  File "lib\aiohttp\connector.py", line 601, in _create_direct_connection
+    local_addr=self._local_addr)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 775, in create_connection
+    raise exceptions[0]
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 762, in create_connection
+    yield from self.sock_connect(sock, address)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\selector_events.py", line 451, in sock_connect
+    return (yield from fut)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 380, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\tasks.py", line 304, in _wakeup
+    future.result()
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 293, in result
+    raise self._exception
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\selector_events.py", line 481, in _sock_connect_cb
+    raise OSError(err, 'Connect call failed %s' % (address,))
+OSError: [Errno 10065] Connect call failed ('104.16.59.5', 443)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "lib\aiohttp\connector.py", line 304, in connect
+    yield from self._create_connection(req)
+  File "lib\aiohttp\connector.py", line 578, in _create_connection
+    transport, proto = yield from self._create_direct_connection(req)
+  File "lib\aiohttp\connector.py", line 624, in _create_direct_connection
+    (req.host, req.port, exc.strerror)) from exc
+aiohttp.errors.ClientOSError: [Errno 10065] Can not connect to discordapp.com:443 [Connect call failed ('104.16.59.5', 443)]
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "red.py", line 614, in <module>
+    loop.run_until_complete(main(bot))
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 466, in run_until_complete
+    return future.result()
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 293, in result
+    raise self._exception
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\tasks.py", line 241, in _step
+    result = coro.throw(exc)
+  File "red.py", line 603, in main
+    yield from bot.connect()
+  File "lib\discord\client.py", line 452, in connect
+    self.ws = yield from DiscordWebSocket.from_client(self, resume=resume)
+  File "lib\discord\gateway.py", line 193, in from_client
+    gateway = yield from client.http.get_gateway()
+  File "lib\discord\http.py", line 633, in get_gateway
+    data = yield from self.request(Route('GET', '/gateway'))
+  File "lib\discord\http.py", line 137, in request
+    r = yield from self.session.request(method, url, **kwargs)
+  File "lib\aiohttp\client.py", line 555, in __iter__
+    resp = yield from self._coro
+  File "lib\aiohttp\client.py", line 198, in _request
+    conn = yield from self._connector.connect(req)
+  File "lib\aiohttp\connector.py", line 314, in connect
+    .format(key, exc.strerror)) from exc
+aiohttp.errors.ClientOSError: [Errno 10065] Cannot connect to host discordapp.com:443 ssl:True [Can not connect to discordapp.com:443 [Connect call failed ('104.16.59.5', 443)]]
+[10/06/2017 14:51] ERROR red <module> 634: Fatal exception, attempting graceful logout
+Traceback (most recent call last):
+  File "lib\aiohttp\connector.py", line 304, in connect
+    yield from self._create_connection(req)
+  File "lib\aiohttp\connector.py", line 578, in _create_connection
+    transport, proto = yield from self._create_direct_connection(req)
+  File "lib\aiohttp\connector.py", line 589, in _create_direct_connection
+    hosts = yield from self._resolve_host(req.host, req.port)
+  File "lib\aiohttp\connector.py", line 561, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "lib\aiohttp\resolver.py", line 29, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 380, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\tasks.py", line 304, in _wakeup
+    future.result()
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 293, in result
+    raise self._exception
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\concurrent\futures\thread.py", line 55, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\socket.py", line 733, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "red.py", line 614, in <module>
+    loop.run_until_complete(main(bot))
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 466, in run_until_complete
+    return future.result()
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 293, in result
+    raise self._exception
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\tasks.py", line 241, in _step
+    result = coro.throw(exc)
+  File "red.py", line 599, in main
+    bot=not bot.settings.self_bot)
+  File "lib\discord\client.py", line 416, in login
+    yield from getattr(self, '_login_' + str(n))(*args, **kwargs)
+  File "lib\discord\client.py", line 346, in _login_1
+    data = yield from self.http.static_login(token, bot=is_bot)
+  File "lib\discord\http.py", line 258, in static_login
+    data = yield from self.request(Route('GET', '/users/@me'))
+  File "lib\discord\http.py", line 137, in request
+    r = yield from self.session.request(method, url, **kwargs)
+  File "lib\aiohttp\client.py", line 555, in __iter__
+    resp = yield from self._coro
+  File "lib\aiohttp\client.py", line 198, in _request
+    conn = yield from self._connector.connect(req)
+  File "lib\aiohttp\connector.py", line 314, in connect
+    .format(key, exc.strerror)) from exc
+aiohttp.errors.ClientOSError: [Errno 11001] Cannot connect to host discordapp.com:443 ssl:True [getaddrinfo failed]
+[16/11/2017 23:16] ERROR red load_cogs 573: [WinError 183] Cannot create a file when that file already exists: 'data/audio/localtracks'
+Traceback (most recent call last):
+  File "red.py", line 570, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 947, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\DivaBot\Red-DiscordBot\cogs\audio.py", line 2219, in setup
+    check_folders()
+  File "C:\DivaBot\Red-DiscordBot\cogs\audio.py", line 2174, in check_folders
+    os.makedirs(folder)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\os.py", line 241, in makedirs
+    mkdir(name, mode)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'data/audio/localtracks'
+[17/11/2017 00:05] ERROR red on_command_error 369: Exception in command 'triggerset influence'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\DivaBot\Red-DiscordBot\cogs\trigger.py", line 300, in influence
+    server = author.server
+AttributeError: 'User' object has no attribute 'server'
+[17/11/2017 00:29] ERROR red load_cogs 573: Expecting value: line 50 column 1 (char 3776)
+Traceback (most recent call last):
+  File "red.py", line 570, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 947, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\DivaBot\Red-DiscordBot\cogs\insult.py", line 55, in setup
+    n = Insult(bot)
+  File "C:\DivaBot\Red-DiscordBot\cogs\insult.py", line 13, in __init__
+    self.insults = fileIO("data/insult/insults.json","load")
+  File "C:\DivaBot\Red-DiscordBot\cogs\utils\dataIO.py", line 60, in _legacy_fileio
+    return self.load_json(filename)
+  File "C:\DivaBot\Red-DiscordBot\cogs\utils\dataIO.py", line 32, in load_json
+    return self._read_json(filename)
+  File "C:\DivaBot\Red-DiscordBot\cogs\utils\dataIO.py", line 46, in _read_json
+    data = json.load(f)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 268, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 50 column 1 (char 3776)
+[17/11/2017 00:31] ERROR owner load 73: Expecting value: line 50 column 1 (char 3776)
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 64, in load
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 947, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\DivaBot\Red-DiscordBot\cogs\insult.py", line 55, in setup
+    n = Insult(bot)
+  File "C:\DivaBot\Red-DiscordBot\cogs\insult.py", line 13, in __init__
+    self.insults = fileIO("data/insult/insults.json","load")
+  File "C:\DivaBot\Red-DiscordBot\cogs\utils\dataIO.py", line 60, in _legacy_fileio
+    return self.load_json(filename)
+  File "C:\DivaBot\Red-DiscordBot\cogs\utils\dataIO.py", line 32, in load_json
+    return self._read_json(filename)
+  File "C:\DivaBot\Red-DiscordBot\cogs\utils\dataIO.py", line 46, in _read_json
+    data = json.load(f)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 268, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 50 column 1 (char 3776)
+[17/11/2017 00:32] ERROR owner load 73: Expecting value: line 50 column 1 (char 3776)
+Traceback (most recent call last):
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 64, in load
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 947, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\DivaBot\Red-DiscordBot\cogs\insult.py", line 55, in setup
+    n = Insult(bot)
+  File "C:\DivaBot\Red-DiscordBot\cogs\insult.py", line 13, in __init__
+    self.insults = fileIO("data/insult/insults.json","load")
+  File "C:\DivaBot\Red-DiscordBot\cogs\utils\dataIO.py", line 60, in _legacy_fileio
+    return self.load_json(filename)
+  File "C:\DivaBot\Red-DiscordBot\cogs\utils\dataIO.py", line 32, in load_json
+    return self._read_json(filename)
+  File "C:\DivaBot\Red-DiscordBot\cogs\utils\dataIO.py", line 46, in _read_json
+    data = json.load(f)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 268, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 50 column 1 (char 3776)
+[17/11/2017 00:33] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\Red-DiscordBot\cogs\owner.py", line 947, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\DivaBot\Red-DiscordBot\cogs\insult.py", line 55, in setup
+    n = Insult(bot)
+  File "C:\DivaBot\Red-DiscordBot\cogs\insult.py", line 13, in __init__
+    self.insults = fileIO("data/insult/insults.json","load")
+  File "C:\DivaBot\Red-DiscordBot\cogs\utils\dataIO.py", line 60, in _legacy_fileio
+    return self.load_json(filename)
+  File "C:\DivaBot\Red-DiscordBot\cogs\utils\dataIO.py", line 32, in load_json
+    return self._read_json(filename)
+  File "C:\DivaBot\Red-DiscordBot\cogs\utils\dataIO.py", line 46, in _read_json
+    data = json.load(f)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 268, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 50 column 1 (char 3776)
+[17/11/2017 03:48] ERROR owner _reload 155: ('unindent does not match any outer indentation level', ('C:\\DivaBot\\cogs\\trigger.py', 619, 30, '    def can_edit(self, user):\n'))
+Traceback (most recent call last):
+  File "C:\DivaBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\cogs\trigger.py", line 619
+    def can_edit(self, user):
+                            ^
+IndentationError: unindent does not match any outer indentation level
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\cogs\owner.py", line 949, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('unindent does not match any outer indentation level', ('C:\\DivaBot\\cogs\\trigger.py', 619, 30, '    def can_edit(self, user):\n'))
+[17/11/2017 22:32] ERROR owner _reload 155: ('unexpected indent', ('C:\\DivaBot\\cogs\\insult.py', 32, 8, '        async def khen(self, ctx, user : discord.Member=None):\n'))
+Traceback (most recent call last):
+  File "C:\DivaBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\cogs\insult.py", line 32
+    async def khen(self, ctx, user : discord.Member=None):
+    ^
+IndentationError: unexpected indent
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\cogs\owner.py", line 949, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('unexpected indent', ('C:\\DivaBot\\cogs\\insult.py', 32, 8, '        async def khen(self, ctx, user : discord.Member=None):\n'))
+[17/11/2017 22:33] ERROR owner _reload 155: ('invalid syntax', ('C:\\DivaBot\\cogs\\insult.py', 43, 16, '            else:\n'))
+Traceback (most recent call last):
+  File "C:\DivaBot\cogs\owner.py", line 945, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\DivaBot\cogs\insult.py", line 43
+    else:
+       ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\DivaBot\cogs\owner.py", line 149, in _reload
+    self._load_cog(module)
+  File "C:\DivaBot\cogs\owner.py", line 949, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\DivaBot\\cogs\\insult.py', 43, 16, '            else:\n'))
+[13/04/2018 04:57] ERROR red load_cogs 573: Expecting ',' delimiter: line 28 column 5 (char 1351)
+Traceback (most recent call last):
+  File "red.py", line 570, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 948, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\insult.py", line 70, in setup
+    n = Insult(bot)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\insult.py", line 13, in __init__
+    self.insults = fileIO("data/insult/insults.json","load")
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\utils\dataIO.py", line 60, in _legacy_fileio
+    return self.load_json(filename)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\utils\dataIO.py", line 32, in load_json
+    return self._read_json(filename)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\utils\dataIO.py", line 46, in _read_json
+    data = json.load(f)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 268, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 28 column 5 (char 1351)
+[13/04/2018 05:23] ERROR owner _reload 156: ('expected an indented block', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\insult.py', 27, 14, '            if user.id == 293041932542672896:\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 946, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\insult.py", line 27
+    if user.id == 293041932542672896:
+     ^
+IndentationError: expected an indented block
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 950, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('expected an indented block', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\insult.py', 27, 14, '            if user.id == 293041932542672896:\n'))
+[13/04/2018 05:24] ERROR owner _reload 156: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\insult.py', 31, 16, '            else:\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 946, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\insult.py", line 31
+    else:
+       ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 950, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\insult.py', 31, 16, '            else:\n'))
+[13/04/2018 05:25] ERROR owner _reload 156: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\insult.py', 26, 17, '            else\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 946, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\insult.py", line 26
+    else
+       ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 950, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\insult.py', 26, 17, '            else\n'))
+[13/04/2018 05:26] ERROR red on_command_error 369: Exception in command 'insult'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\insult.py", line 25, in insult
+    await self.bot.say(user.nick + ":" + msg)
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+[13/04/2018 05:28] ERROR red on_command_error 369: Exception in command 'insult'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\insult.py", line 25, in insult
+    await self.bot.say(user.nick + msg)
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+[13/04/2018 05:31] ERROR red on_command_error 369: Exception in command 'insult'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\insult.py", line 25, in insult
+    await self.bot.say(str(user.username) + msg)
+AttributeError: 'Member' object has no attribute 'username'
+[13/04/2018 05:42] ERROR owner _reload 156: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\insult.py', 25, 24, '                if nem = "None":\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 946, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\insult.py", line 25
+    if nem = "None":
+           ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 950, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\insult.py', 25, 24, '                if nem = "None":\n'))
+[13/04/2018 05:42] ERROR red on_command_error 369: Exception in command 'insult'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\insult.py", line 34, in insult
+    await self.bot.say(nem + "," + msg + randchoice(self.insults))
+UnboundLocalError: local variable 'nem' referenced before assignment
+[15/04/2018 00:26] ERROR red on_command_error 369: Exception in command 'cog install'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\downloader.py", line 397, in _install
+    install_cog = await self.install(repo_name, cog, notify_reqs=True)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\downloader.py", line 465, in install
+    shutil.copy(path, to_path)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\shutil.py", line 241, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\shutil.py", line 120, in copyfile
+    with open(src, 'rb') as fsrc:
+FileNotFoundError: [Errno 2] No such file or directory: 'data\\downloader\\PaddoCogs\\kill\\kill.py'
+[15/04/2018 00:36] ERROR red on_command_error 369: Exception in command 'cog install'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\downloader.py", line 397, in _install
+    install_cog = await self.install(repo_name, cog, notify_reqs=True)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\downloader.py", line 465, in install
+    shutil.copy(path, to_path)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\shutil.py", line 241, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\shutil.py", line 120, in copyfile
+    with open(src, 'rb') as fsrc:
+FileNotFoundError: [Errno 2] No such file or directory: 'data\\downloader\\calebj-cogs\\serverquotes\\serverquotes.py'
+[15/04/2018 00:37] ERROR owner load 74: Command quote is already registered.
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 65, in load
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 948, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\serverquotes.py", line 265, in setup
+    bot.add_cog(n)
+  File "lib\discord\ext\commands\bot.py", line 655, in add_cog
+    self.add_command(member)
+  File "lib\discord\ext\commands\core.py", line 487, in add_command
+    raise discord.ClientException('Command {0.name} is already registered.'.format(command))
+discord.errors.ClientException: Command quote is already registered.
+[15/04/2018 00:39] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 948, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\serverquotes.py", line 265, in setup
+    bot.add_cog(n)
+  File "lib\discord\ext\commands\bot.py", line 655, in add_cog
+    self.add_command(member)
+  File "lib\discord\ext\commands\core.py", line 487, in add_command
+    raise discord.ClientException('Command {0.name} is already registered.'.format(command))
+discord.errors.ClientException: Command addquote is already registered.
+[15/04/2018 00:52] ERROR red <module> 634: Fatal exception, attempting graceful logout
+Traceback (most recent call last):
+  File "lib\aiohttp\connector.py", line 601, in _create_direct_connection
+    local_addr=self._local_addr)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 775, in create_connection
+    raise exceptions[0]
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 762, in create_connection
+    yield from self.sock_connect(sock, address)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\selector_events.py", line 451, in sock_connect
+    return (yield from fut)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 380, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\tasks.py", line 304, in _wakeup
+    future.result()
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 293, in result
+    raise self._exception
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\selector_events.py", line 481, in _sock_connect_cb
+    raise OSError(err, 'Connect call failed %s' % (address,))
+TimeoutError: [Errno 10060] Connect call failed ('104.16.58.5', 443)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "lib\aiohttp\connector.py", line 304, in connect
+    yield from self._create_connection(req)
+  File "lib\aiohttp\connector.py", line 578, in _create_connection
+    transport, proto = yield from self._create_direct_connection(req)
+  File "lib\aiohttp\connector.py", line 624, in _create_direct_connection
+    (req.host, req.port, exc.strerror)) from exc
+aiohttp.errors.ClientOSError: [Errno 10060] Can not connect to discordapp.com:443 [Connect call failed ('104.16.58.5', 443)]
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "red.py", line 614, in <module>
+    loop.run_until_complete(main(bot))
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 466, in run_until_complete
+    return future.result()
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 293, in result
+    raise self._exception
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\tasks.py", line 241, in _step
+    result = coro.throw(exc)
+  File "red.py", line 603, in main
+    yield from bot.connect()
+  File "lib\discord\client.py", line 452, in connect
+    self.ws = yield from DiscordWebSocket.from_client(self, resume=resume)
+  File "lib\discord\gateway.py", line 203, in from_client
+    gateway = yield from client.http.get_gateway()
+  File "lib\discord\http.py", line 633, in get_gateway
+    data = yield from self.request(Route('GET', '/gateway'))
+  File "lib\discord\http.py", line 137, in request
+    r = yield from self.session.request(method, url, **kwargs)
+  File "lib\aiohttp\client.py", line 555, in __iter__
+    resp = yield from self._coro
+  File "lib\aiohttp\client.py", line 198, in _request
+    conn = yield from self._connector.connect(req)
+  File "lib\aiohttp\connector.py", line 314, in connect
+    .format(key, exc.strerror)) from exc
+aiohttp.errors.ClientOSError: [Errno 10060] Cannot connect to host discordapp.com:443 ssl:True [Can not connect to discordapp.com:443 [Connect call failed ('104.16.58.5', 443)]]
+[15/04/2018 02:50] ERROR owner load 74: name 'Kill' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 65, in load
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 948, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\summonbeta.py", line 56, in setup
+    n = Kill(bot)
+NameError: name 'Kill' is not defined
+[15/04/2018 02:51] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 948, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\summonbeta.py", line 56, in setup
+    n = Summon(bot)
+NameError: name 'Summon' is not defined
+[15/04/2018 02:51] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 948, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\summonbeta.py", line 56, in setup
+    n = Summonr(bot)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\summonbeta.py", line 13, in __init__
+    self.summons = dataIO.load_json(self.filename)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\utils\dataIO.py", line 32, in load_json
+    return self._read_json(filename)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\utils\dataIO.py", line 45, in _read_json
+    with open(filename, encoding='utf-8', mode="r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'data/summonr/summonr.json'
+[15/04/2018 03:11] ERROR red on_command_error 369: Exception in command 'summon'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\summonr.py", line 25, in summon
+    author = context.message.author
+NameError: name 'context' is not defined
+[15/04/2018 03:34] ERROR red <module> 634: Fatal exception, attempting graceful logout
+Traceback (most recent call last):
+  File "lib\aiohttp\connector.py", line 601, in _create_direct_connection
+    local_addr=self._local_addr)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 775, in create_connection
+    raise exceptions[0]
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 762, in create_connection
+    yield from self.sock_connect(sock, address)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\selector_events.py", line 451, in sock_connect
+    return (yield from fut)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 380, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\tasks.py", line 304, in _wakeup
+    future.result()
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 293, in result
+    raise self._exception
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\selector_events.py", line 481, in _sock_connect_cb
+    raise OSError(err, 'Connect call failed %s' % (address,))
+OSError: [Errno 10065] Connect call failed ('104.16.58.5', 443)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "lib\aiohttp\connector.py", line 304, in connect
+    yield from self._create_connection(req)
+  File "lib\aiohttp\connector.py", line 578, in _create_connection
+    transport, proto = yield from self._create_direct_connection(req)
+  File "lib\aiohttp\connector.py", line 624, in _create_direct_connection
+    (req.host, req.port, exc.strerror)) from exc
+aiohttp.errors.ClientOSError: [Errno 10065] Can not connect to discordapp.com:443 [Connect call failed ('104.16.58.5', 443)]
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "red.py", line 614, in <module>
+    loop.run_until_complete(main(bot))
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 466, in run_until_complete
+    return future.result()
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 293, in result
+    raise self._exception
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\tasks.py", line 241, in _step
+    result = coro.throw(exc)
+  File "red.py", line 603, in main
+    yield from bot.connect()
+  File "lib\discord\client.py", line 452, in connect
+    self.ws = yield from DiscordWebSocket.from_client(self, resume=resume)
+  File "lib\discord\gateway.py", line 203, in from_client
+    gateway = yield from client.http.get_gateway()
+  File "lib\discord\http.py", line 633, in get_gateway
+    data = yield from self.request(Route('GET', '/gateway'))
+  File "lib\discord\http.py", line 137, in request
+    r = yield from self.session.request(method, url, **kwargs)
+  File "lib\aiohttp\client.py", line 555, in __iter__
+    resp = yield from self._coro
+  File "lib\aiohttp\client.py", line 198, in _request
+    conn = yield from self._connector.connect(req)
+  File "lib\aiohttp\connector.py", line 314, in connect
+    .format(key, exc.strerror)) from exc
+aiohttp.errors.ClientOSError: [Errno 10065] Cannot connect to host discordapp.com:443 ssl:True [Can not connect to discordapp.com:443 [Connect call failed ('104.16.58.5', 443)]]
+[15/04/2018 04:07] ERROR red on_command_error 369: Exception in command 'summon'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\summonr.py", line 35, in summon
+    rand = randint(0,100)
+NameError: name 'randint' is not defined
+[15/04/2018 04:08] ERROR red on_command_error 369: Exception in command 'summon'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\summonr.py", line 39, in summon
+    message = str(random.choice(self.spells))
+AttributeError: 'Summonr' object has no attribute 'spells'
+[15/04/2018 04:10] ERROR red on_command_error 369: Exception in command 'summon'
+Traceback (most recent call last):
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\random.py", line 262, in choice
+    i = self._randbelow(len(seq))
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\random.py", line 239, in _randbelow
+    r = getrandbits(k)          # 0 <= r < 2**k
+ValueError: number of bits must be greater than zero
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\summonr.py", line 41, in summon
+    message = str(random.choice(self.spells))
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\random.py", line 264, in choice
+    raise IndexError('Cannot choose from an empty sequence')
+IndexError: Cannot choose from an empty sequence
+[15/04/2018 04:11] ERROR red on_command_error 369: Exception in command 'summon'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\summonr.py", line 31, in summon
+    char = str(random.choice(self.charas))
+AttributeError: 'Summonr' object has no attribute 'charas'
+[15/04/2018 04:13] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 948, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\summonr.py", line 69, in setup
+    n = Summonr(bot)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\summonr.py", line 15, in __init__
+    self.charas = dataIO.load_json(self.charas)
+AttributeError: 'Summonr' object has no attribute 'charas'
+[15/04/2018 04:18] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 948, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\summonr.py", line 67, in setup
+    n = Summonr(bot)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\summonr.py", line 16, in __init__
+    self.charas = fileIO("data/summonr/summonr.json", "load", self.charas)
+AttributeError: 'Summonr' object has no attribute 'charas'
+[15/04/2018 04:22] ERROR red load_cogs 573: 'Summonr' object has no attribute 'charas'
+Traceback (most recent call last):
+  File "red.py", line 570, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 948, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\summonr.py", line 67, in setup
+    n = Summonr(bot)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\summonr.py", line 16, in __init__
+    self.charas = fileIO("data/summonr/summonr.json", "load", self.charas)
+AttributeError: 'Summonr' object has no attribute 'charas'
+[15/04/2018 04:38] ERROR red on_command_error 369: Exception in command 'summon'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\summonr.py", line 45, in summon
+    await self.bot.say(char + ' hiện lên ' + message + '.')
+UnboundLocalError: local variable 'message' referenced before assignment
+[15/04/2018 04:40] ERROR red on_command_error 369: Exception in command 'summon'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\summonr.py", line 45, in summon
+    await self.bot.say(char + ' hiện lên ' + message + '.')
+UnboundLocalError: local variable 'message' referenced before assignment
+[15/04/2018 04:53] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 948, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\summonr.py", line 66, in setup
+    n = Summonr(bot)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\summonr.py", line 16, in __init__
+    self.charas = self.summons["charas"]
+KeyError: 'charas'
