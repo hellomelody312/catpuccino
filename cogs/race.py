@@ -253,7 +253,7 @@ class Race:
         race_msg = await self.bot.say('\u200b'+'\n'+'\n'.join([player.field() for player in racers]))
         await self.run_game(racers, race_msg, data)
 
-        footer = "Type {}race claim to receive prize money. You must claim it before the next race!"
+        footer = ""
         first = ':first_place:  {0}'.format(*data['First'])
         fv = '{1}\n{2:.2f}s'.format(*data['First'])
         second = ':second_place: {0}'.format(*data['Second'])

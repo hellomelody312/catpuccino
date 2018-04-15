@@ -38,12 +38,12 @@ class Slap:
         elif user.id == botid:
             user = ctx.message.author
             botname = self.bot.user.name
-            await self.bot.say("-" + botname + " slaps " + user.mention +
+            await self.bot.say("*" + botname + " slaps " + user.mention +
                                " multiple times with " +
-                               (rndchoice(self.items) + "-"))
+                               (rndchoice(self.items) + "*"))
         else:
-            await self.bot.say("-slaps " + user.name + " with " +
-                               (rndchoice(self.items) + "-"))
+            await self.bot.say("*slaps " + user.name + " with " +
+                               (rndchoice(self.items) + "*"))
 
     @slap.command()
     async def add(self, item):

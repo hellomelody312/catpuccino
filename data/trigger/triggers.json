@@ -82,7 +82,7 @@
             "Mu\u1ed1n \u0103n ch\u1eedi h\u1ea3 <user>?"
         ],
         "server" : null,
-        "triggered" : 30,
+        "triggered" : 33,
         "triggered_by" : "^(<@!309622066666274818>|<@309622066666274818>)$",
         "type" : "random"
     },

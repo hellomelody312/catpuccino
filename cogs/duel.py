@@ -312,7 +312,7 @@ class Duel:
         self.bot = bot
         self.duelists = dataIO.load_json(JSON_PATH)
         self.underway = set()
-        self.analytics = CogAnalytics(self)
+        #self.analytics = CogAnalytics(self)
 
     def _set_stats(self, user, stats):
         userid = user.member.id
@@ -664,10 +664,10 @@ class Duel:
             target.hp += hp_delta
             if hp_delta > 0:
                 s = random.choice(RECOVERS)
-                msg += ' It %s %d HP (remaining %d)' % (s, abs(hp_delta), target.hp)
+                msg += '\nIt %s %d HP (remaining %d)' % (s, abs(hp_delta), target.hp)
             elif hp_delta < 0:
                 s = random.choice(HITS)
-                msg += ' It %s %d damage (remaining %d)' % (s, abs(hp_delta), target.hp)
+                msg += '\nIt %s %d damage (remaining %d) ' % (s, abs(hp_delta), target.hp)
         return msg
 
     def generate_move(self, moves):
@@ -692,9 +692,9 @@ class Duel:
             raise
         return msg
 
-    async def on_command(self, command, ctx):
-        if ctx.cog is self:
-            self.analytics.command(ctx)
+    #async def on_command(self, command, ctx):
+        #if ctx.cog is self:
+            #self.analytics.command(ctx)
 
 
 def weighted_choice(choices):

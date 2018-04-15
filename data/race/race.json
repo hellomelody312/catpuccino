@@ -1,12 +1,12 @@
 {
     "Servers" : {
         "378799662557036546" : {
-            "Mode" : "standard",
+            "Mode" : "zoo",
             "Prize" : [
                 1,
                 100
             ],
-            "Time" : 60
+            "Time" : 30
         }
     }
 }
