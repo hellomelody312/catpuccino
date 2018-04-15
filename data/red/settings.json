@@ -1,0 +1,16 @@
+{
+    "EMAIL" : null,
+    "OWNER" : "293041932542672896",
+    "PASSWORD" : null,
+    "PREFIXES" : [
+        ";"
+    ],
+    "TOKEN" : null,
+    "default" : {
+        "ADMIN_ROLE" : "Lazy Cat",
+        "MOD_ROLE" : "Bot Commander",
+        "PREFIXES" : [
+            ";"
+        ]
+    }
+}
