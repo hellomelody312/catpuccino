@@ -408,7 +408,7 @@ class Owner:
         current_status = server.me.status if server is not None else None
 
         if game:
-            await self.bot.change_presence(game=discord.Game(name=game), status=current_status)
+            await self.bot.change_presence(game=discord.Game(name=game, type=0), status=current_status)
             log.debug('Status set to "{}" by owner'.format(game))
         else:
             await self.bot.change_presence(game=None, status=current_status)
