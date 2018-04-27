@@ -398,7 +398,7 @@ class Owner:
 
     @_set.command(pass_context=True)
     @checks.is_owner()
-    async def play(self, ctx, *, game=None):
+    async def play(self, ctx, *, game:str):
         """Sets Red's playing status
 
         Leaving this empty will clear it."""
@@ -408,7 +408,6 @@ class Owner:
         current_status = server.me.status if server is not None else None
 
         if game:
-            game=game.strip()
             await self.bot.change_presence(game=discord.Game(name=game, type=0), status=current_status)
             log.debug('Status set to "{}" by owner'.format(game))
         else:
@@ -418,11 +417,10 @@ class Owner:
 
     @_set.command(pass_context=True)
     @checks.is_owner()
-    async def listen(self, ctx, *, song=None):
+    async def listen(self, ctx, *, song:str):
         server = ctx.message.server
         current_status = server.me.status if server is not None else None
         if song:
-            song=song.strip()
             await self.bot.change_presence(game=discord.Game(name=song, type=2), status=current_status)
             log.debug('Status set to "{}" by owner'.format(song))
         else:
@@ -432,11 +430,10 @@ class Owner:
 
     @_set.command(pass_context=True)
     @checks.is_owner()
-    async def watch(self, ctx, *, tv=None):
+    async def watch(self, ctx, *, tv:str):
         server = ctx.message.server
         current_status = server.me.status if server is not None else None
         if tv:
-            tv=tv.strip()
             await self.bot.change_presence(game=discord.Game(name=tv, type=3), status=current_status)
             log.debug('Status set to "{}" by owner'.format(tv))
         else:
