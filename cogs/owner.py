@@ -398,7 +398,7 @@ class Owner:
 
     @_set.command(pass_context=True)
     @checks.is_owner()
-    async def game(self, ctx, *, game=None):
+    async def game(self, ctx, *, game:str):
         """Sets Red's playing status
 
         Leaving this empty will clear it."""
@@ -408,9 +408,7 @@ class Owner:
         current_status = server.me.status if server is not None else None
 
         if game:
-            game = game.strip()
-            await self.bot.change_presence(game=discord.Game(name=game),
-                                           status=current_status)
+            await self.bot.change_presence(game=discord.Game(name=game), status=current_status)
             log.debug('Status set to "{}" by owner'.format(game))
         else:
             await self.bot.change_presence(game=None, status=current_status)
