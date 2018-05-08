@@ -1881,3 +1881,218 @@ Traceback (most recent call last):
   File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\summonr.py", line 16, in __init__
     self.charas = self.summons["charas"]
 KeyError: 'charas'
+[08/05/2018 21:52] ERROR red load_cogs 573: You must run `pip3 install tabulate`.
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\serverquotes.py", line 11, in <module>
+    from tabulate import tabulate
+ImportError: No module named 'tabulate'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "red.py", line 570, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 673, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\serverquotes.py", line 13, in <module>
+    raise RuntimeError("You must run `pip3 install tabulate`.") from e
+RuntimeError: You must run `pip3 install tabulate`.
+[08/05/2018 22:17] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 673, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\race.py", line 27, in <module>
+    ('<:dep:379728193558413312>', 'fast'), ('<:xau:379725691094302730>', 'steady'), ('<:GWmythicalGrandCat:371317556734197761>', 'fast'), ('<:mil:441909091992993792>', 'fast')
+TypeError: 'tuple' object is not callable
+[08/05/2018 23:12] ERROR owner _reload 156: ('non-default argument follows default argument', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\insult.py', 18, 21, '    async def insult(self, ctx, user : discord.Member=None, times : int):\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\insult.py", line 18
+    async def insult(self, ctx, user : discord.Member=None, times : int):
+                    ^
+SyntaxError: non-default argument follows default argument
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('non-default argument follows default argument', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\insult.py', 18, 21, '    async def insult(self, ctx, user : discord.Member=None, times : int):\n'))
+[08/05/2018 23:13] ERROR red load_cogs 573: ('non-default argument follows default argument', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\insult.py', 18, 21, '    async def insult(self, ctx, user : discord.Member=None, times : int):\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\insult.py", line 18
+    async def insult(self, ctx, user : discord.Member=None, times : int):
+                    ^
+SyntaxError: non-default argument follows default argument
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "red.py", line 570, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('non-default argument follows default argument', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\insult.py', 18, 21, '    async def insult(self, ctx, user : discord.Member=None, times : int):\n'))
+[08/05/2018 23:16] ERROR owner _reload 156: ('non-default argument follows default argument', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\insult.py', 18, 21, '    async def insult(self, ctx, user : discord.Member=None, times : int):\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\insult.py", line 18
+    async def insult(self, ctx, user : discord.Member=None, times : int):
+                    ^
+SyntaxError: non-default argument follows default argument
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('non-default argument follows default argument', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\insult.py', 18, 21, '    async def insult(self, ctx, user : discord.Member=None, times : int):\n'))
+[09/05/2018 00:35] ERROR red on_command_error 369: Exception in command 'insult'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\insult.py", line 32, in insult
+    nem = randchoice("Tên Rô biến thái","Đồ Rô vô dụng")
+TypeError: choice() takes 2 positional arguments but 3 were given
+[09/05/2018 00:37] ERROR red on_command_error 369: Exception in command 'insult'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\insult.py", line 32, in insult
+    nem = choice("Tên Rô biến thái","Đồ Rô vô dụng")
+NameError: name 'choice' is not defined
+[09/05/2018 00:42] ERROR red on_command_error 369: Exception in command 'insult'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\insult.py", line 45, in insult
+    nem = choice("Yin vd","Con Yin bánh bèo","Con yin bắt pkm toàn fail","Buljangnan")
+TypeError: choice() takes 2 positional arguments but 5 were given
+[09/05/2018 00:44] ERROR owner _reload 156: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\insult.py', 39, 66, '                    nem = randchoice(["Con Hal vd","Hal bánh bèo")\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\insult.py", line 39
+    nem = randchoice(["Con Hal vd","Hal bánh bèo")
+                                                 ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\insult.py', 39, 66, '                    nem = randchoice(["Con Hal vd","Hal bánh bèo")\n'))
+[09/05/2018 01:42] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 972, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\insult.py", line 108, in setup
+    n = Insult(bot)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\insult.py", line 14, in __init__
+    self.insults = fileIO("data/insult/insults.json","load")
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\utils\dataIO.py", line 60, in _legacy_fileio
+    return self.load_json(filename)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\utils\dataIO.py", line 32, in load_json
+    return self._read_json(filename)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\utils\dataIO.py", line 46, in _read_json
+    data = json.load(f)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 268, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 12 column 5 (char 660)
+[09/05/2018 02:09] ERROR red on_command_error 369: Exception in command 'rpoll'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\reactpoll.py", line 30, in rpoll
+    await bot.purge_from(ctx.message.channel, limit=1)
+NameError: name 'bot' is not defined
+[09/05/2018 03:07] ERROR red on_command_error 369: Exception in command 'rate'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 20, in rate
+    await self.bot.say(rate + " nhận được điểm " + randint(0,101) + "/100.")
+TypeError: Can't convert 'int' object to str implicitly

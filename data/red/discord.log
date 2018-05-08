@@ -1,2 +1,4 @@
 [06/05/2017 02:35] WARNING gateway run 73: We have stopped responding to the gateway.
 [12/05/2017 18:39] WARNING gateway run 73: We have stopped responding to the gateway.
+[08/05/2018 21:52] WARNING client __init__ 164: PyNaCl is not installed, voice will NOT be supported
+[08/05/2018 23:13] WARNING client __init__ 164: PyNaCl is not installed, voice will NOT be supported

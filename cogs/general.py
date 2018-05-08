@@ -34,28 +34,28 @@ class RPSParser:
 
 class General:
     """General commands."""
-    charas = ["Hatsune Miku","Guzma","Milotic","DT","Hello Kitty","Gyarados","Chikapu","Mimikkyu","Madoka","Giovanni","Maxie `:heart:` Archie","Kukui","Lillie","Gladion","Hau","giáo sư Oak","Cynthia","Wallace",
-                  "Jynx","Ditto","Pyukumuku","Togedemaru","Doraemon","Eevee","Vaporeon","Touya Kinomoto","Yue","Cerberus","Clow Reed","Li Syaoran","Daidouji Tomoyo","Ryan Raynolds","Togepi","Alolan Raichu","Dialga",
-                  "Giratina","Arceus","Mewtwo","Shaymin","Sakura Kinomoto","Entei","Raikou","Suicune","Primal Groudon", "Kyogre","Victini","Zygarde","Solgaleo","Lunala","Bibi","Thần Mèo","Doge","Lucario",
+    charas = ["Hatsune Miku","Guzma","Milotic","DT","Hello Kitty","Beyoncé","Chikapu","Mimikkyu","Madoka","Giovanni","Maxie :heart: Archie","Kukui","Lillie","Gladion","Hau","giáo sư Oak","Cynthia","Wallace",
+                  "Jynx","Ditto","Gal","Togedemaru","Doraemon","Yin","Jennie","Touya Kinomoto","Yue","Cerberus","Clow Reed","Li Syaoran","Daidouji Tomoyo","Ryan Reynolds","Bì","RO","Dialga",
+                  "Giratina","Arceus","Mewtwo","Shaymin","Sakura Kinomoto","Entei","Raikou","Suicune","Primal Groudon", "Kyogre","Victini","Zygarde","Solgaleo","Lunala","Bibi","Doge",
                   "Taylor Swift","Katy Perry","Iron Man", "Bích Nụ","Mai Ngô","Panda","Donald Trump","Putin","Harry Potter","Lady Gaga","Chị Dậu","Captain America","Người Dơi","Người Nhện","Hulk",
-                  "Nicki Minaj","Hermione Granger","Giáo sư McGonnagal","Ron Weasley","RO","Một người nào đó trong chatbox này","Batman","Superman","Loki","Thor"]
+                  "Nicki Minaj","Hermione Granger","Giáo sư McGonagall","Ariana Grande","RO","một người nào đó trong chatbox này","Batman","Superman","Loki","Thor"]
 
     def __init__(self, bot):
         self.bot = bot
         self.stopwatches = {}
         self.poll_sessions = []
     def bshuffle():
-        balls = choice(["Chắc có.", "Hiển nhiên rồi.", choice(General.charas) + " bảo " + choice(["có là có :xuy:","không là không."]), "Hỏi " + choice(General.charas) +", " + choice(General.charas) + " bảo có", "69% " + choice(["có","không"]),
-                        choice(General.charas) + " bảo " + choice(["có","không"]) + ".",
-                        "HELL YES", "Mơ đi cưng", "39% " + choice(["có","không"]), "Chắc cỡ " + str(randint(0,101)) + "%", "Nguồn thông tin lân cận bảo " + choice(["có","không"]), "Chừng nào Flygon có mega thì có :feelssadman:",
-                        "Đang bận đi WC, hỏi lại sau nha", "Thôi tốt nhất không nên nói", "Sẽ biết vào ngày thứ " + str(randint(2,7)) + "sắp tới", "Ờ :dep:",
-                        "Đáng ngờ lắm :liec:", "Hãy quen với điều đó đi", "Éo :yamaha:", "Để suy nghĩ thêm :thatbooty:", choice(General.charas) + " " + choice(["rất","không"]) + " thích điều này"])
+        balls = choice(["Chắc có.", "Hiển nhiên rồi.", choice(General.charas) + " bảo " + choice(["có nha <:xuy:379733046816931842>","không <:lol:381816357336907776>"]), choice(General.charas) + " bảo có <:ro:437654455505125406>",
+                        choice(General.charas) + " bảo " + choice(["có","không"]) + ".","69% " + choice(["có","không"]) + "<:ahihi:388302301191733249>",
+                        "HELL YES", "Mơ đi cưng <:lol:381816357336907776>", "39% " + choice(["có","không"]) + "<:dep:379728193558413312>", "Chắc cỡ " + str(randint(0,101)) + "% <:thatbooty:378887011744088064>", "Nguồn thông tin lân cận bảo " + choice(["có","không"])+ "<:xuy:379733046816931842>", "Chừng nào Flygon có mega thì có <:fsm:437638745102221334>",
+                        "Thôi tốt nhất không nên nói", "Ờ <:dep:379728193558413312>",
+                        "Coi chừng có. Đáng ngờ lắm <:hut:441913966231289856>", "Đúng rồi. Hãy quen với điều đó đi", "Đéo <:yamaha:379730516972142602>"])
         return(balls)
 
     @commands.command(hidden=True)
     async def ping(self):
         """Pong."""
-        await self.bot.say("Pong.")
+        await self.bot.say("Ping cl")
 
     @commands.command()
     async def choose(self, *choices):

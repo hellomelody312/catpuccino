@@ -8,3 +8,6 @@ data/red/red.log
 *.log
 data/duel/duelist.json
 *.tmp
+data/mod/mod.log
+data/red/settings.json
+data/red/settings.json

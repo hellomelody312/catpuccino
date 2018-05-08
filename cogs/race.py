@@ -13,16 +13,25 @@ from __main__ import send_cmd_help
 from .utils import checks
 from .utils.dataIO import dataIO
 
-animals = ((':rabbit2:', 'fast'), (':monkey:', 'fast'), (':cat2:', 'fast'), (':mouse2:', 'slow'),
-           (':chipmunk:', 'fast'), (':rat:', 'fast'), (':dove:', 'fast'), (':bird:', 'fast'),
-           (':dromedary_camel:', 'steady'), (':camel:', 'steady'), (':dog2:', 'steady'),
-           (':poodle:', 'steady'), (':racehorse:', 'steady'), (':ox:', 'abberant'),
-           (':cow2:', 'abberant'), (':elephant:', 'abberant'), (':water_buffalo:', 'abberant'),
-           (':ram:', 'abberant'), (':goat:', 'abberant'), (':sheep:', 'abberant'),
-           (':leopard:', 'predator'), (':tiger2:', 'predator'), (':dragon:', 'special'),
-           (':unicorn:', 'special'), (':turtle:', 'slow'), (':bug:', 'slow'), (':rooster:', 'slow'),
-           (':snail:', 'slow'), (':scorpion:', 'slow'), (':crocodile:', 'slow'), (':pig2:', 'slow'),
-           (':turkey:', 'slow'), (':duck:', 'slow'), (':baby_chick:', 'slow'))
+animals = (#(':rabbit2:', 'fast'), (':monkey:', 'fast'), (':cat2:', 'fast'), (':mouse2:', 'slow'),
+           #(':chipmunk:', 'fast'), (':rat:', 'fast'), (':dove:', 'fast'), (':bird:', 'fast'),
+           #(':dromedary_camel:', 'steady'), (':camel:', 'steady'), (':dog2:', 'steady'),
+           #(':poodle:', 'steady'), (':racehorse:', 'steady'), (':ox:', 'abberant'),
+           #(':cow2:', 'abberant'), (':elephant:', 'abberant'), (':water_buffalo:', 'abberant'),
+           #(':ram:', 'abberant'), (':goat:', 'abberant'), (':sheep:', 'abberant'),
+           #(':leopard:', 'predator'), (':tiger2:', 'predator'), (':dragon:', 'special'),
+           #(':unicorn:', 'special'), (':turtle:', 'slow'), (':bug:', 'slow'), (':rooster:', 'slow'),
+           #(':snail:', 'slow'), (':scorpion:', 'slow'), (':crocodile:', 'slow'), (':pig2:', 'slow'),
+           #(':turkey:', 'slow'), (':duck:', 'slow'), (':baby_chick:', 'slow')
+           ('<:ro:437654455505125406>', 'steady'), ('<:hut:441913966231289856>', 'slow'), ('<:yin:442214143483838464>', 'fast'), ('<:aaa:379129973660712961>', 'abberant'),
+           ('<:dep:379728193558413312>', 'fast'), ('<:xau:379725691094302730>', 'steady'), ('<:mil:441909091992993792>', 'fast'),
+           ('<:ree:397654450518360074>', 'fast'), ('<:yamaha:379730516972142602>', 'steady'), ('<:huehue:388300450102902784>', 'predator'),
+           ('<:hooh:381791528110129153>', 'hack'), ('<:pew:412228348391981056>', 'predator'),
+           ('<:kuk:438360479275155456>', 'slow'), ('<:doge:379114406099025920>', 'steady'), ('<:hihi:379731982143455243>', 'steady'),
+           ('<:chetne:378883075301572608>', 'abberant'), ('<:xi:379711420792832015>', 'predator'),('<:duh:386506307722805248>','abberant'),
+           ('<:lol:381816357336907776>', 'predator'), ('<:judge:443033551764717578>', 'steady'), ('<:dafuq:378912971788648459>', 'fast'),
+           ('<:feelsbadchu:388381951205048320>', 'steady'), ('<:lugia:388381948193800202>', 'hack'),('<:chyimdi:388381947942010882>', 'fast'))
+
 
 
 class Racer:
@@ -39,7 +48,7 @@ class Racer:
         self.current = Racer.track + self.animal
 
     def field(self):
-        field = ":carrot: **{}** :flag_black:  [{}]".format(self.current, self.user)
+        field = "<:sky:388303634527682560> **{}** :flag_black:  [{}]".format(self.current, self.user.name)
         return field
 
     def get_position(self):
@@ -57,25 +66,28 @@ class Racer:
 
     def move(self):
         if self.mode == 'slow':
-            return random.randint(1, 3) * 3
+            return random.randint(3, 5) * 2
 
         elif self.mode == 'fast':
-            return random.randint(0, 4) * 3
+            return random.randint(2, 6) * 2
 
         elif self.mode == 'steady':
-            return 2 * 3
+            return random.randint(7, 9)
+
+        elif self.mode == 'hack':
+            return 5 * 2
 
         elif self.mode == 'abberant':
-            if random.randint(1, 100) >= 90:
-                return 5 * 3
+            if random.randint(1, 100) >= 65:
+                return 8 * 2
             else:
-                return random.randint(0, 2) * 3
+                return random.randint(2, 4) * 2
 
         elif self.mode == 'predator':
             if self.turn % 2 == 0:
                 return 0
             else:
-                return random.randint(2, 5) * 3
+                return random.randint(6, 9) * 2
 
         elif self.animal == ':unicorn:':
             if self.turn % 3:
@@ -211,7 +223,7 @@ class Race:
         await self.bot.say("Parameters reset.")
 
     @race.command(name="start", pass_context=True)
-    @commands.cooldown(1, 120, commands.BucketType.server)
+    @commands.cooldown(1, 60, commands.BucketType.server)
     async def _start_race(self, ctx):
         """Start an animal race and enter yourself as participant
 
@@ -240,10 +252,11 @@ class Race:
         data['Race Active'] = True
         data['Players'][author.id] = {}
         wait = settings['Time']
+        await self.bot.purge_from(ctx.message.channel, limit=1)
         await self.bot.say(":triangular_flag_on_post: A race has begun! Type {}race enter "
                            "to join the race! :triangular_flag_on_post:\n{}The race will "
                            "begin in {} seconds!\n\n**{}** entered the "
-                           "race!".format(ctx.prefix, ' ' * 25, wait, author.mention))
+                           "race!".format(ctx.prefix, ' ' * 20, wait, author.mention))
         await asyncio.sleep(wait)
         await self.bot.say(":checkered_flag: The race is now in progress :checkered_flag:")
 
@@ -301,6 +314,7 @@ class Race:
             return
         else:
             data['Players'][author.id] = {}
+            await self.bot.purge_from(ctx.message.channel, limit=1)
             await self.bot.say("**{}** entered the race!".format(author.name))
 
     @race.command(name="claim", pass_context=True)

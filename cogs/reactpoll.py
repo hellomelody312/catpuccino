@@ -27,6 +27,7 @@ class ReactPoll:
         message = ctx.message
         channel = message.channel
         server = message.server
+        await self.bot.purge_from(ctx.message.channel, limit=1)
         if len(text) == 1:
             if text[0].lower() == "stop":
                 await self.endpoll(message)

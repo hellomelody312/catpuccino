@@ -24,7 +24,7 @@
     "cogs.race" : true,
     "cogs.reactpoll" : true,
     "cogs.remindme" : false,
-    "cogs.serverquotes" : true,
+    "cogs.serverquotes" : false,
     "cogs.slap" : true,
     "cogs.smartreact" : true,
     "cogs.streams" : false,
