@@ -2096,3 +2096,395 @@ Traceback (most recent call last):
   File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 20, in rate
     await self.bot.say(rate + " nhận được điểm " + randint(0,101) + "/100.")
 TypeError: Can't convert 'int' object to str implicitly
+[09/05/2018 12:53] ERROR red on_command_error 369: Exception in command 'rank'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 30, in rate
+    rank = text.split(";")
+AttributeError: 'tuple' object has no attribute 'split'
+[09/05/2018 13:02] ERROR red on_command_error 369: Exception in command 'rank'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 31, in rate
+    if not re.search(';',text):
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\re.py", line 173, in search
+    return _compile(pattern, flags).search(string)
+TypeError: expected string or bytes-like object
+[09/05/2018 13:03] ERROR red on_command_error 369: Exception in command 'rank'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 31, in rate
+    if not re.search(';',text):
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\re.py", line 173, in search
+    return _compile(pattern, flags).search(string)
+TypeError: expected string or bytes-like object
+[09/05/2018 13:03] ERROR red on_command_error 369: Exception in command 'rank'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 34, in rate
+    rank = text.split(";")
+AttributeError: 'tuple' object has no attribute 'split'
+[09/05/2018 13:05] ERROR red on_command_error 369: Exception in command 'rank'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 39, in rate
+    msg = " > ".join(ranked)
+TypeError: can only join an iterable
+[09/05/2018 13:08] ERROR red on_command_error 369: Exception in command 'rank'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 35, in rate
+    rank = text.splits(";")
+AttributeError: 'tuple' object has no attribute 'splits'
+[09/05/2018 13:12] ERROR red on_command_error 369: Exception in command 'rank'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 40, in rate
+    msg = " > ".join(str(x)for x in ranked)
+TypeError: 'NoneType' object is not iterable
+[09/05/2018 13:23] ERROR red on_command_error 369: Exception in command 'rank'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 40, in rate
+    msg = " > ".join(ranked)
+TypeError: can only join an iterable
+[09/05/2018 13:24] ERROR red on_command_error 369: Exception in command 'rank'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 39, in rate
+    ranked = list(random.shuffle(rank))
+TypeError: 'NoneType' object is not iterable
+[09/05/2018 13:24] ERROR owner _reload 156: ('expected an indented block', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\engine.py', 46, 0, 'def setup(bot):\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 46
+    def setup(bot):
+                  ^
+IndentationError: expected an indented block
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('expected an indented block', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\engine.py', 46, 0, 'def setup(bot):\n'))
+[09/05/2018 13:26] ERROR red on_command_error 369: Exception in command 'rank'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 34, in rate
+    rank = text.split(";")
+AttributeError: 'tuple' object has no attribute 'split'
+[09/05/2018 13:28] ERROR red on_command_error 369: Exception in command 'rank'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 34, in rate
+    rank = text.split(";")
+AttributeError: 'tuple' object has no attribute 'split'
+[09/05/2018 13:29] ERROR owner _reload 156: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\engine.py', 34, 34, '            rank = ans.strip() for ans in text.split(";")\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 34
+    rank = ans.strip() for ans in text.split(";")
+                         ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\engine.py', 34, 34, '            rank = ans.strip() for ans in text.split(";")\n'))
+[09/05/2018 13:30] ERROR red on_command_error 369: Exception in command 'rank'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 34, in rate
+    rank = [ans.strip() for ans in text.split(";")]
+AttributeError: 'tuple' object has no attribute 'split'
+[09/05/2018 13:37] ERROR red on_command_error 369: Exception in command 'rank'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 40, in rate
+    msg = " > ".join(str(x) for x in ranked)
+TypeError: 'NoneType' object is not iterable
+[09/05/2018 13:38] ERROR red on_command_error 369: Exception in command 'rank'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 40, in rate
+    await self.bot.say(ranked)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400): Cannot send an empty message
+[09/05/2018 13:49] ERROR red on_command_error 369: Exception in command 'rank'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 40, in rank
+    ranked = scrambled(rank)
+NameError: name 'scrambled' is not defined
+[09/05/2018 14:37] ERROR owner _reload 156: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\engine.py', 30, 36, '    async def rank(self, ctx, *text*):\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 30
+    async def rank(self, ctx, *text*):
+                                   ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\engine.py', 30, 36, '    async def rank(self, ctx, *text*):\n'))
+[09/05/2018 14:39] ERROR owner _reload 156: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\engine.py', 30, 35, '    async def rank(self, ctx, text*):\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 30
+    async def rank(self, ctx, text*):
+                                  ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\engine.py', 30, 35, '    async def rank(self, ctx, text*):\n'))
+[09/05/2018 14:50] ERROR red on_command_error 369: Exception in command 'rate'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 21, in rate
+    await self.bot.say(rate + ": " + str(randint(0,101)) + "/100.")
+NameError: name 'randint' is not defined
+[09/05/2018 14:51] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 673, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 4, in <module>
+    from random import randchoice
+ImportError: cannot import name 'randchoice'
+[09/05/2018 16:01] ERROR owner _reload 156: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\insult.py', 31, 30, '                        await.self.bot.say("Sao anh nỡ chửi em anh mil huhu...")\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\insult.py", line 31
+    await.self.bot.say("Sao anh nỡ chửi em anh mil huhu...")
+         ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\insult.py', 31, 30, '                        await.self.bot.say("Sao anh nỡ chửi em anh mil huhu...")\n'))
+[09/05/2018 19:42] ERROR red on_command_error 369: Exception in command 'race enter'
+Traceback (most recent call last):
+  File "lib\discord\client.py", line 1379, in purge_from
+    msg = yield from iterator.iterate()
+  File "lib\discord\iterators.py", line 117, in iterate
+    return self.messages.get_nowait()
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\queues.py", line 183, in get_nowait
+    raise QueueEmpty
+asyncio.queues.QueueEmpty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\race.py", line 317, in _enter_race
+    await self.bot.purge_from(ctx.message.channel, limit=1)
+  File "lib\discord\client.py", line 1388, in purge_from
+    yield from self.delete_message(ret[-1])
+  File "lib\discord\client.py", line 1263, in delete_message
+    yield from self.http.delete_message(channel.id, message.id, guild_id)
+  File "lib\discord\http.py", line 198, in request
+    raise NotFound(r, data)
+discord.errors.NotFound: NOT FOUND (status code: 404): Unknown Message
+[09/05/2018 20:18] ERROR red on_command_error 369: Exception in command 'rate'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 31, in rate
+    if score/max <=0.9:
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+[09/05/2018 20:18] ERROR red on_command_error 369: Exception in command 'rate'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 31, in rate
+    if score/max <=0.9:
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+[09/05/2018 20:19] ERROR red on_command_error 369: Exception in command 'rate'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 31, in rate
+    if score/max <=0.9:
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+[09/05/2018 20:19] ERROR red on_command_error 369: Exception in command 'rate'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 33, in rate
+    await self.bot.say(rate + ": " + score + "/" + max + ". " + cmt)
+TypeError: Can't convert 'int' object to str implicitly
+[09/05/2018 20:19] ERROR red on_command_error 369: Exception in command 'rate'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 33, in rate
+    await self.bot.say(rate + ": " + score + "/" + max + ". " + cmt)
+TypeError: Can't convert 'int' object to str implicitly
+[09/05/2018 20:20] ERROR red on_command_error 369: Exception in command 'rate'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 33, in rate
+    await self.bot.say(rate + ": " + str(score) + "/" + str(max) + ". " + cmt)
+TypeError: Can't convert 'int' object to str implicitly
+[09/05/2018 20:21] ERROR red on_command_error 369: Exception in command 'rate'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 33, in rate
+    await self.bot.say(rate + ": " + str(score) + "/" + str(max) + ". " + cmt)
+UnboundLocalError: local variable 'cmt' referenced before assignment
+[09/05/2018 20:21] ERROR red on_command_error 369: Exception in command 'rate'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 33, in rate
+    await self.bot.say(rate + ": " + str(score) + "/" + str(max) + ". " + cmt)
+UnboundLocalError: local variable 'cmt' referenced before assignment
+[09/05/2018 20:22] ERROR red on_command_error 369: Exception in command 'rate'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 33, in rate
+    await self.bot.say(rate + ": " + str(score) + "/" + str(max) + ". " )
+UnboundLocalError: local variable 'cmt' referenced before assignment
+[09/05/2018 20:51] ERROR owner _reload 156: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\engine.py', 27, 24, '            elif score = 0:\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\engine.py", line 27
+    elif score = 0:
+               ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\engine.py', 27, 24, '            elif score = 0:\n'))

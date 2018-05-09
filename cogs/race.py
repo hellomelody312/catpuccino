@@ -66,28 +66,28 @@ class Racer:
 
     def move(self):
         if self.mode == 'slow':
-            return random.randint(3, 5) * 2
+            return random.randint(4, 10)
 
         elif self.mode == 'fast':
-            return random.randint(2, 6) * 2
+            return random.randint(1, 12)
 
         elif self.mode == 'steady':
-            return random.randint(7, 9)
+            return random.randint(5, 8)
 
         elif self.mode == 'hack':
-            return 5 * 2
+            return random.randint(5, 10)
 
         elif self.mode == 'abberant':
-            if random.randint(1, 100) >= 65:
-                return 8 * 2
+            if random.randint(1, 100) >= 68:
+                return 12
             else:
-                return random.randint(2, 4) * 2
+                return random.randint(4, 8)
 
         elif self.mode == 'predator':
             if self.turn % 2 == 0:
                 return 0
             else:
-                return random.randint(6, 9) * 2
+                return random.randint(10, 15)
 
         elif self.animal == ':unicorn:':
             if self.turn % 3:
@@ -253,12 +253,12 @@ class Race:
         data['Players'][author.id] = {}
         wait = settings['Time']
         await self.bot.purge_from(ctx.message.channel, limit=1)
-        await self.bot.say(":triangular_flag_on_post: A race has begun! Type {}race enter "
-                           "to join the race! :triangular_flag_on_post:\n{}The race will "
-                           "begin in {} seconds!\n\n**{}** entered the "
-                           "race!".format(ctx.prefix, ' ' * 20, wait, author.mention))
+        await self.bot.say(":triangular_flag_on_post: Đua thôi các tình êu ơi! Gõ {}re (race enter) "
+                           "để tham gia nào! :triangular_flag_on_post:\n{}Thời gian tham "
+                           "gia là {} giây.\n\n**{}** đã tham gia. "
+                           "Ahihi".format(ctx.prefix, ' ' * 20, wait, author.name))
         await asyncio.sleep(wait)
-        await self.bot.say(":checkered_flag: The race is now in progress :checkered_flag:")
+        await self.bot.say(":checkered_flag: Cá độ cá độ eiiiii :checkered_flag:")
 
         data['Race Start'] = True
 
@@ -315,7 +315,7 @@ class Race:
         else:
             data['Players'][author.id] = {}
             await self.bot.purge_from(ctx.message.channel, limit=1)
-            await self.bot.say("**{}** entered the race!".format(author.name))
+            await self.bot.say("**{}** đã tham gia. Ahihi".format(author.name))
 
     @race.command(name="claim", pass_context=True)
     async def _claim_race(self, ctx):
@@ -399,10 +399,12 @@ class Race:
         racers = []
 
         if mode == 'zoo':
-            if len(data['Players']) == 1:
-                bot_set = random.choice(animals)
-                racers = [Racer(bot_set[0], bot_set[1], self.bot.user)]
+            #if len(data['Players']) == 1:
+                #bot_set = random.choice(animals)
+                #racers = [Racer(bot_set[0], bot_set[1], self.bot.user)]
 
+            #bot_set = random.choice(animals)
+            #racers = [Racer(bot_set[0], bot_set[1], self.bot.user)]
             for user in data['Players']:
                 mobj = author.server.get_member(user)
                 animal_set = random.choice(animals)

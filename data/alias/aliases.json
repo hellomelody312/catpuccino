@@ -18,6 +18,8 @@
         "ts" : "triggerset"
     },
     "378799662557036546" : {
-        "cl" : "cleanup messages"
+        "cl" : "cleanup messages",
+        "re" : "race enter",
+        "rs" : "race start"
     }
 }

@@ -27,16 +27,19 @@ class Insult:
                 if nem == "None":
                     nem = str(user.name)
                 if user.id == self.bot.user.id:
-                    msg = randchoice([", mày đần tới mức nghĩ chụy ngu mà tự chửi mình hả? Xem lại mình đi cái thứ não bò!",
-                                      " Đù ghê luôn. Thấy tao ngầu quá tính chửi tao hả mày? <:ro:437654455505125406>",
-                                      " giờ vẫn có đứa tính kêu tao chửi tao. Tao khô lời <:ro:437654455505125406>"])
-                    nem = ctx.message.author.mention
-                if user.id == "293041932542672896":
+                    if ctx.message.author.id == "293041932542672896":
+                        await self.bot.say("Sao anh nỡ chửi em anh mil huhu...")
+                    else:
+                        msg = randchoice([", mày đần tới mức nghĩ chụy ngu mà tự chửi mình hả? Xem lại mình đi cái thứ não bò!",
+                                          " Đù ghê luôn. Thấy tao ngầu quá tính chửi tao hả mày? <:ro:437654455505125406>",
+                                          " giờ vẫn có đứa tính kêu tao chửi tao. Tao khô lời <:ro:437654455505125406>"])
+                        nem = ctx.message.author.mention
+                        await self.bot.say(nem + msg)
+                elif user.id == "293041932542672896":
                     msg = randchoice(["Kìa anh Mil, có đứa kêu em chửi anh kìa.",
                                       "Sir Meocu già ai cũng biết rồi, lười chửi lém.",
                                       "Tao biết Mil nó mê trai nè. Nó mê Thỏ.",
                                       "Ngủ điều độ vào cho khỏe mil à :heart:"])
-
                     await self.bot.say(msg)
                 else:
                     for xz in range (0,times):
@@ -47,7 +50,7 @@ class Insult:
                         if user.id == "123385776628039680":
                             nem = randchoice(["Admin vô dụng","DT mê trai","DT biến thái","DT"])
                         if user.id == "226366391509450752":
-                            nem = randchoice(["con Hal vd","tên Hal bánh bèo"])
+                            nem = randchoice(["Hal vd","Hal bánh bèo"])
                         if user.id == "303854270057545729":
                             nem = randchoice(["lãnh đạo phát xít","mèo","mèo kia","mèo mê trai","mèo bánh bèo"])
                         if user.id == "391758777025560588":
