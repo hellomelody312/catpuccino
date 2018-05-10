@@ -54,7 +54,11 @@ class Engine:
             else:
                 if victim!=None:
                     nem = gender + " " + nem
+                else:
+                    nem = gender
                 ge = ""
+        else:
+            ge = ""
         if ctx.message.author.id == "343674681829621761":
             if randint(1,10) > 5:
                 choice = "Bram Grenfeld"
