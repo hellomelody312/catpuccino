@@ -36,7 +36,7 @@ class Engine:
         if gender!=None:
             troll = randint(1,100)
             if gender.lower() == "m" or gender.lower() == "male":
-                if troll > 6:
+                if troll > 7:
                     choice = str(randchoice(self.charas[0]))
                     ge = ge + "nam"
                 else:
@@ -44,13 +44,13 @@ class Engine:
                     ge = ge + "nữ"
                     msg= msg + "Kiếm nam hoài không chán ư, sao không thử đổi vị 1 chút?"
             elif gender.lower() == "f" or gender.lower() == "female":
-                if troll > 6:
+                if troll > 7:
                     choice = str(randchoice(self.charas[1]))
                     ge = ge + "nữ"
                 else:
                     choice = str(randchoice(self.charas[0]))
                     ge = ge + "nam"
-                    msg= msg + "Kiếm nữ hoài không chán ư, sao không thử đổi vị 1 chút?"
+                    msg= msg + "Kiếm nữ hoài không chán ư, sao không thử đổi vị 1 chút? "
             else:
                 if victim!=None:
                     nem = gender + " " + nem
@@ -62,9 +62,17 @@ class Engine:
         if ctx.message.author.id == "343674681829621761":
             if randint(1,10) > 5:
                 choice = "Bram Grenfeld"
+        if randint(2,100) < 9:
+            choice = "không ai cả"
         msg = msg + "Người" + ge +" hợp với " + nem + " là " + choice
         if choice == "không ai cả":
-            msg = msg + ". Thôi FA suốt đời đi là vừa."
+            if ge!="":
+                if ge == " nam":
+                    msg = msg + " Nhưng nếu là nữ thì có " + str(randchoice(self.charas[1])) + " hợp đó."
+                elif ge == " nữ":
+                    msg = msg + " Nhưng nếu là nam thì có " + str(randchoice(self.charas[0])) + " hợp đó."
+            else:
+                msg = msg + ". Thôi FA suốt đời đi là vừa."
         else:
             action = str(randchoice(self.actions))
             if action == "hát":
