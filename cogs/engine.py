@@ -22,13 +22,25 @@ class Engine:
         await self.bot.say("VROOM VROOM!")
 
     @commands.command(pass_context=True)
-    async def soulmate(self, ctx):
+    async def soulmate(self, ctx, gender :str =None,*,victim:str=None):
         """You don't need no instruction manual to be free!!"""
-        if ctx.message.author.nick:
+        if victim!=None:
+            nem = victim
+        elif ctx.message.author.nick:
             nem = ctx.message.author.nick
         else:
             nem = ctx.message.author.name
-        choice = str(randchoice(self.charas))
+        if gender!=None:
+            ge = " "
+            if gender.lower() == "m" or gender.lower() == "male":
+                choice = str(randchoice(self.charas[0]))
+                ge = ge + "nam"
+            elif gender.lower() == "f" or gender.lower() == "female":
+                choice = str(randchoice(self.charas[1]))
+                ge = ge + "nữ"
+            else:
+                choice = str(randchoice(self.charas[0]+self.charas[1]))
+                nem = gender + nem
         if ctx.message.author.id == "343674681829621761":
             if randint(1,10) > 5:
                 choice = "Bram Grenfeld"
@@ -36,7 +48,7 @@ class Engine:
         if action == "hát":
             song = str(randchoice(self.songs))
             action = action + " " + song
-        await self.bot.say("Người hợp với " + nem + " là " + choice + ". Các bạn nên " + action + " đi.")
+        await self.bot.say("Người" + ge +" hợp với " + nem + " là " + choice + ". Các bạn nên " + action + " đi.")
 
     @commands.command(pass_context=True, no_pm=True, name='rate')
     async def rate(self, ctx, *, rate:str = None):
