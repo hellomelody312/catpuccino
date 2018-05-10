@@ -23,25 +23,27 @@ class Engine:
             score = randint(-1,101)
             special = randint(1,100)
             if score/100 < 0:
-                cmt = randchoice(["Thảm hại chưa cưng","thôi đi nhảy cầu đi","tởm"])
+                cmt = randchoice(["Thảm hại chưa cưng","thôi đi nhảy cầu đi","tởm","ewwwwwww","<:ro:437654455505125406>"])
             elif score == 0:
-                cmt = randchoice(["muhaahAhAhaHHahha",":smile:","Nice"])
-            elif 0 < score/100 < 0.15:
-                cmt = randchoice(["tệ vl","Thôi bỏ đi cưng","đứa nào tính slash ship hả?"])
+                cmt = randchoice(["muhaahAhAhaHHahha",":smile:","Nice","<:ro:437654455505125406>"])
+            elif 0 < score/100 < 0.18:
+                cmt = randchoice(["tệ vl","Thôi bỏ đi cưng","rác rưởi","thứ rẻ rách","eww","đứa nào tính slash ship hả?","<:ro:437654455505125406>"])
             elif score/100 < 0.35:
-                cmt = randchoice(["could be better","muốn thử lại hông?","rr","vd"])
-            elif score/100 < 0.65:
-                cmt = randchoice(["meh","tàm tạm","ít ra gần trung bình rồi","chấp nhận được"])
+                cmt = randchoice(["could be better","muốn thử lại hông?","rác vl","vd","<:kuk:438360479275155456>"])
+            elif score/100 < 0.5:
+                cmt = randchoice(["meh","tàm tạm","ít ra gần trung bình rồi","chấp nhận được","duh","<:doge:379114406099025920>"])
+            elif score/100 < 0.75:
+                cmt = randchoice(["cũng ok","có triển vọng","ít ra trên trung bình rồi","có tiềm năng","mm hmm","<:thatbooty:378887011744088064>"])
             elif score/100 < 0.9:
-                cmt = randchoice(["Có vẻ tốt","khá đấy","Nai xừ","khá ổn","cũng ok"])
+                cmt = randchoice(["Có vẻ tốt","khá đấy","Nai xừ <:dep:379728193558413312>","khá ổn","ghê chưa"])
             elif score/100 < 1:
-                cmt = randchoice(["Ghê lun","Hay","Hài lòng chưa?","đứa nào nói rig ta chửi","mood tốt nên cho tốt đó","đù","vl cao"])
+                cmt = randchoice(["Ghê lun","Hay","Hài lòng chưa?","đứa nào nói rig ta chửi","mood tốt nên cho tốt đó","đù <:dep:379728193558413312>","vl cao"])
             else:
-                cmt = randchoice(["Purrfecttttt","VÃI LỜ","Ghê ghê ghê","Kinh","Ahahahahahhha","sắp có người ghen tị","kiểu gì cũng có đứa kêu rigged"])
+                cmt = randchoice(["Purrfecttttt","VÃI LỜ","Ghê ghê ghê","Đù <:dep:379728193558413312>","Ahahahahahhha","sắp có người ghen tị <:yin:442214143483838464>","kiểu gì cũng có đứa kêu rigged"])
             if special < 3:
                 score = 1000
                 cmt = randchoice(["SAIKOU DESU WA","A ĐÙ LIT VCL","Gk3^^^^^^^","UNSTOPPABLE"])
-            elif special == 100:
+            elif special == 100 or re.search('mil',rate):
                 score = 9001
                 cmt = "IT'S OVER 9000!!!!"
             await self.bot.say(rate + ": " + str(score) + "/100. " + cmt)

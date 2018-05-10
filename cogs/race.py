@@ -399,9 +399,9 @@ class Race:
         racers = []
 
         if mode == 'zoo':
-            #if len(data['Players']) == 1:
-                #bot_set = random.choice(animals)
-                #racers = [Racer(bot_set[0], bot_set[1], self.bot.user)]
+            if len(data['Players']) == 1:
+                bot_set = random.choice(animals)
+                racers = [Racer(bot_set[0], bot_set[1], self.bot.user)]
 
             #bot_set = random.choice(animals)
             #racers = [Racer(bot_set[0], bot_set[1], self.bot.user)]
