@@ -23,8 +23,9 @@ class Engine:
 
     @commands.command(pass_context=True)
     async def soulmate(self, ctx, gender :str =None,*,victim:str=None):
-        """You don't need no instruction manual to be free!!"""
-        ge =""
+        """;soulmate [male/female] [victim's name]"""
+        ge =" "
+        msg=""
         choice = str(randchoice(self.charas[0]+self.charas[1]))
         if victim!=None:
             nem = victim
@@ -33,15 +34,27 @@ class Engine:
         else:
             nem = ctx.message.author.name
         if gender!=None:
-            ge = " "
+            troll = randint(1,100)
             if gender.lower() == "m" or gender.lower() == "male":
-                choice = str(randchoice(self.charas[0]))
-                ge = ge + "nam"
+                if troll > 6:
+                    choice = str(randchoice(self.charas[0]))
+                    ge = ge + "nam"
+                else:
+                    choice = str(randchoice(self.charas[1]))
+                    ge = ge + "nữ"
+                    msg= msg + "Kiếm nam hoài không chán ư, sao không thử đổi vị 1 chút?"
             elif gender.lower() == "f" or gender.lower() == "female":
-                choice = str(randchoice(self.charas[1]))
-                ge = ge + "nữ"
+                if troll > 6:
+                    choice = str(randchoice(self.charas[1]))
+                    ge = ge + "nữ"
+                else:
+                    choice = str(randchoice(self.charas[0]))
+                    ge = ge + "nam"
+                    msg= msg + "Kiếm nữ hoài không chán ư, sao không thử đổi vị 1 chút?"
             else:
-                nem = gender + nem
+                if victim!=None:
+                    nem = gender + " " + nem
+                ge = ""
         if ctx.message.author.id == "343674681829621761":
             if randint(1,10) > 5:
                 choice = "Bram Grenfeld"
@@ -49,7 +62,8 @@ class Engine:
         if action == "hát":
             song = str(randchoice(self.songs))
             action = action + " " + song
-        await self.bot.say("Người" + ge +" hợp với " + nem + " là " + choice + ". Các bạn nên " + action + " đi.")
+        msg = msg + "Người" + ge +" hợp với " + nem + " là " + choice + ". Các bạn nên " + action + " đi."
+        await self.bot.say(msg)
 
     @commands.command(pass_context=True, no_pm=True, name='rate')
     async def rate(self, ctx, *, rate:str = None):
