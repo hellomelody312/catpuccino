@@ -3,18 +3,33 @@ import random
 from random import randint
 from random import choice as randchoice
 import re
+from cogs.utils.dataIO import dataIO
+from .utils.dataIO import fileIO
 
 class Engine:
     """leavin you in the dust!"""
 
     def __init__(self, bot):
         self.bot = bot
-
+        self.people = dataIO.load_json("data/engine/people.json")
+        self.charas = self.people["charas"]
+        self.actions = self.people["actions"]
+        self.songs = self.people["songs"]
 
     @commands.command(pass_context=True)
     async def vroom(self, ctx):
         """You don't need no instruction manual to be free!!"""
         await self.bot.say("VROOM VROOM!")
+
+    @commands.command(pass_context=True)
+    async def soulmate(self, ctx):
+        """You don't need no instruction manual to be free!!"""
+        choice = str(randchoice(self.charas))
+        action = str(randchoice(self.actions))
+        if action == "hát":
+            song = str(randchoice(self.songs))
+            action = action + song
+        await self.bot.say("Người có khả năng hợp với bạn là " + choice + ". Các bạn nên " + action + " đi.")
 
     @commands.command(pass_context=True, no_pm=True, name='rate')
     async def rate(self, ctx, *, rate:str = None):
