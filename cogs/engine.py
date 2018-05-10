@@ -25,6 +25,7 @@ class Engine:
     async def soulmate(self, ctx, gender :str =None,*,victim:str=None):
         """You don't need no instruction manual to be free!!"""
         ge =""
+        choice = str(randchoice(self.charas[0]+self.charas[1]))
         if victim!=None:
             nem = victim
         elif ctx.message.author.nick:
@@ -40,7 +41,6 @@ class Engine:
                 choice = str(randchoice(self.charas[1]))
                 ge = ge + "nữ"
             else:
-                choice = str(randchoice(self.charas[0]+self.charas[1]))
                 nem = gender + nem
         if ctx.message.author.id == "343674681829621761":
             if randint(1,10) > 5:
