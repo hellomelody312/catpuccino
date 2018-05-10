@@ -24,12 +24,19 @@ class Engine:
     @commands.command(pass_context=True)
     async def soulmate(self, ctx):
         """You don't need no instruction manual to be free!!"""
+        if ctx.message.author.nick:
+            nem = ctx.message.author.nick
+        else:
+            nem = ctx.message.author.name
         choice = str(randchoice(self.charas))
+        if ctx.message.author.id == "343674681829621761":
+            if randint(1,10) > 5:
+                choice = "Bram Grenfeld"
         action = str(randchoice(self.actions))
         if action == "hát":
             song = str(randchoice(self.songs))
-            action = action + song
-        await self.bot.say("Người có khả năng hợp với bạn là " + choice + ". Các bạn nên " + action + " đi.")
+            action = action + " " + song
+        await self.bot.say("Người hợp với " + nem + " là " + choice + ". Các bạn nên " + action + " đi.")
 
     @commands.command(pass_context=True, no_pm=True, name='rate')
     async def rate(self, ctx, *, rate:str = None):
