@@ -62,11 +62,15 @@ class Engine:
         if ctx.message.author.id == "343674681829621761":
             if randint(1,10) > 5:
                 choice = "Bram Grenfeld"
-        action = str(randchoice(self.actions))
-        if action == "hát":
-            song = str(randchoice(self.songs))
-            action = action + " " + song
-        msg = msg + "Người" + ge +" hợp với " + nem + " là " + choice + ". Các bạn nên " + action + " đi."
+        msg = msg + "Người" + ge +" hợp với " + nem + " là " + choice
+        if choice == "không ai cả":
+            msg = msg + ". Thôi FA suốt đời đi là vừa."
+        else:
+            action = str(randchoice(self.actions))
+            if action == "hát":
+                song = str(randchoice(self.songs))
+                action = action + " " + song
+            msg = msg + ". Các bạn nên " + action + " đi."
         await self.bot.say(msg)
 
     @commands.command(pass_context=True, no_pm=True, name='rate')
