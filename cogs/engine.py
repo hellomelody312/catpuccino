@@ -24,6 +24,7 @@ class Engine:
     @commands.command(pass_context=True)
     async def soulmate(self, ctx, gender :str =None,*,victim:str=None):
         """You don't need no instruction manual to be free!!"""
+        ge =""
         if victim!=None:
             nem = victim
         elif ctx.message.author.nick:
