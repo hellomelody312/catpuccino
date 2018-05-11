@@ -42,7 +42,7 @@ class Engine:
                 else:
                     choice = str(randchoice(self.charas[1]))
                     ge = ge + "nữ"
-                    msg= msg + "Kiếm nam hoài không chán ư, sao không thử đổi vị 1 chút?"
+                    msg= msg + "Kiếm nam hoài không chán ư, sao không thử đổi vị 1 chút? "
             elif gender.lower() == "f" or gender.lower() == "female":
                 if troll > 7:
                     choice = str(randchoice(self.charas[1]))
@@ -60,8 +60,8 @@ class Engine:
         else:
             ge = ""
         if ctx.message.author.id == "343674681829621761":
-            if randint(1,10) > 5:
-                choice = "Bram Grenfeld"
+            if randint(1,10) > 7:
+                choice = "Bram Greenfeld"
         if randint(2,100) < 9:
             choice = "không ai cả"
         msg = msg + "Người" + ge +" hợp với " + nem + " là " + choice
