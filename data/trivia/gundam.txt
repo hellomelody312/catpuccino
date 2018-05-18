@@ -1,0 +1,775 @@
+(General) This Universal Century technology allows for thruster-less maneuvering in 0G environments.`AMBAC
+(General) What was the name of the ill-advised attempt to bring SD Gundam to the US Market?`Doozy Bots
+(General) This 90s OVA series took over 3 years to be released, in part due to its Director being killed in a drunk driving accident.`08th MS Team
+(General) This movie, released on the 20th Anniversary of the Gundam franchise, is its first and only live action entry.`G-Saviour`G Saviour
+(General) Introduced in War in the Pocket, this is the name of the currency used in the Universal Century.`Kule
+(General) What was the first series *not* directed by Yoshiyuki Tomino?`0080`War In The Pocket
+(General) This line is a set of mechanical designs which are canonical but are otherwise not featured in the various animated series.`MSV`Mobile Suit Variations`MS-V
+(General) This series is one of Tomino's least favorites, going so far as to say on a DVD interview, "This DVD should not be bought as it is not intended to be seen!!"`Victory`Victory Gundam
+(General) What was the first series set in an alternate universe?`G Gundam`G
+(General) This series takes place in the timeline known as the "Correct Century".`Turn-A`Turn A
+(General) This series takes place in the timeline known as the "Future Century".`G`G Gundam
+(General) This series takes place in the timeline known as the "Cosmic Era".`SEED`Gundam SEED
+(General) This series takes place in the "Anno Domini" era.`00
+(General) This show was created as a collaboration between Sunrise and video game developer Level 5.`AGE`Gundam AGE
+(General) This series takes place in the timeline known as the "Advanced Generation".`AGE`Gundam AGE
+(General) This line of action figures ran from 1999 to 2008, when it was replaced by Robot Damashii.`MSIA`Mobile Suit In Action
+(General) This was the first mobile suit released under the Robot Damashii line of action figures.`00 Gundam`00
+(General) This series takes place in the timeline known as "After War".`X
+(General) This series takes place in the timeline known as "Post Disaster".`IBO`Iron Blooded Orphans
+(General) This series was the first since Gundam 00 to receive an official North American release, dub, and broadcast.`IBO`Iron Blooded Orphans
+(General) Which series has the highest total number of episodes?`IBO`Iron Blooded Orphans
+(General) This series was the first Gundam series to be split into two seasons.`00
+(General) This series takes place in the timekline known as the "Regild Century".`G-Reco`Reconguista in G
+(General) Which character was the first one to pilot a mobile suit of their own design?`Kamille
+(General) This was the first Universal Century anime to air on American television since 08th MS Team, airing on Adult Swim's Toonami block.`Unicorn`Re:0096`Re 0096
+(General) Which Gundam type mobile suit is the first one shown on screen that is not considered to be a "prototype" unit?`F91`F-91`F 91
+(General) This Gundam type mobile suit is canonically the first "production type" Gundam.`Ground Type`
+(General) What is the name of the largest city established on the moon?`Von Braun
+(General) Canonically, which was the first series to feature a mobile suit created by Anaheim Electronics?`0083`Stardust Memory
+(General) Side 5, otherwise known by this name, was the site of a massive battle early in the One Year War, and is where Char Aznable made a name for himself as 'The Red Comet'.`Loum
+(General) This side declared neutrality early in the One Year War, and was later the site of events shown in 0080 War In The Pocket.`Side 6
+(General) Side 1 is otherwise known by this name.`Zahn
+(General) Side 2 is otherwise known by this name.`Hatte
+(General) Side 4 is otherwise known by this name.`Moore
+(General) Side 6 is otherwise known by this name.`Riah
+(General) Side 7 is otherwise known by this name.`Noa
+(General) Where is Torrington Base located?`Australia`Sydney
+(General) This character is considered to be the first "Char Clone."`Glemy`Glemy Toto
+(General) This series was the first to be animated in widescreen and high definition.`00
+(General) This was the first Gundam series to air on American television not on Toonami or Adult Swim.`00
+(General) Which series was the first to air in English prior to the conclusion of its original Japanese run?`00
+
+(MSG) Which Side declared its independence and became the Principality of Zeon?`3`Three`Side 3
+(MSG) Which Side was used to develop the RX-78-2 Gundam in secret?`7`Seven`Side 7
+(MSG) The three Zaku pilots who infiltrated Side 7 are named Slender, Gene, and _____`Denim
+(MSG) This piece of technology allowed the Gundam to actively learn and improve its combat capabilites.`Learning Computer
+(MSG) What was the name of the project responsible for developing the Gundam, Guncannon, and Guntank?`Project V`Victory`V
+(MSG) What was the name of the original Captain of the White Base?`Paolo`Paolo Cassius`Cassius
+(MSG) What was the name of the little orphan girl who stayed on board the White Base?`Kikka
+(MSG) What was the name of the asteroid base the White Base escapes to after the destruction of Side 7?`Luna II`Luna 2
+(MSG) Garma Zabi's ship is this type of attack carrier.`Gaw`Gau
+(MSG) Episode 9, Fly! Gundam, is famous for introducing this method of reprimanding snooty Gundam pilots, and turning them into men.`Brightslap`Bright Slap
+(MSG) What was the name of Garma Zabi's girlfriend?`Icelina
+(MSG) The novelization of Mobile Suit Gundam featured some notable translations, including calling the Zaku "Zak", and Char ___`Sha`Shaa
+(MSG) In the Novelization, this mobile suit was created from the destroyed parts of the RX-78-2.`G-3`G3`RX-78-3
+(MSG) This technology was applied to the actuators of mobile suits, which reduces friction resistance and increases efficiency.'Magnetic Coating
+(MSG) This episode was excluded from the US release due to Yoshiyuki Tomino's displeasure with the quality of the episode.`Cucuruz Doan's Island`Cucuruz Doan Island
+(MSG) The name of Cucuruz Doan's preferred form of mobile suit combat, as he had sworn off on using guns ever again.`Mobile Suit Martial Arts
+(MSG) This mobile suit is no Zaku, boy. No Zaku!`Gouf
+(MSG) This girl, who was ultimately determined to be a Zeon spy, was snuck onto the White Base by a lovestruck Kai.`Miharu
+(MSG) Amuro's duel with M'Quve and his Gyan takes place in which colony?`Texas Colony`Texas
+(MSG) The RGM-79 GM was first shown on screen in defense of which location?`Jaburo
+(MSG) Lalah Sune was a part of Newtype Research conducted by which institution?`Flanagan Institute`Flanagan
+(MSG) This mobile suit is the first Zeon produced suit to utilize beam weaponry.`Gelgoog
+(MSG) This space fortress is the last line of defense for Zeon, and is named after an obscure Malayan legend about a monster who guards the Tower of Victory.`A Baoa Qu
+(MSG) Sleggar Law lost his life in battle at this Zeon space fortress.`Solomon
+(MSG) This weapon was used by the Gundam only once, in episode 2, to dispose of the Project V debris.`Super Napalm
+(MSG) This operation undertaken by Zeon forces in an attempt to drop a colony on the Federation headquarters at Jaburo, but instead landed on Sydney, Australia.`Operation British`British
+
+(08th) The name of the unit piloted by Shiro Amada, after the near total destruction of his original RX-78(G).`Ez-8`EZ8
+(08th) A veteran soldier, this member of the 08th MS Team is known as "Shinigami" or "Reaper".`Terry Sanders`Sanders`Terry`Terry Sanders Jr`Terry Sanders Jr.`Terry Sanders, Jr.`Terry Sanders, Jr
+(08th) What was the name of the compilation movie for 08th MS Team, framed around the court marshalling of Shiro Amada?`Millers Report`Miller's Report
+(08th) What was the name of the individual carrying out the investigation of Shiro Amada, used as the framing device for the series' compilation movie?`Alice Miller`Miller
+(08th) Shiro Amada's rank is listed as...?`Ensign
+(08th) What was the name of Eledore's song that he was desperately trying to get on the radio?`Mirai no Futari Ni`The Future for Both of Us
+(08th) The MS-07B3 Gouf Custom was piloted by which character?`Norris`Norris Packard
+(08th) What is the name of Michel Ninorich's girlfriend?`B.B.`BB
+(08th) This is the name of the massive mobile armor developed by Ginias Sahalin.`Apsalus
+(08th) A member of the guerilla forces featured in the series, this character develops a crush on Shiro.`Kiki
+(08th) Karen Joshua's damaged Gundam had parts replaced by this mobile suit.`GM
+(08th) What is Karen Joshua's rank?`Master Chief`Master Chief Petty officer`MCPO
+(08th) The Ez-8 is unique in that it's lacking in this distinguishing feature.`V-Fin`V Fin
+(08th) This short film was bundled with the Blu-Ray Memorial box set.`Battle in Three Dimensions
+
+(0080) What was the name of the lunar colony used as the base of operations by the Cyclops Team?`Granada
+(0080) The name of the mobile suit intended for Amuro Ray as a successor to the Gundam.`RX-78NT1`Alex`NT-1
+(0080) This operation's goal was to capture or destroy the mobile suit being developed on Side 6 as a replacement for the Gundam.`Rubicon`Operation Rubicon
+(0080) Bernard Wiseman was made a member of this team after the death of a pilot assaulting the Federation's arctic base.`Cyclops`Cyclops Team
+(0080) This appropriately named villain is the leader of the Zeon unit responsible for the assault on Side 6.`Killing`Colonel Killing
+(0080) This type of armor was added to the mobile suit in development on Side 6, increasing its defensive capabilities, but leaving it ultimately unarmed.`Chobham`Chobham Armor
+(0080) This unit, whose name translates simply as "Fighter" or "Warrior", is a high mobility assault mobile suit deployed on Side 6 to destroy the Gundam under development.`Kampfer
+(0080) What was the name of the test pilot assigned to the Gundam under development on Side 6?`Chris`Christina`Christina Mackenzie
+(0080) How many episodes were created for 0080?`6`Six
+(0080) What was the subtitle for this OVA?`War in the Pocket
+
+(0083) This term, also the name of the first episode, was recognized as a TVTrope used in fiction to describe stealing a super prototype weapon from the enemy.`Gundamjack`Gundam Jack
+(0083) A compilation movie for this OVA was released, but never in America. What was it called?`The Last Blitz of Zeon`Last Blitz of Zeon
+(0083) The primary antagonist of 0083, he is known as the "Nightmare of Solomon."`Anavel Gato`Gato
+(0083) This flower, known also as a Rain Lilly, is the code name of the RX-78GP01`Zephyranthes
+(0083) This treaty, whose vague language was used as a justification for the development of the GP02A, prohibits the use of nuclear weapons.`Antarctic Treaty
+(0083) This unit of questionable canonicity was the first unit developed under the Gundam Development Project, which was either "Destroyed by Zeon forces" or "Self-Destructed during a test run after it lost balance."`Blossom`GP00
+(0083) Cima Garahau pilots this type of Gelgoog.`Marine Commander
+(0083) Kou is not a fan of this vegetable.`Carrot`Carrots
+(0083) What is the subtitle for this OVA?`Stardust Memory
+(0083) Which character was named as the Albion's "combat tactician"?`South Burning
+(0083) Chap Adel, Bernard Monsha, Alpha A. Bate, and South Burning are collectively known as this.`Immortal 4th Team`Immortal Fourth Team
+(0083) Every character seen in the Anaheim Electronics Mobile Suit division shares this characteristic.`Woman`Female`Girl
+
+(Zeta) Training and test runs of the RX-178 Mk II were conducted on this Titans military base.`Green Noa
+(Zeta) The second Psyco Gundam was fought at which Titans base?`Kilimanjaro
+(Zeta) This mobile suit, developed by AEUG, was the primary unit used by characters such as Apolly, Roberto, and for a time Quattro.`Rick Dias
+(Zeta) This character, he is a CHAR.`Quattro
+(Zeta) Mouar Pharaoh is known as the lover of which character?`Jerid
+(Zeta) Mouar Pharaoh is voiced by Yoshiko Sakakibara, who also voices this character in Zeta.`Haman
+(Zeta) This mobile suit was originally designed as the Delta Gundam.`Hyaku Shiki
+(Zeta) This mobile suit is piloted by Amuro Ray during the Gryps Conflict.`Dijeh
+(Zeta) "Love is the Pulse of the Stars", the third compilation movie, was the final voicing role for Hirotaka Suzuoki, who voiced this character.`Bright Noa`Bright
+(Zeta) This mobile suit is created by combining the Mk II with the G-Defenser unit.`Super Gundam
+(Zeta) The earth based resistance group Karaba is headed up by this veteran of the One Year War.`Hayato`Hayato Kobayashi
+(Zeta) A young operative of Karaba, this character is also the namesake of one of the two noveliations for Char's Counterattack.`Beltorchika
+(Zeta) Quattro Bajeena reveals himself as Char Aznable in a speech at a parliamentary building in this real life city.`Dakar
+(Zeta) This character serves as the Titans' field leader under Jamitov, and is responsible for some of the worst atrocities associated with the Titans.`Bask`Bask Om
+(Zeta) The purpose of the Jupiter Fleet is to collect large amounts of this resource from the outer planets.`Helium-3`Helium 3
+(Zeta) Scirocco's mining vessel for the Jupiter fleet is known as this class of vehicle.`Jupitris
+(Zeta) Scirocco's personal mobile suit, known for its sub-arms and massive size.`The O
+(Zeta) A war orphan whose memories were robbed by the Titans, this character is the original pilot of the Psyco Gundam.`Four
+(Zeta) This character was the first Cyber-Newtype introduced in Zeta.`Rosamia
+(Zeta) This technology is considered to be a variant of the Psycommu system, allowing a Newtype pilot to more easily interface with his mobile suit via mental commands.`Bio-Sensor`Biosensor
+(Zeta) What was the first mobile suit shown in the series?`Rick Dias
+(Zeta) The Anti-Earth Union Group was lead by this individual.`Blex`Blex Forer
+(Zeta) Who was the principal designer of the RX-178?`Franklin Bidan
+(Zeta) During episode 13, the Walker Galia shows up in Hayato's Museum shows up, a nod to this show directed by Tomino.`Xanbungle
+(Zeta) What was the name of the colony that housed the Colony Laser?`Gryps 2
+(Zeta) Opening and Ending themes for the compilation movies were done by this visual kei artist.`Gackt
+(Zeta) The events of this series would be later known by this name.`Gryps Conflict
+(Zeta) This ship is used throughout the series by the AEUG.`Argama
+
+(ZZ) Char and Amuro were originally slated to appear in this series, but their planned appearances were canned after this movie was approved.`Char's Counterattack`CCA`Chars Counterattack
+(ZZ) Judau Ashta starts the series as a junk dealer in this space colony.`Shangri-la
+(ZZ) This character is the younger sister of Judau, and her capture by Glemmy Toto causes her retrieval to become Judau's main objective`Leina
+(ZZ) Judau comes across an escape pod, containing this Titans pilot who managed to survive the Gryps Conflict at the conclusion of Zeta.`Yazan`Yazan Gable
+(ZZ) In later years, Judau goes by this name and pilots the Gump, a battle worn ZZ Gundam in disguise.`Grey Stoke
+(ZZ) Roux Louka winds up piloting this mobile suit, a relic from a previous series.`Zeta
+(ZZ) Glemy Toto was killed by this character.`Roux`Roux Louka
+(ZZ) The nickname of this group, comprised of Judau, Elle, Lino, Roux, and others on board the Argama, named after the sheer number of Gundam type units on board.`Gundam Team
+(ZZ) The resupply crates received by the Argama all have this real life company's logo prominently stamped on the side of them.`Bandai
+(ZZ) Canonically, how old is Judau during the events of the series?`14`Fourteen
+(ZZ) This character eventually became the captain of the Nahel Argama after stealing it from AEUG to finish the Neo Zeon War.`Beecher`Beecha
+(ZZ) The first Qubeley seen on screen in the series was piloted by...?`Puru`Ple
+(ZZ) Which character is the primary antagonist of the series?`Haman`Haman Karn
+(ZZ) Haman is the regent for this Zabi family member.`Mineva`Mineva Lao Zabi
+
+(CCA) What was the name of the special task force lead by Bright Noa?`Londo Bell
+(CCA) This Gundam is not for show.`Nu
+(CCA) This novelization was used as the basis for the first script for Char's Counterattack.`High Streamer
+(CCA) This novelization is a modified version of another novelization, which was submitted as the script for Char's Counterattack, but ultimately rejected.`Beltorchika's Children
+(CCA) This civilian mobile suit, piloted on screen by Gyunei Guss, was used to retrieve Char and Quess from Side 1.`Hobby Hizack
+(CCA) The name of the remote weapon used by the Nu Gundam, controlled by Amuro's newtype powers.`Fin Funnel`Fin Funnels
+(CCA) This battleship was used by the Londo Bell task force during the second Neo Zeon conflict.`Ra Cailum
+(CCA) The Londo Bell task force is headquartered at this space colony.`Londenion
+(CCA) Bright Noa is shown to be married to this character from the original series.`Mirai`Mirai Yashima
+(CCA) Who was the character responsible for killing Chan Agi?`Hathaway
+(CCA) The novelizations have Char pilot this mobile suit instead of the Sazabi.`Nightingale
+(CCA) Both Char and Amuro are both officially listed as this after the events of the movie.`MIA`Missing in Action
+(CCA) Quess Paraya pilots this mobile suit towards the end of the movie, model number NZ-333.`Alpha Azieru
+(CCA) The head of the Neo-Zeon Cyber-Newtype labs, this character is personally responsible for enhancing Gyunei and Quess.`Nanai`Nanai Miguel
+(CCA) What was the name of Bright's daughter?`Chemin
+(CCA) This technology was leaked to Anaheim by Char Aznable, allowing a mobile suit to be controlled as if it were an extension of their own body.`Psycoframe
+(CCA) This asteroid was dropped onto the EFSF headquarters in Lhasa, Tibet.`5th Luna`Fifth Luna
+(CCA) This colony was created as a place for refugees throughout the many conflicts from previous series, and is used as a base of operations by Char's Neo Zeon forces.`Sweetwater
+
+(Unicorn) The three mobile suits used by Riddhe Marcenas on screen share this characteristic.`Transformation`Transforming
+(Unicorn) Riddhe is responsible for the death of this character in the final episodes of the series.`Marida Cruz`Marida
+(Unicorn) The Banshee, following the central theme of "The Lady and the Unicorn", uses this animal as a motif.`Lion
+(Unicorn) Banagher Links is the child of this character.`Cardeas Vist`Cardeas
+(Unicorn) The remnants of Char's Neo-Zeon movement call themselves this.`Sleeves
+(Unicorn) The NT-D system utilized by the RX-0 series of mobile suits is an acronym for this.`Newtype Destroyer`Newtype-Destroyer
+(Unicorn) This spec-ops Federation unit featured in the series is named after their ability to operate on Earth, Colonies, and Asteroids.`ECOAS
+(Unicorn) This unit of ace pilots, station aboard the Ra Cailum, is considered a call back to a team of enemy pilots from MSG.`Tri-Stars`TriStars`Tri Stars
+(Unicorn) Robin Diez pilots this unit, shown defending Torrington Base against an assault by the Sleeves and Zeon Remnants, and is considered a fan favorite.`Byarlant Custom
+(Unicorn) Marida's real identity is the twelth clone of this ZZ character.`Ple`Puru
+(Unicorn) This individual is the pilot of the Shamblo mobile armor.`Loni`Loni Garvey
+(Unicorn) This mobile suit was piloted by Gael Chan in an attempt to delay Full Frontal in the Neo Zeong to allow Banagher to reach his Unicorn.`Silver Bullet
+(Unicorn) What was the subtitle for the Gundam Unicorn manga adaptation?`Bande Dessinee
+(Unicorn) This space colony was the stage set for both the beginning and the ending of Gundam Unicorn.`Industrial 7
+(Unicorn) Music for the series was composed by which legendary composer?`Hiroyuki Sawano`Sawano
+(Unicorn) After the battle near Torrington Base, this OYW veteran advises Bright Noa to contact the Garencieres to help keep the Unicorn safe.`Kai`Kai Shiden
+(Unicorn) The series takes place during what year in the Universal Century?`0096
+(Unicorn) Mineva Zabi takes her alias from which famous real life actress?`Audrey Hepburn
+(Unicorn) The Loto mobile suit was created by which manufacturer?`SNRI
+(Unicorn) This mobile suit was produced as an escort unit for the Unicorn to help protect it after the NT-D's five minute time limit had elapsed.`Jesta
+(Unicorn) This mobile suit is named after the Hindu military and ruling order.`Kshatriya
+(Unicorn) What was the name of the colony that served as the official residence of the Prime Minister of the Earth Federation, which was destroyed in UC 0001?`Laplace
+(Unicorn) This mining asteroid belonging to Side 6 was used as a base of operations by the Sleeves.`Palau
+
+(F91) This weapon is used by the F91, where the user can adjust the width of the beam, meaning it can be a broad, sweeping beam or a high powered narrow beam that can even penetrate beam shields.`VSBR`Variable Speed Beam Rifle
+(F91) Cecily Fairchild, being an expy of Sayla Mass, is actually the daughter of Iron Mask, and her name is...?`Berah`Berah Ronah
+(F91) This is the name of the mobile armor piloted by Carozzo "Iron Mask" Ronah.`Rafflesia
+(F91) The Gundam F91 was developed as a part of the Formula Project undertaken by this research organization.`SNRI
+(F91) The F91 was assigned to this Ark-class training ship.`Space Ark
+(F91) What was the name of the contest Cecily was participating in at the beginning of the movie?`Miss Countryside
+(F91) What was the name of the colony attacked by the Crossbone Vanguard at the beginning of the movie?`Frontier 4`Frontier IV
+
+(Victory) What was the name of the Resistance Group that Uso Ewin was a part of?`League Militaire
+(Victory) This fortress was considered the ultimate weapon of the Zanscare Empire, capable of "devolving" human minds.`Angel Halo
+(Victory) This team of all-female mobile suit pilots had an unfortunate 100% fatality rate.`Shrike Team`Shrike
+(Victory) The brother of queen Maria Pia Armonia, and love interest of Katejina Loos.`Chronicle`Chronicle Asher
+
+(G Gundam) What was the name of the first mobile fighter used by Domon Kasshu?`Shining`Shining Gundam
+(G Gundam) This alliance, whose members were named after the faces in a deck of cards, was comprised of the main characters.`Shuffle Alliance`Shuffle
+(G Gundam) How many articles are included in the Gundam Fight International Regulations?`7`Seven
+(G Gundam) This mobile fighter's name was changed to Burning Gundam in the English dub.`God`God Gundam
+(G Gundam) This character is the representative of Neo China, and pilots the Dragon Gundam.`Sai`Sai Saici
+(G Gundam) Which character is the pilot of the Rising Gundam?`Rain`Rain Mikamura
+(G Gundam) This character started off as a supporting character, but is ultimately revealed to be the primary antagonist.`Ulube`Ulube Ishikawa
+(G Gundam) Ulube Ishikawa's Japanese voice actor, Nobuo Tobita, is also responsible for voicing which Zeta Gundam character?`Kamille`Kamille Bidan
+(G Gundam) Mark Gatha voices this character in the English dub.`Domon`Domon Kasshu
+(G Gundam) Domon spends most of the early episodes interrupting other people's fights and shoving a picture of this man at everyone he encounters.`Kyoji
+(G Gundam) Chibodee's Shuffle Crest is...?`Queen of Spades`Queen the Spade
+(G Gundam) George's Shuffle Crest is...?`Jack of Diamonds`Jack in Diamond
+(G Gundam) Domon's Shuffle Crest is...?`King of Hearts`King of Heart
+(G Gundam) Sai's Shuffle Crest is...?`Ace of Clubs`Club Ace
+(G Gundam) Argo's Shuffle Crest is the only one not named after a suit in a standard deck of cards. What is it called?`Black Joker
+(G Gundam) How often do the Gundam Fights take place?`4 Years
+(G Gundam) Allenby Beardsley learns to use this attack, despite the Nobel Gundam not being equipped to do so, just from watching it in action.`Burning Finger`God Finger
+(G Gundam) What was the name of the first mobile fighter used by Master Asia?`Kowloon`Kowloon Gundam
+(G Gundam) The events of G Gundam take place during which instance of the Gundam Fight?`13th`Thirteenth
+(G Gundam) This mobile weapon is the only known instance of a "Mobile Horse."`Fuunsaiki
+(G Gundam) How many Gundams are registered to participate in the 13th Gundam Fight?`30`Thirty
+(G Gundam) What is the name of the announcer that appears in the beginning of each episode?`Stalker
+
+(Wing) Doctor J was responsible for which Mobile Suit?`Wing`Wing Gundam
+(Wing) What is the first thing Heero does after destroying two Aries suits in the first episode?`Laugh
+(Wing) Where is the presidental residence located?`Brussels
+(Wing) What instrument does Trowa play?`Flute
+(Wing) Relena is the last surviving female heir to this kingdom.`Sanc`Sanc Kingdom
+(Wing) Relena is a proponent of this ideal.`Total Pacifism
+(Wing) This man's name is derived from the French word for "Thirteen."`Treize
+(Wing) The name of the infamous strategic military retaliation plot designed by members of the colonies.`Operation Meteor
+(Wing) The biological father of Heero Yuy and the assassin of the original Heero Yuy.`Odin`Odin Lowe
+(Wing) Professor G was responsible for this Mobile Suit.`Deathscythe
+(Wing) OZ is the military wing of this organization.`Romefeller`Romefeller Foundation
+(Wing) OZ is an acronym for what?`Organization of the Zodiac
+(Wing) This private army supports Quatre Raberba Winner with their mobile suits.`Maganac Corps
+(Wing) Zechs was known by this nickname throughout the series.`Lightning Count`Lightning Baron
+(Wing) This mobile suit is the original armed mobile suit of the series.`Tallgeese
+
+(Endless Waltz) What type of Mobile Doll is guarding the colony X-18999?`Taurus
+
+(X) This weapon, utilized by the X series of Gundams, was powered by microwaves transmitted from the moon and capable of destroying entire space colonies.`Satellite Cannon
+(X) Who is the main character of the series?`Garrod`Garrod Ran
+(X) This mobile suit, piloted by Garrod and eventually Jamil Neate, was created by repairing the original Gundam X unit.`Divider`X Divider`X-Divider
+(X) These mass produced dummy units are used by Newtypes for support when using the Satellite Cannon.`GX-Bit`G-Bit`Bit`G Bit`GX Bit
+(X) What is the name of the ship that Jamil, Garrod, Tiffa, and others all call home?`Freeden
+(X) What color is the Gundam Leopard Destroy?`Red
+(X) How many episodes does Gundam X contain?`39`Thirty-nine
+(X) This manga takes place seven years after the final episode of Gundam X.`Under the Moonlight
+
+(Turn A) The Turn A Gundam is known in universe by this nickname.`White Doll
+(Turn A) The Moonrace military force is known by this name.`Dianna Counter
+(Turn A) The ultimate weapon of both Turn A and Turn X, this devestating attack uses nanomachines to turn technology into silicon dioxide.`Moonlight Butterfly
+(Turn A) This mobile suit was originally designed as the Turn A, but was rejected and ultimately turned into this.`SUMO
+(Turn A) This character is shown to have memories of the Wing Gundam Zero, suggesting he was actually from the After Colony Era.`Corin Nander`Corin
+(Turn A) The mobile suit used as the landing craft for Loran, Fran, and Keith, and was eventually sold to the Inglessa Militia to allow Keith to expand his bakery.`FLAT`High Heel
+(Turn A) These mobile suits, bearing an exact resemblance to the MS-06 Zaku II, is used by the Luzianna Militia.`Borjarnon
+(Turn A) This mobile suit, colloquially referred to as a "Ball", is most famously piloted by Sochie Heim.`Kapool
+(Turn A) This individual is in charge of the cryogeneic stasis chambers of the moon, and plots to take control away from Dianna Soreil.`Agrippa Maintainer
+(Turn A) Harry Ord is never seen without these.`Sunglasses`Shades
+(Turn A) Harry Ord's personal mobile suit is this color.`Gold
+(Turn A) This character shares a voice actor with Mu La Flaga, the Mobius Zero pilot from Gundam SEED.`Gym Ghingnham`Gym
+(Turn A) In lieu of a standard manipulator, the right hand of the Turn X is replaced with a Fusion Destruction Manipulator, capable of using this famous attack from G Gundam.`Shining Finger
+(Turn A) The Turn X is one of the few mobile suits in the multiverse to have its cockpit located where?`Head
+(Turn A) There are three requirements to activating the Moonlight Butterfly, of which the Turn X is lacking two. What does the Turn X have that the Turn A did not?`Energy`Power
+(Turn A) The leader of the Luzianna Militia's Suicide Squad, this character wound up with a Zaku I instead of a Zaku II, because it looked different and assumed it was superior.`Gavane Gooney`Gavane`Gooney
+(Turn A) The Turn A Gundam was designed by this American concept artist.`Syd Mead
+(Turn A) What year did Turn A premier?`1999
+(Turn A) The Turn A was used to store these weapons in its multi-purpose silos for a period of time until they could be properly disposed of.`Nukes`Nuclear Missiles`Nuclear
+(Turn A) This ship was used by the Inglessa Militia to journey to the moon.`Willgem
+(Turn A) This ship is the flagship of the Moonrace and was used as their field headquarters on Earth.`Soliel
+(Turn A) This land battleship was used by the Inglessa Militia and bears an uncanny resemblance to another ship featured in Mobile Suit Gundam.`Gallop
+(Turn A) A cache located in Vicinity Town grants the Turn A access to this weapon.`Gundam Hammer
+(Turn A) This character pilots the FLAT mobile suit, after it has been sold to the Inglessa Militia.`Joseph`Joseph Yaht
+
+(SEED) Which Gundam was the first one activated in the series?`Duel`Duel Gundam
+(SEED) What was the name of the colony secretly developing the Gundam series of mobile suits?`Heliopolis
+(SEED) This general-purpose mobile suit is the first mass produced model created by ZAFT.`GINN
+(SEED) What was the name of the project responsible for creating the Gundam mobile suits?`G Project
+(SEED) This armor system uses electricity to reduce the damage from solid body impact attacks.`Phase Shift
+(SEED) This quadrupedal mobile suit is used on Earth during the first Alliance-PLANT war.`BuCUE
+(SEED) What is the name given to those who have been genetically altered at birth?`Coordinator
+(SEED) How many mobile suits were stolen by ZAFT at the beginning of SEED?`4`Four
+(SEED) What is the name of ORB's mass produced mobile suit?`Astray
+(SEED) Where was the Arcangel supposed to land on earth?`Alaska
+(SEED) This mobile suit is piloted by Nicol Amalfi.`Blitz
+(SEED) The Blitz Gundam is capable of using this technology for stealth missions, which renders it invisible to both sensors and the naked eye.`Mirage Colloid
+(SEED) This weapon was built under the orders of Patrick Zala, capable of wiping ou
+(SEED) PLANT colonies use this naming scheme.`Months
+(SEED) This colony is the capital of the PLANTs and home of the PLANT Supreme Council`Aprilius One
+(SEED) The tragedy that befell Junius Seven is known in universe by this name.`Bloody Valentine Incident`Bloody Valentine
+(SEED) This technology is used to supress nuclear fission reactions by blocking the movement of free neutrons.`Neutron Jammer`N-Jammer
+(SEED) The G Project mobile suits were constructed by this Orb Union manufacturer.`Morgenroete
+(SEED) Flay was given a disc by Rau Le Creuset containing technical data on the Freedom, Justice, and this technology.`N-Jammer Canceller`Neutron Jammer Canceller`N Jammer Canceller
+
+(Destiny) This mobile suit was the first one piloted by Shinn Asuka.`Impulse
+(Destiny) After graduation, Shinn was assigned to this battleship under the command of Talia Gladys.`Minerva
+(Destiny) This character is revealed to be a brainwashed Mu La Flaga, after his supposed death in SEED.`Neo Roanoke
+(Destiny) Gilbert Durandal is voiced by Shuichi Ikeda, known as the voice of this popular Universal Century character.`Char`Char Aznable
+(Destiny) After the death of Gilbert Durandal, this character takes over as chair of the PLANT Supreme Council.`Lacus Clyne`Lacus
+(Destiny) What was the name of Shinn's sister?`Mayu
+(Destiny) What was shinn attempting to recover for his sister in the first episode that separated him from his family?`Cell`Cell Phone
+(Destiny) This mobile suit was piloted by Athrun for the first half of the series.`Saviour
+(Destiny) What mobile suit did Athrun commandeer to protect Cagalli?`ZAKU
+
+(00) One of the Innovades is voiced by Toru Furuya, also known as the VA behind Amuro Ray. What was this characters name?`Ribbons`Ribbons Almark
+(00) This unit is the successor to the GNY-001 Gundam Astraea.`Exia
+(00) The power plant for the Gundams is known as what?`GN Drive`Gundam Nucleus Drive`Solar Reactor`Solar Furnace
+(00) This character, after losing her arm to a random attack by Nena Trinity, used her financial influence to join the A-Laws as a means to personally confront Celestial Being.`Louise Halevy`Louise
+(00) This international coalition is composed mostly of Southern and Eastern Asian countries.`HRL`Human Reform League
+(00) Graham Aker begins to go by this name during the second season.`Mister Bushido`Mr Bushido`Mr. Bushido
+(00) This system, used by Tieria Erde, is capable of cutting off a mobile suit's link to Veda and shutting down their unit.`Trial System`Trial
+(00) This team of siblings, Johann, Michael, and Nena, use the Throne series of Gundams in an attempt to take over Aeolia Schenberg's plan for the benefit of the Corner Family.`Trinity`Team Trinity
+(00) Sam Vincent, the English voice actor for Tieria Erde, was also the voice of Athrun Zala in SEED, and another pilot in this movie.`G-Saviour
+
+(AGE) This colony is home to Flit Asuno at the beginning of the series, when it is destroyed by the Unknown Enemy.`Orvan
+(AGE) This Asuno family heirloom is given to Flit Asuno by his dying mother at the beginning of the series.`AGE Device
+(AGE) Flit Asuno is living on this colony when it comes under attack by the UE, forcing him into piloting the AGE-1.`Nora
+(AGE) This special ability is known as the AGE equivalent of a Newtype.`X-Rounder
+(AGE) The son of Flit Asuno, this character is the protagonist of the second part of the series.`Asemu`Asemu Aseno
+(AGE) The Unknown Enemy is eventually revealed to be this race of people, remnants of Mars Colonists from the beginning of AG.`Vagan
+(AGE) During the third part of the series, Flit Asuno's son goes by this name as the captain of a gang of pirates.`Ash`Captain Ash
+(AGE) The grandson of Flit Asuno, this character is the protagonist of the third part of the series.`Kio
+(AGE) Flit Asuno's son uses this mobile suit during part three.`Dark Hound
+(AGE) This device uses combat data from the Gundam to create special equipment.`AGE Builder
+(AGE) This Transformable Assault Carrier is the central ship used during the events of the series.`Diva
+(AGE) What was the name of the mass produced mobile suits used throughout the series by EFF?`Genoace
+(AGE) Kio is tied with Victory's Uso Ewin for being the youngest main protagonist of a Gundam series, both being this age.`13`Thirteen
+(AGE) Flit Asuno serves as the commander of this orbital military base in AG 141.`Big Ring
+(AGE) This beam weapon was used by the AGE-1 Normal, which fires beams that spin like a drill to increase its penetrating power.`DODS Rifle
+(AGE) This compilation movie attempts to recompile the 2nd Generation of the series.`Memory of Eden
+(AGE) Which mobile suit was piloted by Woolf Enneacle?`G-Bouncer`G Bouncer
+(AGE) This form of the AGE-1 places emphasis on speed.`Spallow
+(AGE) This form of the AGE-1 places a great emphasis on power and melee attacks.`Titus
+
+(IBO) This mobile suit is not the first mobile suit with this name, having been the name of a boss in SD Gundam G Generation World.`Barbatos
+(IBO) Mikazuki and Orga originaly belonged to which private security company?`CGS
+(IBO) The nations of Earth and Mars accept this treaty in PD 001, issued by Gjallarhorn.`Vingolf`Vingolf Proclamation
+(IBO) The Gundam Frames are powered by this type of reactor.`Ahab`Ahab Reactor
+(IBO) How many forms does the Barbatos have before being upgraded to the Barbatos Lupus?`Six`6
+(IBO) How many Gundam frames were produced during the Calamity War?`72`Seventy Two
+(IBO) This weapon was the primary weapon of the Barbatos before being lost during atmospheric entry while in battle with the Kimaris.`Mace
+(IBO) This Gundam Frame was piloted by McGillis Fareed.`Bael
+(IBO) This character is the only Gundam pilot to survive to the end of the series.`Gaelio
+(IBO) The Isaribi was originally known by this name while used by the Chryse Guard Security.`Will O The Wisp`Will-O-the-Wisp`Will-O'-The-Wisp
+(IBO) The Griffon family characters are all named after this.`Food`Snacks
+(IBO) The series is notable for their lack of this type of weaponry.`Beam
+(IBO) The Gundam frames are named after these demons, featured in the book The Lesser Key of Solomon.`Ars Goetia
+
+(G-Saviour) What is the abbreviated name of the *Congress of Settlement Nations*?`CONSENT
+(G-Saviour) This is the name of the pilot of the G-Saviour mobile suit.`Mark Curran
+(G-Saviour) The movie is unique among Gundam animated and live-action properties for not using this word.`Gundam
+(G-Saviour) The name of the resistance group which Mark Curran is a part of.`Illuminati
+(G-Saviour) Cynthia Graves is portrayed by Enuka Okuma, who goes on to voice this character from Gundam Wing.`Lady Une`Une
+(G-Saviour) Model number RGM-196 shares a name with this mobile suit from Gundam SEED.`Freedom
+(G-Saviour) Side 8 makes its first appearance in this movie, and is otherwise known by this name.`Gaea
+
+(GBF) Nils Nielsen's Sengoku Astray Gundam uses this Mobile Horse as a mode of transportation, an easter egg from G Gundam.`Fuunsaiki
+
+(Thunderbolt) This genre of music is Io Flemming's favorite.`Jazz
+(Thunderbolt) This unit of Zeon soldiers is composed entirely of amputees.`Living Dead
+(Thunderbolt) This weapon, a giant rifle used by Zakus, is simply named this.`Big Gun
+(Thunderbolt) Io Flemming refers to Daryl by this nickname.`Peglegs
+(Thunderbolt) The name of the EFSF ship commanded by Claudia Peer.`Beehive
+(Thunderbolt) The Atlas Gundam uses these type of joints to provide a greater range of motion underwater.`Globe`Globe Joints
+
+(Origin) This child of Degwin Zabi was assassinated by a car bomb.`Saslo`Sasro
+(Origin) This battle, depicted in episode 3 of the OVA series, was undertaken by third year cadets of the Zeon Military Academy against an EFSF garrison on Side 3.`Dawn Rebellion
+(Origin) Side 3 is otherwise known as what?`Munzo
+(Origin) Zeon Zum Deikun spread this philosophy, believing that the earth is sacred and that humans had a solemn duty to protect it.`Contolism
+
+(G-Reco) This character is the pilot of the G-Self.`Bellri
+(G-Reco) Bellri Zenam starts off as a member of this faction.`Capital Guard
+(G-Reco) The G-Lucifer has the capacity to use this attack, a call back to its predecessor series, Turn A.`Moonlight Butterfly
+
+(MSV) This character, nicknamed "Crimson Lightning", is one of the many ace pilots who fought for the Principality of Zeon during the One Year War.`Johnny Ridden`Ridden
+(MSV) This team is the main focus of MSV-R: The Return of Johnny Ridden, a hand picked corps of ace pilots created by Kycilia Zabi.`Chimera Corps`Chimera
+(MSV) Shin Matsunaga is known by this nickname.`White Wolf`The White Wolf
+
+(Other) This mobile suit is featured prominently in the manga Plamo-Kyoshiro, piloted by Shiro Kyoda, and also has its own Master Grade model kit.`Perfect Gundam
+(Other) This manga is a fictionalized retelling of the creation of the Gundam series, depicting Yoshiyuki Tomino as a chain smoking, shades sporting badass.`Gundam Sousei
+(Other) The mobile suits featured and assigned to the Titans Test Team in the Advance of Zeta photo-novel are named after rabbits from this British novel.`Watership Down
+(Other) Seabook Arno uses this alias in the Mobile Suit Crossbone Gundam manga series.`Kincade Nau`Kincade
+(Other) Andrew W.K created a cover album featuring music from Mobile Suit Gundam for its 30th anniversary. What was the album called?`Gundam Rock
+(Other) This light novel takes place in the long gap between Unicorn and F91, and was recently given an ONA.`Twilight Axis
+(Other) This novel, set in UC 203, features the first instance of a literal Char Clone called Afranche Char.`Gaia Gear
+(Other) This manga takes place in the closing days of the One Year War, featuring a then 14 year old Haman Karn.`Char's Deleted Affair`Chars Deleted Affair`CDA`Portrait of Young Comet
+(Other) The Gundam F90 manga series starts off with the sinking of this Jupiter Energy Fleet supply ship, named after a training simulator found in Star Trek.`Kobayashi Maru
+(Other) Originally named Frontier IV, this colony was the first to be attacked by the Crossbone Vanguard, and became the capital of the Ronah family's nation.`Cosmo Babylonia
+(Other) This character is the pilot of the S Gundam, despite the fact that most of the piloting is handled by an artificial intelligence.`Ryou Roots`Ryu Roots`Ryou`Ryu
+(Other) This weapon is used by the X-1 Kai Kai "Skull Heart", featuring nine separate beam guns capable of being fired in multiple different configurations.`Peacock Smasher
+(Other) This technology was designed as an anti-newtype system, featured prominently in Blue Destiny.`EXAM`EXAM System
+(Other) This novel takes place after the Second Neo Zeon War, covering the activities of the terrorist organization Mufti and their attempts to take down the Federation.`Hathaway's Flash`Hathaways Flash
+(Other) This character pilots the Astray Blue Frame in the Gundam SEED Astray manga series.`Gai`Gai Murakumo
+(Other) This weapon is utilized by the Astray Red Frame, and is just... its a big ol' katana.`Gerbera Straight
+(Other) This mobile suit is chronologically the very first Gundam-type mobile suit to fall under the service of Zeon.`Blue Destiny 2`Blue Destiny Unit 2
+(Other) This system, utilized by the Pale Rider, is similar in function to the EXAM system in that in increases performance and reaction times.`HADES
+(Other) This novel features the debut work of Hajime Katoki as mechanical designer.`Gundam Sentinel`Sentinel
+(Other) This mobile suit is based on data stolen from SNRI's Formula Project, completed by Anaheim in UC 122.`Silhouette`RXF-91
+(Other) The Mars-based "Oldsmobile" forces are revealed to be the last faction of this nation.`Zeon
+(Other) This mobile suit was used in a commercial bumper for Late Night with Conan O'Brien, with his face replacing the traditional head.`MkII`Mk II`Mark II`MarkII`Mk2`Mark 2
+(Other) During the events of Gundam Sentinel, this group of EFSF officers loyal to the Titans staged a rebellion on the asteroid Pezun.`New Desides
+(Other) All of the Universal Century OVAs in the 1990s have this common theme in the title.`8`Eight`Number 8`Number Eight
+
+(Gaming) This game puts you in control of the Midnight Fenrir Corps in the early days of the One Year War.`Zeonic Front
+(Gaming) This Gundam type mobile suit is deployed by the Federation to defend Jaburo against the Midnight Fenrir Corp.`Mudrock`RX-78-6
+(Gaming) This was the first Gundam game created, released for the Famicom, and based on Mobile Suit Zeta Gundam.`Hot Scramble
+(Gaming) The Dreamcast game Mobile Suit Gundam Side Story 0079: Rise from the Ashes puts you in command of this EFSF team.`White Dingo
+(Gaming) This PS2 game prominently features cover art best described as "The GP01Fb Is About To Shoot You."`Encounters in Space
+(Gaming) What was the name of the first Gundam game released on the PS2?`Journey to Jaburo
+(Gaming) This game, developed for the PC, Mac, Pippin, and PSX by an American developer, prominently features full motion video with western actors.`War for Earth`The War for Earth
+(Gaming) This series of tactical RPGs features a myriad of Gundam shows and series alongside the likes of Getter Robo and Mazinger Z.`SRW`Super Robot Wars
+
+(Gunpla) This kit was the 100th Master Grade.`Turn A`Turn-A
+(Gunpla) The 1/100 Scale model kits are released under this Grade.`Master`Master Grade`MG
+(Gunpla) This line of 1/100 scale kits shares the same level of detail of the Master Grade line, but are lacking in a complex inner frame.`Re/100
+(Gunpla) This line of 1/144 scale kits has the tagline of "Excitement Embodied".`RG`Real Grade
+(Gunpla) The ver.Ka line of kits are suits that have been redesigned by which mechanical designer?`Katoki`Hajime Katoki
+(Gunpla) Which standard MG kit comes with the most individual runners (39)?`FA Unicorn`Full Armor Unicorn`F.A. Unicorn
+(Gunpla) Which standard MG kit comes with the most individual parts (796)?`Psycho Zaku
+(Gunpla) As of 9/2017, what is the only MG kit to receive a version 3.0?`RX-78-2`RX-78
+(Gunpla) The first Master Grade kit was released in what year?`1995`95
+(Gunpla) This line of kits measures in at a whopping 1/48 scale.`Mega Size
+(Gunpla) This standard Perfect Grade kit is the only one featuring a mobile suit not seen in a TV series.`Red Frame
+(Gunpla) This Master Grade kit was the first one released of an MSV mobile suit.`G-3`G3
+(Gunpla) This Master Grade kit was the first one to use "EFSF" in place of "UNT Spacy" as the official Federation moniker.`GM
+(Gunpla) This Master Grade kit is the only one designated as "1.5"`RX-78`RX-78-2`Gundam
+(Gunpla) This Master Grade kit was the first one to include an innter frame for the torso, and includes die cast metal parts for the ankles and hips.`Nu
+(Gunpla) This mobile suit was the first to receive the MG Ver.Ka treatment.`RX-78`RX-78-2`Gundam
+(Gunpla) Measuring in at 36 cm, this is the tallest Master Grade kit available.`Perfect Zeong
+(Gunpla) This mobile suit was the first to receive a Ver. 2.0.`RX-178`Mk II
+(Gunpla) This Master Grade kit was the first one not to include any polycaps.`F91`F-91`F 91
+(Gunpla) This mobile suit is tied with the Phenex as the most expensive MG release.`The O
+(Gunpla) This Master Grade kit was the first to be released with bilingual Japanese/English text on its packaging and instruction manual.`Psycho Zaku
+(Gunpla) This Master Grade kit is a regular retail release in all markets except Japan, where it is a P-Bandai exclusive.`XN Raiser`00 XN Raiser
+(Gunpla) This is the only amphibious mobile suit to receive a Real Grade kit.`Z'gok
+(Gunpla) This was the first Gundam featured in the HG-GTO line.`Local Type`Gundam Local Type
+(Gunpla) This standard MG kit is the only one to include die cast parts.`Nu
+(Gunpla) This line of 1/144 scale kits is exclusive to the Gundam AGE series, and included microchips to use in the GAGE-ING arcade game.`Advanced Grade`AG
+(Gunpla) As of 9/2017, this series is the only one without a Master Grade kit.`IBO`Iron Blooded Orphans
+(Gunpla) This is the name of the official line of Resin kits created by Bandai.`B-Club
+
+(Model Number) RX-78-2`Gundam
+(Model Number) MS-06`Zaku II`Zaku 2
+(Model Number) MS-05`Zaku I`Zaku 1
+(Model Number) RX-77-2`Guncannon
+(Model Number) RX-75`Guntank
+(Model Number) MSZ-010`ZZ`Double Zeta
+(Model Number) MS-18E`Kampfer
+(Model Number) GN-001`Exia
+(Model Number) GAT-X105`Strike
+(Model Number) RGM-79`GM
+(Model Number) RB-79`Ball
+(Model Number) LM312V04`Victory
+(Model Number) RX-178`Mk II`MkII`Mark 2`Mark II
+(Model Number) MSZ-006`Zeta
+(Model Number) MSN-00100`Hyaku Shiki
+(Model Number) SYSTEM A-99`Turn A
+(Model Number) CONCEPT-X 6-1-2`Turn X
+(Model Number) GF13-017NJ`Shining`Shining Gundam
+(Model Number) GF13-017NJII`God`God Gundam`Burning`Burning Gundam
+(Model Number) RX-0`Unicorn
+(Model Number) ZGMF-X09A`Justice
+(Model Number) RX-78NT1`Alex
+(Model Number) MSA-0011`S`S Gundam
+(Model Number) XXXG-01W`Wing
+(Model Number) RB-79`Ball
+(Model Number) ZGMF-X42S`Destiny
+(Model Number) ZGMF-X56S`Impulse
+(Model Number) ASW-G-08`Barbatos
+(Model Number) ZGMF-X10A`Freedom
+(Model Number) YG-111`G-Self
+(Model Number) RTX-65`Guntank`Guntank Early Type`Guntank Origin
+(Model Number) MS-01`Worker`Mobile Worker
+(Model Number) RX-78-01[N]`Gundam Local Type`Gundam Local
+(Model Number) RAG-79-G1`Gundam Marine`Gundam Marine Type`Gundiver
+(Model Number) FA-78`Full Armor`Gundam Full Armor`Full Armor Gundam
+(Model Number) FA-010S`Full Armor ZZ
+(Model Number) MSZ-010`ZZ`Double Zeta
+(Model Number) AMX-004`Qubeley
+(Model Number) RX-93`Nu
+(Model Number) RGZ-91`Re-GZ`ReGZ
+(Model Number) MSN-04`Sazabi
+(Model Number) MSN-06S`Sinanju
+(Model Number) NZ-666`Kshatriya
+(Model Number) NZ-999`Neo Zeong
+(Model Number) XM-X1`Crossbone
+(Model Number) GX-9900`X
+(Model Number) GX-9901-DX`Double X`DX`XX
+(Model Number) ZGMF-X20A`Strike Freedom
+(Model Number) RXF-91`Silhouette
+(Model Number) OZ-00MS`Tallgeese
+(Model Number) VGMM-Gf10`G-Lucifer`G Lucifer
+(Model Number) CAMS-05`Mack Knife
+(Model Number) MSAM-033`G-Arcane`G Arcane
+
+(Opening Theme) Fly! Gundam - Tobe! Gandamu`MSG`Gundam`Mobile Suit Gundam
+(Opening Theme) Transcending Times - Toki wo Koete`Zeta
+(Opening Theme) It's Not Anime - Anime Ja Nai`ZZ`Double Zeta
+(Opening Theme) STAND UP TO THE VICTORY`Victory
+(Opening Theme) Raise Your Flag`IBO`Iron Blooded Orphans
+(Opening Theme) Century Color`Turn A
+(Opening Theme) INVOKE`SEED
+(Opening Theme) Dreams`X
+(Opening Theme) Just Communication`Wing
+(Opening Theme) The Winner`0083`Stardust Memory
+(Opening Theme) Arashi no Naka de Kagayaite - Shine in the Storm`08th`08th MS Team
+(Opening Theme) Towards Tomorrow - Asu E`AGE
+(Opening Theme) sharp #`AGE
+(Opening Theme) REAL`AGE
+(Opening Theme) AURORA`AGE
+(Opening Theme) Mizu no Hoshi e Ai wo Komete - Towards the Aqueous Star with Love`Zeta
+(Opening Theme) Daybreak's Bell`00
+(Opening Theme) Ash Like Snow`00
+(Opening Theme) Fleeting and Eternal Sorrow`00
+(Opening Theme) Past the Tears`00
+
+Name That Mobile Suit! https://i.imgur.com/350nk2n.png`GM
+Name That Mobile Suit! https://i.imgur.com/EnebWeG.png`RX-78`RX-78-2`Gundam
+Name That Mobile Suit! https://i.imgur.com/2JthQlh.png`Guncannon
+Name That Mobile Suit! https://i.imgur.com/bZ0fpD3.png`RX-78-1
+Name That Mobile Suit! https://i.imgur.com/OeCjOgJ.png`GP02A`Physalis
+Name That Mobile Suit! https://i.imgur.com/zO1Jk2D.png`Woundwort
+Name That Mobile Suit! https://i.imgur.com/BBhC5Ne.png`Zaku II`Zaku 2
+Name That Mobile Suit! https://i.imgur.com/CjfkAFT.png`Dom
+Name That Mobile Suit! https://i.imgur.com/vnmsSAp.png`Hazel
+Name That Mobile Suit! https://i.imgur.com/BP87RzK.png`GM Quel
+Name That Mobile Suit! https://i.imgur.com/2g57CrW.png`Gouf
+Name That Mobile Suit! https://i.imgur.com/3FsO8RJ.png`Guntank
+Name That Mobile Suit! https://i.imgur.com/9wUXHkw.png`G3`RX-78-3
+Name That Mobile Suit! https://i.imgur.com/E9PB3Fo.png`Zaku I`Zaku 1
+Name That Mobile Suit! https://i.imgur.com/OvvBjD2.png`Gogg
+Name That Mobile Suit! https://i.imgur.com/hnFHJmU.png`Alex`NT-1
+Name That Mobile Suit! https://i.imgur.com/UIS0hx0.png`Acguy
+Name That Mobile Suit! https://i.imgur.com/osajmo5.png`Z'Gok
+Name That Mobile Suit! https://i.imgur.com/TfBKyOm.png`Zock
+Name That Mobile Suit! https://i.imgur.com/cLRSLFV.png`Zeong
+Name That Mobile Suit! https://i.imgur.com/AnDrJeN.png`Ball
+Name That Mobile Suit! https://i.imgur.com/o3NFgCg.png`Gyan
+Name That Mobile Suit! https://i.imgur.com/iMJn9Ni.png`Nemo
+Name That Mobile Suit! https://i.imgur.com/QGG78qc.png`Mk II`Mark II`Mk 2`Mark 2`RX-178
+Name That Mobile Suit! https://i.imgur.com/nawldF1.png`Rick Dias
+Name That Mobile Suit! https://i.imgur.com/JaJCXot.png`Methuss
+Name That Mobile Suit! https://i.imgur.com/VJn8lZ2.png`Hyaku Shiki
+Name That Mobile Suit! https://i.imgur.com/XdxszUu.png`Dijeh
+Name That Mobile Suit! https://i.imgur.com/SQcNQ0C.png`Zeta
+Name That Mobile Suit! https://i.imgur.com/D4uc83e.png'Hizack
+Name That Mobile Suit! https://i.imgur.com/S97IttJ.png'Super Gundam
+Name That Mobile Suit! https://i.imgur.com/UxiCWQm.png`Marasai
+Name That Mobile Suit! https://i.imgur.com/t1O05ix.png`Hambrabi
+Name That Mobile Suit! https://i.imgur.com/nMRySXk.png`Byarlant
+Name That Mobile Suit! https://i.imgur.com/DW5f95P.png`Psyco Gundam`Psyco
+Name That Mobile Suit! https://i.imgur.com/NBo25Av.png`Psyco Mk II`Psyco Mark II`Psyco Mark 2`Psyco Mark II`Psyco Gundam Mk II`Psyco Gundam Mk 2`Psyco Gundam Mark 2`Psyco Gundam Mark II
+Name That Mobile Suit! https://i.imgur.com/bVXrGQi.png`Asshimar
+Name That Mobile Suit! https://i.imgur.com/vLqjiEv.png`Baund Doc
+Name That Mobile Suit! https://i.imgur.com/hkSReBS.png`Gaplant
+Name That Mobile Suit! https://i.imgur.com/9Tgt62v.png`Messala
+Name That Mobile Suit! https://i.imgur.com/t3zvBiv.png`Qubeley
+Name That Mobile Suit! https://i.imgur.com/lnRl7S1.png`Dra-C
+Name That Mobile Suit! https://i.imgur.com/HoknlQD.png`The O
+Name That Mobile Suit! https://i.imgur.com/Rc75giN.png`Palace Athene
+Name That Mobile Suit! https://i.imgur.com/8oE4QIY.png`Mobile Worker
+Name That Mobile Suit! https://i.imgur.com/6rxYcir.png`Bugu
+Name That Mobile Suit! https://i.imgur.com/yiLUQQw.png`Waff
+Name That Mobile Suit! https://i.imgur.com/Nby7Sin.png`Local Type
+Name That Mobile Suit! https://i.imgur.com/yIJrJL7.png`Marine Type`Gundiver
+Name That Mobile Suit! https://i.imgur.com/FpKPY5d.png`Full Armor Gundam`FA Gundam
+Name That Mobile Suit! https://i.imgur.com/Cs2KBOL.png`Atlas
+Name That Mobile Suit! https://i.imgur.com/fLnes1R.png`Guncannon Aqua
+Name That Mobile Suit! https://i.imgur.com/SN19ifV.png`Perfect Gundam
+Name That Mobile Suit! https://i.imgur.com/hdVyqCw.png`Psycho Zaku
+Name That Mobile Suit! https://i.imgur.com/85MjIxs.png`High Mobility Zaku II`Ridden Zaku II
+Name That Mobile Suit! https://i.imgur.com/hSUOikq.png`Hazel Custom
+Name That Mobile Suit! https://i.imgur.com/AfxcnJY.png`Hazel II
+Name That Mobile Suit! https://i.imgur.com/sCkdMGN.png`Full Armor ZZ`Full Armor Double Zeta
+Name That Mobile Suit! https://i.imgur.com/Qtp7SlO.png`Enhanced ZZ`Enhanced Double Zeta
+Name That Mobile Suit! https://i.imgur.com/0mGWxEo.png`ZZ`Double Zeta
+Name That Mobile Suit! https://i.imgur.com/j0infvt.png`Tryon 3
+Name That Mobile Suit! https://i.imgur.com/r13jN4K.png`Qubeley Mk II`Qubeley Mark 2`Qubeley 2`Qubeley II
+Name That Mobile Suit! https://i.imgur.com/rI0Jafh.png`Doven Wolf
+Name That Mobile Suit! https://i.imgur.com/UxFBTTm.png`Zaku III`Zaku 3
+Name That Mobile Suit! https://i.imgur.com/pM6QU9Z.png`Dreissen
+Name That Mobile Suit! https://i.imgur.com/bdGINje.png`GM III`GM 3
+Name That Mobile Suit! https://i.imgur.com/WFqRONj.png`Hamma Hamma
+Name That Mobile Suit! https://i.imgur.com/CQFaVlq.png`Bawoo
+Name That Mobile Suit! https://i.imgur.com/aAbGG7E.png`Queen Mansa
+Name That Mobile Suit! https://i.imgur.com/YgqWpa6.png`Nu
+Name That Mobile Suit! https://i.imgur.com/vZZJL4X.png`Jegan
+Name That Mobile Suit! https://i.imgur.com/dtSaGfW.png`Re-GZ`ReGZ
+Name That Mobile Suit! https://i.imgur.com/htRwmct.png`Hi-Nu`HiNu`Hi Nu
+Name That Mobile Suit! https://i.imgur.com/FHtAf1F.png`Geara Doga
+Name That Mobile Suit! https://i.imgur.com/JUxR74A.png`Jagd Doga
+Name That Mobile Suit! https://i.imgur.com/jiZPHjd.png`Sazabi
+Name That Mobile Suit! https://i.imgur.com/WMTvre8.png`Nightingale
+Name That Mobile Suit! https://i.imgur.com/oTEkirK.png`Hobby Hizack
+Name That Mobile Suit! https://i.imgur.com/ApGZCUh.png`Loto
+Name That Mobile Suit! https://i.imgur.com/1qB7FZC.png`Gustav Karl
+Name That Mobile Suit! https://i.imgur.com/BiEn7xi.png`Delta Plus
+Name That Mobile Suit! https://i.imgur.com/EqppmQz.png`Zeta Plus A1
+Name That Mobile Suit! https://i.imgur.com/oNPSXEa.png`Stark Jegan
+Name That Mobile Suit! https://i.imgur.com/93xxzn0.png`Jesta
+Name That Mobile Suit! https://i.imgur.com/u0pn1Ql.png`ReZEL
+Name That Mobile Suit! https://i.imgur.com/iukrIgM.png`Banshee
+Name That Mobile Suit! https://i.imgur.com/QASHJcb.png`Banshee Norn
+Name That Mobile Suit! https://i.imgur.com/hZ4gVgy.png`Geara Zulu
+Name That Mobile Suit! https://i.imgur.com/XNV1oBS.png`Zee Zulu
+Name That Mobile Suit! https://i.imgur.com/sKpIcog.png`Schuzrum-Galluss
+Name That Mobile Suit! https://i.imgur.com/Cw0IGsy.png`Zssa
+Name That Mobile Suit! https://i.imgur.com/h4GAg68.png`Sinanju
+Name That Mobile Suit! https://i.imgur.com/BftER6R.png`Sinanju Stein
+Name That Mobile Suit! https://i.imgur.com/Gr7oekk.png`Kshatriya
+Name That Mobile Suit! https://i.imgur.com/ywPA7dF.png`Neo Zeong
+Name That Mobile Suit! https://i.imgur.com/wpAMn4c.png`Rozen Zulu
+Name That Mobile Suit! https://i.imgur.com/PwVAJru.png`Dom Tropen
+Name That Mobile Suit! https://i.imgur.com/OeBby99.png`Efreet Schneid
+Name That Mobile Suit! https://i.imgur.com/9fvakLQ.png`Zogok
+Name That Mobile Suit! https://i.imgur.com/hGGHXqB.png`Juaggu
+Name That Mobile Suit! https://i.imgur.com/uYwYNet.png`FAZZ
+Name That Mobile Suit! https://i.imgur.com/sWI4hFc.png`S`Superior
+Name That Mobile Suit! https://i.imgur.com/rko9uZX.png`Deep Striker
+Name That Mobile Suit! https://i.imgur.com/etedmUG.png`Ex-S
+Name That Mobile Suit! https://i.imgur.com/7UyGheV.png`V2`Victory 2
+Name That Mobile Suit! https://i.imgur.com/yzvmhVz.png`Victory`V
+Name That Mobile Suit! https://i.imgur.com/vtDmdmC.png`V-Dash`Victory Dash
+Name That Mobile Suit! https://i.imgur.com/5ulBmRB.png`V Hexa`Victory Hexa`Hexa
+Name That Mobile Suit! https://i.imgur.com/FgRWqWR.png`F91
+Name That Mobile Suit! https://i.imgur.com/5xmqDwI.png`Vigna Ghina
+Name That Mobile Suit! https://i.imgur.com/UPg3xhb.png`X-1`Crossbone
+Name That Mobile Suit! https://i.imgur.com/zzbEr3v.png`X-1 Kai Kai`Skull Heart
+Name That Mobile Suit! https://i.imgur.com/ATg2VCL.png`X-2
+Name That Mobile Suit! https://i.imgur.com/76Jo9cP.png`X-3
+Name That Mobile Suit! https://i.imgur.com/skGJ9t8.png`G-Saviour Space`G-Saviour
+Name That Mobile Suit! https://i.imgur.com/3MRBjSQ.png`Kampfer
+Name That Mobile Suit! https://i.imgur.com/4HXLP6T.png`Hygogg
+Name That Mobile Suit! https://i.imgur.com/16wLJih.png`GP01`Zephyranthes
+Name That Mobile Suit! https://i.imgur.com/ICw6kNl.png`Gerbera Tetra
+Name That Mobile Suit! https://i.imgur.com/P7mifSK.png`GP03S`Dendrobium Stamen
+Name That Mobile Suit! https://i.imgur.com/DYpf5Vm.png`Neue Ziel
+Name That Mobile Suit! https://i.imgur.com/ZtGC0C7.png`GP04`Gerbera
+Name That Mobile Suit! https://i.imgur.com/wxs1otk.png`GP00`Blossom
+Name That Mobile Suit! https://i.imgur.com/MAMdRPx.png`Shining
+Name That Mobile Suit! https://i.imgur.com/RvK0X8U.png`Maxter
+Name That Mobile Suit! https://i.imgur.com/HreTwvp.png`Rose
+Name That Mobile Suit! https://i.imgur.com/68RFB1v.png`Dragon
+Name That Mobile Suit! https://i.imgur.com/vlrAA6d.png`Bolt
+Name That Mobile Suit! https://i.imgur.com/ifVTTbH.png`God`Burning
+Name That Mobile Suit! https://i.imgur.com/UgJDoqh.png`Kowloon
+Name That Mobile Suit! https://i.imgur.com/0bUQItH.png`Master
+Name That Mobile Suit! https://i.imgur.com/Jrk1N5c.png`Spiegel
+Name That Mobile Suit! https://i.imgur.com/7uHa51n.png`Nobell
+Name That Mobile Suit! https://i.imgur.com/mebQ9rV.png`Devil`Dark
+Name That Mobile Suit! https://i.imgur.com/smJHYTv.png`Leo
+Name That Mobile Suit! https://i.imgur.com/80ZPpfL.png`Epyon
+Name That Mobile Suit! https://i.imgur.com/08zJpWA.png`Taurus
+Name That Mobile Suit! https://i.imgur.com/hpCRXGw.png`Maganac
+Name That Mobile Suit! https://i.imgur.com/yzi641C.png`Wing Zero
+Name That Mobile Suit! https://i.imgur.com/0yKm3wa.png`Deathscythe
+Name That Mobile Suit! https://i.imgur.com/GRv0DSp.png`Deathscythe Hell
+Name That Mobile Suit! https://i.imgur.com/KxbvTro.png`Heavyarms
+Name That Mobile Suit! https://i.imgur.com/BnUj1pc.png`Heavyarms Kai`Heavyarms Custom
+Name That Mobile Suit! https://i.imgur.com/aIuA9nl.png`Shenlong
+Name That Mobile Suit! https://i.imgur.com/DYvRHTH.png`Altron
+Name That Mobile Suit! https://i.imgur.com/hmdhKvP.png`Sandrock
+Name That Mobile Suit! https://i.imgur.com/mgcCYkr.png`Sandrock Kai`Sandrock Custom
+Name That Mobile Suit! https://i.imgur.com/J5Plh67.png`Wing
+Name That Mobile Suit! https://i.imgur.com/MV6aMYw.png`X
+Name That Mobile Suit! https://i.imgur.com/uemqCj3.png`X-Divider`X Divider
+Name That Mobile Suit! https://i.imgur.com/WwBbqRz.png`Double X`XX
+Name That Mobile Suit! https://i.imgur.com/lW2lEMe.png`Leopard 
+Name That Mobile Suit! https://i.imgur.com/aukbIqW.png`Leopard Destroy
+Name That Mobile Suit! https://i.imgur.com/MOZMS4R.png`Airmaster
+Name That Mobile Suit! https://i.imgur.com/HYQFgnO.png`Airmaster Burst
+Name That Mobile Suit! https://i.imgur.com/AhTMFbe.png`Virsago
+Name That Mobile Suit! https://i.imgur.com/1hPHNwm.png`Virsago Chest Break
+Name That Mobile Suit! https://i.imgur.com/aYd4HLp.png`Ashtaron
+Name That Mobile Suit! https://i.imgur.com/WEgweHa.png`Ashtaron Hermit Crab
+Name That Mobile Suit! https://i.imgur.com/yl8zm7q.png`Jenice
+Name That Mobile Suit! https://i.imgur.com/SipiLdY.png`RX-79G`Gundam Ground Type`Ground`Ground Type
+Name That Mobile Suit! https://i.imgur.com/bWyxixi.png`Ez8`Ez-8
+Name That Mobile Suit! https://i.imgur.com/eFWAXSH.png`Blue Destiny Unit 1`Blue Destiny 1`BD1
+Name That Mobile Suit! https://i.imgur.com/BGD7526.png`Pale Rider
+Name That Mobile Suit! https://i.imgur.com/LOjodBZ.png`RX-78-7`7th Gundam`Seventh Gundam
+Name That Mobile Suit! https://i.imgur.com/NGKqgQ0.png`Gaplant TR-5`TR-5`Fiver
+Name That Mobile Suit! https://i.imgur.com/LFlSb37.png`GM Custom
+Name That Mobile Suit! https://i.imgur.com/1RPsQWf.png`Musha
+Name That Mobile Suit! https://i.imgur.com/PI4eXum.png`Amazing Red Warrior
+Name That Mobile Suit! https://i.imgur.com/fSxKWzU.png`Forever
+Name That Mobile Suit! https://i.imgur.com/IyxDmAz.png`Beargguy
+Name That Mobile Suit! https://i.imgur.com/jbbLhUr.png`Beginning
+Name That Mobile Suit! https://i.imgur.com/XVP4Umb.png`Beginning 30
+Name That Mobile Suit! https://i.imgur.com/MpUB3R2.png`G-Self
+Name That Mobile Suit! https://i.imgur.com/Xn3y3li.png`Age-3 Fortress`Fortress
+Name That Mobile Suit! https://i.imgur.com/qN4mHI4.png`Age-FX`Age FX
+Name That Mobile Suit! https://i.imgur.com/ZbjK501.png`Age-3`Age 3
+Name That Mobile Suit! https://i.imgur.com/ZI1UBBK.png`Age-3 Orbital`Orbital
+Name That Mobile Suit! https://i.imgur.com/YjVvE8z.png`Legilis
+Name That Mobile Suit! https://i.imgur.com/kKehibT.png`Age-1`Age 1
+Name That Mobile Suit! https://i.imgur.com/vZYa5RB.png`Age-1 Flat`Age 1 Flat`Flat
+Name That Mobile Suit! https://i.imgur.com/fkzjBcj.png`Age-1 Spallow`Spallow
+Name That Mobile Suit! https://i.imgur.com/AW3HKOL.png`Age-1 Swordia`Swordia
+Name That Mobile Suit! https://i.imgur.com/R82brxN.png`Age-1 Titus`Titus
+Name That Mobile Suit! https://i.imgur.com/vxagIKu.png`Age-2`Age 2
+Name That Mobile Suit! https://i.imgur.com/uN49k6O.png`Age-2 Double Bullet`Double Bullet
+Name That Mobile Suit! https://i.imgur.com/pLPtlsQ.png`Age-2 Dark Hound`Dark Hound
+Name That Mobile Suit! https://i.imgur.com/tvTfPEj.png`Genoace
+Name That Mobile Suit! https://i.imgur.com/9IPkFPw.png`Genoace Custom
+Name That Mobile Suit! https://i.imgur.com/v7s5GpB.png`Adele
+Name That Mobile Suit! https://i.imgur.com/0QtCgut.png`Genoace II`Genoace 2
+Name That Mobile Suit! https://i.imgur.com/nKDYwLU.png`0`0 Gundam
+Name That Mobile Suit! https://i.imgur.com/4QgooVX.png`Astraea
+Name That Mobile Suit! https://i.imgur.com/UHvXmp9.png`Exia
+Name That Mobile Suit! https://i.imgur.com/ydwhT2c.png`Exia Repair
+Name That Mobile Suit! https://i.imgur.com/KVifTK7.png`Dynames
+Name That Mobile Suit! https://i.imgur.com/q1Ev4l7.png`Kyrios
+Name That Mobile Suit! https://i.imgur.com/rXpYnGN.png`Virtue
+Name That Mobile Suit! https://i.imgur.com/YvPi6HW.png`Nadleeh
+Name That Mobile Suit! https://i.imgur.com/m1elgwW.png`Cherudim
+Name That Mobile Suit! https://i.imgur.com/B60mY1F.png`Arios
+Name That Mobile Suit! https://i.imgur.com/0NgAq8d.png`Seravee
+Name That Mobile Suit! https://i.imgur.com/qnaBtIu.png`Seraphim
+Name That Mobile Suit! https://i.imgur.com/3V9qujd.png`00
+Name That Mobile Suit! https://i.imgur.com/LSEWZlL.png`Qant`Qanta`Quanta`Qan[T]
+Name That Mobile Suit! https://i.imgur.com/R5KTTo2.png`Buster
+Name That Mobile Suit! https://i.imgur.com/eAvRsM1.png`Strike
+Name That Mobile Suit! https://i.imgur.com/s1AE3dv.png`Strike Rouge
+Name That Mobile Suit! https://i.imgur.com/Te5KeTk.png`Astray
+Name That Mobile Suit! https://i.imgur.com/PT0xoKg.png`Justice
+Name That Mobile Suit! https://i.imgur.com/WO9vTtk.png`Freedom
+Name That Mobile Suit! https://i.imgur.com/u0jlF3d.png`Akatsuki
+Name That Mobile Suit! https://i.imgur.com/GaHCmvD.png`Infinite Justice
+Name That Mobile Suit! https://i.imgur.com/rOYImUm.png`Strike Freedom
+Name That Mobile Suit! https://i.imgur.com/u4mVERV.png`Gaia
+Name That Mobile Suit! https://i.imgur.com/kktnJjh.png`Duel
+Name That Mobile Suit! https://i.imgur.com/qxcPIEg.png`Strike Noir
+Name That Mobile Suit! https://i.imgur.com/IaXmXVC.png`Calamity
+Name That Mobile Suit! https://i.imgur.com/teE2WyO.png`Blitz
+Name That Mobile Suit! https://i.imgur.com/IkXRvPD.png`Forbidden
+Name That Mobile Suit! https://i.imgur.com/6g8vm0o.png`Aegis
+Name That Mobile Suit! https://i.imgur.com/80vnisC.png`Raider
+Name That Mobile Suit! https://i.imgur.com/lLHZD3y.png`Destroy
+Name That Mobile Suit! https://i.imgur.com/EHNuUjT.png`Destiny
+Name That Mobile Suit! https://i.imgur.com/gmgd0OC.png`Impulse
+Name That Mobile Suit! https://i.imgur.com/9Rd1JkM.png`Legend
+Name That Mobile Suit! https://i.imgur.com/RC0LjPy.png`Red Frame`Astray Red Frame`Red Frame Astray
+Name That Mobile Suit! https://i.imgur.com/UB9DwHk.png`Blue Frame`Astray Blue Frame`Blue Frame Astray
+Name That Mobile Suit! https://i.imgur.com/SkPCUZG.png`Gump
+Name That Mobile Suit! https://i.imgur.com/arGfYB4.png`Flint
+Name That Mobile Suit! https://i.imgur.com/AmPjyzE.png`Heavygun
+Name That Mobile Suit! https://i.imgur.com/RZytDxX.png`F-70
+Name That Mobile Suit! https://i.imgur.com/WjBshRw.png`F-90
+Name That Mobile Suit! https://i.imgur.com/LZ8X017.png`ST-Gun
+Name That Mobile Suit! https://i.imgur.com/X8EpXDP.png`Barbatos
+Name That Mobile Suit! https://i.imgur.com/34Y5LtT.png`Barbatos Lupus
+Name That Mobile Suit! https://i.imgur.com/52ZXKnN.png`Barbatos Lupus Rex
+Name That Mobile Suit! https://i.imgur.com/yyHQstu.png`Gusion Rebake
+Name That Mobile Suit! https://i.imgur.com/BahuCv9.png`Gusion Rebake Full City
+Name That Mobile Suit! https://i.imgur.com/QXa96Ts.png`Flauros
+Name That Mobile Suit! https://i.imgur.com/jqjmylq.png`Bael
+Name That Mobile Suit! https://i.imgur.com/zpsiL34.png`Kimaris
+Name That Mobile Suit! https://i.imgur.com/LSgyQy6.png`Kimaris Trooper
+Name That Mobile Suit! https://i.imgur.com/5gTLp0t.png`Vidar
+Name That Mobile Suit! https://i.imgur.com/E0qFjo8.png`Kimaris Vidar
+Name That Mobile Suit! https://i.imgur.com/lVUPVMr.png`Schwalbe Graze
+Name That Mobile Suit! https://i.imgur.com/cM40gSq.png`Graze
+Name That Mobile Suit! https://i.imgur.com/FWtXCT5.png`Gusion
+Name That Mobile Suit! https://i.imgur.com/VHzoguL.png`Shia Qan[T]`Shia Qant`Shia Quanta
+Name That Mobile Suit! https://i.imgur.com/fIJiYYm.png`Kamiki Burning
