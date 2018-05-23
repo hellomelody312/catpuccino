@@ -16,6 +16,7 @@
     "cogs.kaomoji" : true,
     "cogs.kill" : true,
     "cogs.leveler" : false,
+    "cogs.magic" : true,
     "cogs.memes" : true,
     "cogs.meow" : false,
     "cogs.mock" : true,

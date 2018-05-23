@@ -2488,3 +2488,340 @@ Traceback (most recent call last):
   File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
     raise CogLoadError(*e.args)
 cogs.owner.CogLoadError: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\engine.py', 27, 24, '            elif score = 0:\n'))
+[24/05/2018 02:02] ERROR owner load 69: ('expected an indented block', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 27, 5, "    @magic.command(pass_context=True, name='set')\n"))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 27
+    @magic.command(pass_context=True, name='set')
+    ^
+IndentationError: expected an indented block
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 65, in load
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('expected an indented block', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 27, 5, "    @magic.command(pass_context=True, name='set')\n"))
+[24/05/2018 02:02] ERROR owner load 74: extension does not have a setup function
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 65, in load
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 972, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 736, in load_extension
+    raise discord.ClientException('extension does not have a setup function')
+discord.errors.ClientException: extension does not have a setup function
+[24/05/2018 02:04] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 972, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 736, in load_extension
+    raise discord.ClientException('extension does not have a setup function')
+discord.errors.ClientException: extension does not have a setup function
+[24/05/2018 02:07] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 972, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 736, in load_extension
+    raise discord.ClientException('extension does not have a setup function')
+discord.errors.ClientException: extension does not have a setup function
+[24/05/2018 02:07] ERROR owner load 74: extension does not have a setup function
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 65, in load
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 972, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 736, in load_extension
+    raise discord.ClientException('extension does not have a setup function')
+discord.errors.ClientException: extension does not have a setup function
+[24/05/2018 02:12] ERROR owner load 74: Expecting property name enclosed in double quotes: line 11 column 1 (char 185)
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 65, in load
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 972, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 70, in setup
+    n = magic(bot)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 19, in __init__
+    self.stats = dataIO.load_json(self.statspath)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\utils\dataIO.py", line 32, in load_json
+    return self._read_json(filename)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\utils\dataIO.py", line 46, in _read_json
+    data = json.load(f)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 268, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 11 column 1 (char 185)
+[24/05/2018 02:13] ERROR red on_command_error 369: Exception in command 'magic'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 28, in _magic
+    @magic.command(pass_context=True, name='set')
+AttributeError: type object 'magic' has no attribute 'command'
+[24/05/2018 02:17] ERROR owner _reload 156: ('expected an indented block', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 28, 5, "    @magic.command(pass_context=True, name='set')\n"))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 28
+    @magic.command(pass_context=True, name='set')
+    ^
+IndentationError: expected an indented block
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('expected an indented block', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 28, 5, "    @magic.command(pass_context=True, name='set')\n"))
+[24/05/2018 02:18] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 673, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 13, in <module>
+    class magic:
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 29, in magic
+    @magic.command(pass_context=True, name='set')
+NameError: name 'magic' is not defined
+[24/05/2018 02:19] ERROR red on_command_error 369: Exception in command 'magic'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 27, in _magic
+    if ctx.invoked_subcommand is None:
+NameError: name 'ctx' is not defined
+[24/05/2018 02:32] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 673, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 13, in <module>
+    class magic:
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 30, in magic
+    @magic.command(pass_context=True, no_pm=true, name='set')
+NameError: name 'true' is not defined
+[24/05/2018 02:36] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 972, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 72, in setup
+    n = Magic(bot)
+NameError: name 'Magic' is not defined
+[24/05/2018 02:40] ERROR red on_command_error 369: Exception in command 'magic showstats'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 42, in showstats
+    await self.bot.say(user.name + '\'s stats are: ' + self.stats[user.id])
+TypeError: Can't convert 'dict' object to str implicitly
+[24/05/2018 02:53] ERROR owner _reload 156: ('unexpected indent', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 45, 8, '        async def setstats(self, ctx, hp:int=0,atk:int=0,def:int=0,spa:int=0,spd:int=0,spe:int=0):\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 45
+    async def setstats(self, ctx, hp:int=0,atk:int=0,def:int=0,spa:int=0,spd:int=0,spe:int=0):
+    ^
+IndentationError: unexpected indent
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('unexpected indent', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 45, 8, '        async def setstats(self, ctx, hp:int=0,atk:int=0,def:int=0,spa:int=0,spd:int=0,spe:int=0):\n'))
+[24/05/2018 02:54] ERROR owner _reload 156: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 45, 56, '    async def setstats(self, ctx, hp:int=0,atk:int=0,def:int=0,spa:int=0,spd:int=0,spe:int=0):\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 45
+    async def setstats(self, ctx, hp:int=0,atk:int=0,def:int=0,spa:int=0,spd:int=0,spe:int=0):
+                                                       ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 45, 56, '    async def setstats(self, ctx, hp:int=0,atk:int=0,def:int=0,spa:int=0,spd:int=0,spe:int=0):\n'))
+[24/05/2018 02:56] ERROR owner _reload 156: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 45, 58, '    async def setstats(self, ctx, hp:int=0, atk:int=0, def:int=0, spa:int=0, spd:int=0, spe:int=0):\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 45
+    async def setstats(self, ctx, hp:int=0, atk:int=0, def:int=0, spa:int=0, spd:int=0, spe:int=0):
+                                                         ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 45, 58, '    async def setstats(self, ctx, hp:int=0, atk:int=0, def:int=0, spa:int=0, spd:int=0, spe:int=0):\n'))
+[24/05/2018 02:58] ERROR owner _reload 156: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 45, 58, '    async def setstats(self, ctx, hp:int=0, atk:int=0, def:int=0, spa:int=0, spd:int=0, spe:int=0):\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 45
+    async def setstats(self, ctx, hp:int=0, atk:int=0, def:int=0, spa:int=0, spd:int=0, spe:int=0):
+                                                         ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 45, 58, '    async def setstats(self, ctx, hp:int=0, atk:int=0, def:int=0, spa:int=0, spd:int=0, spe:int=0):\n'))
+[24/05/2018 03:00] ERROR red on_command_error 369: Exception in command 'magic setstats'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 49, in setstats
+    await self.bot.say(user.name + '\'s stats are: ' + str(self.stats[user.id]).strip('\'','{','}'))
+TypeError: strip() takes at most 1 argument (3 given)
+[24/05/2018 03:00] ERROR owner _reload 156: ('EOL while scanning string literal', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 49, 96, "        await self.bot.say(user.name + '\\'s stats are: ' + str(self.stats[user.id]).strip('{}))\n"))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 49
+    await self.bot.say(user.name + '\'s stats are: ' + str(self.stats[user.id]).strip('{}))
+                                                                                          ^
+SyntaxError: EOL while scanning string literal
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('EOL while scanning string literal', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 49, 96, "        await self.bot.say(user.name + '\\'s stats are: ' + str(self.stats[user.id]).strip('{}))\n"))
