@@ -196,7 +196,7 @@
             "OMG YES"
         ],
         "server" : null,
-        "triggered" : 29,
+        "triggered" : 30,
         "triggered_by" : "(^ya+[y+]$|^ye+[y+]$|^yah[o+]$|^ya+[s+]$)",
         "type" : "random"
     },

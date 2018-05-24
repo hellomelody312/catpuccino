@@ -1,27 +1,93 @@
 {
+    "123385776628039680" : {
+        "atk" : 120,
+        "defe" : 135,
+        "hp" : 65,
+        "spa" : 65,
+        "spd" : 80,
+        "spe" : 75,
+        "type1" : "Grass",
+        "type2" : "Fighting"
+    },
+    "226366391509450752" : {
+        "atk" : 119,
+        "defe" : 100,
+        "hp" : 64,
+        "spa" : 70,
+        "spd" : 115,
+        "spe" : 114,
+        "type1" : "Fairy",
+        "type2" : "Bug"
+    },
     "269895662999568384" : {
         "atk" : 1,
-        "def" : 2,
+        "defe" : 2,
         "hp" : 2,
         "lvl" : 1,
         "spa" : 1,
         "spd" : 2,
-        "spe" : 1
+        "spe" : 1,
+        "type1" : "Normal",
+        "type2" : "Normal"
     },
     "293041932542672896" : {
-        "atk" : 60,
-        "def" : 79,
-        "hp" : 95,
-        "spa" : 100,
-        "spd" : 125,
-        "spe" : 81
+        "atk" : 119,
+        "defe" : 67,
+        "hp" : 63,
+        "spa" : 61,
+        "spd" : 71,
+        "spe" : 89,
+        "type1" : "Bug",
+        "type2" : "Dragon"
     },
     "309622066666274818" : {
-        "atk" : 0,
-        "def" : 0,
-        "hp" : 0,
-        "spa" : 0,
-        "spd" : 0,
-        "spe" : 0
+        "atk" : 180,
+        "defe" : 95,
+        "hp" : 90,
+        "spa" : 200,
+        "spd" : 100,
+        "spe" : 120,
+        "type1" : "Fighting",
+        "type2" : "Electric"
+    },
+    "365975655608745985" : {
+        "atk" : 1,
+        "defe" : 1,
+        "hp" : 1,
+        "spa" : 1,
+        "spd" : 1,
+        "spe" : 1,
+        "type1" : "Normal",
+        "type2" : "Normal"
+    },
+    "391758777025560588" : {
+        "atk" : 1,
+        "defe" : 1,
+        "hp" : 1,
+        "spa" : 1,
+        "spd" : 1,
+        "spe" : 1,
+        "type1" : "Normal",
+        "type2" : "Normal"
+    },
+    "434088597373714442" : {
+        "atk" : 2,
+        "defe" : 3,
+        "hp" : 1,
+        "spa" : 3,
+        "spd" : 4,
+        "spe" : 5,
+        "type1" : "Normal",
+        "type2" : "Normal"
+    },
+    "85614143951892480" : {
+        "atk" : 1,
+        "defe" : 1,
+        "hp" : 1,
+        "spa" : 1,
+        "spd" : 1,
+        "spe" : 1,
+        "type1" : "Normal",
+        "type2" : "Normal"
     }
 }
