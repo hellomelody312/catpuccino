@@ -2825,3 +2825,1138 @@ Traceback (most recent call last):
   File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
     raise CogLoadError(*e.args)
 cogs.owner.CogLoadError: ('EOL while scanning string literal', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 49, 96, "        await self.bot.say(user.name + '\\'s stats are: ' + str(self.stats[user.id]).strip('{}))\n"))
+[25/05/2018 17:36] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 78, in attack
+    msg = msg + "Hits " + self.moves[moveid]['hits'] + " times! "
+TypeError: Can't convert 'int' object to str implicitly
+[25/05/2018 17:39] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 94, in attack
+    msg = msg + str(totaldmg) + " damage! (" + str(round(dmg / (self.stats[target.id]['hp']*3)*100)) + "\% of " + target.name + "\'s health) ("+str(targethp)+"/"+str(self.stats[target.id]['hp']*3)+")\n"
+UnboundLocalError: local variable 'dmg' referenced before assignment
+[25/05/2018 17:57] ERROR owner _reload 156: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 95, 129, '                    msg = msg + str(totaldmg) + " damage! (" + str(round(totaldmg / (self.stats[target.id][\'hp\']*3)*100)) + "\\%") ("+str(targethp)+"/"+str(self.stats[target.id][\'hp\']*3)+" left)\\n"\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 95
+    msg = msg + str(totaldmg) + " damage! (" + str(round(totaldmg / (self.stats[target.id]['hp']*3)*100)) + "\%") ("+str(targethp)+"/"+str(self.stats[target.id]['hp']*3)+" left)\n"
+                                                                                                                ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 95, 129, '                    msg = msg + str(totaldmg) + " damage! (" + str(round(totaldmg / (self.stats[target.id][\'hp\']*3)*100)) + "\\%") ("+str(targethp)+"/"+str(self.stats[target.id][\'hp\']*3)+" left)\\n"\n'))
+[25/05/2018 18:15] ERROR red <module> 634: Fatal exception, attempting graceful logout
+Traceback (most recent call last):
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 762, in create_connection
+    yield from self.sock_connect(sock, address)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\selector_events.py", line 451, in sock_connect
+    return (yield from fut)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 380, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\tasks.py", line 304, in _wakeup
+    future.result()
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 293, in result
+    raise self._exception
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\selector_events.py", line 481, in _sock_connect_cb
+    raise OSError(err, 'Connect call failed %s' % (address,))
+TimeoutError: [Errno 10060] Connect call failed ('104.16.59.37', 443)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "red.py", line 614, in <module>
+    loop.run_until_complete(main(bot))
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 466, in run_until_complete
+    return future.result()
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 293, in result
+    raise self._exception
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\tasks.py", line 239, in _step
+    result = coro.send(None)
+  File "red.py", line 603, in main
+    yield from bot.connect()
+  File "lib\discord\client.py", line 444, in connect
+    self.ws = yield from DiscordWebSocket.from_client(self)
+  File "lib\discord\gateway.py", line 207, in from_client
+    timeout=60, loop=client.loop)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\tasks.py", line 400, in wait_for
+    return fut.result()
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\futures.py", line 293, in result
+    raise self._exception
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\tasks.py", line 241, in _step
+    result = coro.throw(exc)
+  File "lib\discord\gateway.py", line 65, in _ensure_coroutine_connect
+    ws = yield from websockets.connect(gateway, loop=loop, klass=klass)
+  File "lib\websockets\py35\client.py", line 19, in __await__
+    return (yield from self.client)
+  File "lib\websockets\client.py", line 210, in connect
+    factory, wsuri.host, wsuri.port, **kwds)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\asyncio\base_events.py", line 784, in create_connection
+    ', '.join(str(exc) for exc in exceptions)))
+OSError: Multiple exceptions: [Errno 10060] Connect call failed ('104.16.60.37', 443), [Errno 10060] Connect call failed ('104.16.59.37', 443)
+[25/05/2018 18:18] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 98, in attack
+    msg = msg + str(totaldmg) + " damage! (" + str(round(totaldmg / (self.stats[target.id]['hp']*3)*100)) + "\%) ("+str(targethp)+"/"+str(self.stats[target.id]['hp']*3)+" left)\n"
+UnboundLocalError: local variable 'msg' referenced before assignment
+[25/05/2018 18:28] ERROR red on_command_error 369: Exception in command 'stat random'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 146, in random
+    self.save_stats()
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 26, in save_stats
+    dataIO.save_json(self.statspath, self.stats)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\utils\dataIO.py", line 27, in save_json
+    os.replace(tmp_file, filename)
+PermissionError: [WinError 5] Access is denied: 'data/magic/stats-9262.tmp' -> 'data/magic/stats.json'
+[25/05/2018 20:05] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 972, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 221, in setup
+    n = Magic(bot)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 19, in __init__
+    self.stats = dataIO.load_json(self.statspath)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\utils\dataIO.py", line 32, in load_json
+    return self._read_json(filename)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\utils\dataIO.py", line 45, in _read_json
+    with open(filename, encoding='utf-8', mode="r") as f:
+OSError: [Errno 22] Invalid argument: 'https://od.lk/s/MzVfNDg2MDUyOF8/stats.json'
+[25/05/2018 20:08] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 972, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 224, in setup
+    n = Magic(bot)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 18, in __init__
+    json_url = urlopen("https://od.lk/s/MzVfNDg2MDUyOF8/stats.json")
+NameError: name 'urlopen' is not defined
+[25/05/2018 20:08] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 972, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 224, in setup
+    n = Magic(bot)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 18, in __init__
+    json_url = urlopen("https://od.lk/s/MzVfNDg2MDUyOF8/stats.json")
+NameError: name 'urlopen' is not defined
+[25/05/2018 20:09] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 972, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 224, in setup
+    n = Magic(bot)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 18, in __init__
+    json_url = urllib.urlopen("https://od.lk/s/MzVfNDg2MDUyOF8/stats.json")
+AttributeError: module 'urllib' has no attribute 'urlopen'
+[25/05/2018 20:09] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 972, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 224, in setup
+    n = Magic(bot)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 18, in __init__
+    json_url = urllib.open("https://od.lk/s/MzVfNDg2MDUyOF8/stats.json")
+AttributeError: module 'urllib' has no attribute 'open'
+[25/05/2018 20:10] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 972, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 224, in setup
+    n = Magic(bot)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 18, in __init__
+    json_url = urllib.request.urlopen("https://od.lk/s/MzVfNDg2MDUyOF8/stats.json")
+AttributeError: module 'urllib' has no attribute 'request'
+[25/05/2018 20:11] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 972, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 224, in setup
+    n = Magic(bot)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 19, in __init__
+    self.stats = json.loads(json_url.read())
+NameError: name 'json' is not defined
+[25/05/2018 20:12] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 972, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 224, in setup
+    n = Magic(bot)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 19, in __init__
+    self.stats = dataIO.load_json(json_url)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\utils\dataIO.py", line 32, in load_json
+    return self._read_json(filename)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\utils\dataIO.py", line 45, in _read_json
+    with open(filename, encoding='utf-8', mode="r") as f:
+TypeError: invalid file: <http.client.HTTPResponse object at 0x0000025390EBB908>
+[25/05/2018 20:13] ERROR owner _reload 156: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 18, 48, '        json_url = urllib.request.urlopen(https://od.lk/s/MzVfNDg2MDUyOF8/stats.json)\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 971, in _load_cog
+    importlib.reload(mod_obj)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 166, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 626, in _exec
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 18
+    json_url = urllib.request.urlopen(https://od.lk/s/MzVfNDg2MDUyOF8/stats.json)
+                                           ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 18, 48, '        json_url = urllib.request.urlopen(https://od.lk/s/MzVfNDg2MDUyOF8/stats.json)\n'))
+[25/05/2018 20:15] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 971, in _load_cog
+    importlib.reload(mod_obj)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 166, in reload
+    _bootstrap._exec(spec, module)
+  File "<frozen importlib._bootstrap>", line 626, in _exec
+  File "<frozen importlib._bootstrap_external>", line 673, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 8, in <module>
+    import urllib2
+ImportError: No module named 'urllib2'
+[25/05/2018 20:16] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 972, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 224, in setup
+    n = Magic(bot)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 19, in __init__
+    self.stats = json.loads(json_url)
+NameError: name 'json' is not defined
+[25/05/2018 20:16] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 972, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 224, in setup
+    n = Magic(bot)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 19, in __init__
+    self.stats = json.loads(json_url)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 312, in loads
+    s.__class__.__name__))
+TypeError: the JSON object must be str, not 'HTTPResponse'
+[25/05/2018 20:18] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 972, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 224, in setup
+    n = Magic(bot)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 19, in __init__
+    self.stats = json.loads(json_url)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 312, in loads
+    s.__class__.__name__))
+TypeError: the JSON object must be str, not 'Response'
+[25/05/2018 20:26] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 972, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 224, in setup
+    n = Magic(bot)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 18, in __init__
+    json_url = requests.get("//api.jsonbin.io/b/5b080ed07a973f4ce5784717")
+  File "lib\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "lib\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "lib\requests\sessions.py", line 494, in request
+    prep = self.prepare_request(req)
+  File "lib\requests\sessions.py", line 437, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "lib\requests\models.py", line 305, in prepare
+    self.prepare_url(url, params)
+  File "lib\requests\models.py", line 379, in prepare_url
+    raise MissingSchema(error)
+requests.exceptions.MissingSchema: Invalid URL '//api.jsonbin.io/b/5b080ed07a973f4ce5784717': No schema supplied. Perhaps you meant http:////api.jsonbin.io/b/5b080ed07a973f4ce5784717?
+[25/05/2018 20:27] ERROR red on_command_error 369: Exception in command 'reload'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 972, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "lib\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 224, in setup
+    n = Magic(bot)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 19, in __init__
+    self.stats = json.loads(json_url)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 312, in loads
+    s.__class__.__name__))
+TypeError: the JSON object must be str, not 'Response'
+[25/05/2018 21:00] ERROR owner load 69: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 178, 90, '        embed.add_field(name="HP", value=self.stats[user.id][\'hp\'] + "(in battle "+ value=self.stats[user.id][\'hp\']*3 +")", inline=True)\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 178
+    embed.add_field(name="HP", value=self.stats[user.id]['hp'] + "(in battle "+ value=self.stats[user.id]['hp']*3 +")", inline=True)
+                                                                                     ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 65, in load
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 178, 90, '        embed.add_field(name="HP", value=self.stats[user.id][\'hp\'] + "(in battle "+ value=self.stats[user.id][\'hp\']*3 +")", inline=True)\n'))
+[25/05/2018 21:01] ERROR red on_command_error 369: Exception in command 'stat show'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 122, in show
+    await self.output_stats(ctx,user)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 178, in output_stats
+    embed.add_field(name="HP", value=self.stats[user.id]['hp'] + "(in battle "+ self.stats[user.id]['hp']*3 +")", inline=True)
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+[25/05/2018 21:02] ERROR red on_command_error 369: Exception in command 'stat random'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 147, in random
+    self.save_stats()
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 27, in save_stats
+    dataIO.save_json(self.statspath, self.stats)
+AttributeError: 'Magic' object has no attribute 'statspath'
+[25/05/2018 21:03] ERROR red on_command_error 369: Exception in command 'stat show'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 122, in show
+    await self.output_stats(ctx,user)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 177, in output_stats
+    embed.add_field(name="Class", value=self.stats[user.id]['class'], inline=True)
+KeyError: 'class'
+[25/05/2018 21:05] ERROR red on_command_error 369: Exception in command 'stat random'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 147, in random
+    self.save_stats()
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 27, in save_stats
+    dataIO.save_json(self.stats_url, self.stats)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\utils\dataIO.py", line 16, in save_json
+    path, ext = os.path.splitext(filename)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\ntpath.py", line 224, in splitext
+    return genericpath._splitext(p, '\\', '/', '.')
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\genericpath.py", line 118, in _splitext
+    sepIndex = p.rfind(sep)
+AttributeError: 'Response' object has no attribute 'rfind'
+[25/05/2018 21:07] ERROR red on_command_error 369: Exception in command 'stat random'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 147, in random
+    self.save_stats()
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 27, in save_stats
+    dataIO.save_json(self.stats_url.json(), self.stats)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\utils\dataIO.py", line 16, in save_json
+    path, ext = os.path.splitext(filename)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\ntpath.py", line 224, in splitext
+    return genericpath._splitext(p, '\\', '/', '.')
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\genericpath.py", line 118, in _splitext
+    sepIndex = p.rfind(sep)
+AttributeError: 'dict' object has no attribute 'rfind'
+[25/05/2018 21:14] ERROR red on_command_error 369: Exception in command 'stat random'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 146, in random
+    self.save_stats()
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 27, in save_stats
+    requests.post(self.stats_url, json=self.stats)
+  File "lib\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "lib\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "lib\requests\sessions.py", line 494, in request
+    prep = self.prepare_request(req)
+  File "lib\requests\sessions.py", line 437, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "lib\requests\models.py", line 305, in prepare
+    self.prepare_url(url, params)
+  File "lib\requests\models.py", line 379, in prepare_url
+    raise MissingSchema(error)
+requests.exceptions.MissingSchema: Invalid URL '<Response [200]>': No schema supplied. Perhaps you meant http://<Response [200]>?
+[25/05/2018 21:14] ERROR red on_command_error 369: Exception in command 'stat random'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 148, in random
+    await self.output_stats(ctx,user)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 176, in output_stats
+    embed.add_field(name="Class", value=self.stats[user.id]['class'], inline=True)
+KeyError: 'class'
+[25/05/2018 23:22] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 52, in attack
+    if self.moves[moveclass][moveid]:
+KeyError: '9'
+[25/05/2018 23:23] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 54, in attack
+    msg1 = user.name + " used "+ self.moves[moveclass][moveid]['name'] + self.types[self.moves[moveclass][moveid]['type']]['icon'] +" to "+ self.types[self.moves[moveclass][moveid]['effect']].format(target.name) + "!\n"
+KeyError: ' create a huge explosion! '
+[25/05/2018 23:30] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 54, in attack
+    msg1 = user.name + " used "+ self.moves[moveclass][moveid]['name'] + self.types[self.moves[moveclass][moveid]['type']]['icon'] +" to "+ self.types[self.moves[moveclass][moveid]['effect']] + "!\n"
+KeyError: ' torture {}! '
+[25/05/2018 23:36] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 52, in attack
+    if self.moves[moveclass][moveid]['name']:
+KeyError: '6'
+[26/05/2018 00:00] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 114, in attack
+    embed.set_footer(text=user.name + " received " + prize + " PMP for winning! Congratulations!")
+TypeError: Can't convert 'int' object to str implicitly
+[26/05/2018 00:35] ERROR owner _reload 156: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 104, 62, '                    totaldmg = totaldmg + damage_string[g] for g in damage_string\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 104
+    totaldmg = totaldmg + damage_string[g] for g in damage_string
+                                             ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 104, 62, '                    totaldmg = totaldmg + damage_string[g] for g in damage_string\n'))
+[26/05/2018 00:36] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 105, in attack
+    totaldmg = totaldmg + damage_string[g]
+IndexError: list index out of range
+[26/05/2018 00:39] ERROR owner _reload 156: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 106, 60, '                        msg2 = msg2 + str(totaldmg) + "-"str(targethp) +"\\n"\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 106
+    msg2 = msg2 + str(totaldmg) + "-"str(targethp) +"\n"
+                                       ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 106, 60, '                        msg2 = msg2 + str(totaldmg) + "-"str(targethp) +"\\n"\n'))
+[26/05/2018 00:49] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 102, in attack
+    msg2 = msg2 + +str(targethp)
+TypeError: bad operand type for unary +: 'str'
+[26/05/2018 01:09] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 87, in attack
+    msg2 = msg2 + target.name + " took "
+UnboundLocalError: local variable 'msg2' referenced before assignment
+[26/05/2018 01:45] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 59, in attack
+    msg2 = msg2 + targetremaininghp + " current hp target \n "
+TypeError: Can't convert 'int' object to str implicitly
+[26/05/2018 01:49] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 110, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 01:49] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 110, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 01:50] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 109, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 01:53] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 107, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 02:07] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 98, in attack
+    embed.add_field(value=tesssst, inline=True)
+NameError: name 'tesssst' is not defined
+[26/05/2018 02:07] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 98, in attack
+    embed.add_field(value="tesssst", inline=True)
+TypeError: add_field() missing 1 required keyword-only argument: 'name'
+[26/05/2018 02:13] ERROR owner _reload 156: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 46, 56, '                embed.add_field(name="", value="*"target.name + " goes first due to higher Speed!*", inline=True)\n'))
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 970, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\Remy\AppData\Local\Programs\Python\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 669, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 775, in get_code
+  File "<frozen importlib._bootstrap_external>", line 735, in source_to_code
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 46
+    embed.add_field(name="", value="*"target.name + " goes first due to higher Speed!*", inline=True)
+                                           ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 150, in _reload
+    self._load_cog(module)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\owner.py", line 974, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid syntax', ('C:\\Users\\Remy\\Documents\\GitHub\\catpuccino\\cogs\\magic.py', 46, 56, '                embed.add_field(name="", value="*"target.name + " goes first due to higher Speed!*", inline=True)\n'))
+[26/05/2018 02:14] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 44, in attack
+    msg2 = msg2 + str(targetremaininghp) + " current hp target -2 \n "
+UnboundLocalError: local variable 'msg2' referenced before assignment
+[26/05/2018 02:15] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 02:23] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 02:26] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 02:26] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 02:26] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 02:31] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 02:33] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 02:34] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 02:35] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 02:36] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 02:36] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 02:36] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 02:44] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 02:49] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 02:49] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 02:49] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 02:51] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 02:51] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 02:54] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 34, in attack
+    if user.id not in self.stats or target.id not in self.stats:
+AttributeError: 'str' object has no attribute 'id'
+[26/05/2018 02:55] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 33, in attack
+    target.id = "309622066666274818"
+AttributeError: 'NoneType' object has no attribute 'id'
+[26/05/2018 02:59] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 34, in attack
+    if user.id not in self.stats or target.id not in self.stats:
+  File "lib\discord\client.py", line 296, in __getattr__
+    raise AttributeError(msg.format(self.__class__, name))
+AttributeError: '<class '__main__.Bot'>' object has no attribute 'id'
+[26/05/2018 02:59] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 03:00] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 03:00] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 03:01] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 03:01] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 03:02] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 03:02] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 03:02] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+[26/05/2018 03:02] ERROR red on_command_error 369: Exception in command 'attack'
+Traceback (most recent call last):
+  File "lib\discord\ext\commands\core.py", line 50, in wrapped
+    ret = yield from coro(*args, **kwargs)
+  File "C:\Users\Remy\Documents\GitHub\catpuccino\cogs\magic.py", line 103, in attack
+    await self.bot.say(embed=embed)
+  File "lib\discord\ext\commands\bot.py", line 309, in _augmented_msg
+    msg = yield from coro
+  File "red.py", line 92, in send_message
+    return await super().send_message(*args, **kwargs)
+  File "lib\discord\client.py", line 1152, in send_message
+    data = yield from self.http.send_message(channel_id, content, guild_id=guild_id, tts=tts, embed=embed)
+  File "lib\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)

@@ -11,3 +11,5 @@ data/duel/duelist.json
 data/mod/mod.log
 data/red/settings.json
 data/red/settings.json
+*.log
+*.log

@@ -34,73 +34,73 @@
       "supereffective" : ["Ground"],
       "notveryeffective" : ["Electric","Steel","Flying"],
       "noteffective": ["None"],
-      "icon" : ":lightning:"
+      "icon" : ":zap:"
     },
     "Ground" : {
       "supereffective" : ["Water","Grass","Ice"],
       "notveryeffective" : ["Poison","Rock"],
       "noteffective": ["Electric"],
-      "icon" : ":white_large_square:"
+      "icon" : ":earth_asia:"
     },
     "Rock" : {
       "supereffective" : ["Water","Grass","Ground","Fighting","Steel"],
       "notveryeffective" : ["Normal","Fire","Poison","Flying"],
       "noteffective": ["None"],
-      "icon" : ":white_large_square:"
+      "icon" : ":new_moon:"
     },
     "Bug" : {
       "supereffective" : ["Fire","Flying","Rock"],
       "notveryeffective" : ["Fighting","Ground","Grass"],
       "noteffective": ["None"],
-      "icon" : ":white_large_square:"
+      "icon" : ":bug:"
     },
     "Steel" : {
       "supereffective" : ["Fighting","Ground","Fire"],
       "notveryeffective" : ["Normal","Rock","Flying","Rock","Bug","Steel","Grass","Ice","Psychic","Dragon","Fairy"],
       "noteffective": ["Poison"],
-      "icon" : ":white_large_square:"
+      "icon" : ":chains:"
     },
     "Poison" : {
       "supereffective" : ["Psychic","Ground"],
       "notveryeffective" : ["Poison","Grass","Fighting","Bug","Fairy"],
       "noteffective": ["None"],
-      "icon" : ":white_large_square:"
+      "icon" : ":skull_crossbones:"
     },
     "Ice" : {
       "supereffective" : ["Fighting","Fire","Rock","Steel"],
       "notveryeffective" : ["Ice"],
       "noteffective": ["None"],
-      "icon" : ":white_large_square:"
+      "icon" : ":snowflake:"
     },
     "Dragon" : {
       "supereffective" : ["Dragon","Fairy","Ice"],
       "notveryeffective" : ["Fire","Water","Grass","Electric"],
       "noteffective": ["None"],
-      "icon" : ":white_large_square:"
+      "icon" : ":dragon:"
     },
     "Fairy" : {
       "supereffective" : ["Poison","Steel"],
       "notveryeffective" : ["Bug","Fighting"],
       "noteffective": ["Dragon"],
-      "icon" : ":white_large_square:"
+      "icon" : ":sparkles:"
     },
     "Fighting" : {
       "supereffective" : ["Psychic","Flying","Fairy"],
       "notveryeffective" : ["Rock","Bug","Dark"],
       "noteffective": ["None"],
-      "icon" : ":white_large_square:"
+      "icon" : ":boxing_glove:"
     },
     "Psychic" : {
       "supereffective" : ["Dark","Ghost","Bug"],
       "notveryeffective" : ["Psychic","Fighting"],
       "noteffective": ["None"],
-      "icon" : ":white_large_square:"
+      "icon" : ":eye:"
     },
     "Dark" : {
       "supereffective" : ["Fighting","Bug","Fairy"],
       "notveryeffective" : ["Ghost","Dark"],
       "noteffective": ["None"],
-      "icon" : ":white_large_square:"
+      "icon" : ":smiling_imp:"
     },
     "Ghost" : {
       "supereffective" : ["Ghost","Dark"],
@@ -111,24 +111,25 @@
   },
 
   "Moves" : {
+    "sakura" : {
     "1" : {
       "name" : "The Windy",
       "origin" : "Clow Card",
       "category" : "Special",
       "type" : "Flying",
-      "hits" : 1,
+      "random" : 40,
       "power": 85,
       "image" : ":white_large_square:"
       ,
-      "effect":" bound their opponent with wind chains! "
+      "effect":"bind {} with wind chains"
           },
     "2" : {
       "name" : "The Firey",
       "origin" : "Clow Card",
       "category" : "Special",
       "type" : "Fire",
-      "hits" : 6,
-      "power": 20,
+      "random" : 60,
+      "power": 90,
       "image" : ":white_large_square:",
       "effect":""
           },
@@ -137,7 +138,7 @@
       "origin" : "Clow Card",
       "category" : "Special",
       "type" : "Water",
-      "hits" : 1,
+      "random" : 20,
       "power": 100,
       "image" : ":white_large_square:",
       "effect":""
@@ -147,28 +148,28 @@
       "origin" : "Clow Card",
       "category" : "Physcial",
       "type" : "Ground",
-      "hits" : 1,
+      "random" : 1,
       "power": 120,
       "image" : ":white_large_square:",
-      "effect":" KABOOM! "
+      "effect":"cause an earthquake"
           },
     "5" : {
-      "name" : "The Erase",
+      "name" : "The Shadow",
       "origin" : "Clow Card",
-      "category" : "Physcial",
+      "category" : "Ghost",
       "type" : "Dark",
-      "hits" : 0,
-      "power": 999,
-      "image" : ":white_large_square:",
-      "effect":" erased their opponent! "
+      "random" : 1,
+      "power": 50,
+      "image" : ":ghost:",
+      "effect":""
           },
     "6" : {
       "name" : "The Fight",
       "origin" : "Clow Card",
       "category" : "Physcial",
       "type" : "Fighting",
-      "power": 25,
-      "hits" : 4,
+      "power": 55,
+      "random" : 42,
       "image" : ":white_large_square:",
       "effect":""
           },
@@ -177,30 +178,30 @@
       "origin" : "Clow Card",
       "category" : "Special",
       "type" : "Water",
-      "hits" : 5,
-      "power": 12,
+      "random" : 5,
+      "power": 39,
       "image" : ":white_large_square:",
-      "effect":" blowed some bubbles! "
+      "effect":"blow some bubbles"
           },
     "8" : {
       "name" : "The Sword",
       "origin" : "Clow Card",
       "category" : "Physcial",
       "type" : "Steel",
-      "hits" : 1,
+      "random" : 1,
       "power": 95,
       "image" : ":white_large_square:",
-      "effect":" slashed their opponent! "
+      "effect":"slash at {} "
           },
     "9" : {
-      "name" : "The Erase",
+      "name" : "The Thunder",
       "origin" : "Clow Card",
-      "category" : "Physcial",
-      "type" : "Dark",
-      "hits" : 0,
-      "power": 999,
+      "category" : "Special",
+      "type" : "Electric",
+      "random" : 33,
+      "power": 110,
       "image" : ":white_large_square:",
-      "effect":" has erased their opponent from existence! "
+      "effect":"hit {}"
           },
     "10" : {
       "name" : "The Freeze",
@@ -208,70 +209,73 @@
       "category" : "Special",
       "type" : "Ice",
       "power": 88,
-      "hits" : 1,
+      "random" : 0,
       "image" : ":white_large_square:",
-      "effect":" froze their opponent! "
+      "effect":"freeze {}"
           },
     "11" : {
       "name" : "Gale",
       "origin" : "Clear Card",
       "category" : "Physical",
       "type" : "Flying",
-      "hits" : 45,
-      "power": 3,
+      "random" : 45,
+      "power": 115,
       "image" : ":white_large_square:",
-      "effect":" scliced their opponent with wind blades! "
-          },
-    "12" : {
+      "effect":"slice {} with wind blades"
+          }
+        },
+        "harrypotter" :{
+    "1" : {
       "name" : "Incendio",
       "origin" : "Harry Potter Spell",
       "category" : "Special",
       "type" : "Fire",
-      "hits" : 1,
+      "random" : 20,
       "power": 78,
       "image" : ":white_large_square:",
-      "effect":" conjured a stream of fire! "
+      "effect":"conjure a stream of fire"
           },
-    "13" : {
+    "2" : {
       "name" : "Stupefy",
       "origin" : "Harry Potter Spell",
       "category" : "Physcial",
       "type" : "Fighting",
-      "hits" : 1,
+      "random" : 1,
       "power": 99,
       "image" : ":white_large_square:",
-      "effect":" tried to stun their opponent! "
+      "effect":"stun {}! "
           },
-    "14" : {
+    "3" : {
       "name" : "Crucio",
       "origin" : "Harry Potter Spell",
       "category" : "Physcial",
       "type" : "Dark",
-      "power": 60,
-      "hits" : 8,
+      "power": 129,
+      "random" : 26,
       "image" : ":white_large_square:",
-      "effect":" tortured their opponent! "
+      "effect":"torture {}"
           },
-    "15" : {
+    "4" : {
       "name" : "Imperio",
       "origin" : "Harry Potter Spell",
       "category" : "Other",
       "type" : "Dark",
-      "hits" : 0,
-      "power": 1,
+      "random" : 17,
+      "power": 69,
       "image" : ":white_large_square:",
-      "effect":" made the opponent KO themselves! "
+      "effect":"make {} beat themselves"
           },
-    "16" : {
+    "5" : {
       "name" : "Confringo",
       "origin" : "Harry Potter Spell",
       "category" : "Physcial",
       "type" : "Fire",
-      "hits" : 1,
+      "random" : 3,
       "power": 145,
       "image" : ":white_large_square:",
-      "effect":" created a huge explosion! "
+      "effect":"create a huge explosion"
           }
+        }
   }
 
 

@@ -40,7 +40,7 @@
             "Here, take my pity."
         ],
         "server" : null,
-        "triggered" : 8,
+        "triggered" : 9,
         "triggered_by" : "(sucks|sucked|suck)",
         "type" : "random"
     },
