@@ -111,14 +111,15 @@ class Magic:
     @commands.command(pass_context=True)
     async def givepmp(self, ctx, target:discord.Member=None, amount:int=0):
         user= ctx.message.author
-        if not target:
-            await self.bot.say("No one to give.")
-        else:
+        if target:
             self.check_if_exist(user,target)
             self.stats[user.id]['money']=self.stats[user.id]['money'] - amount
             self.stats[target.id]['money']=self.stats[target.id]['money'] + amount
             await self.bot.say(discord.Embed(title="Gave " + amount + " PMP to " + target.name + ".",description="You now have " + str(self.stats[user.id]['money']) + " PMP.\n" + target.name + " now has " + str(self.stats[target.id]['money'])
                                              + " PMP.", color=0xe90169))
+        else:
+            await self.bot.say("No one to give.")
+
 
 
     @commands.group(pass_context=True)
