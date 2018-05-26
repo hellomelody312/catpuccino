@@ -156,8 +156,8 @@
     "5" : {
       "name" : "The Shadow",
       "origin" : "Clow Card",
-      "category" : "Ghost",
-      "type" : "Dark",
+      "category" : "Physical",
+      "type" : "Ghost",
       "random" : 1,
       "power": 50,
       "image" : ":ghost:",
@@ -274,8 +274,181 @@
       "power": 145,
       "image" : ":white_large_square:",
       "effect":"create a huge explosion"
-          }
-        }
+          },
+          "6" : {
+            "name" : "Depulso",
+            "origin" : "Harry Potter Spell",
+            "category" : "Physical",
+            "type" : "Fighting",
+            "random" : 3,
+            "power": 45,
+            "image" : ":white_large_square:",
+            "effect":"knock {} away"
+                },
+                "7" : {
+                  "name" : "Impedimenta",
+                  "origin" : "Harry Potter Spell",
+                  "category" : "Physcial",
+                  "type" : "Psychic",
+                  "random" : 3,
+                  "power": 98,
+                  "image" : ":white_large_square:",
+                  "effect":""
+                      },
+                      "8" : {
+                        "name" : "Ventus",
+                        "origin" : "Harry Potter Spell",
+                        "category" : "Special",
+                        "type" : "Flying",
+                        "random" : 33,
+                        "power": 39,
+                        "image" : ":white_large_square:",
+                        "effect":"lift {} with a whirlwind"
+                            },
+                            "9" : {
+                              "name" : "Confringo",
+                              "origin" : "Harry Potter Spell",
+                              "category" : "Physcial",
+                              "type" : "Fire",
+                              "random" : 3,
+                              "power": 145,
+                              "image" : ":white_large_square:",
+                              "effect":"create a huge explosion"
+                                  },
+                                  "10" : {
+                                    "name" : "Diffindo",
+                                    "origin" : "Harry Potter Spell",
+                                    "category" : "Physcial",
+                                    "type" : "Steel",
+                                    "random" : 30,
+                                    "power": 67,
+                                    "image" : ":white_large_square:",
+                                    "effect":"cut {}"
+                                        },
+                                        "5" : {
+                                          "name" : "Herbivicus",
+                                          "origin" : "Harry Potter Spell",
+                                          "category" : "Physcial",
+                                          "type" : "Grass",
+                                          "random" : 22,
+                                          "power": 56,
+                                          "image" : ":white_large_square:",
+                                          "effect":"bind {} with vines"
+                                              }
+        },
+        "pokemon" : {
+        "1" : {
+          "name" : "Cross Poison",
+          "origin" : "Pokemon",
+          "category" : "Physical",
+          "type" : "Poison",
+          "random" : 0,
+          "power": 90,
+          "image" : ":white_large_square:"
+          ,
+          "effect":""
+              },
+        "2" : {
+          "name" : "Flamethrower",
+          "origin" : "Clow Card",
+          "category" : "Special",
+          "type" : "Fire",
+          "random" : 0,
+          "power": 90,
+          "image" : ":white_large_square:",
+          "effect":""
+              },
+        "3" : {
+          "name" : "Aqua Tail",
+          "origin" : "Clow Card",
+          "category" : "Physcial",
+          "type" : "Water",
+          "random" : 0,
+          "power": 90,
+          "image" : ":white_large_square:",
+          "effect":""
+              },
+        "4" : {
+          "name" : "Earthquake",
+          "origin" : "Clow Card",
+          "category" : "Physcial",
+          "type" : "Ground",
+          "random" : 1,
+          "power": 100,
+          "image" : ":white_large_square:",
+          "effect":""
+              },
+        "5" : {
+          "name" : "Shadow Ball",
+          "origin" : "Clow Card",
+          "category" : "Special",
+          "type" : "Ghost",
+          "random" : 1,
+          "power": 80,
+          "image" : ":ghost:",
+          "effect":""
+              },
+        "6" : {
+          "name" : "Psyshock",
+          "origin" : "Clow Card",
+          "category" : "Physcial",
+          "type" : "Psychic",
+          "power": 80,
+          "random" : 0,
+          "image" : ":white_large_square:",
+          "effect":""
+              },
+        "7" : {
+          "name" : "Bug Bite",
+          "origin" : "Clow Card",
+          "category" : "Physcial",
+          "type" : "Bug",
+          "random" : 0,
+          "power": 60,
+          "image" : ":white_large_square:",
+          "effect":""
+              },
+        "8" : {
+          "name" : "Flash Cannon",
+          "origin" : "Clow Card",
+          "category" : "Special",
+          "type" : "Steel",
+          "random" : 1,
+          "power": 90,
+          "image" : ":white_large_square:",
+          "effect":""
+              },
+        "9" : {
+          "name" : "Thunder Punch",
+          "origin" : "Clow Card",
+          "category" : "Physical",
+          "type" : "Electric",
+          "random" : 0,
+          "power": 75,
+          "image" : ":white_large_square:",
+          "effect":"hit {}"
+              },
+        "10" : {
+          "name" : "Ice Beam",
+          "origin" : "Clow Card",
+          "category" : "Special",
+          "type" : "Ice",
+          "power": 90,
+          "random" : 0,
+          "image" : ":white_large_square:",
+          "effect":""
+              },
+        "11" : {
+          "name" : "Moonblast",
+          "origin" : "Clear Card",
+          "category" : "Special",
+          "type" : "Fairy",
+          "random" : 0,
+          "power": 90,
+          "image" : ":white_large_square:",
+          "effect":""
+              }
+            },
   }
 
 
