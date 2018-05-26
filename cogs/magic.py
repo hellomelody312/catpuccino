@@ -36,7 +36,7 @@ class Magic:
         user= ctx.message.author
         if not target:
             target = self.bot.user
-        check_if_exist(user,target)
+        Magic.check_if_exist(user,target)
         #if user.id not in self.stats or target.id not in self.stats:
             #self.stats[user.id] = {'hp': 1, 'atk': 1, 'defe': 1, 'spa': 1, 'spd': 1, 'spe': 1, 'type1':"Normal",'type2':"Normal"}
             #self.save_stats()
@@ -113,10 +113,10 @@ class Magic:
     async def givepmp(self, ctx, target:discord.Member=None, amount:int=0):
         user= ctx.message.author
         if target:
-            check_if_exist(user,target)
+            Magic.check_if_exist(user,target)
             self.stats[user.id]['money']=self.stats[user.id]['money'] - amount
             self.stats[target.id]['money']=self.stats[target.id]['money'] + amount
-            await self.bot.say(discord.Embed(title="Gave " + amount + " PMP to " + target.name + ".",description="You now have " + str(self.stats[user.id]['money']) + " PMP.\n" + target.name + " now has " + str(self.stats[target.id]['money'])
+            await self.bot.say(embed=discord.Embed(title="Gave " + str(amount) + " PMP to " + target.name + ".",description="You now have " + str(self.stats[user.id]['money']) + " PMP.\n" + target.name + " now has " + str(self.stats[target.id]['money'])
                                              + " PMP.", color=0xe90169))
         else:
             await self.bot.say("No one to give.")
