@@ -26,7 +26,7 @@ class Magic:
     def save_stats(self):
         requests.put("https://api.jsonbin.io/b/5b081b310fb4d74cdf23e613", json=self.stats)
 
-    def check_if_exist(user,target):
+    async def check_if_exist(user,target):
         if user.id not in self.stats or target.id not in self.stats:
             await self.bot.say("One or both of you do not have stats in the database! Set your stats using ``;stat`` first.")
 
@@ -36,76 +36,77 @@ class Magic:
         user= ctx.message.author
         if not target:
             target = self.bot.user
-        if user.id not in self.stats or target.id not in self.stats:
+        self.check_if_exist(user,target)
+        #if user.id not in self.stats or target.id not in self.stats:
             #self.stats[user.id] = {'hp': 1, 'atk': 1, 'defe': 1, 'spa': 1, 'spd': 1, 'spe': 1, 'type1':"Normal",'type2':"Normal"}
             #self.save_stats()
-            await self.bot.say("One or both of you do not have stats in the database! Set your stats using ``;stat`` first.")
-        else:
-            embed=discord.Embed(title=":sparkles: **Magic Battle** :sparkles:", color=0xe90169)
-            userhp = round(self.stats[user.id]['hp']*round(random.uniform(2.5,3), 2))
-            targethp = round(self.stats[target.id]['hp']*round(random.uniform(2.5,3), 2))
-            userremaininghp = userhp
-            targetremaininghp = targethp
-            if self.stats[user.id]['spe'] < self.stats[target.id]['spe']:
-                embed.add_field(name=user.name + " tries to attack!", value="*"+target.name + " goes first due to higher Speed!*", inline=True)
+            #await self.bot.say("One or both of you do not have stats in the database! Set your stats using ``;stat`` first.")
+        #else:
+        embed=discord.Embed(title=":sparkles: **Magic Battle** :sparkles:", color=0xe90169)
+        userhp = round(self.stats[user.id]['hp']*round(random.uniform(2.5,3), 2))
+        targethp = round(self.stats[target.id]['hp']*round(random.uniform(2.5,3), 2))
+        userremaininghp = userhp
+        targetremaininghp = targethp
+        if self.stats[user.id]['spe'] < self.stats[target.id]['spe']:
+            embed.add_field(name=user.name + " tries to attack!", value="*"+target.name + " goes first due to higher Speed!*", inline=True)
+            user, target = target, user
+            userhp, targethp = targethp, userhp
+        while targetremaininghp > 0:
+            msg2 = ""
+            if self.stats[user.id]['class'] == "all":
+                moveclass = random.choice(["harrypotter","sakura"])
+            else:
+                moveclass = self.stats[user.id]['class']
+            moveid = str(random.randint(1,len(self.moves[moveclass])))
+            msg1 = "**"+user.name + "** used **"+ self.moves[moveclass][moveid]['name']+"** " + self.types[self.moves[moveclass][moveid]['type']]['icon']
+            if self.moves[moveclass][moveid]['effect']:
+                msg1 = msg1 +" to "+ self.moves[moveclass][moveid]['effect'] + "!\n"
+            else:
+                msg1 = msg1 +"!\n"
+            power = self.moves[moveclass][moveid]['power']
+            if self.moves[moveclass][moveid]['category'] == "Physical":
+                atk = self.stats[user.id]['atk']
+                defe = self.stats[target.id]['defe']
+            else:
+                atk = self.stats[user.id]['spa']
+                defe = self.stats[target.id]['spd']
+            if self.moves[moveclass][moveid]['type'] in self.types[self.stats[target.id]['type1']]['supereffective']:
+                mul = 2
+            elif self.moves[moveclass][moveid]['type'] in self.types[self.stats[target.id]['type1']]['notveryeffective']:
+                mul = 0.5
+            elif self.moves[moveclass][moveid]['type'] in self.types[self.stats[target.id]['type1']]['noteffective']:
+                mul = 0
+            else:
+                mul = 1
+            if self.moves[moveclass][moveid]['type'] in self.types[self.stats[target.id]['type2']]['supereffective']:
+                mul = mul * 2
+            elif self.moves[moveclass][moveid]['type'] in self.types[self.stats[target.id]['type2']]['notveryeffective']:
+                mul = mul * 0.5
+            elif self.moves[moveclass][moveid]['type'] in self.types[self.stats[target.id]['type2']]['noteffective']:
+                mul = 0
+            if self.moves[moveclass][moveid]['type'] == self.stats[user.id]['type1'] or self.moves[moveclass][moveid]['type'] == self.stats[user.id]['type2']:
+                power = power * 1.5
+            if mul >1:
+                msg2 = msg2 + ":arrow_up_small: It's super effective! \n"
+            elif 0 <mul <1:
+                msg2 = msg2 + ":arrow_down_small: It's not very effective... \n"
+            msg2 = msg2 + target.name + " took "
+            rand = 0.01*random.randint(75,115)
+            dmg = round(math.floor(math.floor(70 * power * atk / defe) / 50) + 2 * mul * rand)
+            targetremaininghp = targetremaininghp - dmg
+            msg2 = msg2 + str(dmg) + " damage! (" + str(round(dmg / (targethp)*100)) + "\%) ("+str(targetremaininghp)+"/"+str(targethp)+" HP)\n"
+            if targetremaininghp <= 0:
+                msg2 = msg2  + "\n***" + target.name + " has fainted!***"
+            embed.add_field(name=msg1.replace("{}",target.name), value=msg2, inline=True)
+            if targetremaininghp > 0:
                 user, target = target, user
                 userhp, targethp = targethp, userhp
-            while targetremaininghp > 0:
-                msg2 = ""
-                if self.stats[user.id]['class'] == "all":
-                    moveclass = random.choice(["harrypotter","sakura"])
-                else:
-                    moveclass = self.stats[user.id]['class']
-                moveid = str(random.randint(1,len(self.moves[moveclass])))
-                msg1 = "**"+user.name + "** used **"+ self.moves[moveclass][moveid]['name']+"** " + self.types[self.moves[moveclass][moveid]['type']]['icon']
-                if self.moves[moveclass][moveid]['effect']:
-                    msg1 = msg1 +" to "+ self.moves[moveclass][moveid]['effect'] + "!\n"
-                else:
-                    msg1 = msg1 +"!\n"
-                power = self.moves[moveclass][moveid]['power']
-                if self.moves[moveclass][moveid]['category'] == "Physical":
-                    atk = self.stats[user.id]['atk']
-                    defe = self.stats[target.id]['defe']
-                else:
-                    atk = self.stats[user.id]['spa']
-                    defe = self.stats[target.id]['spd']
-                if self.moves[moveclass][moveid]['type'] in self.types[self.stats[target.id]['type1']]['supereffective']:
-                    mul = 2
-                elif self.moves[moveclass][moveid]['type'] in self.types[self.stats[target.id]['type1']]['notveryeffective']:
-                    mul = 0.5
-                elif self.moves[moveclass][moveid]['type'] in self.types[self.stats[target.id]['type1']]['noteffective']:
-                    mul = 0
-                else:
-                    mul = 1
-                if self.moves[moveclass][moveid]['type'] in self.types[self.stats[target.id]['type2']]['supereffective']:
-                    mul = mul * 2
-                elif self.moves[moveclass][moveid]['type'] in self.types[self.stats[target.id]['type2']]['notveryeffective']:
-                    mul = mul * 0.5
-                elif self.moves[moveclass][moveid]['type'] in self.types[self.stats[target.id]['type2']]['noteffective']:
-                    mul = 0
-                if self.moves[moveclass][moveid]['type'] == self.stats[user.id]['type1'] or self.moves[moveclass][moveid]['type'] == self.stats[user.id]['type2']:
-                    power = power * 1.5
-                if mul >1:
-                    msg2 = msg2 + ":arrow_up_small: It's super effective! \n"
-                elif 0 <mul <1:
-                    msg2 = msg2 + ":arrow_down_small: It's not very effective... \n"
-                msg2 = msg2 + target.name + " took "
-                rand = 0.01*random.randint(75,115)
-                dmg = round(math.floor(math.floor(70 * power * atk / defe) / 50) + 2 * mul * rand)
-                targetremaininghp = targetremaininghp - dmg
-                msg2 = msg2 + str(dmg) + " damage! (" + str(round(dmg / (targethp)*100)) + "\%) ("+str(targetremaininghp)+"/"+str(targethp)+" HP)\n"
-                if targetremaininghp <= 0:
-                    msg2 = msg2  + "\n***" + target.name + " has fainted!***"
-                embed.add_field(name=msg1.replace("{}",target.name), value=msg2, inline=True)
-                if targetremaininghp > 0:
-                    user, target = target, user
-                    userhp, targethp = targethp, userhp
-                    userremaininghp, targetremaininghp = targetremaininghp, userremaininghp
-            prize = random.randint(10,100)
-            embed.set_footer(text=user.name + " received " + str(prize) + " PMP for winning! Congratulations!")
-            self.stats[user.id]['money'] = self.stats[user.id]['money'] + prize
-            self.save_stats()
-            await self.bot.say(embed=embed)
+                userremaininghp, targetremaininghp = targetremaininghp, userremaininghp
+        prize = random.randint(10,100)
+        embed.set_footer(text=user.name + " received " + str(prize) + " PMP for winning! Congratulations!")
+        self.stats[user.id]['money'] = self.stats[user.id]['money'] + prize
+        self.save_stats()
+        await self.bot.say(embed=embed)
 
 
     @commands.command(pass_context=True)
@@ -138,14 +139,14 @@ class Magic:
         if user.id in self.stats:
             await self.output_stats(ctx,user)
         else:
-            self.stats[user.id] = {'hp': 1, 'atk': 1, 'defe': 1, 'spa': 1, 'spd': 1, 'spe': 1, 'type1':"Normal",'type2':"Normal"}
+            self.stats[user.id] = {'hp': 50, 'atk': 50, 'defe': 50, 'spa': 50, 'spd': 50, 'spe': 50, 'class': "all", 'bst': 400, 'money': 0, 'item': 0, 'type1':"Normal",'type2':"Normal"}
             self.save_stats()
-            await self.bot.say(user.name + "\'s stats were not found and have been set all to 1.")
+            await self.bot.say(user.name + "\'s stats were not found and have been set all to 50.")
 
     @stat.command(pass_context=True)
     async def reset(self,ctx):
         user = ctx.message.author
-        self.stats[user.id] = {'hp': 60, 'atk': 60, 'defe': 60, 'spa': 60, 'spd': 60, 'spe': 60, 'type1':"Normal",'type2':"Normal"}
+        self.stats[user.id] = {'hp': 60, 'atk': 60, 'defe': 60, 'spa': 60, 'spd': 60, 'spe': 60, 'class': "all", 'bst': 400, 'money': 0, 'item': 0, 'type1':"Normal",'type2':"Normal"}
         self.save_stats()
         await self.bot.say(user.name + "\'s stats were set all to 60 and your types to Normal.")
 
