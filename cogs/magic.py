@@ -26,6 +26,11 @@ class Magic:
     def save_stats(self):
         requests.put("https://api.jsonbin.io/b/5b081b310fb4d74cdf23e613", json=self.stats)
 
+    def check_if_exist(user,target):
+        if user.id not in self.stats or target.id not in self.stats:
+            await self.bot.say("One or both of you do not have stats in the database! Set your stats using ``;magic setstats`` first.")
+        
+        
     @commands.command(pass_context=True)
     async def attack(self, ctx, target:discord.Member=None):
         user= ctx.message.author
@@ -103,6 +108,18 @@ class Magic:
             await self.bot.say(embed=embed)
 
 
+    @commands.command(pass_context=True)
+    async def givepmp(self, ctx, target:discord.Member=None, amount:int=0):
+        user= ctx.message.author
+        if not target:
+            await self.bot.say("No one to give.")
+        else:
+            self.check_if_exist()
+            self.stats[user.id]['money']=self.stats[user.id]['money'] - amount
+            self.stats[target.id]['money']=self.stats[target.id]['money'] + amount
+            await self.bot.say("Gave " + amount + " PMP to " + target.name + ". \nYou now have " + str(self.stats[user.id]['money']) + " PMP.\n" + target.name + " now has " + self.stats[target.id]['money'] + " PMP.")
+
+            
     @commands.group(pass_context=True)
     async def stat(self, ctx):
         if ctx.invoked_subcommand is None:
@@ -133,7 +150,7 @@ class Magic:
     @stat.command(pass_context=True)
     async def random(self, ctx):
         user = ctx.message.author
-        if not self.stats[user.id]:
+        if user.id not in self.stats:
              self.stats[user.id] = {'hp': 1, 'atk': 1, 'defe': 1, 'spa': 1, 'spd': 1, 'spe': 1, 'class': "all", 'bst': 400, 'money': 0, 'item': 0, 'type1':"Normal",'type2':"Normal"}
         self.stats[user.id]['hp'] = random.randint(40,120)
         self.stats[user.id]['atk'] = random.randint(40,120)
@@ -150,7 +167,7 @@ class Magic:
     @stat.command(pass_context=True)
     async def pmp(self, ctx):
         user = ctx.message.author
-        if not self.stats[user.id]:
+        if user.id not in self.stats:
             await self.bot.say(user.name + "\'s stats were not found.")
         else:
             await self.bot.say(user.name + " has "+ str(self.stats[user.id]['money']) +" PMP.")
