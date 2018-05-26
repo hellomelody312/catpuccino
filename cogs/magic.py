@@ -36,7 +36,7 @@ class Magic:
         user= ctx.message.author
         if not target:
             target = self.bot.user
-        self.check_if_exist(user,target)
+        check_if_exist(user,target)
         #if user.id not in self.stats or target.id not in self.stats:
             #self.stats[user.id] = {'hp': 1, 'atk': 1, 'defe': 1, 'spa': 1, 'spd': 1, 'spe': 1, 'type1':"Normal",'type2':"Normal"}
             #self.save_stats()
@@ -92,7 +92,7 @@ class Magic:
                 msg2 = msg2 + ":arrow_down_small: It's not very effective... \n"
             msg2 = msg2 + target.name + " took "
             rand = 0.01*random.randint(75,115)
-            dmg = round(math.floor(math.floor(70 * power * atk / defe) / 50) + 2 * mul * rand)
+            dmg = round(math.floor(math.floor(60 * power * atk / defe) / 50) + 2 * mul * rand)
             targetremaininghp = targetremaininghp - dmg
             msg2 = msg2 + str(dmg) + " damage! (" + str(round(dmg / (targethp)*100)) + "\%) ("+str(targetremaininghp)+"/"+str(targethp)+" HP)\n"
             if targetremaininghp <= 0:
@@ -113,7 +113,7 @@ class Magic:
     async def givepmp(self, ctx, target:discord.Member=None, amount:int=0):
         user= ctx.message.author
         if target:
-            self.check_if_exist(user,target)
+            check_if_exist(user,target)
             self.stats[user.id]['money']=self.stats[user.id]['money'] - amount
             self.stats[target.id]['money']=self.stats[target.id]['money'] + amount
             await self.bot.say(discord.Embed(title="Gave " + amount + " PMP to " + target.name + ".",description="You now have " + str(self.stats[user.id]['money']) + " PMP.\n" + target.name + " now has " + str(self.stats[target.id]['money'])
@@ -151,8 +151,11 @@ class Magic:
         await self.bot.say(user.name + "\'s stats were set all to 60 and your types to Normal.")
 
     @stat.command(pass_context=True)
-    async def random(self, ctx):
-        user = ctx.message.author
+    async def random(self, ctx, target:discord.Member=None):
+        if target:
+            user = target
+        else:
+            user = ctx.message.author
         if user.id not in self.stats:
              self.stats[user.id] = {'hp': 1, 'atk': 1, 'defe': 1, 'spa': 1, 'spd': 1, 'spe': 1, 'class': "all", 'bst': 400, 'money': 0, 'item': 0, 'type1':"Normal",'type2':"Normal"}
         self.stats[user.id]['hp'] = random.randint(40,120)
@@ -182,10 +185,10 @@ class Magic:
         else:
             user= ctx.message.author
         if user.id not in self.stats:
-            self.stats[user.id] = {'hp': 1, 'atk': 1, 'defe': 1, 'spa': 1, 'spd': 1, 'spe': 1, 'type1':"Normal",'type2':"Normal"}
+            self.stats[user.id] = {'hp': 1, 'atk': 1, 'defe': 1, 'spa': 1, 'spd': 1, 'spe': 1,'class': "all", 'bst': 400, 'money': 0, 'item': 0, 'type1':"Normal",'type2':"Normal"}
             self.save_stats()
-        if atk + defe +spa +spd +spe +hp >500:
-            await self.bot.say("Too OP! BST should be no more than 500.")
+        if atk + defe +spa +spd +spe +hp >550:
+            await self.bot.say("Too OP! BST should be no more than 550.")
         else:
             name = user.name
             self.stats[user.id]['hp'] = hp
