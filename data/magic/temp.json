@@ -1,122 +1,121 @@
-{
-  "1": {
-    "name": "Weave Snatch",
-    "origin": "Showbiz",
-    "category": "Physical",
-    "type": "Fairy",
-    "random": 5,
-    "power": 75,
-    "image": ":white_large_square:",
-    "effect": "snatch {}’s wig"
-  },
-  "2": {
-    "name": "Flame Star",
-    "origin": "Made_up",
-    "category": "Special",
-    "type": "Fire",
-    "random": 3,
-    "power": 90,
-    "image": ":fire:",
-    "effect": "use the heavenly power to incinerate"
-  },
-  "3": {
-    "name": "Drama Absorption",
-    "origin": "Made_up",
-    "category": "Special",
-    "type": "Ghost",
-    "random": 10,
-    "power": 100,
-    "image": ":hut:",
-    "effect": "unleash power from an unlikely source"
-  },
-  "4": {
-    "name": "Armiger Unleashed",
-    "origin": "FFXV",
-    "category": "Physical",
-    "type": "Fairy",
-    "random": 20,
-    "power": 150,
-    "image": ":crossed_swords:",
-    "effect": "hurl all 13 Royal Arms with the true power of kings at {}"
-  },
-  "5": {
-    "name": "Royal Cleave",
-    "origin": "FFXV",
-    "category": "Physical",
-    "type": "Psychic",
-    "random": 10,
-    "power": 90,
-    "image": ":dagger:",
-    "effect": "cloak Engine Blade in magic aura and slash {}"
-  },
-  "6": {
-    "name": "Apocalypsis",
-    "origin": "FFXV",
-    "category": "Physical",
-    "type": "Steel",
-    "random": 10,
-    "power": 100,
-    "image": ":cyclone:",
-    "effect": "draw Royal Arms as multiple bolts in a cylindrical formation and shoot {}"
-  },
-  "7": {
-    "name": "Gungnir",
-    "origin": "Granblue Fantasy",
-    "category": "Special",
-    "type": "Electric",
-    "random": 10,
-    "power": 95,
-    "image": "none",
-    "effect": "summon Odin to hurl Gungnir with incredible force at {}"
-  },
-  "8": {
-    "name": "Close Combat",
-    "origin": "Made up",
-    "category": "Physical",
-    "type": "Fighting",
-    "random": 3,
-    "power": 120,
-    "image": ":white_large_square:",
-    "effect": "an all-out attack at {}"
-  },
-  "9": {
-    "name": "Bite",
-    "origin": "Made up",
-    "category": "Physical",
-    "type": "Normal",
-    "random": 5,
-    "power": 60,
-    "image": ":xau:",
-    "effect": ""
-  },
-  "10": {
-    "name": ":ro:",
-    "origin": "Made up",
-    "category": "Physical",
-    "type": "Normal",
-    "random": 3,
-    "power": 1,
-    "image": ":ro:",
-    "effect": ""
-  },
-  "11": {
-    "name": ":ree:",
-    "origin": "Made up",
-    "category": "Physical",
-    "type": "Fire",
-    "random": 3,
-    "power": 105,
-    "image": ":ree:",
-    "effect": ""
-  },
-  "12": {
+"1": {
+  "effect": "snatch {}’s wig",
+  "image": ":white_large_square:",
+  "power": 75,
+  "random": 3,
+  "type": "Fairy",
+  "category": "Physical",
+  "origin": "Showbiz",
+  "name": "Weave Snatch"
+},
+"2": {
+  "effect": "use the heavenly power to incinerate",
+  "image": ":white_large_square:",
+  "power": 90,
+  "random": 3,
+  "type": "Fire",
+  "category": "Special",
+  "origin": "Made_up",
+  "name": "Flame Star"
+},
+"3": {
+  "effect": "unleash power from an unlikely source",
+  "image": ":white_large_square:",
+  "power": 100,
+  "random": 3,
+  "type": "Dark",
+  "category": "Special",
+  "origin": "Made_up",
+  "name": "Drama Absorption"
+},
+"4": {
+  "effect": "hurl all 13 Royal Arms at {}",
+  "image": ":crossed_swords:",
+  "power": 150,
+  "random": 30,
+  "type": "Fairy",
+  "category": "Physical",
+  "origin": "FFXV",
+  "name": "Armiger Unleashed"
+},
+"5": {
+  "effect": "cloak Engine Blade in magic aura and slash {}",
+  "image": ":dagger:",
+  "power": 90,
+  "random": 20,
+  "type": "Psychic",
+  "category": "Physical",
+  "origin": "FFXV",
+  "name": "Royal Cleave"
+},
+"6": {
+  "effect": "draw Royal Arms as multiple bolts in a cylindrical formation and shoot {}",
+  "image": ":cyclone:",
+  "power": 100,
+  "random": 20,
+  "type": "Steel",
+  "category": "Physical",
+  "origin": "FFXV",
+  "name": "Apocalypsis"
+},
+"7": {
+  "effect": "summon Odin to hurl Gungnir with incredible force at {}",
+  "image": "none",
+  "power": 95,
+  "random": 20,
+  "type": "Electric",
+  "category": "Special",
+  "origin": "Granblue Fantasy",
+  "name": "Gungnir"
+},
+"8": {
+  "effect": "an all-out attack at {}",
+  "image": ":white_large_square:",
+  "power": 125,
+  "random": 3,
+  "type": "Fighting",
+  "category": "Physical",
+  "origin": "Made up",
+  "name": "Five-front attack"
+},
+"9": {
+  "effect": "",
+  "image": ":white_large_square:",
+  "power": 25,
+  "random": 3,
+  "type": "Normal",
+  "category": "Physical",
+  "origin": "Made up",
+  "name": "cắn"
+},
+"10": {
+  "effect": "",
+  "image": ":white_large_square:",
+  "power": 1,
+  "random": 3,
+  "type": "Normal",
+  "category": "Physical",
+  "origin": "Made up",
+  "name": ":ro:"
+},
+"11": {
+  "effect": "",
+  "image": ":white_large_square:",
+  "power": 105,
+  "random": 3,
+  "type": "Fire",
+  "category": "Physical",
+  "origin": "Made up",
+  "name": "reeeeeeeeeeeee"
+},
+"12": {
     "name": "Dynastic Stance",
     "origin": "FFXV",
     "category": "Physical",
     "type": "Water",
     "random": 10,
     "power": 105,
-    "image": ":cloud_rain: ",
+    "image": "https://discordapp.com/assets/150db78e52c699a04a9feb46592ebf89.svg",
     "effect": "summon Royal Arms to rain down on {}"
   }
 }
