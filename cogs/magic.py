@@ -17,13 +17,13 @@ class Magic:
         self.bot = bot
         self.ownerid = "293041932542672896"
         self.stats_url = requests.get("https://api.jsonbin.io/b/5b081b310fb4d74cdf23e613/latest")
-        self.magic_url = requests.get("https://api.jsonbin.io/b/5b080ed07a973f4ce5784717/latest")
+        self.moves_url = requests.get("https://api.jsonbin.io/b/5b080ed07a973f4ce5784717/latest")
         self.stats = self.stats_url.json()
-        self.magic = self.magic_url.json()
-        self.moves = self.magic['Moves']
-        self.types = self.magic['Types']
-        self.typelist = ["Normal","Fire","Fighting","Water","Flying","Grass","Poison","Electric","Ground","Psychic","Rock","Ice","Bug","Dragon","Ghost","Dark","Steel","Fairy"]
+        self.moves = self.moves_url.json()
+        self.types = dataIO.load_json('data/magic/types.json')
+        self.typelist = ["Light","Normal","Fire","Fighting","Water","Flying","Grass","Poison","Electric","Ground","Psychic","Rock","Ice","Bug","Dragon","Ghost","Dark","Steel","Fairy"]
         self.errornotexist = "One or both of you do not have stats in the database! Set your stats using ``;stat`` first."
+        self.classes = ["all","pokemon","sakura","harrypotter","new","sailormoon"]
 
     def save_stats(self):
         requests.put("https://api.jsonbin.io/b/5b081b310fb4d74cdf23e613", json=self.stats)
@@ -56,16 +56,20 @@ class Magic:
                 embed=discord.Embed(color=user.color)
                 msg2 = ""
                 if self.stats[user.id]['class'] == "all":
-                    moveclass = random.choice(["harrypotter","sakura","pokemon","new"])
+                    moveclass = random.choice(["pokemon","sakura","harrypotter","new","sailormoon"])
                 else:
                     moveclass = self.stats[user.id]['class']
                 moveid = str(random.randint(1,len(self.moves[moveclass])))
-                msg1 = "**"+user.display_name + "** used **"+ self.moves[moveclass][moveid]['name']+"** " + self.types[self.moves[moveclass][moveid]['type']]['icon']
+                if moveclass == "harrypotter" or moveclass == "sakura":
+                    verb = "cast"
+                else:
+                    verb = "used"
+                msg1 = "**"+user.display_name + "** "+ verb +" **"+ self.moves[moveclass][moveid]['name']+"** " + self.types[self.moves[moveclass][moveid]['type']]['icon']
                 if self.moves[moveclass][moveid]['effect']:
                     msg1 = msg1 +" to "+ self.moves[moveclass][moveid]['effect'] + "!\n"
                 else:
                     msg1 = msg1 +"!\n"
-                power = self.moves[moveclass][moveid]['power']
+                power = random.randint(self.moves[moveclass][moveid]['power']-self.moves[moveclass][moveid]['random'],self.moves[moveclass][moveid]['power']+self.moves[moveclass][moveid]['random'])
                 if self.moves[moveclass][moveid]['category'] == "Physical":
                     atk = self.stats[user.id]['atk']
                     defe = self.stats[target.id]['defe']
@@ -109,7 +113,9 @@ class Magic:
                     userremaininghp, targetremaininghp = targetremaininghp, userremaininghp
                 await self.bot.say(embed=embed)
                 await asyncio.sleep(2)
-            prize = random.randint(30,200)
+            prize = random.randint(50,200)
+            if self.stats[target.id]['buff']-self.stats[user.id]['buff'] > 0:
+                prize += int(1500*(self.stats[target.id]['buff']-self.stats[user.id]['buff']))
             embed = discord.Embed(color=user.color,title=user.display_name + " received " + str(prize) + " PMP for winning! Congratulations!")
             self.stats[user.id]['money'] = self.stats[user.id]['money'] + prize
             self.stats[user.id]['win'] = self.stats[user.id]['win'] + 1
@@ -207,16 +213,16 @@ class Magic:
                                     'type1':"Normal",'type2':"Normal",'win':0,'lose':0, 'buff':0}
         buff = self.stats[user.id]['buff'] * 10
         while True:
-            self.stats[user.id]['hp'] = random.randint(40+buff,120+buff)
-            self.stats[user.id]['atk'] = random.randint(30+buff,120+buff)
-            self.stats[user.id]['defe'] = random.randint(30+buff,120+buff)
-            self.stats[user.id]['spa'] = random.randint(30+buff,120+buff)
-            self.stats[user.id]['spd'] = random.randint(30+buff,120+buff)
-            self.stats[user.id]['spe'] = random.randint(30+buff,120+buff)
+            self.stats[user.id]['hp'] = random.randint(40+buff/2,120+buff)
+            self.stats[user.id]['atk'] = random.randint(30+buff/2,120+buff)
+            self.stats[user.id]['defe'] = random.randint(30+buff/2,120+buff)
+            self.stats[user.id]['spa'] = random.randint(30+buff/2,120+buff)
+            self.stats[user.id]['spd'] = random.randint(30+buff/2,120+buff)
+            self.stats[user.id]['spe'] = random.randint(30+buff/2,120+buff)
             bst0 = self.stats[user.id]['hp'] + self.stats[user.id]['atk'] +self.stats[user.id]['defe'] +self.stats[user.id]['spa']+self.stats[user.id]['spd'] +self.stats[user.id]['spe']
-            if  self.stats[user.id]['bst'] >= bst0 > (self.stats[user.id]['bst']-20):
+            if  self.stats[user.id]['bst'] >= bst0 > (self.stats[user.id]['bst']-(30+buff)):
                 break
-        self.stats[user.id]['class'] = "all"
+        self.stats[user.id]['class'] = random.choice(self.classes)
         self.stats[user.id]['type1'] = random.choice(self.typelist)
         self.stats[user.id]['type2'] = random.choice(self.typelist)
         self.save_stats()
@@ -226,14 +232,18 @@ class Magic:
     @stat.command(pass_context=True)
     async def set(self, ctx, hp:int=1, atk:int=1, defe:int=1, spa:int=1, spd:int=1, spe:int=1, target:discord.Member=None):
         user= ctx.message.author
-        if user.id != self.ownerid:
-            await self.bot.say("Not authorized to do this.")
+        limit = 140+self.stats[user.id]['buff']*10
+        if target:
+            if user.id != self.ownerid:
+                await self.bot.say("Not authorized to do this.")
         else:
             if user.id not in self.stats:
                 self.stats[user.id] = {'hp': 1, 'atk': 1, 'defe': 1, 'spa': 1, 'spd': 1, 'spe': 1,'class': "all", 'bst': 400, 'money': 0, 'item': 0, 'type1':"Normal",'type2':"Normal"}
                 self.save_stats()
             if atk + defe +spa +spd +spe +hp > self.stats[user.id]['bst']:
-                await self.bot.say("Too OP! BST should be no more than your max BST of " + str(self.stats[user.id]['hp']) + ".")
+                await self.bot.say("Too OP! BST should be no more than your max BST of " + str(self.stats[user.id]['bst']) + ".")
+            elif atk > limit or defe > limit or spa > limit or spd > limit or spe > limit or hp > limit:
+                await self.bot.say("Too OP! Any  one stat should be no more than " + str(limit) + ".")
             else:
                 name = user.display_name
                 self.stats[user.id]['hp'] = hp
@@ -269,9 +279,9 @@ class Magic:
     @commands.command(pass_context=True)
     async def upgrade(self, ctx):
         user = ctx.message.author
-        price = 50 + (self.stats[user.id]['buff']**2)*2000
+        price = 50 + (self.stats[user.id]['buff']**2)*2500
         await self.bot.say("You currently have buff **level " + str(self.stats[user.id]['buff']) +"** with a max BST of **" + str(self.stats[user.id]['bst']) + "**. Would you like to purchase a buff for **" + str(price) + "** PMP?\n"
-                            + "A buff will increase your BST by **50**, and min/max stat random value by **10**. Type *yes* to confirm. (30s)")
+                            + "A buff will increase your BST by **50**, and min and max stat random value by **5** and **10**. Type *yes* to confirm. (30s)")
         answer = await self.bot.wait_for_message(timeout=30, author=ctx.message.author)
         if answer is None:
             await self.bot.say('Purchase cancelled due to timeout.')
@@ -288,7 +298,7 @@ class Magic:
                 self.stats[user.id]['money'] = self.stats[user.id]['money'] - price
                 self.save_stats()
                 await self.bot.say("Purchase success. You now have buff level **" + str(self.stats[user.id]['buff']) +"** with a max BST of **" + str(self.stats[user.id]['bst']) + "**.\n"
-                                   + "Your random value has been increased to **min " + str(30+self.stats[user.id]['buff']*10) + ", max " + str((120+self.stats[user.id]['buff']*10)) + "**.")
+                                   + "Your random value has been increased to **min " + str(30+self.stats[user.id]['buff']*5) + ", max " + str((120+self.stats[user.id]['buff']*10)) + "**.")
 
     @commands.command(pass_context=True)
     async def moveinfo(self, ctx, *, move:str=None):
@@ -317,6 +327,22 @@ class Magic:
         else:
             await self.bot.say("No move specified.")
 #self.moves[moveclass][moveid]['power']
+
+    @commands.command(pass_context=True)
+    async def setclass(self, ctx):
+        user= ctx.message.author
+        await self.bot.say('Currently available classes are and the following: ' + str(self.classes) + ". Type a class name to change to.")
+        answer = await self.bot.wait_for_message(timeout=30, author=ctx.message.author)
+        if answer is None:
+            await self.bot.say('Purchase cancelled due to timeout.')
+            return
+        elif answer.content.lower() not in self.classes:
+            await self.bot.say('Invalid class.')
+            return
+        else:
+            self.stats[user.id]['class'] = str(answer.content)
+            self.save_stats()
+            await self.bot.say('Successfully changed class.')
 
     @commands.command(pass_context=True)
     async def settype(self, ctx, type1:str=None, type2:str=None):

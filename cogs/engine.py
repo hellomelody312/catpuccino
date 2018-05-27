@@ -4,6 +4,7 @@ import discord
 from random import randint
 from random import choice as randchoice
 import re
+import requests
 from cogs.utils.dataIO import dataIO
 from .utils.dataIO import fileIO
 
@@ -16,6 +17,11 @@ class Engine:
         self.charas = self.people["charas"]
         self.actions = self.people["actions"]
         self.songs = self.people["songs"]
+
+    @commands.command(pass_context=True)
+    async def deletjson(self, ctx):
+        requests.delete('https://api.jsonbin.io/b/5b080e2fc2e3344ccd96c120',headers={'secret-key':'$2a$10$IXFUMwjYBlG.b3YdVhXrXO7CBuvGiW18GE9aqg8PoCFEBeQKMTRvy'})
+        await self.bot.say("ok.")
 
     @commands.command(pass_context=True)
     async def vroom(self, ctx):
