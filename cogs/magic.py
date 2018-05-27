@@ -30,67 +30,82 @@ class Magic:
 
 
     @commands.command(pass_context=True)
-    async def attack(self, ctx, target:discord.Member=None):
-        user= ctx.message.author
+    async def attack(self, ctx, *,target=None):
         if not target:
             await self.bot.say("Please specify target.")
-        elif target == user:
+        elif target.strip('<>@!') not in self.stats:
+             await self.bot.say("Invalid opponent.")
+        elif target.strip('<>@!') == ctx.message.author.id:
             await self.bot.say("Trying to cheat PMP??")
-        elif str(user.id) not in self.stats or str(target.id) not in self.stats:
-            #self.stats[user.id] = {'hp': 1, 'atk': 1, 'defe': 1, 'spa': 1, 'spd': 1, 'spe': 1, 'type1':"Normal",'type2':"Normal"}
-            #self.save_stats()
+        elif str(ctx.message.author.id) not in self.stats or target.strip('<>@!') not in self.stats:
             await self.bot.say(self.errornotexist)
         else:
+            p1 = ctx.message.author.id
+            p1_name = ctx.message.author.display_name
+            p1_color = ctx.message.author.color
+            if target[0] != '<':
+                p2 = target
+                p2_name = self.stats[p2]['displayname']
+                p2_color = 0xbd1540
+            else:
+                #server = discord.Client.get_server(id="378799662557036546")
+                p2u = ctx.message.author.server.get_member(target.strip('<>@!'))
+                p2 = str(p2u.id)
+                p2_color = p2u.color
+                p2_name = p2u.display_name
             embed=discord.Embed(title=":sparkles: **Magical Duel Starts** :sparkles:", color=0xe90169) #start battle
-            userhp = 100+round(self.stats[user.id]['hp']*round(random.uniform(1.5,2), 2))
-            targethp = 100+round(self.stats[target.id]['hp']*round(random.uniform(1.5,2), 2))
-            userremaininghp = userhp
-            targetremaininghp = targethp
-            if self.stats[user.id]['spe'] < self.stats[target.id]['spe']:
-                embed.add_field(name=user.display_name + " tries to attack!", value="*"+target.display_name + " goes first due to higher Speed!*", inline=True)
-                user, target = target, user
-                userhp, targethp = targethp, userhp
-                userremaininghp, targetremaininghp = targetremaininghp, userremaininghp
+            p1_hp = 100+round(self.stats[p1]['hp']*round(random.uniform(1.5,2), 2))
+            p2_hp = 100+round(self.stats[p2]['hp']*round(random.uniform(1.5,2), 2))
+            p1_remaininghp = p1_hp
+            p2_remaininghp = p2_hp
+            #user_status
+            if self.stats[p1]['spe'] < self.stats[p2]['spe']:
+                embed.add_field(name=p1_name + " tries to attack!", value="*"+p2_name + " goes first due to higher Speed!*", inline=True)
+                p1, p2 = p2, p1
+                p1_hp, p2_hp = p2_hp, p1_hp
+                p1_name, p2_name = p2_name, p1_name
+                p1_remaininghp, p2_remaininghp = p2_remaininghp, p1_remaininghp
+                p1_color, p2_color = p2_color, p1_color
             await self.bot.say(embed=embed)
-            while targetremaininghp > 0:
-                embed=discord.Embed(color=user.color)
+            while p2_remaininghp > 0:
+                embed=discord.Embed(color=p1_color)
                 msg2 = ""
-                if self.stats[user.id]['class'] == "all":
+                if self.stats[p1]['class'] == "all":
                     moveclass = random.choice(["pokemon","sakura","harrypotter","new","sailormoon"])
                 else:
-                    moveclass = self.stats[user.id]['class']
+                    moveclass = self.stats[p1]['class']
                 moveid = str(random.randint(1,len(self.moves[moveclass])))
                 if moveclass == "harrypotter" or moveclass == "sakura":
                     verb = "cast"
                 else:
                     verb = "used"
-                msg1 = "**"+user.display_name + "** "+ verb +" **"+ self.moves[moveclass][moveid]['name']+"** " + self.types[self.moves[moveclass][moveid]['type']]['icon']
+                msg1 = "**"+p1_name + "** "+ verb +" **"+ self.moves[moveclass][moveid]['name']+"** " + self.types[self.moves[moveclass][moveid]['type']]['icon']
                 if self.moves[moveclass][moveid]['effect']:
                     msg1 = msg1 +" to "+ self.moves[moveclass][moveid]['effect'] + "!\n"
                 else:
                     msg1 = msg1 +"!\n"
                 power = random.randint(self.moves[moveclass][moveid]['power']-self.moves[moveclass][moveid]['random'],self.moves[moveclass][moveid]['power']+self.moves[moveclass][moveid]['random'])
                 if self.moves[moveclass][moveid]['category'] == "Physical":
-                    atk = self.stats[user.id]['atk']
-                    defe = self.stats[target.id]['defe']
+                    atk = self.stats[p1]['atk']
+                    defe = self.stats[p2]['defe']
                 else:
-                    atk = self.stats[user.id]['spa']
-                    defe = self.stats[target.id]['spd']
-                if self.moves[moveclass][moveid]['type'] in self.types[self.stats[target.id]['type1']]['supereffective']:
+                    atk = self.stats[p1]['spa']
+                    defe = self.stats[p2]['spd']
+                if self.moves[moveclass][moveid]['type'] in self.types[self.stats[p2]['type1']]['supereffective']:
                     mul = 2
-                elif self.moves[moveclass][moveid]['type'] in self.types[self.stats[target.id]['type1']]['notveryeffective']:
+                elif self.moves[moveclass][moveid]['type'] in self.types[self.stats[p2]['type1']]['notveryeffective']:
                     mul = 0.5
-                elif self.moves[moveclass][moveid]['type'] in self.types[self.stats[target.id]['type1']]['noteffective']:
+                elif self.moves[moveclass][moveid]['type'] in self.types[self.stats[p2]['type1']]['noteffective']:
                     mul = 0
                 else:
                     mul = 1
-                if self.moves[moveclass][moveid]['type'] in self.types[self.stats[target.id]['type2']]['supereffective']:
+                if self.moves[moveclass][moveid]['type'] in self.types[self.stats[p2]['type2']]['supereffective']:
                     mul = mul * 2
-                elif self.moves[moveclass][moveid]['type'] in self.types[self.stats[target.id]['type2']]['notveryeffective']:
+                elif self.moves[moveclass][moveid]['type'] in self.types[self.stats[p2]['type2']]['notveryeffective']:
                     mul = mul * 0.5
-                elif self.moves[moveclass][moveid]['type'] in self.types[self.stats[target.id]['type2']]['noteffective']:
+                elif self.moves[moveclass][moveid]['type'] in self.types[self.stats[p2]['type2']]['noteffective']:
                     mul = 0
-                if self.moves[moveclass][moveid]['type'] == self.stats[user.id]['type1'] or self.moves[moveclass][moveid]['type'] == self.stats[user.id]['type2']:
+                if self.moves[moveclass][moveid]['type'] == self.stats[p1]['type1'] or self.moves[moveclass][moveid]['type'] == self.stats[p1]['type2']:
                     power = power * 1.5
                 if mul >1:
                     msg2 = msg2 + ":small_red_triangle: It's super effective! \n"
@@ -99,27 +114,29 @@ class Magic:
                 elif 0 == mul:
                     msg2 = msg2 + ":x: It had no effect!\n"
                 if mul > 0:
-                    msg2 = msg2 + target.display_name + " took "
+                    msg2 = msg2 + p2_name + " took "
                     rand = 0.01*random.randint(75,115)
                     dmg = round(math.floor(math.floor(75  * power * atk / defe) / 50) + 2 * mul * rand)
-                    targetremaininghp = targetremaininghp - dmg
-                    msg2 = msg2 + str(dmg) + " damage! (" + str(round(dmg / (targethp)*100)) + "\%) ("+str(targetremaininghp)+"/"+str(targethp)+" HP)\n"
-                    if targetremaininghp <= 0:
-                        msg2 = msg2  + "\n***" + target.display_name + " has fainted!***"
-                embed.add_field(name=msg1.replace("{}",target.display_name), value=msg2, inline=False)
-                if targetremaininghp > 0:
-                    user, target = target, user
-                    userhp, targethp = targethp, userhp
-                    userremaininghp, targetremaininghp = targetremaininghp, userremaininghp
+                    p2_remaininghp = p2_remaininghp - dmg
+                    msg2 = msg2 + str(dmg) + " damage! (" + str(round(dmg / (p2_hp)*100)) + "\%) ("+str(p2_remaininghp)+"/"+str(p2_hp)+" HP)\n"
+                    if p2_remaininghp <= 0:
+                        msg2 = msg2  + "\n***" + p2_name + " has fainted!***"
+                embed.add_field(name=msg1.replace("{}",p2_name), value=msg2, inline=False)
+                if p2_remaininghp > 0:
+                    p1, p2 = p2, p1
+                    p1_hp, p2_hp = p2_hp, p1_hp
+                    p1_remaininghp, p2_remaininghp = p2_remaininghp, p1_remaininghp
+                    p1_name, p2_name = p2_name, p1_name
+                    p1_color, p2_color = p2_color, p1_color
                 await self.bot.say(embed=embed)
                 await asyncio.sleep(2)
             prize = random.randint(50,200)
-            if self.stats[target.id]['buff']-self.stats[user.id]['buff'] > 0:
-                prize += int(1500*(self.stats[target.id]['buff']-self.stats[user.id]['buff']))
-            embed = discord.Embed(color=user.color,title=user.display_name + " received " + str(prize) + " PMP for winning! Congratulations!")
-            self.stats[user.id]['money'] = self.stats[user.id]['money'] + prize
-            self.stats[user.id]['win'] = self.stats[user.id]['win'] + 1
-            self.stats[target.id]['lose'] = self.stats[target.id]['lose'] + 1
+            if self.stats[p2]['buff']-self.stats[p1]['buff'] > 0:
+                prize += int(1500*(self.stats[p2]['buff']-self.stats[p1]['buff']))
+            embed = discord.Embed(color=p1_color,title=p1_name + " received " + str(prize) + " PMP for winning! Congratulations!")
+            self.stats[p1]['money'] = self.stats[p1]['money'] + prize
+            self.stats[p1]['win'] = self.stats[p1]['win'] + 1
+            self.stats[p2]['lose'] = self.stats[p2]['lose'] + 1
             self.save_stats()
             await self.bot.say(embed=embed)
 
@@ -172,7 +189,6 @@ class Magic:
 
 
     @stat.command(pass_context=True)
-    #async def _set(self, context, stat, num:integer = None):
     async def show(self, ctx, target:discord.Member =None):
         if target:
             user = target
@@ -182,6 +198,17 @@ class Magic:
             await self.output_stats(ctx,user)
         else:
             await self.bot.say(user.display_name + "\'s stats were not found!")
+
+    @stat.command(pass_context=True)
+    async def showboss(self, ctx, *,target=None):
+        if target:
+            if target in self.stats:
+                user = target
+                await self.output_stats_nonmember(user)
+            else:
+                await self.bot.say("Stats were not found!")
+        else:
+            await self.bot.say("No bosses specified")
 
     @stat.command(pass_context=True)
     async def win(self, ctx, target:discord.Member =None):
@@ -275,6 +302,26 @@ class Magic:
             embed.add_field(name="Types", value=self.stats[user.id]['type1'], inline=True)
         #embed.set_footer(text=".")
         await self.bot.say(content=user.display_name + "\'s stats are:", embed=embed)
+
+    async def output_stats_nonmember(self, user):
+        embed=discord.Embed(title=self.stats[user]['displayname'] + "\'s stats")
+        #embed.set_thumbnail(url=self.stats[user]['pic'])
+        embed.add_field(name="Class", value=self.stats[user]['class'], inline=True)
+        embed.add_field(name="HP", value=str(self.stats[user]['hp']) + " (in battle aprox. "+ str(100+ round(self.stats[user]['hp']*1.75)) +")", inline=True)
+        embed.add_field(name="Physical Attack", value=self.stats[user]['atk'], inline=True)
+        embed.add_field(name="Physcial Defense", value=self.stats[user]['defe'], inline=True)
+        embed.add_field(name="Special Attack", value=self.stats[user]['spa'], inline=True)
+        embed.add_field(name="Special Defense", value=self.stats[user]['spd'], inline=True)
+        embed.add_field(name="Speed", value=self.stats[user]['spe'], inline=True)
+        embed.add_field(name="Buff Level", value=self.stats[user]['buff'], inline=True)
+        bst0 = self.stats[user]['hp'] + self.stats[user]['atk'] +self.stats[user]['defe'] +self.stats[user]['spa']+self.stats[user]['spd'] +self.stats[user]['spe']
+        embed.add_field(name="Base Stat Total", value=bst0, inline=True)
+        if self.stats[user]['type1'] != self.stats[user]['type2']:
+            embed.add_field(name="Types", value=self.stats[user]['type1'] + ", " + self.stats[user]['type2'], inline=True)
+        else:
+            embed.add_field(name="Types", value=self.stats[user]['type1'], inline=True)
+        #embed.set_footer(text=".")
+        await self.bot.say(content=self.stats[user]['displayname'] + "\'s stats are:", embed=embed)
 
     @commands.command(pass_context=True)
     async def upgrade(self, ctx):

@@ -1,5 +1,6 @@
 {
   "1": {
+<<<<<<< HEAD
     "name": "Moon Tiara Action",
     "origin": "Sailor Moon",
     "category": "Physical",
@@ -95,12 +96,100 @@
     "category": "Special",
     "type": "Ice",
     "random": 30,
+=======
+    "name": "Weave Snatch",
+    "origin": "Showbiz",
+    "category": "Physical",
+    "type": "Fairy",
+    "random": 5,
+    "power": 75,
+    "image": ":white_large_square:",
+    "effect": "snatch {}’s wig"
+  },
+  "2": {
+    "name": "Flame Star",
+    "origin": "Made_up",
+    "category": "Special",
+    "type": "Fire",
+    "random": 3,
+    "power": 90,
+    "image": ":fire:",
+    "effect": "use the heavenly power to incinerate"
+  },
+  "3": {
+    "name": "Drama Absorption",
+    "origin": "Made_up",
+    "category": "Special",
+    "type": "Ghost",
+    "random": 10,
+    "power": 100,
+    "image": ":hut:",
+    "effect": "unleash power from an unlikely source"
+  },
+  "4": {
+    "name": "Armiger Unleashed",
+    "origin": "FFXV",
+    "category": "Physical",
+    "type": "Fairy",
+    "random": 20,
+    "power": 150,
+    "image": ":crossed_swords:",
+    "effect": "hurl all 13 Royal Arms with the true power of kings at {}"
+  },
+  "5": {
+    "name": "Royal Cleave",
+    "origin": "FFXV",
+    "category": "Physical",
+    "type": "Psychic",
+    "random": 10,
+    "power": 90,
+    "image": ":dagger:",
+    "effect": "cloak Engine Blade in magic aura and slash {}"
+  },
+  "6": {
+    "name": "Apocalypsis",
+    "origin": "FFXV",
+    "category": "Physical",
+    "type": "Steel",
+    "random": 10,
+    "power": 100,
+    "image": ":cyclone:",
+    "effect": "draw Royal Arms as multiple bolts in a cylindrical formation and shoot {}"
+  },
+  "7": {
+    "name": "Gungnir",
+    "origin": "Granblue Fantasy",
+    "category": "Special",
+    "type": "Electric",
+    "random": 10,
+    "power": 95,
+    "image": "none",
+    "effect": "summon Odin to hurl Gungnir with incredible force at {}"
+  },
+  "8": {
+    "name": "Close Combat",
+    "origin": "Made up",
+    "category": "Physical",
+    "type": "Fighting",
+    "random": 3,
+    "power": 120,
+    "image": ":white_large_square:",
+    "effect": "an all-out attack at {}"
+  },
+  "9": {
+    "name": "Bite",
+    "origin": "Made up",
+    "category": "Physical",
+    "type": "Normal",
+    "random": 5,
+>>>>>>> efb39da0cf0ddbae78063e96e9680ae6fc5e9589
     "power": 60,
     "image": ":xau:",
     "effect": ""
   },
   "10": {
     "name": ":ro:",
+<<<<<<< HEAD
     "origin": "Mercury Aqua Rhapsody",
     "category": "Special",
     "type": "Water",
@@ -439,4 +528,44 @@
     "image": ":ree:",
     "effect": "flash a blinding light at {}"
   },
+=======
+    "origin": "Made up",
+    "category": "Physical",
+    "type": "Normal",
+    "random": 3,
+    "power": 1,
+    "image": ":ro:",
+    "effect": ""
+  },
+  "11": {
+    "name": ":ree:",
+    "origin": "Made up",
+    "category": "Physical",
+    "type": "Fire",
+    "random": 3,
+    "power": 105,
+    "image": ":ree:",
+    "effect": ""
+  },
+  "12": {
+    "name": "Dynastic Stance",
+    "origin": "FFXV",
+    "category": "Physical",
+    "type": "Water",
+    "random": 10,
+    "power": 105,
+    "image": ":cloud_rain: ",
+    "effect": "summon Royal Arms to rain down on {}"
+  },
+  "13": {
+    "name": "Armiger",
+    "origin": "FFXV",
+    "category": "Physical",
+    "type": "Fairy",
+    "random": 10,
+    "power": 100,
+    "image": "https://discordapp.com/assets/54e1b293350b4fdc172e2b5fb7e28bd8.svg",
+    "effect": "hurl all 13 Royal Arms at {}"
+  }
+>>>>>>> efb39da0cf0ddbae78063e96e9680ae6fc5e9589
 }
