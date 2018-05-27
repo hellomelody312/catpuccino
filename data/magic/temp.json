@@ -118,5 +118,15 @@
     "power": 105,
     "image": ":cloud_rain: ",
     "effect": "summon Royal Arms to rain down on {}"
+  },
+  "13": {
+    "name": "Armiger",
+    "origin": "FFXV",
+    "category": "Physical",
+    "type": "Fairy",
+    "random": 10,
+    "power": 100,
+    "image": "https://discordapp.com/assets/54e1b293350b4fdc172e2b5fb7e28bd8.svg",
+    "effect": "hurl all 13 Royal Arms at {}"
   }
 }
