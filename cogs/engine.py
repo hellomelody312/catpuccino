@@ -1,5 +1,6 @@
 from discord.ext import commands
 import random
+import discord
 from random import randint
 from random import choice as randchoice
 import re
@@ -19,7 +20,9 @@ class Engine:
     @commands.command(pass_context=True)
     async def vroom(self, ctx):
         """You don't need no instruction manual to be free!!"""
-        await self.bot.say("VROOM VROOM!")
+        embed=discord.Embed(color=0xe90169) #start battle
+        embed.add_field(name="jhasdjads", value="jasndj", inline=False)
+        await self.bot.say(embed=embed)
 
     @commands.command(pass_context=True)
     async def soulmate(self, ctx, gender :str =None,*,victim:str=None):

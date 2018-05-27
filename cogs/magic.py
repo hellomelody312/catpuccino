@@ -33,13 +33,15 @@ class Magic:
     async def attack(self, ctx, target:discord.Member=None):
         user= ctx.message.author
         if not target:
-            target = self.bot.user
-        if str(user.id) not in self.stats or str(target.id) not in self.stats:
+            await self.bot.say("Please specify target.")
+        elif target == user:
+            await self.bot.say("Trying to cheat PMP??")
+        elif str(user.id) not in self.stats or str(target.id) not in self.stats:
             #self.stats[user.id] = {'hp': 1, 'atk': 1, 'defe': 1, 'spa': 1, 'spd': 1, 'spe': 1, 'type1':"Normal",'type2':"Normal"}
             #self.save_stats()
             await self.bot.say(self.errornotexist)
         else:
-            embed=discord.Embed(title=":sparkles: **Magic Battle** :sparkles:", color=0xe90169)
+            embed=discord.Embed(title=":sparkles: **Magical Duel Starts** :sparkles:", color=0xe90169) #start battle
             userhp = 100+round(self.stats[user.id]['hp']*round(random.uniform(1.5,2), 2))
             targethp = 100+round(self.stats[target.id]['hp']*round(random.uniform(1.5,2), 2))
             userremaininghp = userhp
@@ -49,10 +51,12 @@ class Magic:
                 user, target = target, user
                 userhp, targethp = targethp, userhp
                 userremaininghp, targetremaininghp = targetremaininghp, userremaininghp
+            await self.bot.say(embed=embed)
             while targetremaininghp > 0:
+                embed=discord.Embed(color=user.color)
                 msg2 = ""
                 if self.stats[user.id]['class'] == "all":
-                    moveclass = random.choice(["harrypotter","sakura","pokemon"])
+                    moveclass = random.choice(["harrypotter","sakura","pokemon","new"])
                 else:
                     moveclass = self.stats[user.id]['class']
                 moveid = str(random.randint(1,len(self.moves[moveclass])))
@@ -93,7 +97,7 @@ class Magic:
                 if mul > 0:
                     msg2 = msg2 + target.display_name + " took "
                     rand = 0.01*random.randint(75,115)
-                    dmg = round(math.floor(math.floor(60 * power * atk / defe) / 50) + 2 * mul * rand)
+                    dmg = round(math.floor(math.floor(75  * power * atk / defe) / 50) + 2 * mul * rand)
                     targetremaininghp = targetremaininghp - dmg
                     msg2 = msg2 + str(dmg) + " damage! (" + str(round(dmg / (targethp)*100)) + "\%) ("+str(targetremaininghp)+"/"+str(targethp)+" HP)\n"
                     if targetremaininghp <= 0:
@@ -103,8 +107,10 @@ class Magic:
                     user, target = target, user
                     userhp, targethp = targethp, userhp
                     userremaininghp, targetremaininghp = targetremaininghp, userremaininghp
-            prize = random.randint(10,100)
-            embed.set_footer(text=user.display_name + " received " + str(prize) + " PMP for winning! Congratulations!")
+                await self.bot.say(embed=embed)
+                await asyncio.sleep(2)
+            prize = random.randint(30,200)
+            embed = discord.Embed(color=user.color,title=user.display_name + " received " + str(prize) + " PMP for winning! Congratulations!")
             self.stats[user.id]['money'] = self.stats[user.id]['money'] + prize
             self.stats[user.id]['win'] = self.stats[user.id]['win'] + 1
             self.stats[target.id]['lose'] = self.stats[target.id]['lose'] + 1
@@ -185,8 +191,8 @@ class Magic:
     @stat.command(pass_context=True)
     async def reset(self,ctx):
         user = ctx.message.author
-        self.stats[user.id] = {'hp': 60, 'atk': 60, 'defe': 60, 'spa': 60, 'spd': 60, 'spe': 60, 'class': "all", 'bst': 500, 'money': 0, 'item': 0,
-                               'type1':"Normal",'type2':"Normal",'win':0,'lose':0}
+        self.stats[user.id] = {'hp': 60, 'atk': 60, 'defe': 60, 'spa': 60, 'spd': 60, 'spe': 60, 'class': "all", 'bst': 450, 'money': 0, 'item': 0,
+                               'type1':"Normal",'type2':"Normal",'win':0,'lose':0, 'buff':0}
         self.save_stats()
         await self.bot.say(user.display_name + "\'s stats were set all to 60 and your types to Normal.")
 
@@ -197,18 +203,18 @@ class Magic:
         else:
             user = ctx.message.author
         if user.id not in self.stats:
-             self.stats[user.id] = {'hp': 1, 'atk': 1, 'defe': 1, 'spa': 1, 'spd': 1, 'spe': 1, 'class': "all", 'bst': 450, 'money': 0, 'item': 0,
-                                    'type1':"Normal",'type2':"Normal",'win':0,'lose':0}
-        buff = ((self.stats[user.id]['bst']/50) - 9) * 10
+            self.stats[user.id] = {'hp': 1, 'atk': 1, 'defe': 1, 'spa': 1, 'spd': 1, 'spe': 1, 'class': "all", 'bst': 450, 'money': 0, 'item': 0,
+                                    'type1':"Normal",'type2':"Normal",'win':0,'lose':0, 'buff':0}
+        buff = self.stats[user.id]['buff'] * 10
         while True:
-            self.stats[user.id]['hp'] = random.randint(65+buff,120+buff)
-            self.stats[user.id]['atk'] = random.randint(50+buff,120+buff)
-            self.stats[user.id]['defe'] = random.randint(50+buff,120+buff)
-            self.stats[user.id]['spa'] = random.randint(50+buff,120+buff)
-            self.stats[user.id]['spd'] = random.randint(50+buff,120+buff)
-            self.stats[user.id]['spe'] = random.randint(50+buff,120+buff)
+            self.stats[user.id]['hp'] = random.randint(40+buff,120+buff)
+            self.stats[user.id]['atk'] = random.randint(30+buff,120+buff)
+            self.stats[user.id]['defe'] = random.randint(30+buff,120+buff)
+            self.stats[user.id]['spa'] = random.randint(30+buff,120+buff)
+            self.stats[user.id]['spd'] = random.randint(30+buff,120+buff)
+            self.stats[user.id]['spe'] = random.randint(30+buff,120+buff)
             bst0 = self.stats[user.id]['hp'] + self.stats[user.id]['atk'] +self.stats[user.id]['defe'] +self.stats[user.id]['spa']+self.stats[user.id]['spd'] +self.stats[user.id]['spe']
-            if self.stats[user.id]['bst'] >= bst0:
+            if  self.stats[user.id]['bst'] >= bst0 > (self.stats[user.id]['bst']-20):
                 break
         self.stats[user.id]['class'] = "all"
         self.stats[user.id]['type1'] = random.choice(self.typelist)
@@ -219,25 +225,25 @@ class Magic:
 
     @stat.command(pass_context=True)
     async def set(self, ctx, hp:int=1, atk:int=1, defe:int=1, spa:int=1, spd:int=1, spe:int=1, target:discord.Member=None):
-        if target and user.id == "293041932542672896":
-            user = target
+        user= ctx.message.author
+        if user.id != self.ownerid:
+            await self.bot.say("Not authorized to do this.")
         else:
-            user= ctx.message.author
-        if user.id not in self.stats:
-            self.stats[user.id] = {'hp': 1, 'atk': 1, 'defe': 1, 'spa': 1, 'spd': 1, 'spe': 1,'class': "all", 'bst': 400, 'money': 0, 'item': 0, 'type1':"Normal",'type2':"Normal"}
-            self.save_stats()
-        if atk + defe +spa +spd +spe +hp >550:
-            await self.bot.say("Too OP! BST should be no more than 550.")
-        else:
-            name = user.display_name
-            self.stats[user.id]['hp'] = hp
-            self.stats[user.id]['atk'] = atk
-            self.stats[user.id]['defe'] = defe
-            self.stats[user.id]['spa'] = spa
-            self.stats[user.id]['spd'] = spd
-            self.stats[user.id]['spe'] = spe
-            self.save_stats()
-            await self.output_stats(ctx,user)
+            if user.id not in self.stats:
+                self.stats[user.id] = {'hp': 1, 'atk': 1, 'defe': 1, 'spa': 1, 'spd': 1, 'spe': 1,'class': "all", 'bst': 400, 'money': 0, 'item': 0, 'type1':"Normal",'type2':"Normal"}
+                self.save_stats()
+            if atk + defe +spa +spd +spe +hp > self.stats[user.id]['bst']:
+                await self.bot.say("Too OP! BST should be no more than your max BST of " + str(self.stats[user.id]['hp']) + ".")
+            else:
+                name = user.display_name
+                self.stats[user.id]['hp'] = hp
+                self.stats[user.id]['atk'] = atk
+                self.stats[user.id]['defe'] = defe
+                self.stats[user.id]['spa'] = spa
+                self.stats[user.id]['spd'] = spd
+                self.stats[user.id]['spe'] = spe
+                self.save_stats()
+                await self.output_stats(ctx,user)
 
 
     async def output_stats(self, ctx, user):
@@ -250,12 +256,67 @@ class Magic:
         embed.add_field(name="Special Attack", value=self.stats[user.id]['spa'], inline=True)
         embed.add_field(name="Special Defense", value=self.stats[user.id]['spd'], inline=True)
         embed.add_field(name="Speed", value=self.stats[user.id]['spe'], inline=True)
+        embed.add_field(name="Buff Level", value=self.stats[user.id]['buff'], inline=True)
+        bst0 = self.stats[user.id]['hp'] + self.stats[user.id]['atk'] +self.stats[user.id]['defe'] +self.stats[user.id]['spa']+self.stats[user.id]['spd'] +self.stats[user.id]['spe']
+        embed.add_field(name="Base Stat Total", value=bst0, inline=True)
         if self.stats[user.id]['type1'] != self.stats[user.id]['type2']:
             embed.add_field(name="Types", value=self.stats[user.id]['type1'] + ", " + self.stats[user.id]['type2'], inline=True)
         else:
             embed.add_field(name="Types", value=self.stats[user.id]['type1'], inline=True)
         #embed.set_footer(text=".")
         await self.bot.say(content=user.display_name + "\'s stats are:", embed=embed)
+
+    @commands.command(pass_context=True)
+    async def upgrade(self, ctx):
+        user = ctx.message.author
+        price = 50 + (self.stats[user.id]['buff']**2)*2000
+        await self.bot.say("You currently have buff **level " + str(self.stats[user.id]['buff']) +"** with a max BST of **" + str(self.stats[user.id]['bst']) + "**. Would you like to purchase a buff for **" + str(price) + "** PMP?\n"
+                            + "A buff will increase your BST by **50**, and min/max stat random value by **10**. Type *yes* to confirm. (30s)")
+        answer = await self.bot.wait_for_message(timeout=30, author=ctx.message.author)
+        if answer is None:
+            await self.bot.say('Purchase cancelled due to timeout.')
+            return
+        elif "yes" not in answer.content.lower():
+            await self.bot.say('Well? Okay then.')
+            return
+        else:
+            if self.stats[user.id]['money'] < price:
+                await self.bot.say("You don't have enough PMP!")
+            else:
+                self.stats[user.id]['buff'] = self.stats[user.id]['buff'] + 1
+                self.stats[user.id]['bst'] = self.stats[user.id]['bst'] +50
+                self.stats[user.id]['money'] = self.stats[user.id]['money'] - price
+                self.save_stats()
+                await self.bot.say("Purchase success. You now have buff level **" + str(self.stats[user.id]['buff']) +"** with a max BST of **" + str(self.stats[user.id]['bst']) + "**.\n"
+                                   + "Your random value has been increased to **min " + str(30+self.stats[user.id]['buff']*10) + ", max " + str((120+self.stats[user.id]['buff']*10)) + "**.")
+
+    @commands.command(pass_context=True)
+    async def moveinfo(self, ctx, *, move:str=None):
+        if move:
+            found = 0
+            for i in self.moves: #for every class
+                for j in self.moves[i]: #for every move j in class i
+                    if self.moves[i][j]['name'].lower() == move.lower(): #compare
+                        found = 1
+                        embed=discord.Embed(title=self.moves[i][j]['name'] + "\'s info")
+                        #embed.set_thumbnail(url=user.avatar_url) #to be edited
+                        embed.add_field(name="Class", value=str(i), inline=True)
+                        embed.add_field(name="Category", value=self.moves[i][j]['category'], inline=True)
+                        if self.moves[i][j]['random'] > 0:
+                            rara = " ± " + str(self.moves[i][j]['random'])
+                        else:
+                            rara = ""
+                        embed.add_field(name="Power", value=str(self.moves[i][j]['power']) + rara, inline=True)
+                        #embed.add_field(name="Accuracy", value=str(self.moves[i][j]['acc']), inline=True) TBA
+                        embed.add_field(name="Type", value=self.moves[i][j]['type'] + " " + self.types[self.moves[i][j]['type']]['icon'], inline=True)
+                        embed.add_field(name="Origin", value=self.moves[i][j]['origin'], inline=True)
+                        #embed.add_field(name="Speed", value=self.stats[user.id]['spe'], inline=True) unuused
+                        await self.bot.say(embed=embed)
+            if found == 0:
+                await self.bot.say("No such move.")
+        else:
+            await self.bot.say("No move specified.")
+#self.moves[moveclass][moveid]['power']
 
     @commands.command(pass_context=True)
     async def settype(self, ctx, type1:str=None, type2:str=None):
