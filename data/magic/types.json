@@ -1,0 +1,117 @@
+{
+    "Light" : {
+      "supereffective" : ["Dark","Steel"],
+      "notveryeffective" : ["Fairy","Poison","Ice","Fire"],
+      "noteffective": ["Ghost"],
+      "icon" : ":star2:"
+    },
+    "Normal" : {
+      "supereffective" : ["Fighting"],
+      "notveryeffective" : ["None"],
+      "noteffective": ["Ghost"],
+      "icon" : ":white_small_square:"
+    },
+    "Fire" : {
+      "supereffective" : ["Water","Rock","Ground"],
+      "notveryeffective" : ["Fairy","Grass","Fire","Bug","Ice","Steel"],
+      "noteffective": ["None"],
+      "icon" : ":fire:"
+    },
+    "Water" : {
+      "supereffective" : ["Grass","Electric"],
+      "notveryeffective" : ["Steel","Fire","Water","Ice"],
+      "noteffective": ["None"],
+      "icon" : ":ocean: "
+    },
+    "Grass" : {
+      "supereffective" : ["Fire","Flying","Bug","Ice","Poison"],
+      "notveryeffective" : ["Grass","Water","Ground","Electric","Light"],
+      "noteffective": ["None"],
+      "icon" : ":seedling:"
+    },
+    "Flying" : {
+      "supereffective" : ["Rock","Ice","Electric"],
+      "notveryeffective" : ["Grass","Fighting","Bug"],
+      "noteffective": ["Ground"],
+      "icon" : ":cloud_tornado:"
+    },
+    "Electric" : {
+      "supereffective" : ["Ground"],
+      "notveryeffective" : ["Electric","Steel","Flying"],
+      "noteffective": ["None"],
+      "icon" : ":zap:"
+    },
+    "Ground" : {
+      "supereffective" : ["Water","Grass","Ice"],
+      "notveryeffective" : ["Poison","Rock","Light"],
+      "noteffective": ["Electric"],
+      "icon" : ":earth_asia:"
+    },
+    "Rock" : {
+      "supereffective" : ["Water","Grass","Ground","Fighting","Steel"],
+      "notveryeffective" : ["Normal","Fire","Poison","Flying"],
+      "noteffective": ["None"],
+      "icon" : ":new_moon:"
+    },
+    "Bug" : {
+      "supereffective" : ["Fire","Flying","Rock"],
+      "notveryeffective" : ["Fighting","Ground","Grass"],
+      "noteffective": ["None"],
+      "icon" : ":bug:"
+    },
+    "Steel" : {
+      "supereffective" : ["Fighting","Ground","Fire"],
+      "notveryeffective" : ["Normal","Rock","Flying","Rock","Bug","Steel","Grass","Ice","Psychic","Dragon","Fairy"],
+      "noteffective": ["Poison"],
+      "icon" : ":chains:"
+    },
+    "Poison" : {
+      "supereffective" : ["Psychic","Ground"],
+      "notveryeffective" : ["Poison","Grass","Fighting","Bug","Fairy"],
+      "noteffective": ["None"],
+      "icon" : ":skull_crossbones:"
+    },
+    "Ice" : {
+      "supereffective" : ["Fighting","Fire","Rock","Steel","Light"],
+      "notveryeffective" : ["Ice"],
+      "noteffective": ["None"],
+      "icon" : ":snowflake:"
+    },
+    "Dragon" : {
+      "supereffective" : ["Dragon","Fairy","Ice","Light"],
+      "notveryeffective" : ["Fire","Water","Grass","Electric"],
+      "noteffective": ["None"],
+      "icon" : ":dragon:"
+    },
+    "Fairy" : {
+      "supereffective" : ["Poison","Steel","Light"],
+      "notveryeffective" : ["Bug","Fighting"],
+      "noteffective": ["Dragon"],
+      "icon" : ":sparkles:"
+    },
+    "Fighting" : {
+      "supereffective" : ["Psychic","Flying","Fairy"],
+      "notveryeffective" : ["Rock","Bug","Dark"],
+      "noteffective": ["None"],
+      "icon" : ":boxing_glove:"
+    },
+    "Psychic" : {
+      "supereffective" : ["Dark","Ghost","Bug"],
+      "notveryeffective" : ["Psychic","Fighting","Light"],
+      "noteffective": ["None"],
+      "icon" : ":eye:"
+    },
+    "Dark" : {
+      "supereffective" : ["Fighting","Bug","Fairy","Light"],
+      "notveryeffective" : ["Ghost","Dark"],
+      "noteffective": ["Psychic"],
+      "icon" : ":smiling_imp:"
+    },
+    "Ghost" : {
+      "supereffective" : ["Ghost","Dark","Light"],
+      "notveryeffective" : ["Bug","Poison"],
+      "noteffective": ["Normal","Fighting"],
+      "icon" : ":ghost:"
+    }
+
+}

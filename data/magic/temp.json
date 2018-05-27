@@ -1,111 +1,442 @@
-"1": {
-  "effect": "snatch {}’s wig",
-  "image": ":white_large_square:",
-  "power": 75,
-  "random": 3,
-  "type": "Fairy",
-  "category": "Physical",
-  "origin": "Showbiz",
-  "name": "Weave Snatch"
-},
-"2": {
-  "effect": "use the heavenly power to incinerate",
-  "image": ":white_large_square:",
-  "power": 90,
-  "random": 3,
-  "type": "Fire",
-  "category": "Special",
-  "origin": "Made_up",
-  "name": "Flame Star"
-},
-"3": {
-  "effect": "unleash power from an unlikely source",
-  "image": ":white_large_square:",
-  "power": 100,
-  "random": 3,
-  "type": "Dark",
-  "category": "Special",
-  "origin": "Made_up",
-  "name": "Drama Absorption"
-},
-"4": {
-  "effect": "hurl all 13 Royal Arms at {}",
-  "image": ":crossed_swords:",
-  "power": 150,
-  "random": 30,
-  "type": "Fairy",
-  "category": "Physical",
-  "origin": "FFXV",
-  "name": "Armiger Unleashed"
-},
-"5": {
-  "effect": "cloak Engine Blade in magic aura and slash {}",
-  "image": ":dagger:",
-  "power": 90,
-  "random": 20,
-  "type": "Psychic",
-  "category": "Physical",
-  "origin": "FFXV",
-  "name": "Royal Cleave"
-},
-"6": {
-  "effect": "draw Royal Arms as multiple bolts in a cylindrical formation and shoot {}",
-  "image": ":cyclone:",
-  "power": 100,
-  "random": 20,
-  "type": "Steel",
-  "category": "Physical",
-  "origin": "FFXV",
-  "name": "Apocalypsis"
-},
-"7": {
-  "effect": "summon Odin to hurl Gungnir with incredible force at {}",
-  "image": "none",
-  "power": 95,
-  "random": 20,
-  "type": "Electric",
-  "category": "Special",
-  "origin": "Granblue Fantasy",
-  "name": "Gungnir"
-},
-"8": {
-  "effect": "an all-out attack at {}",
-  "image": ":white_large_square:",
-  "power": 125,
-  "random": 3,
-  "type": "Fighting",
-  "category": "Physical",
-  "origin": "Made up",
-  "name": "Five-front attack"
-},
-"9": {
-  "effect": "",
-  "image": ":white_large_square:",
-  "power": 25,
-  "random": 3,
-  "type": "Normal",
-  "category": "Physical",
-  "origin": "Made up",
-  "name": "cắn"
-},
-"10": {
-  "effect": "",
-  "image": ":white_large_square:",
-  "power": 1,
-  "random": 3,
-  "type": "Normal",
-  "category": "Physical",
-  "origin": "Made up",
-  "name": ":ro:"
-},
-"11": {
-  "effect": "",
-  "image": ":white_large_square:",
-  "power": 105,
-  "random": 3,
-  "type": "Fire",
-  "category": "Physical",
-  "origin": "Made up",
-  "name": "reeeeeeeeeeeee"
-}
+{
+  "1": {
+    "name": "Moon Tiara Action",
+    "origin": "Sailor Moon",
+    "category": "Physical",
+    "type": "Light",
+    "random": 5,
+    "power": 50,
+    "image": ":white_large_square:",
+    "effect": ""
+  },
+  "2": {
+    "name": "Moon Princess Halation",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Light",
+    "random": 3,
+    "power": 80,
+    "image": ":fire:",
+    "effect": ""
+  },
+  "3": {
+    "name": "Moon Spiral Heart Attack :heart:",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Psychic",
+    "random": 10,
+    "power": 90,
+    "image": ":hut:",
+    "effect": "smash a giant :heart: into {}"
+  },
+  "3": {
+    "name": "Rainbow Moon Heartache :rainbow::heart:",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Psychic",
+    "random": 30,
+    "power": 100,
+    "image": ":hut:",
+    "effect": "trap {} with heart ribbons"
+  },
+  "4": {
+    "name": "Moon Gorgeous Meditation",
+    "origin": "Sailor Moon",
+    "category": "Physical",
+    "type": "Light",
+    "random": 20,
+    "power": 120,
+    "image": ":crossed_swords:",
+    "effect": "shatter {}"
+  },
+  "5": {
+    "name": "Starlight Honeymoon Therapy Kiss",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Light",
+    "random": 10,
+    "power": 90,
+    "image": ":dagger:",
+    "effect": "soak everything in a pink light"
+  },
+  "6": {
+    "name": "Silver Moon Crystal Power Therapy Kiss",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Light",
+    "random": 20,
+    "power": 150,
+    "image": ":cyclone:",
+    "effect": "soak everything in a blinding light"
+  },
+  "7": {
+    "name": "Bubble Spray",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Water",
+    "random": 10,
+    "power": 25,
+    "image": "none",
+    "effect": "create a misty terrain"
+  },
+  "8": {
+    "name": "Shine Aqua Illusion",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Water",
+    "random": 20,
+    "power": 65,
+    "image": ":white_large_square:",
+    "effect": ""
+  },
+  "9": {
+    "name": "Shine Snow Illusion",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Ice",
+    "random": 30,
+    "power": 60,
+    "image": ":xau:",
+    "effect": ""
+  },
+  "10": {
+    "name": ":ro:",
+    "origin": "Mercury Aqua Rhapsody",
+    "category": "Special",
+    "type": "Water",
+    "random": 15,
+    "power": 100,
+    "image": ":ro:",
+    "effect": "play a divine melody"
+  },
+  "11": {
+    "name": "Mercury Aqua Mirage",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Water",
+    "random": 45,
+    "power": 80,
+    "image": ":ree:",
+    "effect": "hit {} over and over with watery blasts"
+  },
+  "12": {
+    "name": "Burning Mandala",
+    "origin": "Sailor Moon",
+    "category": "Physical",
+    "type": "Fire",
+    "random": 25,
+    "power": 45,
+    "image": ":cloud_rain: ",
+    "effect": "hit {} with rings of fire"
+  },
+  "13": {
+    "name": "Fire Soul",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Fire",
+    "random": 22,
+    "power": 44,
+    "image": ":ree:",
+    "effect": ""
+  },
+  "14": {
+    "name": "Mars Snake Fire",
+    "origin": "Sailor Moon",
+    "category": "Physical",
+    "type": "Fire",
+    "random": 5,
+    "power": 90,
+    "image": ":white_large_square:",
+    "effect": "consume {}"
+  },
+  "15": {
+    "name": "Mars Flame Sniper",
+    "origin": "Sailor Moon",
+    "category": "Physical",
+    "type": "Light",
+    "random": 11,
+    "power": 95,
+    "image": ":fire:",
+    "effect": ""
+  },
+  "16": {
+    "name": "Fire Soul Bird",
+    "origin": "Sailor Moon",
+    "category": "Physical",
+    "type": "Fire",
+    "random": 10,
+    "power": 60,
+    "image": ":hut:",
+    "effect": "send a fire bird towards {}"
+  },
+  "17": {
+    "name": "Fire Heel Drop",
+    "origin": "Sailor Moon",
+    "category": "Physical",
+    "type": "Fire",
+    "random": 20,
+    "power": 30,
+    "image": ":crossed_swords:",
+    "effect": "kick {} from above"
+  },
+  "18": {
+    "name": "Flower Hurricane",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Grass",
+    "random": 10,
+    "power": 30,
+    "image": ":dagger:",
+    "effect": "send petals towards {}"
+  },
+  "19": {
+    "name": "Supreme Thunder",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Electric",
+    "random": 10,
+    "power": 60,
+    "image": ":cyclone:",
+    "effect": "zap {}"
+  },
+  "20": {
+    "name": "Supreme Thunder Dragon :dragon:",
+    "origin": "Sailor Moon",
+    "category": "Physical",
+    "type": "Electric",
+    "random": 10,
+    "power": 75,
+    "image": "none",
+    "effect": "consume {}"
+  },
+  "21": {
+    "name": "Jupiter Coconut Cyclone :cyclone:",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Flying",
+    "random": 35,
+    "power": 85,
+    "image": ":white_large_square:",
+    "effect": "trap {} in a vortex"
+  },
+  "22": {
+    "name": "Sparkling Wide Pressure",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Electric",
+    "random": 20,
+    "power": 90,
+    "image": ":xau:",
+    "effect": "launch an electric ball at {}"
+  },
+  "23": {
+    "name": "Jupiter Oak Evolution",
+    "origin": "Mercury Aqua Rhapsody",
+    "category": "Special",
+    "type": "Grass",
+    "random": 15,
+    "power": 120,
+    "image": ":ro:",
+    "effect": ""
+  },
+  "24": {
+    "name": "Cresent Beam",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Light",
+    "random": 25,
+    "power": 40,
+    "image": ":ree:",
+    "effect": "fire a beam at {}"
+  },
+  "25": {
+    "name": "Hissatsu Love-Me Moon Chain",
+    "origin": "Sailor Moon",
+    "category": "Physical",
+    "type": "Light",
+    "random": 30,
+    "power": 35,
+    "image": ":cloud_rain: ",
+    "effect": "hit {} with a lovely chain of moonlight"
+  },
+  "26": {
+    "name": "Venus Love-Me Chain",
+    "origin": "Sailor Moon",
+    "category": "Physical",
+    "type": "Light",
+    "random": 40,
+    "power": 45,
+    "image": ":cloud_rain: ",
+    "effect": "hit {} with a lovely chain of light"
+  },
+  "27": {
+    "name": "Rolling Heart Vibration",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Light",
+    "random": 22,
+    "power": 55,
+    "image": ":ree:",
+    "effect": "spin {} around"
+  },
+  "28": {
+    "name": "Cresent Beam Shower",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Light",
+    "random": 45,
+    "power": 70,
+    "image": ":ree:",
+    "effect": "fires a beam shower at {}"
+  },
+  "29": {
+    "name": "Venus Love and Beauty Shock",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Fairy",
+    "random": 30,
+    "power": 100,
+    "image": ":cloud_rain: ",
+    "effect": "hit {} with love"
+  },
+  "30": {
+    "name": "World Shaking",
+    "origin": "Sailor Moon",
+    "category": "Physical",
+    "type": "Ground",
+    "random": 40,
+    "power": 75,
+    "image": ":cloud_rain: ",
+    "effect": ""
+  },
+  "31": {
+    "name": "Venus Wink Chain Sword",
+    "origin": "Sailor Moon",
+    "category": "Physcial",
+    "type": "Light",
+    "random": 12,
+    "power": 75,
+    "image": ":ree:",
+    "effect": "slice {}"
+  },
+  "32": {
+    "name": "Space Turbulence",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Flying",
+    "random": 30,
+    "power": 35,
+    "image": ":cloud_rain: ",
+    "effect": ""
+  },
+  "33": {
+    "name": "Space Sword Blaster",
+    "origin": "Sailor Moon",
+    "category": "Physical",
+    "type": "Fighting",
+    "random": 10,
+    "power": 85,
+    "image": ":ree:",
+    "effect": "attack {} with a Talisman"
+  },
+  "34": {
+    "name": "Deep Submerge",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Water",
+    "random": 15,
+    "power": 70,
+    "image": ":ree:",
+    "effect": ""
+  },
+  "35": {
+    "name": "Submarine Violon Tide",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Water",
+    "random": 30,
+    "power": 90,
+    "image": ":cloud_rain: ",
+    "effect": "hit {} with a tidal wave"
+  },
+  "36": {
+    "name": "Submarine Reflection",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Psychic",
+    "random": 20,
+    "power": 95,
+    "image": ":cloud_rain: ",
+    "effect": "purify {}"
+  },
+  "37": {
+    "name": "Dead Scream",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Ghost",
+    "random": 22,
+    "power": 75,
+    "image": ":ree:",
+    "effect": ""
+  },
+  "38": {
+    "name": "Chronos Typhoon",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Ghost",
+    "random": 30,
+    "power": 85,
+    "image": ":cloud_rain: ",
+    "effect": ""
+  },
+  "39": {
+    "name": "Silence Glave Surprise",
+    "origin": "Sailor Moon",
+    "category": "Physical",
+    "type": "Dark",
+    "random": 10,
+    "power": 125,
+    "image": ":ree:",
+    "effect": "destroy everything around {}"
+  },
+  "40": {
+    "name": "Death Reborn Revolution",
+    "origin": "Sailor Moon",
+    "category": "Physical",
+    "type": "Dark",
+    "random": 15,
+    "power": 160,
+    "image": ":ree:",
+    "effect": "destroy {}"
+  },
+  "41": {
+    "name": "Pink Sugar Heart Attack",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Psychic",
+    "random": 20,
+    "power": 20,
+    "image": ":cloud_rain: ",
+    "effect": "hit {} with some pink hearts"
+  },
+  "43": {
+    "name": "Silver Moon Crystal Eternal Power",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Light",
+    "random": 0,
+    "power": 200,
+    "image": ":cloud_rain: ",
+    "effect": "send {} into oblivion"
+  },
+  "37": {
+    "name": "Moon Twilight Flash",
+    "origin": "Sailor Moon",
+    "category": "Special",
+    "type": "Light",
+    "random": 0,
+    "power": 60,
+    "image": ":ree:",
+    "effect": "flash a blinding light at {}"
+  },
 }
