@@ -1,0 +1,38 @@
+
+
+
+    "1": {
+      "text": "",  ## abc used move to (.....) 
+      "description": "", ##CHƯA XÀI ĐẾN
+      "image": "", ## url hình minh họa
+      "status": ["status",0],  ### status thuộc [poison, freeze, burn, confuse, flinch, protect, reflect], 0 = chance gây ra
+      "affected_stat": ["stat",0], tăng hoặc giảm stat mình/đối thủ, stat trong [atk, defe, spa, spd, acc], 0 = bậc (-6 -> +6)
+      "crit": 10, ## chance gây critical hit
+      "info": "Deals damage.", ## bỏ vào moveinfo, vd. Deals damage and lowers attack
+      "power": 50,
+      "acc": 100,
+      "random": 5,
+      "type": "Light",
+      "category": "Physical",
+      "origin": "Sailor Moon",
+      "name": "Moon Tiara Action"
+    },
+    
+    ĐIỀN VÔ DƯỚI
+
+    "1": {
+      "text": "",
+      "description": "",
+      "image": "",
+      "status": ["status",0],
+      "affected_stat": ["stat",0],
+      "crit": 10,
+      "info": "Deals damage.",
+      "power": 50,
+      "acc": 100,
+      "random": 5,
+      "type": "Light",
+      "category": "Physical",
+      "origin": "Sailor Moon",
+      "name": "Moon Tiara Action"
+    },
