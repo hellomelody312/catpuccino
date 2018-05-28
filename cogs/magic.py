@@ -377,7 +377,9 @@ class Magic:
                     if self.moves[i][j]['name'].lower() == move.lower(): #compare
                         found = 1
                         embed=discord.Embed(title=self.moves[i][j]['name'] + "\'s info")
-                        #embed.set_thumbnail(url=user.avatar_url) #to be edited
+                        if self.moves[i][j]['image']:
+                            embed.set_image(url=self.moves[i][j]['image'])
+                        #embed.set_thumbnail(url=self.moves[i][j]['image']) #to be edited
                         embed.add_field(name="Class", value=str(i), inline=True)
                         embed.add_field(name="Category", value=self.moves[i][j]['category'], inline=True)
                         if self.moves[i][j]['random'] > 0:
@@ -385,10 +387,10 @@ class Magic:
                         else:
                             rara = ""
                         embed.add_field(name="Power", value=str(self.moves[i][j]['power']) + rara, inline=True)
-                        #embed.add_field(name="Accuracy", value=str(self.moves[i][j]['acc']), inline=True) TBA
+                        embed.add_field(name="Accuracy", value=str(self.moves[i][j]['acc']), inline=True)
                         embed.add_field(name="Type", value=self.moves[i][j]['type'] + " " + self.types[self.moves[i][j]['type']]['icon'], inline=True)
                         embed.add_field(name="Origin", value=self.moves[i][j]['origin'], inline=True)
-                        #embed.add_field(name="Speed", value=self.stats[user.id]['spe'], inline=True) unuused
+                        embed.add_field(name="Description", value=self.moves[i][j]['info'], inline=False)
                         await self.bot.say(embed=embed)
             if found == 0:
                 await self.bot.say("No such move.")
