@@ -2,11 +2,12 @@
 
 
     "1": {
-      "text": "",  ## abc used move to (.....) 
+      "text": "throw tiara",  abc used move to (.....) 
       "description": "", ##CHƯA XÀI ĐẾN
       "image": "", ## url hình minh họa
-      "status": ["status",0],  ### status thuộc [poison, freeze, burn, confuse, flinch, protect, reflect], 0 = chance gây ra
-      "affected_stat": ["stat",0], tăng hoặc giảm stat mình/đối thủ, stat trong [atk, defe, spa, spd, acc], 0 = bậc (-6 -> +6)
+       "effect": "",  1 trong raise_stat, lower_stat, heal, cause_status
+      "status": ["status",0],  ### status thuộc [poison, freeze, burn, confuse, flinch, protect, reflect], 0 = chance gây ra (%)
+      "affected_stat": ["stat",0,0], tăng hoặc giảm stat mình/đối thủ, stat trong [atk, defe, spa, spd, acc], 0 = bậc (-6 -> +6) , 0 = chance (%)
       "crit": 10, ## chance gây critical hit
       "info": "Deals damage.", ## bỏ vào moveinfo, vd. Deals damage and lowers attack
       "power": 50,
@@ -24,6 +25,7 @@
       "text": "",
       "description": "",
       "image": "",
+       "effect": "",
       "status": ["status",0],
       "affected_stat": ["stat",0],
       "crit": 10,
