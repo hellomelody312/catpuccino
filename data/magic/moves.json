@@ -1,11 +1,20 @@
 {
   "sailormoon": {
     "1": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 50,
       "random": 5,
@@ -15,11 +24,20 @@
       "name": "Moon Tiara Action"
     },
     "2": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 80,
       "random": 3,
@@ -29,11 +47,20 @@
       "name": "Moon Princess Halation"
     },
     "3": {
-      "effect": "trap {} with heart ribbons",
+      "text": "trap {} with heart ribbons",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 100,
       "random": 30,
@@ -43,11 +70,20 @@
       "name": "Rainbow Moon Heartache :rainbow::heart:"
     },
     "4": {
-      "effect": "shatter {}",
+      "text": "shatter {}",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 120,
       "random": 20,
@@ -57,11 +93,20 @@
       "name": "Moon Gorgeous Meditation"
     },
     "5": {
-      "effect": "soak everything in a pink light",
+      "text": "soak everything in a pink light",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 90,
       "random": 10,
@@ -71,11 +116,20 @@
       "name": "Starlight Honeymoon Therapy Kiss"
     },
     "6": {
-      "effect": "soak everything in a blinding light",
+      "text": "soak everything in a blinding light",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 150,
       "random": 20,
@@ -85,11 +139,20 @@
       "name": "Silver Moon Crystal Power Therapy Kiss"
     },
     "7": {
-      "effect": "create a misty terrain",
+      "text": "create a misty terrain",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 25,
       "random": 10,
@@ -99,11 +162,20 @@
       "name": "Bubble Spray"
     },
     "8": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 65,
       "random": 20,
@@ -113,11 +185,20 @@
       "name": "Shine Aqua Illusion"
     },
     "9": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 60,
       "random": 30,
@@ -127,11 +208,20 @@
       "name": "Shine Snow Illusion"
     },
     "10": {
-      "effect": "play a divine melody",
+      "text": "play a divine melody",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 100,
       "random": 15,
@@ -141,11 +231,20 @@
       "name": ":ro:"
     },
     "11": {
-      "effect": "hit {} over and over with watery blasts",
+      "text": "hit {} over and over with watery blasts",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 80,
       "random": 45,
@@ -155,11 +254,20 @@
       "name": "Mercury Aqua Mirage"
     },
     "12": {
-      "effect": "hit {} with rings of fire",
+      "text": "hit {} with rings of fire",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 45,
       "random": 25,
@@ -169,11 +277,20 @@
       "name": "Burning Mandala"
     },
     "13": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 44,
       "random": 22,
@@ -183,11 +300,20 @@
       "name": "Fire Soul"
     },
     "14": {
-      "effect": "consume {}",
+      "text": "consume {}",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 90,
       "random": 5,
@@ -197,11 +323,20 @@
       "name": "Mars Snake Fire"
     },
     "15": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 95,
       "random": 11,
@@ -211,11 +346,20 @@
       "name": "Mars Flame Sniper"
     },
     "16": {
-      "effect": "send a fire bird towards {}",
+      "text": "send a fire bird towards {}",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 60,
       "random": 10,
@@ -225,11 +369,20 @@
       "name": "Fire Soul Bird"
     },
     "17": {
-      "effect": "kick {} from above",
+      "text": "kick {} from above",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 30,
       "random": 20,
@@ -239,11 +392,20 @@
       "name": "Fire Heel Drop"
     },
     "18": {
-      "effect": "send petals towards {}",
+      "text": "send petals towards {}",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 30,
       "random": 10,
@@ -253,11 +415,20 @@
       "name": "Flower Hurricane"
     },
     "19": {
-      "effect": "zap {}",
+      "text": "zap {}",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 60,
       "random": 10,
@@ -267,11 +438,20 @@
       "name": "Supreme Thunder"
     },
     "20": {
-      "effect": "consume {}",
+      "text": "consume {}",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 75,
       "random": 10,
@@ -281,11 +461,20 @@
       "name": "Supreme Thunder Dragon :dragon:"
     },
     "21": {
-      "effect": "trap {} in a vortex",
+      "text": "trap {} in a vortex",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 85,
       "random": 35,
@@ -295,11 +484,20 @@
       "name": "Jupiter Coconut Cyclone :cyclone:"
     },
     "22": {
-      "effect": "launch an electric ball at {}",
+      "text": "launch an electric ball at {}",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 90,
       "random": 20,
@@ -309,11 +507,20 @@
       "name": "Sparkling Wide Pressure"
     },
     "23": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 120,
       "random": 15,
@@ -323,11 +530,20 @@
       "name": "Jupiter Oak Evolution"
     },
     "24": {
-      "effect": "fire a beam at {}",
+      "text": "fire a beam at {}",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 40,
       "random": 25,
@@ -337,11 +553,20 @@
       "name": "Cresent Beam"
     },
     "25": {
-      "effect": "hit {} with a lovely chain of moonlight",
+      "text": "hit {} with a lovely chain of moonlight",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 35,
       "random": 30,
@@ -351,11 +576,20 @@
       "name": "Hissatsu Love-Me Moon Chain"
     },
     "26": {
-      "effect": "hit {} with a lovely chain of light",
+      "text": "hit {} with a lovely chain of light",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 45,
       "random": 40,
@@ -365,11 +599,20 @@
       "name": "Venus Love-Me Chain"
     },
     "27": {
-      "effect": "spin {} around",
+      "text": "spin {} around",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 55,
       "random": 22,
@@ -379,11 +622,20 @@
       "name": "Rolling Heart Vibration"
     },
     "28": {
-      "effect": "fires a beam shower at {}",
+      "text": "fires a beam shower at {}",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 70,
       "random": 45,
@@ -393,11 +645,20 @@
       "name": "Cresent Beam Shower"
     },
     "29": {
-      "effect": "hit {} with love",
+      "text": "hit {} with love",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 100,
       "random": 30,
@@ -407,11 +668,20 @@
       "name": "Venus Love and Beauty Shock"
     },
     "30": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 75,
       "random": 40,
@@ -421,11 +691,20 @@
       "name": "World Shaking"
     },
     "31": {
-      "effect": "slice {}",
+      "text": "slice {}",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 75,
       "random": 12,
@@ -435,11 +714,20 @@
       "name": "Venus Wink Chain Sword"
     },
     "32": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 35,
       "random": 30,
@@ -449,11 +737,20 @@
       "name": "Space Turbulence"
     },
     "33": {
-      "effect": "attack {} with a Talisman",
+      "text": "attack {} with a Talisman",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 85,
       "random": 10,
@@ -463,11 +760,20 @@
       "name": "Space Sword Blaster"
     },
     "34": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 70,
       "random": 15,
@@ -477,11 +783,20 @@
       "name": "Deep Submerge"
     },
     "35": {
-      "effect": "hit {} with a tidal wave",
+      "text": "hit {} with a tidal wave",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 90,
       "random": 30,
@@ -491,11 +806,20 @@
       "name": "Submarine Violon Tide"
     },
     "36": {
-      "effect": "purify {}",
+      "text": "purify {}",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 95,
       "random": 20,
@@ -505,11 +829,20 @@
       "name": "Submarine Reflection"
     },
     "37": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 75,
       "random": 22,
@@ -519,11 +852,20 @@
       "name": "Dead Scream"
     },
     "38": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 85,
       "random": 30,
@@ -533,11 +875,20 @@
       "name": "Chronos Typhoon"
     },
     "39": {
-      "effect": "destroy everything around {}",
+      "text": "destroy everything around {}",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 125,
       "random": 10,
@@ -547,11 +898,20 @@
       "name": "Silence Glave Surprise"
     },
     "40": {
-      "effect": "destroy {}",
+      "text": "destroy {}",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 160,
       "random": 15,
@@ -561,11 +921,20 @@
       "name": "Death Reborn Revolution"
     },
     "41": {
-      "effect": "hit {} with some pink hearts",
+      "text": "hit {} with some pink hearts",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 20,
       "random": 20,
@@ -575,11 +944,20 @@
       "name": "Pink Sugar Heart Attack"
     },
     "43": {
-      "effect": "send {} into oblivion",
+      "text": "send {} into oblivion",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 200,
       "random": 0,
@@ -589,11 +967,20 @@
       "name": "Silver Moon Crystal Eternal Power"
     },
     "44": {
-      "effect": "flash a blinding light at {}",
+      "text": "flash a blinding light at {}",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 60,
       "random": 0,
@@ -603,7 +990,7 @@
       "name": "Moon Twilight Flash"
     }
   },
-  "new": {
+  "ffxv": {
     "1": {
       "name": "Weave Snatch",
       "origin": "Showbiz",
@@ -611,12 +998,21 @@
       "type": "Fairy",
       "random": 5,
       "power": 75,
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
-      "effect": "snatch {}’s wig"
+      "text": "snatch {}’s wig"
     },
     "2": {
       "name": "Flame Star",
@@ -625,12 +1021,21 @@
       "type": "Fire",
       "random": 3,
       "power": 90,
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
-      "effect": "use the heavenly power to incinerate"
+      "text": "use the heavenly power to incinerate"
     },
     "3": {
       "name": "Drama Absorption",
@@ -639,12 +1044,21 @@
       "type": "Ghost",
       "random": 10,
       "power": 100,
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
-      "effect": "unleash power from an unlikely source"
+      "text": "unleash power from an unlikely source"
     },
     "4": {
       "name": "Armiger Unleashed",
@@ -653,12 +1067,21 @@
       "type": "Fairy",
       "random": 20,
       "power": 150,
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
-      "effect": "hurl all 13 Royal Arms with the true power of kings at {}"
+      "text": "hurl all 13 Royal Arms with the true power of kings at {}"
     },
     "5": {
       "name": "Royal Cleave",
@@ -667,12 +1090,21 @@
       "type": "Psychic",
       "random": 10,
       "power": 90,
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
-      "effect": "cloak Engine Blade in magic aura and slash {}"
+      "text": "cloak Engine Blade in magic aura and slash {}"
     },
     "6": {
       "name": "Apocalypsis",
@@ -681,12 +1113,21 @@
       "type": "Steel",
       "random": 10,
       "power": 100,
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
-      "effect": "draw Royal Arms as multiple bolts in a cylindrical formation and shoot {}"
+      "text": "draw Royal Arms as multiple bolts in a cylindrical formation and shoot {}"
     },
     "7": {
       "name": "Gungnir",
@@ -695,12 +1136,21 @@
       "type": "Electric",
       "random": 10,
       "power": 95,
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
-      "effect": "summon Odin to hurl Gungnir with incredible force at {}"
+      "text": "summon Odin to hurl Gungnir with incredible force at {}"
     },
     "8": {
       "name": "Close Combat",
@@ -709,12 +1159,21 @@
       "type": "Fighting",
       "random": 3,
       "power": 120,
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
-      "effect": "an all-out attack at {}"
+      "text": "an all-out attack at {}"
     },
     "9": {
       "name": "Bite",
@@ -723,12 +1182,21 @@
       "type": "Normal",
       "random": 5,
       "power": 60,
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
-      "effect": ""
+      "text": ""
     },
     "10": {
       "name": "<:ro:437654455505125406>",
@@ -737,12 +1205,21 @@
       "type": "Normal",
       "random": 100,
       "power": 10,
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
-      "effect": ""
+      "text": ""
     },
     "11": {
       "name": "<:ree:397654450518360074>",
@@ -751,12 +1228,21 @@
       "type": "Fire",
       "random": 3,
       "power": 85,
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
-      "effect": ""
+      "text": ""
     },
     "12": {
       "name": "Dynastic Stance",
@@ -765,12 +1251,21 @@
       "type": "Water",
       "random": 10,
       "power": 105,
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
-      "effect": "summon Royal Arms to rain down on {}"
+      "text": "summon Royal Arms to rain down on {}"
     },
     "13": {
       "name": "Armiger",
@@ -779,21 +1274,39 @@
       "type": "Fairy",
       "random": 10,
       "power": 100,
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
-      "effect": "hurl all 13 Royal Arms at {}"
+      "text": "hurl all 13 Royal Arms at {}"
     }
   },
   "pokemon": {
     "1": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 90,
       "random": 0,
@@ -803,11 +1316,20 @@
       "name": "Cross Poison"
     },
     "2": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 90,
       "random": 0,
@@ -817,11 +1339,20 @@
       "name": "Flamethrower"
     },
     "3": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 90,
       "random": 0,
@@ -831,11 +1362,20 @@
       "name": "Aqua Tail"
     },
     "4": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 100,
       "random": 1,
@@ -845,11 +1385,20 @@
       "name": "Earthquake"
     },
     "5": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 80,
       "random": 1,
@@ -859,11 +1408,20 @@
       "name": "Shadow Ball"
     },
     "6": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "random": 0,
       "power": 80,
@@ -873,11 +1431,20 @@
       "name": "Psyshock"
     },
     "7": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 60,
       "random": 0,
@@ -887,11 +1454,20 @@
       "name": "Bug Bite"
     },
     "8": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 90,
       "random": 1,
@@ -901,11 +1477,20 @@
       "name": "Flash Cannon"
     },
     "9": {
-      "effect": "hit {}",
+      "text": "hit {}",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 75,
       "random": 0,
@@ -915,11 +1500,20 @@
       "name": "Thunder Punch"
     },
     "10": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "random": 0,
       "power": 90,
@@ -929,11 +1523,20 @@
       "name": "Ice Beam"
     },
     "11": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 90,
       "random": 0,
@@ -945,11 +1548,20 @@
   },
   "harrypotter": {
     "1": {
-      "effect": "conjure a stream of fire",
+      "text": "conjure a stream of fire",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 78,
       "random": 20,
@@ -959,11 +1571,20 @@
       "name": "Incendio"
     },
     "2": {
-      "effect": "stun {}! ",
+      "text": "stun {}! ",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 99,
       "random": 1,
@@ -973,11 +1594,20 @@
       "name": "Stupefy"
     },
     "3": {
-      "effect": "torture {}",
+      "text": "torture {}",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "random": 26,
       "power": 129,
@@ -987,11 +1617,20 @@
       "name": "Crucio"
     },
     "4": {
-      "effect": "make {} beat themselves",
+      "text": "make {} beat themselves",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 69,
       "random": 17,
@@ -1001,11 +1640,20 @@
       "name": "Imperio"
     },
     "5": {
-      "effect": "bind {} with vines",
+      "text": "bind {} with vines",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 56,
       "random": 22,
@@ -1015,11 +1663,20 @@
       "name": "Herbivicus"
     },
     "6": {
-      "effect": "knock {} away",
+      "text": "knock {} away",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 45,
       "random": 3,
@@ -1029,11 +1686,20 @@
       "name": "Depulso"
     },
     "7": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 98,
       "random": 3,
@@ -1043,11 +1709,20 @@
       "name": "Impedimenta"
     },
     "8": {
-      "effect": "lift {} with a whirlwind",
+      "text": "lift {} with a whirlwind",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 39,
       "random": 33,
@@ -1057,11 +1732,20 @@
       "name": "Ventus"
     },
     "9": {
-      "effect": "create a huge explosion",
+      "text": "create a huge explosion",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 145,
       "random": 3,
@@ -1071,11 +1755,20 @@
       "name": "Confringo"
     },
     "10": {
-      "effect": "cut {}",
+      "text": "cut {}",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 67,
       "random": 30,
@@ -1087,11 +1780,20 @@
   },
   "sakura": {
     "1": {
-      "effect": "bind {} with wind chains",
+      "text": "bind {} with wind chains",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 85,
       "random": 40,
@@ -1101,11 +1803,20 @@
       "name": "The Windy"
     },
     "2": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 90,
       "random": 60,
@@ -1115,11 +1826,20 @@
       "name": "The Firey"
     },
     "3": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 100,
       "random": 20,
@@ -1129,11 +1849,20 @@
       "name": "The Watery"
     },
     "4": {
-      "effect": "cause an earthquake",
+      "text": "cause an earthquake",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 120,
       "random": 1,
@@ -1143,11 +1872,20 @@
       "name": "The Earthy"
     },
     "5": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 50,
       "random": 1,
@@ -1157,11 +1895,20 @@
       "name": "The Shadow"
     },
     "6": {
+      "text": "",
+      "description": "",
       "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "random": 42,
       "power": 55,
@@ -1171,11 +1918,20 @@
       "name": "The Fight"
     },
     "7": {
-      "effect": "blow some bubbles",
+      "text": "blow some bubbles",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 39,
       "random": 5,
@@ -1185,11 +1941,20 @@
       "name": "The Bubbles"
     },
     "8": {
-      "effect": "slash at {} ",
+      "text": "slash at {} ",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 95,
       "random": 1,
@@ -1199,11 +1964,20 @@
       "name": "The Sword"
     },
     "9": {
-      "effect": "hit {}",
+      "text": "hit {}",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 110,
       "random": 33,
@@ -1213,11 +1987,20 @@
       "name": "The Thunder"
     },
     "10": {
-      "effect": "freeze {}",
+      "text": "freeze {}",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "random": 0,
       "power": 88,
@@ -1227,11 +2010,20 @@
       "name": "The Freeze"
     },
     "11": {
-      "effect": "slice {} with wind blades",
+      "text": "slice {} with wind blades",
+      "description": "",
+      "effect": "",
       "image": "",
-      "status": "",
-      "affected_stat": "",
-      "stat_amount": "",
+      "status": [
+        "status",
+        0
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
       "info": "Deals damage.",
       "power": 115,
       "random": 45,
