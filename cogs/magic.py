@@ -326,7 +326,7 @@ class Magic:
 
     async def output_stats_nonmember(self, user):
         embed=discord.Embed(title=self.stats[user]['displayname'] + "\'s stats")
-        embed.set_thumbnail(url=self.stats[user]['pic'])
+        embed.set_thumbnail(url=self.stats[user]['pic'], color=self.stats[user]['color'])
         #embed.set_image(url=self.stats[user]['pic'])
         embed.add_field(name="Class", value=self.stats[user]['class'], inline=True)
         embed.add_field(name="HP", value=str(self.stats[user]['hp']) + " (in battle aprox. "+ str(100+ round(self.stats[user]['hp']*1.75)) +")", inline=True)
