@@ -325,9 +325,9 @@ class Magic:
         await self.bot.say(content=user.display_name + "\'s stats are:", embed=embed)
 
     async def output_stats_nonmember(self, user):
-        embed=discord.Embed(title=self.stats[user]['displayname'] + "\'s stats")
+        embed=discord.Embed(title=self.stats[user]['displayname'] + "\'s stats", image.height=250,image.width=250)
         embed.set_thumbnail(url=self.stats[user]['pic'])
-        embed.set_image(url=self.stats[user]['pic'],height=300,width=300)
+        embed.set_image(url=self.stats[user]['pic'])
         embed.add_field(name="Class", value=self.stats[user]['class'], inline=True)
         embed.add_field(name="HP", value=str(self.stats[user]['hp']) + " (in battle aprox. "+ str(100+ round(self.stats[user]['hp']*1.75)) +")", inline=True)
         embed.add_field(name="Physical Attack", value=self.stats[user]['atk'], inline=True)
