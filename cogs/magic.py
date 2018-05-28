@@ -151,6 +151,27 @@ class Magic:
         else:
             await self.bot.say(user.display_name + " has "+ str(self.stats[user.id]['money']) +" PMP.")
 
+    @commands.command(pass_context=True, no_pm=True)
+    @commands.cooldown(1, 3600, commands.BucketType.user)
+    async def getpmp(self, ctx):
+        user = ctx.message.author
+        randomp = random.randint(1,100)
+        if randomp > 50:
+            get = 100
+        elif randomp > 25:
+            get = 500
+        elif randomp > 10:
+            get = 1000
+        elif random >1:
+            get = 5000
+        else:
+            get = 10000
+        self.stats[user.id]['money'] += get
+        self.save_stats()
+        await self.bot.say("You got " + str(get) + " PMP for free! Try again in 1 hour.")
+
+
+
     @commands.command(pass_context=True)
     async def givepmp(self, ctx, target:discord.Member=None, amount:int=0):
         user= ctx.message.author
