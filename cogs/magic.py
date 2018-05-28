@@ -21,9 +21,9 @@ class Magic:
         self.stats = self.stats_url.json()
         self.moves = self.moves_url.json()
         self.types = dataIO.load_json('data/magic/types.json')
-        self.typelist = ["Light","Normal","Fire","Fighting","Water","Flying","Grass","Poison","Electric","Ground","Psychic","Rock","Ice","Bug","Dragon","Ghost","Dark","Steel","Fairy"]
+        self.typelist = ["Normal","Fire","Fighting","Water","Flying","Grass","Poison","Electric","Ground","Psychic","Rock","Ice","Bug","Dragon","Ghost","Dark","Steel","Fairy"]
         self.errornotexist = "One or both of you do not have stats in the database! Set your stats using ``;stat`` first."
-        self.classes = ["all","pokemon","sakura","harrypotter","new","sailormoon"]
+        self.classes = ["all","pokemon","sakura","harrypotter","ffxv","sailormoon"]
 
     def save_stats(self):
         requests.put("https://api.jsonbin.io/b/5b081b310fb4d74cdf23e613", json=self.stats)
@@ -71,7 +71,7 @@ class Magic:
                 embed=discord.Embed(color=p1_color)
                 msg2 = ""
                 if self.stats[p1]['class'] == "all":
-                    moveclass = random.choice(["pokemon","sakura","harrypotter","new","sailormoon"])
+                    moveclass = random.choice(["pokemon","sakura","harrypotter","ffxv","sailormoon"])
                 else:
                     moveclass = self.stats[p1]['class']
                 moveid = str(random.randint(1,len(self.moves[moveclass])))
@@ -80,8 +80,8 @@ class Magic:
                 else:
                     verb = "used"
                 msg1 = "**"+p1_name + "** "+ verb +" **"+ self.moves[moveclass][moveid]['name']+"** " + self.types[self.moves[moveclass][moveid]['type']]['icon']
-                if self.moves[moveclass][moveid]['effect']:
-                    msg1 = msg1 +" to "+ self.moves[moveclass][moveid]['effect'] + "!\n"
+                if self.moves[moveclass][moveid]['text']:
+                    msg1 = msg1 +" to "+ self.moves[moveclass][moveid]['text'] + "!\n"
                 else:
                     msg1 = msg1 +"!\n"
                 power = random.randint(self.moves[moveclass][moveid]['power']-self.moves[moveclass][moveid]['random'],self.moves[moveclass][moveid]['power']+self.moves[moveclass][moveid]['random'])
