@@ -46,7 +46,7 @@ class Magic:
             if target[0] != '<':
                 p2 = target
                 p2_name = self.stats[p2]['displayname']
-                p2_color = 0xbd1540
+                p2_color = self.stats[p2]['color']
             else:
                 #server = discord.Client.get_server(id="378799662557036546")
                 p2u = ctx.message.author.server.get_member(target.strip('<>@!'))
@@ -326,7 +326,7 @@ class Magic:
 
     async def output_stats_nonmember(self, user):
         embed=discord.Embed(title=self.stats[user]['displayname'] + "\'s stats")
-        #embed.set_thumbnail(url=self.stats[user]['pic'])
+        embed.set_thumbnail(url=self.stats[user]['pic'],height=200,width=200)
         embed.add_field(name="Class", value=self.stats[user]['class'], inline=True)
         embed.add_field(name="HP", value=str(self.stats[user]['hp']) + " (in battle aprox. "+ str(100+ round(self.stats[user]['hp']*1.75)) +")", inline=True)
         embed.add_field(name="Physical Attack", value=self.stats[user]['atk'], inline=True)
