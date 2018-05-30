@@ -273,18 +273,19 @@ class Magic:
                         await self.bot.say(embed=embed)
                         await asyncio.sleep(2)
 
-                    p1, p2 = p2, p1
-                    p1_hp, p2_hp = p2_hp, p1_hp
-                    p1_remaininghp, p2_remaininghp = p2_remaininghp, p1_remaininghp
-                    p1_name, p2_name = p2_name, p1_name
-                    p1_color, p2_color = p2_color, p1_color
+                    if p2_remaininghp >0:
+                        p1, p2 = p2, p1
+                        p1_hp, p2_hp = p2_hp, p1_hp
+                        p1_remaininghp, p2_remaininghp = p2_remaininghp, p1_remaininghp
+                        p1_name, p2_name = p2_name, p1_name
+                        p1_color, p2_color = p2_color, p1_color
 
-                    current_buffs_p2temp = {}
-                    current_buffs_p2temp = deepcopy(current_buffs_p2)
-                    current_buffs_p2.clear()
-                    current_buffs_p2 = deepcopy(current_buffs_p1)
-                    current_buffs_p1.clear()
-                    current_buffs_p1 = deepcopy(current_buffs_p2temp)
+                        current_buffs_p2temp = {}
+                        current_buffs_p2temp = deepcopy(current_buffs_p2)
+                        current_buffs_p2.clear()
+                        current_buffs_p2 = deepcopy(current_buffs_p1)
+                        current_buffs_p1.clear()
+                        current_buffs_p1 = deepcopy(current_buffs_p2temp)
 
                 except discord.errors.HTTPException:
                     embed4=discord.Embed(description="Discord is being a bitch again and is throwing HTTP400 errors. \nThis battle may be bugged for the rest of its duration.")
