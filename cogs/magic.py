@@ -197,16 +197,10 @@ class Magic:
                                         atk = self.stats[p1]['atk']*0.5*current_buffs_p1['atk']
                                     else:
                                         atk = self.stats[p1]['atk']*current_buffs_p1['atk']
-                                    if current_buffs_p2['reflected'] == 1:
-                                        defe = self.stats[p1]['defe']*current_buffs_p2['defe']
-                                    else:
-                                        defe = self.stats[p2]['defe']*current_buffs_p1['defe']
+                                    defe = self.stats[p2]['defe']*current_buffs_p2['defe']
                                 else:
                                     atk = self.stats[p1]['spa']*current_buffs_p1['spa']
-                                    if current_buffs_p2['reflected'] == 1:
-                                        defe = self.stats[p1]['spd']*current_buffs_p2['spd']
-                                    else:
-                                        defe = self.stats[p2]['spd']*current_buffs_p1['spd']
+                                    defe = self.stats[p2]['spd']*current_buffs_p2['spd']
                                 mul = 1
                                 for typy in ['type1','type2']: #check type effectiveness
                                     if self.moves[moveclass][moveid]['type'] in self.types[self.stats[p2][typy]]['supereffective']:
