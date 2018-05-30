@@ -249,17 +249,17 @@ class Magic:
                                                         turns = random.randint(1,3)
                                                         current_buffs_p2['turns'] = turns
                                                     if current_buffs_p2['status'] == "confuse":
-                                                        msg2 += "\n"+ p2_name + " became confused! :dizzy:"
+                                                        msg2 += "\n**"+ p2_name + " became confused!** :dizzy:"
                                                     elif current_buffs_p2['status'] == "poison":
-                                                        msg2 += "\n"+ p2_name + " was poisoned! :skull_crossbones:"
+                                                        msg2 += "\n**"+ p2_name + " was poisoned!** :skull_crossbones:"
                                                     elif current_buffs_p2['status'] == "burn":
-                                                        msg2 +="\n"+  p2_name + " was burned! :fire:"
+                                                        msg2 +="\n**"+  p2_name + " was burned! **:fire:"
                                                     elif current_buffs_p2['status'] == "freeze":
-                                                        msg2 += "\n"+ p2_name + " was frozen solid! :snowflake:"
+                                                        msg2 += "\n**"+ p2_name + " was frozen solid! **:snowflake:"
                                                     elif current_buffs_p2['status'] == "para":
-                                                        msg2 += "\n"+  p2_name + " became paralysed! :zap:"
+                                                        msg2 += "\n**"+  p2_name + " became paralysed! **:zap:"
                                                     elif current_buffs_p2['status'] == "sleep":
-                                                        msg2 += "\n"+  p2_name + " fell asleep! :zzz:"
+                                                        msg2 += "\n**"+  p2_name + " fell asleep! **:zzz:"
                                             elif self.moves[moveclass][moveid]['effect'] == "recoil":
                                                 recoil_dmg =  round(dmg *self.moves[moveclass][moveid]['affected_stat'][1]/100)
                                                 p1_remaininghp -= recoil_dmg
@@ -275,11 +275,11 @@ class Magic:
                             if current_buffs_p1['status'] == "burn":
                                 burn_dmg = round(p1_hp/16)
                                 p1_remaininghp -= burn_dmg
-                                msg2 += "\n*"+p1_name + " lost" + str(burn_dmg) + "  HP from the burn!* (" + str(round(burn_dmg / (p2_hp)*100)) + "\%) ("+str(p2_remaininghp)+"/"+str(p2_hp)+" HP)"
+                                msg2 += "\n*"+p1_name + " lost " + str(burn_dmg) + " HP from the burn!* :fire: (" + str(round(burn_dmg / (p1_hp)*100)) + "\%) ("+str(p1_remaininghp)+"/"+str(p1_hp)+" HP)"
                             elif current_buffs_p1['status'] == "poison":
                                 poison_dmg = round(p1_hp/8)
                                 p1_remaininghp -= poison_dmg
-                                msg2 += "\n*"+p1_name + " lost" + str(poison_dmg) + "  HP from poison!* (" + str(round(poison_dmg / (p2_hp)*100)) + "\%) ("+str(p2_remaininghp)+"/"+str(p2_hp)+" HP)"
+                                msg2 += "\n*"+p1_name + " lost " + str(poison_dmg) + " HP from poison!* :skull_crossbones: (" + str(round(poison_dmg / (p1_hp)*100)) + "\%) ("+str(p1_remaininghp)+"/"+str(p1_hp)+" HP)"
                             if p1_remaininghp <=0:
                                 msg2 += "\n***" + p1_name + " has fainted!***"
                         p1, p2 = p2, p1
