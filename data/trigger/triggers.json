@@ -602,7 +602,7 @@
             "Chicken soup helps heal your soul."
         ],
         "server" : null,
-        "triggered" : 3,
+        "triggered" : 4,
         "triggered_by" : "(food | eat | ate )",
         "type" : "random"
     },
