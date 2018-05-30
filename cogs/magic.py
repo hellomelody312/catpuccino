@@ -79,7 +79,6 @@ class Magic:
                     msg2 = ""
                     msg1 = ""
                     canattack = True
-                    targetname = p2_name
                     if current_buffs_p1['status'] not in ["none","burn","poison"]: ##check pre-move status conditions
                         if current_buffs_p1['status'] == "freeze":
                             if current_buffs_p1['turns'] == 0:
@@ -280,7 +279,7 @@ class Magic:
                             current_buffs_p2 = deepcopy(current_buffs_p1)
                             current_buffs_p1.clear()
                             current_buffs_p1 = deepcopy(current_buffs_p2temp)
-                        embed.add_field(name=msg1.replace("{}",targetname), value=msg2, inline=False)
+                        embed.add_field(name=msg1.replace("{}",p2_name), value=msg2, inline=False)
                         await self.bot.say(embed=embed)
                         await asyncio.sleep(2)
                     else:
