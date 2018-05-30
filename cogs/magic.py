@@ -81,7 +81,6 @@ class Magic:
                     canattack = True
                     targetname = p2_name
                     if current_buffs_p1['status'] not in ["none","burn","poison"]: ##check pre-move status conditions
-                        embed2=discord.Embed(color=p1_color)
                         if current_buffs_p1['status'] == "freeze":
                             if current_buffs_p1['turns'] == 0:
                                 embed2=discord.Embed(description=p1_name + " thawed out! :sweat_drops:",color=p1_color)
@@ -134,7 +133,8 @@ class Magic:
                                 canattack = False
                                 embed2=discord.Embed(description=p1_name + " is fast asleep. :zzz:",color=p1_color)
                                 await self.bot.say(embed=embed2)
-                        current_buffs_p1['turns'] -= 1
+                        if current_buffs_p1['turns'] > 0:
+                            current_buffs_p1['turns'] -= 1
                         await asyncio.sleep(1)
                     if canattack == True:
                         if self.stats[p1]['class'] == "all": #detect class
