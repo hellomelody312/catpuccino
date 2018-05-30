@@ -99,7 +99,7 @@ class Magic:
                         current_buffs_p1['statused'] = 0
                     if current_buffs_p1['status'] == "confuse":
                         if current_buffs_p1['turns'] == 0:
-                            embed2=discord.Embed(description=p1_name + " snapped out of confusion! :snowflake:",color=p1_color)
+                            embed2=discord.Embed(description=p1_name + " snapped out of confusion!",color=p1_color)
                             await self.bot.say(embed=embed2)
                             current_buffs_p1['status'] = "none"
                             current_buffs_p1['statused'] = 0
@@ -265,6 +265,7 @@ class Magic:
                                                 p1_remaininghp -= recoil_dmg
                                                 msg2 += p1_name + " took " + str(recoil_dmg) + " recoil damage! (" + str(round(recoil_dmg / (p1_hp)*100)) + "\%) ("+str(p1_remaininghp)+"/"+str(p1_hp)+" HP)\n"
                                     if current_buffs_p2['reflected'] == 1: #swaps back after reflection
+                                        p1_remaininghp = p2_remaininghp
                                         p2 = p3
                                         p2_hp = p3_hp
                                         p2_name = p3_name
