@@ -75,7 +75,7 @@ class Magic:
             await self.bot.say(embed=embed)
             while p2_remaininghp > 0 and p1_remaininghp > 0:
                 try:
-                    embed=discord.Embed(color=p1_color) #initialize panel
+
                     msg2 = ""
                     msg1 = ""
                     canattack = True
@@ -137,6 +137,7 @@ class Magic:
                             current_buffs_p1['turns'] -= 1
                         await asyncio.sleep(1)
                     if canattack == True:
+                        embed=discord.Embed(color=p1_color) #initialize panel
                         if self.stats[p1]['class'] == "all": #detect class
                             moveclass = random.choice(["pokemon","sakura","harrypotter","ffxv","sailormoon","test"])
                         else:
@@ -279,7 +280,9 @@ class Magic:
                             current_buffs_p2 = deepcopy(current_buffs_p1)
                             current_buffs_p1.clear()
                             current_buffs_p1 = deepcopy(current_buffs_p2temp)
-
+                        embed.add_field(name=msg1.replace("{}",targetname), value=msg2, inline=False)
+                        await self.bot.say(embed=embed)
+                        await asyncio.sleep(2)
                     else:
                         p1, p2 = p2, p1
                         p1_hp, p2_hp = p2_hp, p1_hp
@@ -293,9 +296,7 @@ class Magic:
                         current_buffs_p2 = deepcopy(current_buffs_p1)
                         current_buffs_p1.clear()
                         current_buffs_p1 = deepcopy(current_buffs_p2temp)
-                    embed.add_field(name=msg1.replace("{}",targetname), value=msg2, inline=False)
-                    await self.bot.say(embed=embed)
-                    await asyncio.sleep(2)
+
                 except discord.errors.HTTPException:
                     embed4=discord.Embed(description="Discord is being a bitch again and is throwing HTTP400 errors. \nThis battle may be bugged for the rest of its duration.")
                     await self.bot.say(embed=embed4)
