@@ -75,7 +75,6 @@ class Magic:
             await self.bot.say(embed=embed)
             while p2_remaininghp > 0 and p1_remaininghp > 0:
                 try:
-
                     msg2 = ""
                     msg1 = ""
                     canattack = True
@@ -234,6 +233,8 @@ class Magic:
                                                 recoil_dmg =  round(dmg *self.moves[moveclass][moveid]['affected_stat'][1]/100)
                                                 p1_remaininghp -= recoil_dmg
                                                 msg2 += p1_name + " took " + str(recoil_dmg) + " recoil damage! (" + str(round(recoil_dmg / (p1_hp)*100)) + "\%) ("+str(p1_remaininghp)+"/"+str(p1_hp)+" HP)\n"
+                                                if p1_remaininghp <=0:
+                                                    msg2 += "\n***" + p1_name + " has fainted!***"
                                             elif self.moves[moveclass][moveid]['effect'] == "drain":
                                                 drain_dmg =  round(dmg *self.moves[moveclass][moveid]['affected_stat'][1]/100)
                                                 p1_remaininghp += drain_dmg
@@ -267,34 +268,23 @@ class Magic:
                                     msg2 += "\n*"+p1_name + " lost " + str(poison_dmg) + " HP from poison!* :skull_crossbones: (" + str(round(poison_dmg / (p1_hp)*100)) + "\%) ("+str(p1_remaininghp)+"/"+str(p1_hp)+" HP)"
                                 if p1_remaininghp <=0:
                                     msg2 += "\n***" + p1_name + " has fainted!***"
-                            p1, p2 = p2, p1
-                            p1_hp, p2_hp = p2_hp, p1_hp
-                            p1_remaininghp, p2_remaininghp = p2_remaininghp, p1_remaininghp
-                            p1_name, p2_name = p2_name, p1_name
-                            p1_color, p2_color = p2_color, p1_color
 
-                            current_buffs_p2temp = {}
-                            current_buffs_p2temp = deepcopy(current_buffs_p2)
-                            current_buffs_p2.clear()
-                            current_buffs_p2 = deepcopy(current_buffs_p1)
-                            current_buffs_p1.clear()
-                            current_buffs_p1 = deepcopy(current_buffs_p2temp)
                         embed.add_field(name=msg1.replace("{}",p2_name), value=msg2, inline=False)
                         await self.bot.say(embed=embed)
                         await asyncio.sleep(2)
-                    else:
-                        p1, p2 = p2, p1
-                        p1_hp, p2_hp = p2_hp, p1_hp
-                        p1_remaininghp, p2_remaininghp = p2_remaininghp, p1_remaininghp
-                        p1_name, p2_name = p2_name, p1_name
-                        p1_color, p2_color = p2_color, p1_color
 
-                        current_buffs_p2temp = {}
-                        current_buffs_p2temp = deepcopy(current_buffs_p2)
-                        current_buffs_p2.clear()
-                        current_buffs_p2 = deepcopy(current_buffs_p1)
-                        current_buffs_p1.clear()
-                        current_buffs_p1 = deepcopy(current_buffs_p2temp)
+                    p1, p2 = p2, p1
+                    p1_hp, p2_hp = p2_hp, p1_hp
+                    p1_remaininghp, p2_remaininghp = p2_remaininghp, p1_remaininghp
+                    p1_name, p2_name = p2_name, p1_name
+                    p1_color, p2_color = p2_color, p1_color
+
+                    current_buffs_p2temp = {}
+                    current_buffs_p2temp = deepcopy(current_buffs_p2)
+                    current_buffs_p2.clear()
+                    current_buffs_p2 = deepcopy(current_buffs_p1)
+                    current_buffs_p1.clear()
+                    current_buffs_p1 = deepcopy(current_buffs_p2temp)
 
                 except discord.errors.HTTPException:
                     embed4=discord.Embed(description="Discord is being a bitch again and is throwing HTTP400 errors. \nThis battle may be bugged for the rest of its duration.")
