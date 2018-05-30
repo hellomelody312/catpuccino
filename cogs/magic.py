@@ -174,85 +174,86 @@ class Magic:
                                 if current_buffs_p2['protected'] == 1:
                                     current_buffs_p2['protected'] = 0
                                     msg2 += p2_name + " protected themselves from the attack!"
-                                power = abs(random.randint(self.moves[moveclass][moveid]['power']-self.moves[moveclass][moveid]['random'],self.moves[moveclass][moveid]['power']+self.moves[moveclass][moveid]['random']))
-                                if current_buffs_p2['reflected'] == 1:
-                                    #swapped = 1
-                                    msg2 += p2_name + " reflected the attack!\n"
-                                    p3 = p2
-                                    p2 = p1
-                                    p3_hp = p2_hp
-                                    p2_hp = p1_hp
-                                    p3_name = p2_name
-                                    p2_name = p1_name
-                                    p3_remaininghp = p2_remaininghp
-                                    p2_remaininghp = p1_remaininghp
-                                    current_buffs_p2temp = {}
-                                    current_buffs_p2temp = deepcopy(current_buffs_p2)
-                                    current_buffs_p2.clear()
-                                    current_buffs_p2 = deepcopy(current_buffs_p1)
-                                    current_buffs_p1.clear()
-                                    current_buffs_p1 = deepcopy(current_buffs_p2temp)
-                                if self.moves[moveclass][moveid]['category'] == "Physical":
-                                    if current_buffs_p1['status'][0] == "burn":
-                                        atk = self.stats[p1]['atk']*0.5*current_buffs_p1['atk']
-                                    else:
-                                        atk = self.stats[p1]['atk']*current_buffs_p1['atk']
-                                    defe = self.stats[p2]['defe']*current_buffs_p2['defe']
                                 else:
-                                    atk = self.stats[p1]['spa']*current_buffs_p1['spa']
-                                    defe = self.stats[p2]['spd']*current_buffs_p2['spd']
-                                mul = 1
-                                for typy in ['type1','type2']: #check type effectiveness
-                                    if self.moves[moveclass][moveid]['type'] in self.types[self.stats[p2][typy]]['supereffective']:
-                                        mul *= 2
-                                    elif self.moves[moveclass][moveid]['type'] in self.types[self.stats[p2][typy]]['notveryeffective']:
-                                        mul *= 0.5
-                                    elif self.moves[moveclass][moveid]['type'] in self.types[self.stats[p2][typy]]['noteffective']:
-                                        mul *= 0
-                                if self.moves[moveclass][moveid]['type'] in [self.stats[p1]['type1'],self.stats[p1]['type2']]: #check STAB
-                                    power *= 1.5
-                                if mul >1:
-                                    msg2 = msg2 + ":small_red_triangle: It's super effective! \n"
-                                elif 0 <mul <1:
-                                    msg2 = msg2 + ":small_red_triangle_down: It's not very effective... \n"
-                                elif 0 == mul:
-                                    msg2 = msg2 + ":x: It had no effect!\n"
-                                if mul > 0:
-                                    rand = 0.01*random.randint(75,115)
-                                    dmg = round(math.floor(math.floor(64  * power * atk / defe) / 50) + 2 * mul * rand)
-                                    critchance = random.randint(1,100)
-                                    if critchance <= self.moves[moveclass][moveid]['crit']:
-                                        dmg *+ 1.5
-                                        msg2 += "**A critical hit!**\n"
-                                    p2_remaininghp = round(p2_remaininghp - dmg)
-                                    msg2 += p2_name + " took " + str(dmg) + " damage! (" + str(round(dmg / (p2_hp)*100)) + "\%) ("+str(p2_remaininghp)+"/"+str(p2_hp)+" HP)\n"
-                                    if p2_remaininghp <= 0:
-                                        msg2 = msg2  + "\n***" + p2_name + " has fainted!***"
-                                    else:
-                                        if self.moves[moveclass][moveid]['effect'] == "recoil":
-                                            recoil_dmg =  round(dmg *self.moves[moveclass][moveid]['affected_stat'][1]/100)
-                                            p1_remaininghp -= recoil_dmg
-                                            msg2 += p1_name + " took " + str(recoil_dmg) + " recoil damage! (" + str(round(recoil_dmg / (p1_hp)*100)) + "\%) ("+str(p1_remaininghp)+"/"+str(p1_hp)+" HP)\n"
-                                        elif self.moves[moveclass][moveid]['effect'] == "drain":
-                                            drain_dmg =  round(dmg *self.moves[moveclass][moveid]['affected_stat'][1]/100)
-                                            p1_remaininghp += drain_dmg
-                                            msg2 += p1_name + " drained " + str(drain_dmg) + " HP! (" + str(round(drain_dmg / (p1_hp)*100)) + "\%) ("+str(p1_remaininghp)+"/"+str(p1_hp)+" HP)\n"
+                                    power = abs(random.randint(self.moves[moveclass][moveid]['power']-self.moves[moveclass][moveid]['random'],self.moves[moveclass][moveid]['power']+self.moves[moveclass][moveid]['random']))
+                                    if current_buffs_p2['reflected'] == 1:
+                                        #swapped = 1
+                                        msg2 += p2_name + " reflected the attack!\n"
+                                        p3 = p2
+                                        p2 = p1
+                                        p3_hp = p2_hp
+                                        p2_hp = p1_hp
+                                        p3_name = p2_name
+                                        p2_name = p1_name
+                                        p3_remaininghp = p2_remaininghp
+                                        p2_remaininghp = p1_remaininghp
+                                        current_buffs_p2temp = {}
+                                        current_buffs_p2temp = deepcopy(current_buffs_p2)
+                                        current_buffs_p2.clear()
+                                        current_buffs_p2 = deepcopy(current_buffs_p1)
+                                        current_buffs_p1.clear()
+                                        current_buffs_p1 = deepcopy(current_buffs_p2temp)
+                                    if self.moves[moveclass][moveid]['category'] == "Physical":
+                                        if current_buffs_p1['status'][0] == "burn":
+                                            atk = self.stats[p1]['atk']*0.5*current_buffs_p1['atk']
                                         else:
-                                            msg2,current_buffs_p1,current_buffs_p2,p1_remaininghp = self.check_if_cause_status(moveclass,moveid,msg2,current_buffs_p1,current_buffs_p2,p1_name,p2_name,p1_remaininghp,p1_hp)
+                                            atk = self.stats[p1]['atk']*current_buffs_p1['atk']
+                                        defe = self.stats[p2]['defe']*current_buffs_p2['defe']
+                                    else:
+                                        atk = self.stats[p1]['spa']*current_buffs_p1['spa']
+                                        defe = self.stats[p2]['spd']*current_buffs_p2['spd']
+                                    mul = 1
+                                    for typy in ['type1','type2']: #check type effectiveness
+                                        if self.moves[moveclass][moveid]['type'] in self.types[self.stats[p2][typy]]['supereffective']:
+                                            mul *= 2
+                                        elif self.moves[moveclass][moveid]['type'] in self.types[self.stats[p2][typy]]['notveryeffective']:
+                                            mul *= 0.5
+                                        elif self.moves[moveclass][moveid]['type'] in self.types[self.stats[p2][typy]]['noteffective']:
+                                            mul *= 0
+                                    if self.moves[moveclass][moveid]['type'] in [self.stats[p1]['type1'],self.stats[p1]['type2']]: #check STAB
+                                        power *= 1.5
+                                    if mul >1:
+                                        msg2 = msg2 + ":small_red_triangle: It's super effective! \n"
+                                    elif 0 <mul <1:
+                                        msg2 = msg2 + ":small_red_triangle_down: It's not very effective... \n"
+                                    elif 0 == mul:
+                                        msg2 = msg2 + ":x: It had no effect!\n"
+                                    if mul > 0:
+                                        rand = 0.01*random.randint(75,115)
+                                        dmg = round(math.floor(math.floor(64  * power * atk / defe) / 50) + 2 * mul * rand)
+                                        critchance = random.randint(1,100)
+                                        if critchance <= self.moves[moveclass][moveid]['crit']:
+                                            dmg *+ 1.5
+                                            msg2 += "**A critical hit!**\n"
+                                        p2_remaininghp = round(p2_remaininghp - dmg)
+                                        msg2 += p2_name + " took " + str(dmg) + " damage! (" + str(round(dmg / (p2_hp)*100)) + "\%) ("+str(p2_remaininghp)+"/"+str(p2_hp)+" HP)\n"
+                                        if p2_remaininghp <= 0:
+                                            msg2 = msg2  + "\n***" + p2_name + " has fainted!***"
+                                        else:
+                                            if self.moves[moveclass][moveid]['effect'] == "recoil":
+                                                recoil_dmg =  round(dmg *self.moves[moveclass][moveid]['affected_stat'][1]/100)
+                                                p1_remaininghp -= recoil_dmg
+                                                msg2 += p1_name + " took " + str(recoil_dmg) + " recoil damage! (" + str(round(recoil_dmg / (p1_hp)*100)) + "\%) ("+str(p1_remaininghp)+"/"+str(p1_hp)+" HP)\n"
+                                            elif self.moves[moveclass][moveid]['effect'] == "drain":
+                                                drain_dmg =  round(dmg *self.moves[moveclass][moveid]['affected_stat'][1]/100)
+                                                p1_remaininghp += drain_dmg
+                                                msg2 += p1_name + " drained " + str(drain_dmg) + " HP! (" + str(round(drain_dmg / (p1_hp)*100)) + "\%) ("+str(p1_remaininghp)+"/"+str(p1_hp)+" HP)\n"
+                                            else:
+                                                msg2,current_buffs_p1,current_buffs_p2,p1_remaininghp = self.check_if_cause_status(moveclass,moveid,msg2,current_buffs_p1,current_buffs_p2,p1_name,p2_name,p1_remaininghp,p1_hp)
 
-                                if current_buffs_p2['reflected'] == 1: #swaps back after reflection
-                                    current_buffs_p2['reflected'] = 0
-                                    p1_remaininghp = p2_remaininghp
-                                    p2 = p3
-                                    p2_hp = p3_hp
-                                    p2_name = p3_name
-                                    p2_remaininghp = p3_remaininghp
-                                    current_buffs_p2temp = {}
-                                    current_buffs_p2temp = deepcopy(current_buffs_p2)
-                                    current_buffs_p2.clear()
-                                    current_buffs_p2 = deepcopy(current_buffs_p1)
-                                    current_buffs_p1.clear()
-                                    current_buffs_p1 = deepcopy(current_buffs_p2temp)
+                                    if current_buffs_p2['reflected'] == 1: #swaps back after reflection
+                                        current_buffs_p2['reflected'] = 0
+                                        p1_remaininghp = p2_remaininghp
+                                        p2 = p3
+                                        p2_hp = p3_hp
+                                        p2_name = p3_name
+                                        p2_remaininghp = p3_remaininghp
+                                        current_buffs_p2temp = {}
+                                        current_buffs_p2temp = deepcopy(current_buffs_p2)
+                                        current_buffs_p2.clear()
+                                        current_buffs_p2 = deepcopy(current_buffs_p1)
+                                        current_buffs_p1.clear()
+                                        current_buffs_p1 = deepcopy(current_buffs_p2temp)
 
                         if p2_remaininghp > 0: #if p2 is not fainted yet, check if p1 is burned or poisoned, then hceck if p1 fainted, then switch p1 and p2
                             if current_buffs_p1['statused'] == 1:
