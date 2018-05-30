@@ -219,8 +219,8 @@ class Magic:
                                     elif 0 == mul:
                                         msg2 = msg2 + ":x: It had no effect!\n"
                                     if mul > 0:
-                                        rand = 0.01*random.randint(75,115)
-                                        dmg = round(math.floor(math.floor(64  * power * atk / defe) / 50) + 2 * mul * rand)
+                                        rand = 0.01*random.randint(85,115)
+                                        dmg = round(math.floor(math.floor(90  * power * atk / defe) / 50) + 2 * mul * rand)
                                         critchance = random.randint(1,100)
                                         if critchance <= self.moves[moveclass][moveid]['crit']:
                                             dmg *+ 1.5
