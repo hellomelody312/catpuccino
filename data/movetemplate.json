@@ -1,40 +1,36 @@
 
-
-
-    "1": {
-      "text": "throw tiara",  abc used move to (.....) 
-      "description": "", ##CHƯA XÀI ĐẾN
-      "image": "", ## url hình minh họa
-       "effect": "",  1 trong raise_stat, lower_stat, heal, cause_status
-      "status": ["status",0],  ### status thuộc [poison, freeze, burn, confuse, flinch, protect, reflect], 0 = chance gây ra (%)
-      "affected_stat": ["stat",0,0], tăng hoặc giảm stat mình/đối thủ, stat trong [atk, defe, spa, spd, acc], 0 = % , 0 = chance (%)
-      "crit": 10, ## chance gây critical hit
-      "info": "Deals damage.", ## bỏ vào moveinfo, vd. Deals damage and lowers attack
-      "power": 50,
-      "acc": 100,
-      "random": 5,
-      "type": "Light",
-      "category": "Physical",
-      "origin": "Sailor Moon",
-      "name": "Moon Tiara Action"
-    },
-    
-    ĐIỀN VÔ DƯỚI
-
-    "1": {
+  "17": {
       "text": "",
-      "description": "",
-      "image": "",
-       "effect": "",
-      "status": ["status",0],
-      "affected_stat": ["stat",0],
+      "effect2": "",
+      "effect": "cause_status",
+      "image": "https://cdn.bulbagarden.net/upload/thumb/a/aa/Fire_Blast_VII_2.png/300px-Fire_Blast_VII_2.png",
+      "status": [
+        "burn",
+        30
+      ],
+      "affected_stat": [
+        "spa",
+        -15,
+        30
+      ],
       "crit": 10,
-      "info": "Deals damage.",
-      "power": 50,
-      "acc": 100,
-      "random": 5,
-      "type": "Light",
-      "category": "Physical",
-      "origin": "Sailor Moon",
-      "name": "Moon Tiara Action"
+      "info": "The target is attacked with an intense blast of all-consuming fire. This may also leave the target with a burn.",
+      "acc": 85,
+      "power": 110,
+      "random": 0,
+      "type": "Fire",
+      "category": "Special",
+      "origin": "Pokemon",
+      "name": "Fire Blast"
     },
+
+
+# text: do sth to {}
+# effect : cause_status: ở status ghi loại status (flinch, confuse, poison, freeze, burn, para, sleep), và chance %
+#          stat_self, stat_enemy: ở affected_stat ghi stat (atk, defe, spa, spd, acc), % tăng (âm nếu giảm) và chance %
+#           heal, drain, recoil : affected stat ghi  số % hp vào mục thứ 2, k cần mục 1 và 3 
+#           refresh, protect, reflect: ko cần ghi thêm
+# effect2: hiện giờ chỉ hỗ trợ tăng giảm stat kèm với effect khác, ko ghi khác ngoài stat_self và stat_enemy
+# category: nếu ghi Status thì k cần quan tâm power. muốn có dam thì phải ghi Physical hay Special
+# acc: ghi 0 nếu move luôn luôn dính hoặc là move status dùng lên bản thân
+# 
