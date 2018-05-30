@@ -20,7 +20,7 @@ class Insult:
         """Insults the user (max 10)"""
         msg = ' '
         if times > 10 and ctx.message.author.id != "293041932542672896":
-            await self.bot.say(randchoice("Gì chửi nhiều vậy má??  <:ree:397654450518360074> Tém tém bớt coi!!","Hãy văn minh, đừng chửi nhiều quá. <:dep:379728193558413312>", "Muốn bot sập luôn à mà chửi nhiều thế? <:duh:386506307722805248>"))
+            await self.bot.say(randchoice(["Gì chửi nhiều vậy má??  <:ree:397654450518360074> Tém tém bớt coi!!","Hãy văn minh, đừng chửi nhiều quá. <:dep:379728193558413312>", "Muốn bot sập luôn à mà chửi nhiều thế? <:duh:386506307722805248>"]))
         else:
             if user != None:
                 nem = str(user.nick)

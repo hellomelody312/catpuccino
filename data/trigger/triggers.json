@@ -82,7 +82,7 @@
             "Mu\u1ed1n \u0103n ch\u1eedi h\u1ea3 <user>?"
         ],
         "server" : null,
-        "triggered" : 33,
+        "triggered" : 34,
         "triggered_by" : "^(<@!309622066666274818>|<@309622066666274818>)$",
         "type" : "random"
     },
@@ -177,7 +177,7 @@
             "Bye, <user>."
         ],
         "server" : null,
-        "triggered" : 6,
+        "triggered" : 7,
         "triggered_by" : "((<@!309622066666274818>|<@309622066666274818>) (bye+|t\u1ea1m bi\u1ec7t|sayonara+|ch\u00e0o+|adieu+)|(bye+|t\u1ea1m bi\u1ec7t|sayonara+|ch\u00e0o+|adieu+) ((<@!309622066666274818>|<@309622066666274818>)|m\u1ecdi ng\u01b0\u1eddi|everyone|everybody))",
         "type" : "random"
     },
