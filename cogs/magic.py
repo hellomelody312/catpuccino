@@ -35,7 +35,7 @@ class Magic:
 
 
     @commands.command(pass_context=True)
-    async def attack(self, ctx, *,target=None):
+    async def duel(self, ctx, *,target=None):
         if not target:
             await self.bot.say("Please specify target.")
         elif target.strip('<>@!') not in self.stats:
@@ -219,7 +219,7 @@ class Magic:
                                     msg2 = msg2 + ":x: It had no effect!\n"
                                 if mul > 0:
                                     rand = 0.01*random.randint(75,115)
-                                    dmg = round(math.floor(math.floor((2 * 100 / 5 + 2)  * power * atk / defe) / 50) + 2 * mul * rand)
+                                    dmg = round(math.floor(math.floor(64  * power * atk / defe) / 50) + 2 * mul * rand)
                                     critchance = random.randint(1,100)
                                     if critchance <= self.moves[moveclass][moveid]['crit']:
                                         dmg *+ 1.5
