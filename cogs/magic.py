@@ -176,7 +176,8 @@ class Magic:
                                 else:
                                     power = abs(random.randint(self.moves[moveclass][moveid]['power']-self.moves[moveclass][moveid]['random'],self.moves[moveclass][moveid]['power']+self.moves[moveclass][moveid]['random']))
                                     if current_buffs_p2['reflected'] == 1:
-                                        #swapped = 1
+                                        swapped = 1
+                                        current_buffs_p2['reflected'] = 0
                                         msg2 += p2_name + " reflected the attack!\n"
                                         p3 = p2
                                         p2 = p1
@@ -242,8 +243,8 @@ class Magic:
                                             else:
                                                 msg2,current_buffs_p1,current_buffs_p2,p1_remaininghp = self.check_if_cause_status(moveclass,moveid,msg2,current_buffs_p1,current_buffs_p2,p1_name,p2_name,p1_remaininghp,p1_hp)
 
-                                    if current_buffs_p1['reflected'] == 1: #swaps back after reflection
-                                        current_buffs_p1['reflected'] = 0
+                                    if swapped == 1: #swaps back after reflection
+                                        swapped = 0
                                         p1_remaininghp = p2_remaininghp
                                         p2 = p3
                                         p2_hp = p3_hp
