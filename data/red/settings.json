@@ -5,7 +5,7 @@
     "PREFIXES" : [
         ";"
     ],
-    "TOKEN" : "MzA5NjIyMDY2NjY2Mjc0ODE4.Db9TXw.SG8lin82UZTyD8tf5bFnpyKc5ps",
+    "TOKEN" : null,
     "default" : {
         "ADMIN_ROLE" : "Lazy Cat",
         "MOD_ROLE" : "Bot Commander",
