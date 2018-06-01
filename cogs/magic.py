@@ -77,6 +77,7 @@ class Magic:
                 try:
                     msg2 = ""
                     msg1 = ""
+                    swapped = 0
                     canattack = True
                     if current_buffs_p1['status'] not in ["none","burn","poison"]: ##check pre-move status conditions
                         if current_buffs_p1['status'] == "freeze":
