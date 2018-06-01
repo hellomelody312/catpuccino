@@ -423,10 +423,10 @@ class Magic:
                 if self.stats[user.id]['money'] < amount:
                     await self.bot.say("You do not have enough PMP to give this much! You might as well give all of your PMP!")
                 else:
-                self.stats[user.id]['money']-= amount
-                self.stats[target.id]['money']+= amount
-                self.save_stats()
-                await self.bot.say(embed=discord.Embed(title="Gave " + str(amount) + " PMP to " + target.display_name + ".",description="You now have " + str(self.stats[user.id]['money']) + " PMP.\n" + target.display_name + " now has " + str(self.stats[target.id]['money'])
+                    self.stats[user.id]['money']-= amount
+                    self.stats[target.id]['money']+= amount
+                    self.save_stats()
+                    await self.bot.say(embed=discord.Embed(title="Gave " + str(amount) + " PMP to " + target.display_name + ".",description="You now have " + str(self.stats[user.id]['money']) + " PMP.\n" + target.display_name + " now has " + str(self.stats[target.id]['money'])
                                                  + " PMP.", color=0xe90169))
         else:
             await self.bot.say("No one to give.")
@@ -597,7 +597,7 @@ class Magic:
         user = ctx.message.author
         price = 50 + (self.stats[user.id]['buff']**2)*2500
         await self.bot.say("You currently have buff **level " + str(self.stats[user.id]['buff']) +"** with a max BST of **" + str(self.stats[user.id]['bst']) + "**. Would you like to purchase a buff for **" + str(price) + "** PMP?\n"
-                            + "A buff will increase your BST by **50**, and min and max stat random value by **5** and **10**. Type *yes* to confirm. (30s)")
+                            + "A buff will increase your BST by **50**, and min and max stat values by **5** and **10**. Type *yes* to confirm. (30s)")
         answer = await self.bot.wait_for_message(timeout=30, author=ctx.message.author)
         if answer is None:
             await self.bot.say('Purchase cancelled due to timeout.')
@@ -614,7 +614,7 @@ class Magic:
                 self.stats[user.id]['money'] = self.stats[user.id]['money'] - price
                 self.save_stats()
                 await self.bot.say("Purchase success. You now have buff level **" + str(self.stats[user.id]['buff']) +"** with a max BST of **" + str(self.stats[user.id]['bst']) + "**.\n"
-                                   + "Your random value has been increased to **min " + str(30+self.stats[user.id]['buff']*5) + ", max " + str((120+self.stats[user.id]['buff']*10)) + "**.")
+                                   + "Your stat limits has been increased to **min " + str(30+self.stats[user.id]['buff']*5) + ", max " + str((120+self.stats[user.id]['buff']*10)) + "**.")
 
     @commands.command(pass_context=True)
     async def moveinfo(self, ctx, *, move:str=None):
