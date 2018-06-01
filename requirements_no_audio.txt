@@ -3,3 +3,4 @@ git+git://github.com/Rapptz/discord.py.git
 pillow
 imgurpython
 boto3
+schedule

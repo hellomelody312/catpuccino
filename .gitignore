@@ -15,3 +15,7 @@ data/red/settings.json
 *.log
 *.log
 *.log
+data/red/settings.json
+data/red/red.log
+data/red/discord.log
+data/mod/mod.log

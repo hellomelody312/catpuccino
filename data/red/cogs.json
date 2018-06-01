@@ -21,6 +21,7 @@
     "cogs.meow" : false,
     "cogs.mock" : true,
     "cogs.mod" : true,
+    "cogs.pets" : true,
     "cogs.quotes" : false,
     "cogs.race" : true,
     "cogs.reactpoll" : true,
