@@ -219,7 +219,7 @@ class Magic:
                                         msg2 = msg2 + ":x: It had no effect!\n"
                                     if mul > 0:
                                         rand = 0.01*random.randint(85,115)
-                                        dmg = round(math.floor(math.floor(90  * power * atk / defe) / 50) + 2 * mul * rand)
+                                        dmg = round(math.floor(math.floor(64  * power * atk / defe) / 50) + 2 * mul * rand)
                                         critchance = random.randint(1,100)
                                         if critchance <= self.moves[moveclass][moveid]['crit']:
                                             dmg *+ 1.5
@@ -242,8 +242,8 @@ class Magic:
                                             else:
                                                 msg2,current_buffs_p1,current_buffs_p2,p1_remaininghp = self.check_if_cause_status(moveclass,moveid,msg2,current_buffs_p1,current_buffs_p2,p1_name,p2_name,p1_remaininghp,p1_hp)
 
-                                    if current_buffs_p2['reflected'] == 1: #swaps back after reflection
-                                        current_buffs_p2['reflected'] = 0
+                                    if current_buffs_p1['reflected'] == 1: #swaps back after reflection
+                                        current_buffs_p1['reflected'] = 0
                                         p1_remaininghp = p2_remaininghp
                                         p2 = p3
                                         p2_hp = p3_hp
@@ -403,7 +403,7 @@ class Magic:
             get = 500
         elif randomp > 10:
             get = 1000
-        elif random >1:
+        elif randomp >1:
             get = 5000
         else:
             get = 10000
@@ -420,8 +420,11 @@ class Magic:
             if str(user.id) not in self.stats or str(target.id) not in self.stats:
                 await self.bot.say(self.errornotexist)
             else:
-                self.stats[user.id]['money']=self.stats[user.id]['money'] - amount
-                self.stats[target.id]['money']=self.stats[target.id]['money'] + amount
+                if self.stats[user.id]['money'] < amount:
+                    await self.bot.say("You do not have enough PMP to give this much! You might as well give all of your PMP!")
+                else:
+                self.stats[user.id]['money']-= amount
+                self.stats[target.id]['money']+= amount
                 self.save_stats()
                 await self.bot.say(embed=discord.Embed(title="Gave " + str(amount) + " PMP to " + target.display_name + ".",description="You now have " + str(self.stats[user.id]['money']) + " PMP.\n" + target.display_name + " now has " + str(self.stats[target.id]['money'])
                                                  + " PMP.", color=0xe90169))
@@ -447,7 +450,7 @@ class Magic:
     @commands.group(pass_context=True)
     async def stat(self, ctx):
         if ctx.invoked_subcommand is None:
-            await self.bot.say("``Magical duel commands: \n;stat random OR set hp atk def spA spD speed to set your stats.\n;settype type1 type2 to set your types.\n;stat show to show yours or someone else's stats.\nType ;attack @user to try attacking someone.``")
+            await self.bot.say("``Magical duel commands: \n;stat random OR set hp atk def spA spD speed to set your stats.\n;settype type1 type2 to set your types.\n;stat show to show yours or someone else's stats.\n;setclass to set your class.\n;duel @user to duel someone.``")
 
 
     @stat.command(pass_context=True)
@@ -521,7 +524,8 @@ class Magic:
     @stat.command(pass_context=True)
     async def set(self, ctx, hp:int=1, atk:int=1, defe:int=1, spa:int=1, spd:int=1, spe:int=1, target:discord.Member=None):
         user= ctx.message.author
-        limit = 140+self.stats[user.id]['buff']*10
+        limit = 120+self.stats[user.id]['buff']*10
+        limit2 = 30+self.stats[user.id]['buff']*5
         if target:
             if user.id != self.ownerid:
                 await self.bot.say("Not authorized to do this.")
@@ -532,7 +536,9 @@ class Magic:
             if atk + defe +spa +spd +spe +hp > self.stats[user.id]['bst']:
                 await self.bot.say("Too OP! BST should be no more than your max BST of " + str(self.stats[user.id]['bst']) + ".")
             elif atk > limit or defe > limit or spa > limit or spd > limit or spe > limit or hp > limit:
-                await self.bot.say("Too OP! Any  one stat should be no more than " + str(limit) + ".")
+                await self.bot.say("Too OP! Any one stat should be no more than " + str(limit) + ".")
+            elif atk > limit or defe > limit or spa > limit or spd > limit or spe > limit or hp > limit:
+                await self.bot.say("Any one stat should be no lower than " + str(limit2) + ".")
             else:
                 name = user.display_name
                 self.stats[user.id]['hp'] = hp
