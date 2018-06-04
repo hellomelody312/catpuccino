@@ -60,7 +60,8 @@ class Magic:
             p2_color = target.color
             p2_name = target.display_name
             p2_stats = self.stats[target.id]
-            await self.duelscript(p1,p2,p1_name,p1_color,p1_stats,p2_name,p2_color,p2_stats)
+            mode = "player"
+            await self.duelscript(p1,p2,p1_name,p1_color,p1_stats,p2_name,p2_color,p2_stats,mode)
 
     @commands.command(pass_context=True)
     async def duelboss(self, ctx, *,target:str=None):
@@ -77,10 +78,11 @@ class Magic:
             p2_stats = self.bosses[target]
             p2_name = p2_stats['displayname']
             p2_color = p2_stats['color']
-            await self.duelscript(p1,p2,p1_name,p1_color,p1_stats,p2_name,p2_color,p2_stats)
+            mode = "boss"
+            await self.duelscript(p1,p2,p1_name,p1_color,p1_stats,p2_name,p2_color,p2_stats,mode)
             self.save_boss_stats()
 
-    async def duelscript(self,p1,p2,p1_name,p1_color,p1_stats,p2_name,p2_color,p2_stats):
+    async def duelscript(self,p1,p2,p1_name,p1_color,p1_stats,p2_name,p2_color,p2_stats,mode):
         embed=discord.Embed(title="**"+p1_name+ self.types[p1_stats['type1']]['icon'] +self.types[p1_stats['type2']]['icon']+" vs. " + p2_name + self.types[p2_stats['type1']]['icon'] +self.types[p2_stats['type2']]['icon']+"**", color=0xe90169) #start battle
         p1_hp = 100+round(p1_stats['hp']*round(random.uniform(1.5,2), 2))
         p2_hp = 100+round(p2_stats['hp']*round(random.uniform(1.5,2), 2))
@@ -162,15 +164,16 @@ class Magic:
                     await asyncio.sleep(1)
                 if canattack == True:
                     embed=discord.Embed(color=p1_color) #initialize panel
-                    if p1 in self.bosses:
-                        if p1_stats['moveset'] == 'all':
-                            moveclass = p1_stats['class']
-                            moveid = random.choice(list(self.moves[moveclass]))
-                        else:
-                            move_choice = random.choice(p1_stats['moveset'])
-                            moveclass = movechoice[0]
-                            moveid = movechoice[1]
-                    else:
+                    try:
+                        if p1_stats['moveset']:
+                            if p1_stats['moveset'] == 'all':
+                                moveclass = p1_stats['class']
+                                moveid = random.choice(list(self.moves[moveclass]))
+                            else:
+                                move_choice = random.choice(p1_stats['moveset'])
+                                moveclass = movechoice[0]
+                                moveid = movechoice[1]
+                    except KeyError:
                         if p1_stats['class'] == "all": #detect class
                             moveclass = random.choice(["pokemon","sakura","harrypotter","ffxv","sailormoon"])
                         else:
@@ -353,7 +356,7 @@ class Magic:
         if self.moves[moveclass][moveid]['effect'] == "stat_self":
             raise_chance = random.randint(1,100)
             if raise_chance <= self.moves[moveclass][moveid]['affected_stat'][2]:
-                current_buffs_p1[self.moves[moveclass][moveid]['affected_stat'][0]] += self.moves[moveclass][moveid]['affected_stat'][1]/100
+                current_buffs_p1[self.moves[moveclass][moveid]['affected_stat'][0]] *= self.moves[moveclass][moveid]['affected_stat'][1]/100
                 if current_buffs_p1[self.moves[moveclass][moveid]['affected_stat'][0]] == 0:
                     current_buffs_p1[self.moves[moveclass][moveid]['affected_stat'][0]] += 0.1
                 if self.moves[moveclass][moveid]['affected_stat'][1] < 0:
@@ -368,7 +371,7 @@ class Magic:
                     veve = [":arrow_down: *"," fell by "]
                 else:
                     veve = [":arrow_up: *"," increased by "]
-                current_buffs_p2[self.moves[moveclass][moveid]['affected_stat'][0]] += self.moves[moveclass][moveid]['affected_stat'][1]/100
+                current_buffs_p2[self.moves[moveclass][moveid]['affected_stat'][0]] *= self.moves[moveclass][moveid]['affected_stat'][1]/100
                 if current_buffs_p2[self.moves[moveclass][moveid]['affected_stat'][0]] == 0:
                     current_buffs_p2[self.moves[moveclass][moveid]['affected_stat'][0]] += 0.1
                 msg2 += veve[0] + p2_name + "\'s " + self.stat_names[self.moves[moveclass][moveid]['affected_stat'][0]] + veve[1] + str(abs(self.moves[moveclass][moveid]['affected_stat'][1])) + "%!*"
@@ -412,7 +415,7 @@ class Magic:
         if self.moves[moveclass][moveid]['effect2'] == "stat_self":
             raise_chance = random.randint(1,100)
             if raise_chance <= self.moves[moveclass][moveid]['affected_stat'][5]:
-                current_buffs_p1[self.moves[moveclass][moveid]['affected_stat'][3]] += self.moves[moveclass][moveid]['affected_stat'][4]/100
+                current_buffs_p1[self.moves[moveclass][moveid]['affected_stat'][3]] *= self.moves[moveclass][moveid]['affected_stat'][4]/100
                 if current_buffs_p1[self.moves[moveclass][moveid]['affected_stat'][3]] == 0:
                     current_buffs_p1[self.moves[moveclass][moveid]['affected_stat'][3]] += 0.1
                 if self.moves[moveclass][moveid]['affected_stat'][4] < 0:
@@ -427,7 +430,7 @@ class Magic:
                     veve = [":arrow_down: *"," fell by "]
                 else:
                     veve = [":arrow_up: *"," increased by "]
-                current_buffs_p2[self.moves[moveclass][moveid]['affected_stat'][3]] += self.moves[moveclass][moveid]['affected_stat'][4]/100
+                current_buffs_p2[self.moves[moveclass][moveid]['affected_stat'][3]] *= self.moves[moveclass][moveid]['affected_stat'][4]/100
                 if current_buffs_p2[self.moves[moveclass][moveid]['affected_stat'][3]] == 0:
                     current_buffs_p2[self.moves[moveclass][moveid]['affected_stat'][3]] += 0.1
                 msg2 += veve[0] + p2_name + "\'s " + self.stat_names[self.moves[moveclass][moveid]['affected_stat'][3]] + veve[1] + str(abs(self.moves[moveclass][moveid]['affected_stat'][4])) + "%!*"

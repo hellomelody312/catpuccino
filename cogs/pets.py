@@ -694,7 +694,7 @@ class Pets:
         if self.moves[moveclass][moveid]['effect'] == "stat_self":
             raise_chance = random.randint(1,100)
             if raise_chance <= self.moves[moveclass][moveid]['affected_stat'][2]:
-                current_buffs_p1[self.moves[moveclass][moveid]['affected_stat'][0]] += self.moves[moveclass][moveid]['affected_stat'][1]/100
+                current_buffs_p1[self.moves[moveclass][moveid]['affected_stat'][0]] *= self.moves[moveclass][moveid]['affected_stat'][1]/100
                 if current_buffs_p1[self.moves[moveclass][moveid]['affected_stat'][0]] == 0:
                     current_buffs_p1[self.moves[moveclass][moveid]['affected_stat'][0]] += 0.1
                 if self.moves[moveclass][moveid]['affected_stat'][1] < 0:
@@ -709,7 +709,7 @@ class Pets:
                     veve = [":arrow_down: *"," fell by "]
                 else:
                     veve = [":arrow_up: *"," increased by "]
-                current_buffs_p2[self.moves[moveclass][moveid]['affected_stat'][0]] += self.moves[moveclass][moveid]['affected_stat'][1]/100
+                current_buffs_p2[self.moves[moveclass][moveid]['affected_stat'][0]] *= self.moves[moveclass][moveid]['affected_stat'][1]/100
                 if current_buffs_p2[self.moves[moveclass][moveid]['affected_stat'][0]] == 0:
                     current_buffs_p2[self.moves[moveclass][moveid]['affected_stat'][0]] += 0.1
                 msg2 += veve[0] + p2_name + "\'s " + self.stat_names[self.moves[moveclass][moveid]['affected_stat'][0]] + veve[1] + str(abs(self.moves[moveclass][moveid]['affected_stat'][1])) + "%!*"
@@ -753,7 +753,7 @@ class Pets:
         if self.moves[moveclass][moveid]['effect2'] == "stat_self":
             raise_chance = random.randint(1,100)
             if raise_chance <= self.moves[moveclass][moveid]['affected_stat'][5]:
-                current_buffs_p1[self.moves[moveclass][moveid]['affected_stat'][3]] += self.moves[moveclass][moveid]['affected_stat'][4]/100
+                current_buffs_p1[self.moves[moveclass][moveid]['affected_stat'][3]] *= self.moves[moveclass][moveid]['affected_stat'][4]/100
                 if current_buffs_p1[self.moves[moveclass][moveid]['affected_stat'][3]] == 0:
                     current_buffs_p1[self.moves[moveclass][moveid]['affected_stat'][3]] += 0.1
                 if self.moves[moveclass][moveid]['affected_stat'][4] < 0:
@@ -768,7 +768,7 @@ class Pets:
                     veve = [":arrow_down: *"," fell by "]
                 else:
                     veve = [":arrow_up: *"," increased by "]
-                current_buffs_p2[self.moves[moveclass][moveid]['affected_stat'][3]] += self.moves[moveclass][moveid]['affected_stat'][4]/100
+                current_buffs_p2[self.moves[moveclass][moveid]['affected_stat'][3]] *= self.moves[moveclass][moveid]['affected_stat'][4]/100
                 if current_buffs_p2[self.moves[moveclass][moveid]['affected_stat'][3]] == 0:
                     current_buffs_p2[self.moves[moveclass][moveid]['affected_stat'][3]] += 0.1
                 msg2 += veve[0] + p2_name + "\'s " + self.stat_names[self.moves[moveclass][moveid]['affected_stat'][3]] + veve[1] + str(abs(self.moves[moveclass][moveid]['affected_stat'][4])) + "%!*"
