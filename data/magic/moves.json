@@ -1,223 +1,5 @@
 {
-  "test2": {
-    "1": {
-      "name": "atk",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Light",
-      "random": 5,
-      "acc": 100,
-      "power": 50,
-      "info": "Causes Poison.",
-      "crit": 10,
-      "affected_stat": [
-        "atk",
-        50,
-        100
-      ],
-      "status": [
-        "poison",
-        100
-      ],
-      "effect": "stat_self",
-      "image": "",
-      "effect2": "",
-      "text": ""
-    },
-    "2": {
-      "name": "defff",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Light",
-      "random": 5,
-      "acc": 100,
-      "power": 50,
-      "info": "Deals damage.",
-      "crit": 10,
-      "affected_stat": [
-        "defe",
-        -50,
-        100
-      ],
-      "status": [
-        "burn",
-        100
-      ],
-      "effect": "stat_enemy",
-      "image": "",
-      "effect2": "",
-      "text": ""
-    },
-    "3": {
-      "name": "spa",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Light",
-      "random": 5,
-      "acc": 100,
-      "power": 50,
-      "info": "Deals damage.",
-      "crit": 10,
-      "affected_stat": [
-        "spa",
-        100,
-        100
-      ],
-      "status": [
-        "sleep",
-        100
-      ],
-      "effect": "stat_self",
-      "image": "",
-      "effect2": "",
-      "text": ""
-    },
-    "4": {
-      "name": "spd",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Light",
-      "random": 5,
-      "acc": 100,
-      "power": 50,
-      "info": "Deals damage.",
-      "crit": 10,
-      "affected_stat": [
-        "spd",
-        -50,
-        100
-      ],
-      "status": [
-        "confuse",
-        100
-      ],
-      "effect": "stat_enemy",
-      "image": "",
-      "effect2": "",
-      "text": ""
-    },
-    "5": {
-      "name": "acc",
-      "origin": "Sailor Moon",
-      "category": "Status",
-      "type": "Light",
-      "random": 5,
-      "acc": 100,
-      "power": 50,
-      "info": "Deals damage.",
-      "crit": 10,
-      "affected_stat": [
-        "acc",
-        -50,
-        100
-      ],
-      "status": [
-        "acc",
-        50
-      ],
-      "effect": "stat_enemy",
-      "image": "",
-      "effect2": "",
-      "text": ""
-    },
-    "6": {
-      "name": "closecombat",
-      "origin": "Sailor Moon",
-      "category": "Status",
-      "type": "Light",
-      "random": 5,
-      "acc": 100,
-      "power": 150,
-      "info": "Deals damage.",
-      "crit": 10,
-      "affected_stat": [
-        "atk",
-        -30,
-        100
-      ],
-      "status": [
-        "protect",
-        100
-      ],
-      "effect": "stat_self",
-      "image": "",
-      "effect2": "",
-      "text": ""
-    },
-    "7": {
-      "name": "heal",
-      "origin": "Sailor Moon",
-      "category": "Status",
-      "type": "Light",
-      "random": 5,
-      "acc": 100,
-      "power": 50,
-      "info": "Deals damage.",
-      "crit": 10,
-      "affected_stat": [
-        "hp",
-        50,
-        100
-      ],
-      "status": [
-        "freeze",
-        100
-      ],
-      "effect": "heal",
-      "image": "",
-      "effect2": "",
-      "text": ""
-    },
-    "8": {
-      "name": "drain",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Light",
-      "random": 5,
-      "acc": 100,
-      "power": 50,
-      "info": "Deals damage.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        50,
-        100
-      ],
-      "status": [
-        "drain",
-        100
-      ],
-      "effect": "drain",
-      "image": "",
-      "effect2": "",
-      "text": ""
-    },
-    "9": {
-      "name": "swagger",
-      "origin": "Sailor Moon",
-      "category": "Status",
-      "type": "Light",
-      "random": 5,
-      "acc": 100,
-      "power": 50,
-      "info": "Deals damage.",
-      "crit": 10,
-      "affected_stat": [
-        "atk",
-        50,
-        100
-      ],
-      "status": [
-        "sleep",
-        100
-      ],
-      "effect": "stat_enemy",
-      "image": "",
-      "effect2": "",
-      "text": ""
-    }
-  },
-  "madeup": {
+  "general": {
     "1": {
       "name": "Weave Snatch",
       "origin": "Showbiz",
@@ -336,221 +118,6 @@
       ],
       "crit": 10,
       "info": "Deals damage.",
-      "text": ""
-    }
-  },
-  "test": {
-    "1": {
-      "name": "poison",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Light",
-      "random": 5,
-      "acc": 100,
-      "power": 50,
-      "info": "Causes Poison.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0
-      ],
-      "status": [
-        "poison",
-        100
-      ],
-      "effect": "cause_status",
-      "image": "",
-      "effect2": "",
-      "text": ""
-    },
-    "2": {
-      "name": "burn",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Light",
-      "random": 5,
-      "acc": 100,
-      "power": 50,
-      "info": "Deals damage.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0
-      ],
-      "status": [
-        "burn",
-        100
-      ],
-      "effect": "cause_status",
-      "image": "",
-      "effect2": "",
-      "text": ""
-    },
-    "3": {
-      "name": "sleeep",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Light",
-      "random": 5,
-      "acc": 100,
-      "power": 50,
-      "info": "Deals damage.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0
-      ],
-      "status": [
-        "sleep",
-        100
-      ],
-      "effect": "cause_status",
-      "image": "",
-      "effect2": "",
-      "text": ""
-    },
-    "4": {
-      "name": "confuse",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Light",
-      "random": 5,
-      "acc": 100,
-      "power": 50,
-      "info": "Deals damage.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        100
-      ],
-      "status": [
-        "confuse",
-        100
-      ],
-      "effect": "cause_status",
-      "image": "",
-      "effect2": "",
-      "text": ""
-    },
-    "5": {
-      "name": "reflect",
-      "origin": "Sailor Moon",
-      "category": "Status",
-      "type": "Light",
-      "random": 5,
-      "acc": 100,
-      "power": 50,
-      "info": "Deals damage.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        100
-      ],
-      "status": [
-        "reflect",
-        100
-      ],
-      "effect": "reflect",
-      "image": "",
-      "effect2": "",
-      "text": ""
-    },
-    "6": {
-      "name": "protect",
-      "origin": "Sailor Moon",
-      "category": "Status",
-      "type": "Light",
-      "random": 5,
-      "acc": 100,
-      "power": 50,
-      "info": "Deals damage.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        100
-      ],
-      "status": [
-        "protect",
-        100
-      ],
-      "effect": "protect",
-      "image": "",
-      "effect2": "",
-      "text": ""
-    },
-    "7": {
-      "name": "freeze",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Light",
-      "random": 5,
-      "acc": 100,
-      "power": 50,
-      "info": "Deals damage.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        100
-      ],
-      "status": [
-        "freeze",
-        100
-      ],
-      "effect": "cause_status",
-      "image": "",
-      "effect2": "",
-      "text": ""
-    },
-    "8": {
-      "name": "para",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Light",
-      "random": 5,
-      "acc": 100,
-      "power": 50,
-      "info": "Deals damage.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        100
-      ],
-      "status": [
-        "para",
-        100
-      ],
-      "effect": "cause_status",
-      "image": "",
-      "effect2": "",
-      "text": ""
-    },
-    "9": {
-      "name": "sleep",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Light",
-      "random": 5,
-      "acc": 100,
-      "power": 50,
-      "info": "Deals damage.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        100
-      ],
-      "status": [
-        "sleep",
-        100
-      ],
-      "effect": "cause_status",
-      "image": "",
-      "effect2": "",
       "text": ""
     }
   },
@@ -1381,14 +948,14 @@
     }
   },
   "harrypotter": {
-    "1": {
-      "text": "conjure a stream of fire",
+    "incendio": {
+      "text": "conjure a stream of fire and scorch {}",
       "effect2": "",
-      "effect": "",
+      "effect": "cause_status",
       "image": "",
       "status": [
-        "status",
-        0
+        "burn",
+        40
       ],
       "affected_stat": [
         "stat",
@@ -1396,23 +963,47 @@
         0
       ],
       "crit": 10,
-      "info": "Deals damage.",
-      "acc": 100,
-      "power": 78,
+      "info": "Deals damage and 40% chance of burning the target.",
+      "acc": 95,
+      "power": 68,
       "random": 20,
       "type": "Fire",
       "category": "Special",
       "origin": "Harry Potter Spell",
       "name": "Incendio"
     },
-    "2": {
-      "text": "stun {}! ",
+    "aqua": {
+      "text": "conjure a stream of water to douse {}",
       "effect2": "",
-      "effect": "",
+      "effect": "stat_enemy",
       "image": "",
       "status": [
-        "status",
-        0
+        "burn",
+        40
+      ],
+      "affected_stat": [
+        "spa",
+        -25,
+        30
+      ],
+      "crit": 10,
+      "info": "Deals damage and has a 30% chance of lowering Special Attack by 25%.",
+      "acc": 95,
+      "power": 75,
+      "random": 20,
+      "type": "Water",
+      "category": "Special",
+      "origin": "Harry Potter Spell",
+      "name": "Aguamenti"
+    },
+    "stupefy": {
+      "text": "stun {}! ",
+      "effect2": "",
+      "effect": "cause_status",
+      "image": "",
+      "status": [
+        "confuse",
+        50
       ],
       "affected_stat": [
         "stat",
@@ -1420,8 +1011,8 @@
         0
       ],
       "crit": 10,
-      "info": "Deals damage.",
-      "acc": 100,
+      "info": "Deals damage and 50% chance of confusion.",
+      "acc": 75,
       "power": 99,
       "random": 1,
       "type": "Fighting",
@@ -1429,55 +1020,112 @@
       "origin": "Harry Potter Spell",
       "name": "Stupefy"
     },
-    "3": {
+    "crucio": {
       "text": "torture {}",
-      "effect2": "",
-      "effect": "",
+      "effect2": "stat_enemy",
+      "effect": "stat_enemy",
       "image": "",
+      "info": "A very difficult curse that is hard to execute. Once hit, it has a 50% chance of lowering both of the target's defenses by 50%.",
       "status": [
         "status",
         0
       ],
       "affected_stat": [
-        "stat",
-        0,
-        0
+        "defe",
+        -50,
+        50,
+        "spd",
+        -50,
+        50
       ],
       "crit": 10,
-      "info": "Deals damage.",
-      "random": 26,
-      "acc": 100,
+      "random": 25,
+      "acc": 50,
       "power": 129,
       "type": "Dark",
       "category": "Physcial",
       "origin": "Harry Potter Spell",
       "name": "Crucio"
     },
-    "4": {
-      "text": "make {} beat themselves",
-      "effect2": "",
-      "effect": "",
+    "rictusempra": {
+      "text": "make {} laugh uncontrollably",
+      "effect2": "stat_enemy",
+      "effect": "cause_status",
       "image": "",
       "status": [
-        "status",
-        0
+        "flinch",
+        100
       ],
       "affected_stat": [
-        "stat",
-        0,
-        0
+        "defe",
+        -30,
+        100
       ],
       "crit": 10,
-      "info": "Deals damage.",
-      "acc": 100,
-      "power": 69,
-      "random": 17,
-      "type": "Dark",
-      "category": "Other",
+      "info": "The Tickling Charm. The target is so busy laughing they are rendered unable to attack and their defense dropping harshly.",
+      "acc": 90,
+      "power": 0,
+      "random": 0,
+      "type": "Psychic",
+      "category": "Status",
       "origin": "Harry Potter Spell",
-      "name": "Imperio"
+      "name": "Rictusempra"
     },
-    "5": {
+    "spon": {
+      "text": "make {}'s body incredibly soft",
+      "effect2": "stat_enemy",
+      "effect": "stat_enemy",
+      "image": "",
+      "status": [
+        "flinch",
+        100
+      ],
+      "affected_stat": [
+        "defe",
+        -60,
+        100,
+        "spd",
+        60,
+        100
+      ],
+      "crit": 10,
+      "info": "The Softening Charm. The target is made squishier and their defense dropping harshly, but their Sp.Def is raised instead.",
+      "acc": 90,
+      "power": 0,
+      "random": 0,
+      "type": "Psychic",
+      "category": "Status",
+      "origin": "Harry Potter Spell",
+      "name": "Spongify"
+    },
+    "aloho": {
+      "text": "strip open {}'s clothes",
+      "effect2": "stat_enemy",
+      "effect": "stat_enemy",
+      "image": "",
+      "status": [
+        "flinch",
+        100
+      ],
+      "affected_stat": [
+        "defe",
+        -20,
+        100,
+        "spd",
+        -40,
+        100
+      ],
+      "crit": 10,
+      "info": "The Unlocking Charm. The target has their clothes unbuttoned, unzipped, etc. They get embarrassed and have their defenses drop.",
+      "acc": 90,
+      "power": 0,
+      "random": 0,
+      "type": "Psychic",
+      "category": "Status",
+      "origin": "Harry Potter Spell",
+      "name": "Alohomora"
+    },
+    "herbi": {
       "text": "bind {} with vines",
       "effect2": "",
       "effect": "",
@@ -1501,14 +1149,14 @@
       "origin": "Harry Potter Spell",
       "name": "Herbivicus"
     },
-    "6": {
+    "depulso": {
       "text": "knock {} away",
       "effect2": "",
-      "effect": "",
+      "effect": "cause_status",
       "image": "",
       "status": [
-        "status",
-        0
+        "flinch",
+        30
       ],
       "affected_stat": [
         "stat",
@@ -1516,7 +1164,7 @@
         0
       ],
       "crit": 10,
-      "info": "Deals damage.",
+      "info": "Deals damage, 30% chance of flinch.",
       "acc": 100,
       "power": 45,
       "random": 3,
@@ -1525,14 +1173,14 @@
       "origin": "Harry Potter Spell",
       "name": "Depulso"
     },
-    "7": {
-      "text": "",
+    "impedimenta": {
+      "text": "stop {} in mid-air",
       "effect2": "",
-      "effect": "",
+      "effect": "cause_status",
       "image": "",
       "status": [
-        "status",
-        0
+        "flinch",
+        100
       ],
       "affected_stat": [
         "stat",
@@ -1540,8 +1188,8 @@
         0
       ],
       "crit": 10,
-      "info": "Deals damage.",
-      "acc": 100,
+      "info": "Deals damage and makes the target unable of attacking.",
+      "acc": 75,
       "power": 98,
       "random": 3,
       "type": "Psychic",
@@ -1549,7 +1197,7 @@
       "origin": "Harry Potter Spell",
       "name": "Impedimenta"
     },
-    "8": {
+    "ventus": {
       "text": "lift {} with a whirlwind",
       "effect2": "",
       "effect": "",
@@ -1564,23 +1212,23 @@
         0
       ],
       "crit": 10,
-      "info": "Deals damage.",
+      "info": "Summons a whirlwind that varies drastically in power.",
       "acc": 100,
-      "power": 39,
-      "random": 33,
+      "power": 50,
+      "random": 45,
       "type": "Flying",
       "category": "Special",
       "origin": "Harry Potter Spell",
       "name": "Ventus"
     },
-    "9": {
+    "confringo": {
       "text": "create a huge explosion",
       "effect2": "",
-      "effect": "",
+      "effect": "cause_status",
       "image": "",
       "status": [
-        "status",
-        0
+        "burn",
+        50
       ],
       "affected_stat": [
         "stat",
@@ -1588,16 +1236,16 @@
         0
       ],
       "crit": 10,
-      "info": "Deals damage.",
+      "info": "Makes the target's surroundings explode. If they survive, they're left with 50% chance of a burn.",
       "acc": 100,
       "power": 145,
       "random": 3,
       "type": "Fire",
-      "category": "Physcial",
+      "category": "Special",
       "origin": "Harry Potter Spell",
       "name": "Confringo"
     },
-    "10": {
+    "diffindo": {
       "text": "cut {}",
       "effect2": "",
       "effect": "",
@@ -1611,9 +1259,9 @@
         0,
         0
       ],
-      "crit": 10,
-      "info": "Deals damage.",
-      "acc": 100,
+      "crit": 50,
+      "info": "Cuts the target. High chance of a critical hit.",
+      "acc": 89,
       "power": 67,
       "random": 30,
       "type": "Steel",
@@ -1623,7 +1271,7 @@
     }
   },
   "sakura": {
-    "1": {
+    "windy": {
       "text": "bind {} with wind chains",
       "effect2": "",
       "effect": "",
@@ -1647,7 +1295,7 @@
       "origin": "Clow Card",
       "name": "The Windy"
     },
-    "2": {
+    "firey": {
       "text": "",
       "effect2": "",
       "effect": "",
@@ -1671,7 +1319,7 @@
       "origin": "Clow Card",
       "name": "The Firey"
     },
-    "3": {
+    "watery": {
       "text": "",
       "effect2": "",
       "effect": "",
@@ -1695,7 +1343,7 @@
       "origin": "Clow Card",
       "name": "The Watery"
     },
-    "4": {
+    "earthy": {
       "text": "cause an earthquake",
       "effect2": "",
       "effect": "",
@@ -1719,14 +1367,14 @@
       "origin": "Clow Card",
       "name": "The Earthy"
     },
-    "5": {
+    "shadow": {
       "text": "",
       "effect2": "",
-      "effect": "",
+      "effect": "cause_status",
       "image": "",
       "status": [
-        "status",
-        0
+        "flinch",
+        20
       ],
       "affected_stat": [
         "stat",
@@ -1734,7 +1382,7 @@
         0
       ],
       "crit": 10,
-      "info": "Deals damage.",
+      "info": "Deals damage. 20% chance of flinching.",
       "acc": 100,
       "power": 50,
       "random": 1,
@@ -1743,7 +1391,7 @@
       "origin": "Clow Card",
       "name": "The Shadow"
     },
-    "6": {
+    "fight": {
       "text": "",
       "effect2": "",
       "effect": "",
@@ -1757,32 +1405,32 @@
         0,
         0
       ],
-      "crit": 10,
-      "info": "Deals damage.",
-      "random": 42,
+      "crit": 40,
+      "info": "Deals damage. High chance for a critical hit.",
+      "random": 22,
       "acc": 100,
-      "power": 55,
+      "power": 65,
       "type": "Fighting",
       "category": "Physcial",
       "origin": "Clow Card",
       "name": "The Fight"
     },
-    "7": {
-      "text": "blow some bubbles",
+    "bubbles": {
+      "text": "enclose {} in bubbles",
       "effect2": "",
-      "effect": "",
+      "effect": "stat_enemy",
       "image": "",
       "status": [
         "status",
         0
       ],
       "affected_stat": [
-        "stat",
-        0,
-        0
+        "spe",
+        -30,
+        100
       ],
       "crit": 10,
-      "info": "Deals damage.",
+      "info": "Bubbles are sent towards the target to slow them down.",
       "acc": 100,
       "power": 39,
       "random": 5,
@@ -1791,7 +1439,7 @@
       "origin": "Clow Card",
       "name": "The Bubbles"
     },
-    "8": {
+    "sword": {
       "text": "slash at {} ",
       "effect2": "",
       "effect": "",
@@ -1815,14 +1463,14 @@
       "origin": "Clow Card",
       "name": "The Sword"
     },
-    "9": {
-      "text": "hit {}",
+    "thunder": {
+      "text": "strike {}",
       "effect2": "",
-      "effect": "",
+      "effect": "cause_status",
       "image": "",
       "status": [
-        "status",
-        0
+        "para",
+        30
       ],
       "affected_stat": [
         "stat",
@@ -1830,8 +1478,8 @@
         0
       ],
       "crit": 10,
-      "info": "Deals damage.",
-      "acc": 100,
+      "info": "Deals damage. 30% chance of paralysis.",
+      "acc": 70,
       "power": 110,
       "random": 33,
       "type": "Electric",
@@ -1839,14 +1487,14 @@
       "origin": "Clow Card",
       "name": "The Thunder"
     },
-    "10": {
-      "text": "freeze {}",
+    "freeze": {
+      "text": "",
       "effect2": "",
-      "effect": "",
+      "effect": "cause_status",
       "image": "",
       "status": [
-        "status",
-        0
+        "freeze",
+        100
       ],
       "affected_stat": [
         "stat",
@@ -1856,14 +1504,14 @@
       "crit": 10,
       "info": "Deals damage.",
       "random": 0,
-      "acc": 100,
-      "power": 88,
+      "acc": 80,
+      "power": 0,
       "type": "Ice",
-      "category": "Special",
+      "category": "Status",
       "origin": "Clow Card",
       "name": "The Freeze"
     },
-    "11": {
+    "gale": {
       "text": "slice {} with wind blades",
       "effect2": "",
       "effect": "",
@@ -1877,9 +1525,9 @@
         0,
         0
       ],
-      "crit": 10,
-      "info": "Deals damage.",
-      "acc": 100,
+      "crit": 30,
+      "info": "Deals damage, high chance of critical hit.",
+      "acc": 85,
       "power": 115,
       "random": 45,
       "type": "Flying",
@@ -1889,7 +1537,7 @@
     }
   },
   "sailormoon": {
-    "1": {
+    "tiara": {
       "name": "Moon Tiara Action",
       "origin": "Sailor Moon",
       "category": "Physical",
@@ -1913,7 +1561,7 @@
       "effect2": "",
       "text": "throw a tiara at {}"
     },
-    "2": {
+    "moonprincesshalation": {
       "name": "Moon Princess Halation",
       "origin": "Sailor Moon",
       "category": "Special",
@@ -1937,943 +1585,7 @@
       "effect2": "",
       "text": ""
     },
-    "3": {
-      "name": "Rainbow Moon Heartache :rainbow::heart:",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Psychic",
-      "random": 30,
-      "power": 90,
-      "acc": 100,
-      "info": "Deadly ribbons fly at the target and zap them. High chance of a critical hit.",
-      "crit": 30,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "status",
-        0
-      ],
-      "image": "https://78.media.tumblr.com/c87ce382c98ead0a69c8b8dc1b7cd0ca/tumblr_nj69k7dN7Z1r89q2no1_500.gif",
-      "effect": "",
-      "effect2": "",
-      "text": "trap {} with heart ribbons"
-    },
-    "4": {
-      "name": "Moon Gorgeous Meditation",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Light",
-      "random": 20,
-      "power": 110,
-      "acc": 100,
-      "info": "Projects the opponent into a kaleidoscope and shatters it. Highly confusing. (30%)",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "confuse",
-        30
-      ],
-      "image": "https://78.media.tumblr.com/tumblr_lu5xzh4oSI1qdewlro8_r1_400.gif",
-      "effect": "cause_status",
-      "effect2": "",
-      "text": "shatter {}"
-    },
-    "5": {
-      "name": "Starlight Honeymoon Therapy Kiss",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Light",
-      "random": 10,
-      "power": 90,
-      "acc": 100,
-      "info": "Deals damage and heals the user in the process.",
-      "crit": 10,
-      "affected_stat": [
-        "hp",
-        30,
-        0
-      ],
-      "status": [
-        "status",
-        0
-      ],
-      "image": "https://vignette.wikia.nocookie.net/powerlisting/images/9/9d/Starlight_Honeymoon_Therapy_Kiss.gif",
-      "effect": "heal",
-      "effect2": "",
-      "text": "soak everything in a pink light"
-    },
-    "6": {
-      "name": "Silver Moon Crystal Power Therapy Kiss",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Light",
-      "random": 20,
-      "power": 150,
-      "acc": 100,
-      "info": "Deals damage and heals all statuses of the user.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "status",
-        0
-      ],
-      "image": "https://78.media.tumblr.com/482d0c0f2e0eec009efa644f5e1d823c/tumblr_n696ny7Ena1smtt6xo7_500.gif",
-      "effect": "refresh",
-      "effect2": "",
-      "text": "soak everything in a blinding light"
-    },
-    "7": {
-      "name": "Bubble Spray",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Water",
-      "random": 10,
-      "power": 25,
-      "acc": 100,
-      "info": "Only the user can see through the mist and bubbles. Halves the target's accuracy.",
-      "crit": 10,
-      "affected_stat": [
-        "acc",
-        50,
-        100
-      ],
-      "status": [
-        "status",
-        0
-      ],
-      "image": "https://thumbs.gfycat.com/InformalAnguishedErne-max-1mb.gif",
-      "effect": "",
-      "effect2": "",
-      "text": "create a misty terrain"
-    },
-    "8": {
-      "name": "Shine Aqua Illusion",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Water",
-      "random": 20,
-      "power": 65,
-      "acc": 100,
-      "info": "Looks pretty. 10% of lowering Speed by 20%.",
-      "crit": 10,
-      "affected_stat": [
-        "speed",
-        -20,
-        10
-      ],
-      "status": [
-        "status",
-        0
-      ],
-      "image": "https://thumbs.gfycat.com/TastyDeafeningBluebird-max-1mb.gif",
-      "effect": "stat_enemy",
-      "effect2": "",
-      "text": "douse {}"
-    },
-    "9": {
-      "name": "Shine Snow Illusion",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Ice",
-      "random": 30,
-      "power": 50,
-      "acc": 75,
-      "info": "Attacks with a small snowstorm. 50% chance to freeze the target.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "freeze",
-        50
-      ],
-      "image": "https://vignette.wikia.nocookie.net/powerlisting/images/5/59/Shine_Snow_Illusion.gif",
-      "effect": "cause_status",
-      "effect2": "",
-      "text": ""
-    },
-    "10": {
-      "name": "Mercury Aqua Rhapsody",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Water",
-      "random": 15,
-      "power": 100,
-      "acc": 100,
-      "info": "Deals damage.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "status",
-        0
-      ],
-      "image": "https://78.media.tumblr.com/tumblr_m7uovfpcIq1qgi7m8o1_250.gif",
-      "effect": "",
-      "effect2": "",
-      "text": "play a divine melody"
-    },
-    "11": {
-      "name": "Mercury Aqua Mirage",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Water",
-      "random": 45,
-      "power": 80,
-      "acc": 100,
-      "info": "Looks pretty. High chance of flinch and a critical hit.",
-      "crit": 30,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "flinch",
-        30
-      ],
-      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/1/1b/Makyuuriakuamiraji.gif",
-      "effect": "cause_status",
-      "effect2": "",
-      "text": "hit {} over and over with watery blasts"
-    },
-    "12": {
-      "name": "Burning Mandala",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Fire",
-      "random": 25,
-      "power": 45,
-      "acc": 100,
-      "info": "Deals damage. High chance for a burn.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "burn",
-        30
-      ],
-      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/a/a3/Burnmandala.gif",
-      "effect": "cause_status",
-      "effect2": "",
-      "text": "hit {} with rings of fire"
-    },
-    "13": {
-      "name": "Fire Soul",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Fire",
-      "random": 22,
-      "power": 44,
-      "acc": 95,
-      "info": "Deals damage. 10% chance for a burn.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "burn",
-        10
-      ],
-      "image": "https://media.giphy.com/media/TJZrVEMyIY55m/giphy.gif",
-      "effect": "cause_status",
-      "effect2": "",
-      "text": ""
-    },
-    "14": {
-      "name": "Mars Snake Fire",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Fire",
-      "random": 5,
-      "power": 90,
-      "acc": 100,
-      "info": "Conjures a fire snake with a 20% chance of burn.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "burn",
-        20
-      ],
-      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/c/c7/Mars_Snake_fire_Cr.gif",
-      "effect": "cause_status",
-      "effect2": "",
-      "text": "consume {}"
-    },
-    "15": {
-      "name": "Mars Flame Sniper",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Fire",
-      "random": 11,
-      "power": 95,
-      "acc": 80,
-      "info": "20% of a burn and/or a critical hit.",
-      "crit": 20,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "burn",
-        20
-      ],
-      "image": "https://78.media.tumblr.com/44d785fb729b218ef77a4fe368cd3c0b/tumblr_n5fddvOwEt1t7q46vo1_400.gif",
-      "effect": "cause_status",
-      "effect2": "",
-      "text": "fire an arrow at {}"
-    },
-    "16": {
-      "name": "Fire Soul Bird",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Fire",
-      "random": 10,
-      "power": 60,
-      "acc": 100,
-      "info": "Upgraded Fire Soul with a bird. 20% chance of a burn.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "burn",
-        20
-      ],
-      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/0/04/Mars_fire_soul_bird_2.gif",
-      "effect": "cause_status",
-      "effect2": "",
-      "text": "send a fire bird towards {}"
-    },
-    "17": {
-      "name": "Fire Heel Drop",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Fighting",
-      "random": 10,
-      "power": 30,
-      "acc": 95,
-      "info": "A basic kick, sometimes hot.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "status",
-        0
-      ],
-      "image": "https://www.schnittberichte.com/www/SBs/4679388/ct9.jpg",
-      "effect": "",
-      "effect2": "",
-      "text": "kick {} from above"
-    },
-    "18": {
-      "name": "Flower Hurricane",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Grass",
-      "random": 10,
-      "power": 30,
-      "acc": 100,
-      "info": "30% of lowering Special Defense by 30%.",
-      "crit": 10,
-      "affected_stat": [
-        "spd",
-        -30,
-        30
-      ],
-      "status": [
-        "",
-        ""
-      ],
-      "image": "https://i.pinimg.com/originals/d2/bc/42/d2bc429e057998331e19ad10c97f65e5.jpg",
-      "effect": "stat_enemy",
-      "effect2": "",
-      "text": "send petals towards {}"
-    },
-    "19": {
-      "name": "Supreme Thunder",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Electric",
-      "random": 10,
-      "power": 60,
-      "acc": 100,
-      "info": "Deals damage. 10% chance of paralysis.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "para",
-        10
-      ],
-      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/2/29/Supreme_Thunder_Crash_Gif.gif/revision/latest?cb=20120420224255",
-      "effect": "cause_status",
-      "effect2": "",
-      "text": "zap {}"
-    },
-    "20": {
-      "name": "Supreme Thunder Dragon :dragon:",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Electric",
-      "random": 10,
-      "power": 75,
-      "acc": 75,
-      "info": "Deals damage. 30% chance of paralysis.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "para",
-        30
-      ],
-      "image": "https://img.fireden.net/a/image/1515/35/1515357862017.gif",
-      "effect": "cause_status",
-      "effect2": "",
-      "text": "consume {}"
-    },
-    "21": {
-      "name": "Jupiter Coconut Cyclone :cyclone:",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Flying",
-      "random": 35,
-      "power": 85,
-      "acc": 90,
-      "info": "Deals damage. 10% chance of flinching.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "flinch",
-        10
-      ],
-      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/e/e9/Jupiter_Coconut_CycloneSMC.gif",
-      "effect": "cause_status",
-      "effect2": "",
-      "text": "trap {} in a vortex"
-    },
-    "22": {
-      "name": "Sparkling Wide Pressure",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Electric",
-      "random": 20,
-      "power": 90,
-      "acc": 85,
-      "info": "Deals damage. 20% chance of paralysis.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "para",
-        20
-      ],
-      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/9/92/SMC3_Version.gif",
-      "effect": "cause_status",
-      "effect2": "",
-      "text": "launch an electric ball at {}"
-    },
-    "23": {
-      "name": "Jupiter Oak Evolution",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Grass",
-      "random": 15,
-      "power": 120,
-      "acc": 100,
-      "info": "Deals damage. High chance of a critical hit.",
-      "crit": 30,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "status",
-        0
-      ],
-      "image": "https://78.media.tumblr.com/3ecb161d6b9016f32b1d055ad8e651d5/tumblr_mz43qfnDOT1ro8ba4o3_400.gif",
-      "effect": "",
-      "effect2": "",
-      "text": "launch multiple bursts at {}"
-    },
-    "24": {
-      "name": "Crescent Beam",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Light",
-      "random": 25,
-      "power": 40,
-      "acc": 90,
-      "info": "Deals damage.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "status",
-        0
-      ],
-      "image": "https://media1.tenor.com/images/8dbe35a7e47d369a3ec4d6750bae4b24/tenor.gif?itemid=3543303",
-      "effect": "",
-      "effect2": "",
-      "text": "fire a beam at {}"
-    },
-    "25": {
-      "name": "Hissatsu Love-Me Moon Chain",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Light",
-      "random": 30,
-      "power": 35,
-      "acc": 90,
-      "info": "Deals damage in a disguise. Very high chance of consfusion.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "confuse",
-        70
-      ],
-      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/d/d2/Hissatsu_chain.gif/revision/latest?cb=20131005184259",
-      "effect": "cause_status",
-      "effect2": "",
-      "text": "hit {} with a lovely chain of moonlight"
-    },
-    "26": {
-      "name": "Venus Love-Me Chain",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Light",
-      "random": 40,
-      "power": 45,
-      "acc": 90,
-      "info": "30% chance of flinching.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "flinch",
-        30
-      ],
-      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/d/d2/Hissatsu_chain.gif/revision/latest?cb=20131005184259",
-      "effect": "cause_status",
-      "effect2": "",
-      "text": "hit {} with a lovely chain of light :heart:"
-    },
-    "27": {
-      "name": "Rolling Heart Vibration",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Light",
-      "random": 22,
-      "power": 55,
-      "acc": 77,
-      "info": "Deals damage. 20% of confusion.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "confuse",
-        20
-      ],
-      "image": "http://68.media.tumblr.com/56c8f9d664366f75fefd3321bd722092/tumblr_nlktypBTNf1rqrq7ho4_500.gif",
-      "effect": "cause_status",
-      "effect2": "",
-      "text": "spin {} around"
-    },
-    "28": {
-      "name": "Crescent Beam Shower",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Light",
-      "random": 45,
-      "power": 70,
-      "acc": 100,
-      "info": "Deals damage. Increased chance of a critical hit.",
-      "crit": 20,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "status",
-        0
-      ],
-      "image": "https://vignette.wikia.nocookie.net/powerlisting/images/0/07/Sailor_Venus.gif",
-      "effect": "",
-      "effect2": "",
-      "text": "fire a beam shower at {}"
-    },
-    "29": {
-      "name": "Venus Love and Beauty Shock",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Fairy",
-      "random": 10,
-      "power": 100,
-      "acc": 80,
-      "info": "Deals love damage. 50% chance of paralysis.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "para",
-        50
-      ],
-      "image": "https://orig00.deviantart.net/247e/f/2017/157/5/4/venus_love_and_beauty_shock_by_otakuangelx-dbbsnhn.gif",
-      "effect": "cause_status",
-      "effect2": "",
-      "text": "hit {} with love :heart:"
-    },
-    "30": {
-      "name": "World Shaking",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Ground",
-      "random": 40,
-      "power": 75,
-      "acc": 100,
-      "info": "Deals damage. 10% chance of flinching.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "flinch",
-        10
-      ],
-      "image": "https://i.pinimg.com/originals/31/fe/3e/31fe3e21c89e5fe73293ff7ec8c90f56.gif",
-      "effect": "cause_status",
-      "effect2": "",
-      "text": ""
-    },
-    "31": {
-      "name": "Venus Wink Chain Sword",
-      "origin": "Sailor Moon",
-      "category": "Physcial",
-      "type": "Light",
-      "random": 12,
-      "power": 75,
-      "acc": 90,
-      "info": "Deals damage. Increased chance of a critical hit.",
-      "crit": 25,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "status",
-        0
-      ],
-      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/2/28/Wink_Chain_Sword.gif/revision/latest?cb=20160407013841",
-      "effect": "",
-      "effect2": "",
-      "text": "slice {}"
-    },
-    "32": {
-      "name": "Space Turbulence",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Flying",
-      "random": 30,
-      "power": 35,
-      "acc": 100,
-      "info": "Deals damage. 20% chance of lowering Sp.Def by 20%.",
-      "crit": 10,
-      "affected_stat": [
-        "spd",
-        -20,
-        20
-      ],
-      "status": [
-        "status",
-        0
-      ],
-      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/5/58/Spaceturbulence.jpg",
-      "effect": "stat_enemy",
-      "effect2": "",
-      "text": ""
-    },
-    "33": {
-      "name": "Space Sword Blaster",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Fighting",
-      "random": 30,
-      "power": 85,
-      "acc": 85,
-      "info": "Deals damage. High chance of a critical hit.",
-      "crit": 30,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "status",
-        0
-      ],
-      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/9/94/Space_Sword_BlasterCrystal.gif/revision/latest?cb=20160502185428",
-      "effect": "",
-      "effect2": "",
-      "text": "attack {} with a Talisman"
-    },
-    "34": {
-      "name": "Deep Submerge",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Water",
-      "random": 15,
-      "power": 70,
-      "acc": 90,
-      "info": "Deals damage. 20% chance to lower Defense by 10%.",
-      "crit": 10,
-      "affected_stat": [
-        "defe",
-        -10,
-        20
-      ],
-      "status": [
-        "status",
-        0
-      ],
-      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/b/b5/Deep_Submerge.gif/revision/latest?cb=20160629031236",
-      "effect": "stat_enemy",
-      "effect2": "",
-      "text": ""
-    },
-    "35": {
-      "name": "Submarine Violon Tide",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Water",
-      "random": 30,
-      "power": 90,
-      "acc": 70,
-      "info": "Deals damage. 30% chance of lowering Attack by 20%.",
-      "crit": 10,
-      "affected_stat": [
-        "atk",
-        -20,
-        30
-      ],
-      "status": [
-        "status",
-        0
-      ],
-      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/1/1a/M_submarineviolontide.gif/revision/latest?cb=20120322233704",
-      "effect": "stat_enemy",
-      "effect2": "",
-      "text": "hit {} with a tidal wave"
-    },
-    "36": {
-      "name": "Submarine Reflection",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Psychic",
-      "random": 20,
-      "power": 95,
-      "acc": 100,
-      "info": "Deals damage.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "status",
-        0
-      ],
-      "image": "https://i.pinimg.com/originals/56/51/f7/5651f77b0791bb989a1d8786f4d618ab.gif",
-      "effect": "",
-      "effect2": "",
-      "text": "purify {}"
-    },
-    "37": {
-      "name": "Dead Scream",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Ghost",
-      "random": 20,
-      "power": 75,
-      "acc": 90,
-      "info": "30% chance of lowering Sp.Def by 30%. Cannot be a critical hit.",
-      "crit": 0,
-      "affected_stat": [
-        "spd",
-        -30,
-        30
-      ],
-      "status": [
-        "status",
-        0
-      ],
-      "image": "https://78.media.tumblr.com/dc0f44dfba8126a734df74e019073b34/tumblr_nrnw5p1u2d1r89q2no1_500.gif",
-      "effect": "stat_enemy",
-      "effect2": "",
-      "text": ""
-    },
-    "38": {
-      "name": "Chronos Typhoon",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Ghost",
-      "random": 30,
-      "power": 85,
-      "acc": 95,
-      "info": "Cannot be a critical hit.",
-      "crit": 0,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "status",
-        0
-      ],
-      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/3/37/Chronos_yphoonSMC.gif",
-      "effect": "",
-      "effect2": "",
-      "text": "blow {} away"
-    },
-    "39": {
-      "name": "Silence Glave Surprise",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Dark",
-      "random": 10,
-      "power": 125,
-      "acc": 100,
-      "info": "Deals damage. Very high chance of a critical hit.",
-      "crit": 50,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "status",
-        0
-      ],
-      "image": "https://78.media.tumblr.com/d12f13b0e7019a930f669b2b12152a9a/tumblr_mmky8xhhgc1r717c6o4_250.gif",
-      "effect": "",
-      "effect2": "",
-      "text": "destroy everything around {}"
-    },
-    "40": {
-      "name": "Death Reborn Revolution",
-      "origin": "Sailor Moon",
-      "category": "Physical",
-      "type": "Dark",
-      "random": 20,
-      "power": 160,
-      "acc": 70,
-      "info": "Deals damage and heals the user by the same amount.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "status",
-        0
-      ],
-      "image": "https://78.media.tumblr.com/b67e5b6d29f481b39fc4c8f44d2324bd/tumblr_o92voqvtnw1v6bs4yo9_r2_500.gif",
-      "effect": "drain",
-      "effect2": "",
-      "text": "destroy {}"
-    },
-    "41": {
-      "name": "Pink Sugar Heart Attack",
-      "origin": "Sailor Moon",
-      "category": "Special",
-      "type": "Psychic",
-      "random": 10,
-      "power": 25,
-      "acc": 95,
-      "info": "Deals damage. Very high chance of flinching.",
-      "crit": 10,
-      "affected_stat": [
-        "stat",
-        0,
-        0
-      ],
-      "status": [
-        "flinch",
-        80
-      ],
-      "image": "https://78.media.tumblr.com/f38c8acc9c4f2cf16119a63f81548f0d/tumblr_njh3lbSY151tggy4no6_500.gif",
-      "effect": "cause_status",
-      "effect2": "",
-      "text": "hit {} with some pink hearts :heart:"
-    },
-    "42": {
+    "msha": {
       "name": "Moon Spiral Heart Attack",
       "origin": "Sailor Moon",
       "category": "Special",
@@ -2897,7 +1609,967 @@
       "effect2": "",
       "text": "smash {} with a giant heart :heart:"
     },
-    "43": {
+    "rainbowmoonheartache": {
+      "name": "Rainbow Moon Heartache",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Psychic",
+      "random": 30,
+      "power": 90,
+      "acc": 100,
+      "info": "Deadly ribbons fly at the target and zap them. High chance of a critical hit.",
+      "crit": 30,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "status",
+        0
+      ],
+      "image": "https://78.media.tumblr.com/c87ce382c98ead0a69c8b8dc1b7cd0ca/tumblr_nj69k7dN7Z1r89q2no1_500.gif",
+      "effect": "",
+      "effect2": "",
+      "text": "trap {} with heart ribbons"
+    },
+    "gorgeousmedi": {
+      "name": "Moon Gorgeous Meditation",
+      "origin": "Sailor Moon",
+      "category": "Physical",
+      "type": "Light",
+      "random": 20,
+      "power": 110,
+      "acc": 100,
+      "info": "Projects the opponent into a kaleidoscope and shatters it. Highly confusing. (30%)",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "confuse",
+        30
+      ],
+      "image": "https://78.media.tumblr.com/tumblr_lu5xzh4oSI1qdewlro8_r1_400.gif",
+      "effect": "cause_status",
+      "effect2": "",
+      "text": "shatter {}"
+    },
+    "shtk": {
+      "name": "Starlight Honeymoon Therapy Kiss",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Light",
+      "random": 10,
+      "power": 90,
+      "acc": 100,
+      "info": "Deals damage and heals the user in the process.",
+      "crit": 10,
+      "affected_stat": [
+        "hp",
+        30,
+        0
+      ],
+      "status": [
+        "status",
+        0
+      ],
+      "image": "https://vignette.wikia.nocookie.net/powerlisting/images/9/9d/Starlight_Honeymoon_Therapy_Kiss.gif",
+      "effect": "heal",
+      "effect2": "",
+      "text": "soak everything in a pink light"
+    },
+    "smcptk": {
+      "name": "Silver Moon Crystal Power Therapy Kiss",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Light",
+      "random": 20,
+      "power": 150,
+      "acc": 100,
+      "info": "Deals damage and heals all statuses of the user.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "status",
+        0
+      ],
+      "image": "https://78.media.tumblr.com/482d0c0f2e0eec009efa644f5e1d823c/tumblr_n696ny7Ena1smtt6xo7_500.gif",
+      "effect": "refresh",
+      "effect2": "",
+      "text": "soak everything in a blinding light"
+    },
+    "shabon": {
+      "name": "Bubble Spray",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Water",
+      "random": 10,
+      "power": 25,
+      "acc": 100,
+      "info": "Only the user can see through the mist and bubbles. Halves the target's accuracy.",
+      "crit": 10,
+      "affected_stat": [
+        "acc",
+        50,
+        100
+      ],
+      "status": [
+        "status",
+        0
+      ],
+      "image": "https://thumbs.gfycat.com/InformalAnguishedErne-max-1mb.gif",
+      "effect": "",
+      "effect2": "",
+      "text": "create a misty terrain"
+    },
+    "shabonfreezing": {
+      "name": "Bubble Spray Freezing",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Ice",
+      "random": 10,
+      "power": 25,
+      "acc": 100,
+      "info": "Freezes the target.",
+      "crit": 10,
+      "affected_stat": [
+        "acc",
+        50,
+        100
+      ],
+      "status": [
+        "freeze",
+        100
+      ],
+      "image": "https://thumbs.gfycat.com/InformalAnguishedErne-max-1mb.gif",
+      "effect": "cause_status",
+      "effect2": "",
+      "text": "create a misty terrain"
+    },
+    "saquail": {
+      "name": "Shine Aqua Illusion",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Water",
+      "random": 20,
+      "power": 65,
+      "acc": 100,
+      "info": "Looks pretty. 10% of lowering Speed by 20%.",
+      "crit": 10,
+      "affected_stat": [
+        "speed",
+        -20,
+        10
+      ],
+      "status": [
+        "status",
+        0
+      ],
+      "image": "https://thumbs.gfycat.com/TastyDeafeningBluebird-max-1mb.gif",
+      "effect": "stat_enemy",
+      "effect2": "",
+      "text": "douse {}"
+    },
+    "ssnowil": {
+      "name": "Shine Snow Illusion",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Ice",
+      "random": 20,
+      "power": 50,
+      "acc": 75,
+      "info": "Attacks with a small snowstorm. 50% chance to freeze the target.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "freeze",
+        50
+      ],
+      "image": "https://vignette.wikia.nocookie.net/powerlisting/images/5/59/Shine_Snow_Illusion.gif",
+      "effect": "cause_status",
+      "effect2": "",
+      "text": ""
+    },
+    "rhapsody": {
+      "name": "Mercury Aqua Rhapsody",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Water",
+      "random": 15,
+      "power": 100,
+      "acc": 100,
+      "info": "Deals damage.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "status",
+        0
+      ],
+      "image": "https://78.media.tumblr.com/tumblr_m7uovfpcIq1qgi7m8o1_250.gif",
+      "effect": "",
+      "effect2": "",
+      "text": "play a divine melody"
+    },
+    "aquamira": {
+      "name": "Mercury Aqua Mirage",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Water",
+      "random": 45,
+      "power": 80,
+      "acc": 100,
+      "info": "Looks pretty. High chance of flinch and a critical hit.",
+      "crit": 30,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "flinch",
+        30
+      ],
+      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/1/1b/Makyuuriakuamiraji.gif",
+      "effect": "cause_status",
+      "effect2": "",
+      "text": "hit {} over and over with watery blasts"
+    },
+    "mandala": {
+      "name": "Burning Mandala",
+      "origin": "Sailor Moon",
+      "category": "Physical",
+      "type": "Fire",
+      "random": 25,
+      "power": 45,
+      "acc": 100,
+      "info": "Deals damage. High chance for a burn.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "burn",
+        30
+      ],
+      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/a/a3/Burnmandala.gif",
+      "effect": "cause_status",
+      "effect2": "",
+      "text": "hit {} with rings of fire"
+    },
+    "fsoul": {
+      "name": "Fire Soul",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Fire",
+      "random": 22,
+      "power": 44,
+      "acc": 95,
+      "info": "Deals damage. 10% chance for a burn.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "burn",
+        10
+      ],
+      "image": "https://media.giphy.com/media/TJZrVEMyIY55m/giphy.gif",
+      "effect": "cause_status",
+      "effect2": "",
+      "text": ""
+    },
+    "snakefire": {
+      "name": "Mars Snake Fire",
+      "origin": "Sailor Moon",
+      "category": "Physical",
+      "type": "Fire",
+      "random": 5,
+      "power": 90,
+      "acc": 100,
+      "info": "Conjures a fire snake with a 20% chance of burn.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "burn",
+        20
+      ],
+      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/c/c7/Mars_Snake_fire_Cr.gif",
+      "effect": "cause_status",
+      "effect2": "",
+      "text": "consume {}"
+    },
+    "fsniper": {
+      "name": "Mars Flame Sniper",
+      "origin": "Sailor Moon",
+      "category": "Physical",
+      "type": "Fire",
+      "random": 11,
+      "power": 95,
+      "acc": 80,
+      "info": "20% of a burn and/or a critical hit.",
+      "crit": 20,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "burn",
+        20
+      ],
+      "image": "https://78.media.tumblr.com/44d785fb729b218ef77a4fe368cd3c0b/tumblr_n5fddvOwEt1t7q46vo1_400.gif",
+      "effect": "cause_status",
+      "effect2": "",
+      "text": "fire an arrow at {}"
+    },
+    "fsoulbird": {
+      "name": "Fire Soul Bird",
+      "origin": "Sailor Moon",
+      "category": "Physical",
+      "type": "Fire",
+      "random": 10,
+      "power": 60,
+      "acc": 100,
+      "info": "Upgraded Fire Soul with a bird. 20% chance of a burn.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "burn",
+        20
+      ],
+      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/0/04/Mars_fire_soul_bird_2.gif",
+      "effect": "cause_status",
+      "effect2": "",
+      "text": "send a fire bird towards {}"
+    },
+    "fheeldrop": {
+      "name": "Fire Heel Drop",
+      "origin": "Sailor Moon",
+      "category": "Physical",
+      "type": "Fighting",
+      "random": 10,
+      "power": 30,
+      "acc": 95,
+      "info": "A basic kick, sometimes hot.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "status",
+        0
+      ],
+      "image": "https://www.schnittberichte.com/www/SBs/4679388/ct9.jpg",
+      "effect": "",
+      "effect2": "",
+      "text": "kick {} from above"
+    },
+    "flowerhurricane": {
+      "name": "Flower Hurricane",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Grass",
+      "random": 10,
+      "power": 30,
+      "acc": 100,
+      "info": "30% of lowering Special Defense by 30%.",
+      "crit": 10,
+      "affected_stat": [
+        "spd",
+        -30,
+        30
+      ],
+      "status": [
+        "",
+        ""
+      ],
+      "image": "https://i.pinimg.com/originals/d2/bc/42/d2bc429e057998331e19ad10c97f65e5.jpg",
+      "effect": "stat_enemy",
+      "effect2": "",
+      "text": "send petals towards {}"
+    },
+    "sundae": {
+      "name": "Supreme Thunder",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Electric",
+      "random": 10,
+      "power": 60,
+      "acc": 100,
+      "info": "Deals damage. 10% chance of paralysis.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "para",
+        10
+      ],
+      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/2/29/Supreme_Thunder_Crash_Gif.gif/revision/latest?cb=20120420224255",
+      "effect": "cause_status",
+      "effect2": "",
+      "text": "zap {}"
+    },
+    "sundaedragon": {
+      "name": "Supreme Thunder Dragon",
+      "origin": "Sailor Moon",
+      "category": "Physical",
+      "type": "Electric",
+      "random": 10,
+      "power": 75,
+      "acc": 75,
+      "info": "Deals damage. 30% chance of paralysis.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "para",
+        30
+      ],
+      "image": "https://img.fireden.net/a/image/1515/35/1515357862017.gif",
+      "effect": "cause_status",
+      "effect2": "",
+      "text": "consume {} :dragon:"
+    },
+    "coconut": {
+      "name": "Jupiter Coconut Cyclone",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Flying",
+      "random": 35,
+      "power": 85,
+      "acc": 90,
+      "info": "Deals damage. 10% chance of flinching.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "flinch",
+        10
+      ],
+      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/e/e9/Jupiter_Coconut_CycloneSMC.gif",
+      "effect": "cause_status",
+      "effect2": "",
+      "text": "trap {} in a vortex :cyclone:"
+    },
+    "widepressure": {
+      "name": "Sparkling Wide Pressure",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Electric",
+      "random": 20,
+      "power": 90,
+      "acc": 85,
+      "info": "Deals damage. 20% chance of paralysis.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "para",
+        20
+      ],
+      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/9/92/SMC3_Version.gif",
+      "effect": "cause_status",
+      "effect2": "",
+      "text": "launch an electric ball at {}"
+    },
+    "oakevo": {
+      "name": "Jupiter Oak Evolution",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Grass",
+      "random": 15,
+      "power": 120,
+      "acc": 100,
+      "info": "Deals damage. High chance of a critical hit.",
+      "crit": 30,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "status",
+        0
+      ],
+      "image": "https://78.media.tumblr.com/3ecb161d6b9016f32b1d055ad8e651d5/tumblr_mz43qfnDOT1ro8ba4o3_400.gif",
+      "effect": "",
+      "effect2": "",
+      "text": "launch multiple bursts at {}"
+    },
+    "cresbeam": {
+      "name": "Crescent Beam",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Light",
+      "random": 25,
+      "power": 40,
+      "acc": 90,
+      "info": "Deals damage.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "status",
+        0
+      ],
+      "image": "https://media1.tenor.com/images/8dbe35a7e47d369a3ec4d6750bae4b24/tenor.gif?itemid=3543303",
+      "effect": "",
+      "effect2": "",
+      "text": "fire a beam at {}"
+    },
+    "lovememoon": {
+      "name": "Hissatsu Love-Me Moon Chain",
+      "origin": "Sailor Moon",
+      "category": "Physical",
+      "type": "Light",
+      "random": 30,
+      "power": 35,
+      "acc": 90,
+      "info": "Deals damage in a disguise. Very high chance of consfusion.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "confuse",
+        70
+      ],
+      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/d/d2/Hissatsu_chain.gif/revision/latest?cb=20131005184259",
+      "effect": "cause_status",
+      "effect2": "",
+      "text": "hit {} with a lovely chain of moonlight"
+    },
+    "lovemechain": {
+      "name": "Venus Love-Me Chain",
+      "origin": "Sailor Moon",
+      "category": "Physical",
+      "type": "Light",
+      "random": 40,
+      "power": 45,
+      "acc": 90,
+      "info": "30% chance of flinching.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "flinch",
+        30
+      ],
+      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/d/d2/Hissatsu_chain.gif/revision/latest?cb=20131005184259",
+      "effect": "cause_status",
+      "effect2": "",
+      "text": "hit {} with a lovely chain of light :heart:"
+    },
+    "vibration": {
+      "name": "Rolling Heart Vibration",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Light",
+      "random": 22,
+      "power": 55,
+      "acc": 77,
+      "info": "Deals damage. 20% of confusion.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "confuse",
+        20
+      ],
+      "image": "http://68.media.tumblr.com/56c8f9d664366f75fefd3321bd722092/tumblr_nlktypBTNf1rqrq7ho4_500.gif",
+      "effect": "cause_status",
+      "effect2": "",
+      "text": "spin {} around"
+    },
+    "cresbeamshower": {
+      "name": "Crescent Beam Shower",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Light",
+      "random": 45,
+      "power": 70,
+      "acc": 100,
+      "info": "Deals damage. Increased chance of a critical hit.",
+      "crit": 20,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "status",
+        0
+      ],
+      "image": "https://vignette.wikia.nocookie.net/powerlisting/images/0/07/Sailor_Venus.gif",
+      "effect": "",
+      "effect2": "",
+      "text": "fire a beam shower at {}"
+    },
+    "beautyshock": {
+      "name": "Venus Love and Beauty Shock",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Fairy",
+      "random": 10,
+      "power": 100,
+      "acc": 80,
+      "info": "Deals love damage. 50% chance of paralysis.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "para",
+        50
+      ],
+      "image": "https://orig00.deviantart.net/247e/f/2017/157/5/4/venus_love_and_beauty_shock_by_otakuangelx-dbbsnhn.gif",
+      "effect": "cause_status",
+      "effect2": "",
+      "text": "hit {} with love :heart:"
+    },
+    "winkchain": {
+      "name": "Venus Wink Chain Sword",
+      "origin": "Sailor Moon",
+      "category": "Physcial",
+      "type": "Light",
+      "random": 12,
+      "power": 75,
+      "acc": 90,
+      "info": "Deals damage. Increased chance of a critical hit.",
+      "crit": 25,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "status",
+        0
+      ],
+      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/2/28/Wink_Chain_Sword.gif/revision/latest?cb=20160407013841",
+      "effect": "",
+      "effect2": "",
+      "text": "slice {}"
+    },
+    "wshaking": {
+      "name": "World Shaking",
+      "origin": "Sailor Moon",
+      "category": "Physical",
+      "type": "Ground",
+      "random": 40,
+      "power": 75,
+      "acc": 100,
+      "info": "Deals damage. 10% chance of flinching.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "flinch",
+        10
+      ],
+      "image": "https://i.pinimg.com/originals/31/fe/3e/31fe3e21c89e5fe73293ff7ec8c90f56.gif",
+      "effect": "cause_status",
+      "effect2": "",
+      "text": ""
+    },
+    "spacet": {
+      "name": "Space Turbulence",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Flying",
+      "random": 30,
+      "power": 35,
+      "acc": 100,
+      "info": "Deals damage. 20% chance of lowering Sp.Def by 20%.",
+      "crit": 10,
+      "affected_stat": [
+        "spd",
+        -20,
+        20
+      ],
+      "status": [
+        "status",
+        0
+      ],
+      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/5/58/Spaceturbulence.jpg",
+      "effect": "stat_enemy",
+      "effect2": "",
+      "text": ""
+    },
+    "spaceswo": {
+      "name": "Space Sword Blaster",
+      "origin": "Sailor Moon",
+      "category": "Physical",
+      "type": "Fighting",
+      "random": 30,
+      "power": 85,
+      "acc": 85,
+      "info": "Deals damage. High chance of a critical hit.",
+      "crit": 30,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "status",
+        0
+      ],
+      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/9/94/Space_Sword_BlasterCrystal.gif/revision/latest?cb=20160502185428",
+      "effect": "",
+      "effect2": "",
+      "text": "attack {} with a Talisman"
+    },
+    "deepsm": {
+      "name": "Deep Submerge",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Water",
+      "random": 15,
+      "power": 70,
+      "acc": 90,
+      "info": "Deals damage. 20% chance to lower Defense by 10%.",
+      "crit": 10,
+      "affected_stat": [
+        "defe",
+        -10,
+        20
+      ],
+      "status": [
+        "status",
+        0
+      ],
+      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/b/b5/Deep_Submerge.gif/revision/latest?cb=20160629031236",
+      "effect": "stat_enemy",
+      "effect2": "",
+      "text": ""
+    },
+    "violon": {
+      "name": "Submarine Violon Tide",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Water",
+      "random": 30,
+      "power": 90,
+      "acc": 70,
+      "info": "Deals damage. 30% chance of lowering Attack by 20%.",
+      "crit": 10,
+      "affected_stat": [
+        "atk",
+        -20,
+        30
+      ],
+      "status": [
+        "status",
+        0
+      ],
+      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/1/1a/M_submarineviolontide.gif/revision/latest?cb=20120322233704",
+      "effect": "stat_enemy",
+      "effect2": "",
+      "text": "hit {} with a tidal wave"
+    },
+    "sreflection_dmg": {
+      "name": "Submarine Reflection",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Psychic",
+      "random": 20,
+      "power": 95,
+      "acc": 100,
+      "info": "Deals damage.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "status",
+        0
+      ],
+      "image": "https://i.pinimg.com/originals/56/51/f7/5651f77b0791bb989a1d8786f4d618ab.gif",
+      "effect": "",
+      "effect2": "",
+      "text": "purify {}"
+    },
+    "dedscri": {
+      "name": "Dead Scream",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Ghost",
+      "random": 20,
+      "power": 75,
+      "acc": 90,
+      "info": "30% chance of lowering Sp.Def by 30%. Cannot be a critical hit.",
+      "crit": 0,
+      "affected_stat": [
+        "spd",
+        -30,
+        30
+      ],
+      "status": [
+        "status",
+        0
+      ],
+      "image": "https://78.media.tumblr.com/dc0f44dfba8126a734df74e019073b34/tumblr_nrnw5p1u2d1r89q2no1_500.gif",
+      "effect": "stat_enemy",
+      "effect2": "",
+      "text": ""
+    },
+    "chronos": {
+      "name": "Chronos Typhoon",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Ghost",
+      "random": 30,
+      "power": 85,
+      "acc": 95,
+      "info": "Cannot be a critical hit.",
+      "crit": 0,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "status",
+        0
+      ],
+      "image": "https://vignette.wikia.nocookie.net/sailormoon/images/3/37/Chronos_yphoonSMC.gif",
+      "effect": "",
+      "effect2": "",
+      "text": "blow {} away"
+    },
+    "silenceglaves": {
+      "name": "Silence Glave Surprise",
+      "origin": "Sailor Moon",
+      "category": "Physical",
+      "type": "Dark",
+      "random": 10,
+      "power": 125,
+      "acc": 100,
+      "info": "Deals damage. Very high chance of a critical hit.",
+      "crit": 50,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "status",
+        0
+      ],
+      "image": "https://78.media.tumblr.com/d12f13b0e7019a930f669b2b12152a9a/tumblr_mmky8xhhgc1r717c6o4_250.gif",
+      "effect": "",
+      "effect2": "",
+      "text": "destroy everything around {}"
+    },
+    "dedribbon": {
+      "name": "Death Reborn Revolution",
+      "origin": "Sailor Moon",
+      "category": "Physical",
+      "type": "Dark",
+      "random": 20,
+      "power": 160,
+      "acc": 70,
+      "info": "Deals damage and heals the user by the same amount.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "status",
+        0
+      ],
+      "image": "https://78.media.tumblr.com/b67e5b6d29f481b39fc4c8f44d2324bd/tumblr_o92voqvtnw1v6bs4yo9_r2_500.gif",
+      "effect": "drain",
+      "effect2": "",
+      "text": "destroy {}"
+    },
+    "pinksugar": {
+      "name": "Pink Sugar Heart Attack",
+      "origin": "Sailor Moon",
+      "category": "Special",
+      "type": "Psychic",
+      "random": 10,
+      "power": 25,
+      "acc": 95,
+      "info": "Deals damage. Very high chance of flinching.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "status": [
+        "flinch",
+        80
+      ],
+      "image": "https://78.media.tumblr.com/f38c8acc9c4f2cf16119a63f81548f0d/tumblr_njh3lbSY151tggy4no6_500.gif",
+      "effect": "cause_status",
+      "effect2": "",
+      "text": "hit {} with some pink hearts :heart:"
+    },
+    "silvercrystal": {
       "name": "Silver Moon Crystal Eternal Power",
       "origin": "Sailor Moon",
       "category": "Special",
@@ -2921,7 +2593,7 @@
       "effect2": "",
       "text": "send {} into oblivion"
     },
-    "44": {
+    "tl_flash": {
       "name": "Moon Twilight Flash",
       "origin": "Sailor Moon",
       "category": "Special",
@@ -2945,7 +2617,7 @@
       "effect2": "",
       "text": "flash a blinding light at {}"
     },
-    "45": {
+    "reflection_ref": {
       "name": "Submarine Reflection",
       "origin": "Sailor Moon",
       "category": "Status",
@@ -2969,7 +2641,7 @@
       "effect2": "",
       "text": "create a shield"
     },
-    "46": {
+    "silwall": {
       "name": "Silent Wall",
       "origin": "Sailor Moon",
       "category": "Status",
@@ -2993,8 +2665,8 @@
       "effect2": "",
       "text": "create a shield"
     },
-    "47": {
-      "name": "Moon Healing Escalation :sparkles:",
+    "escaleshon": {
+      "name": "Moon Healing Escalation",
       "origin": "Sailor Moon",
       "category": "Status",
       "type": "Light",
@@ -3014,6 +2686,221 @@
       ],
       "image": "https://media.giphy.com/media/ClbowsbCh5rI4/giphy.gif",
       "effect": "heal",
+      "effect2": "",
+      "text": ""
+    }
+  },
+  "test": {
+    "1": {
+      "name": "poison",
+      "origin": "Sailor Moon",
+      "category": "Physical",
+      "type": "Light",
+      "random": 5,
+      "acc": 100,
+      "power": 50,
+      "info": "Causes Poison.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0
+      ],
+      "status": [
+        "poison",
+        100
+      ],
+      "effect": "cause_status",
+      "image": "",
+      "effect2": "",
+      "text": ""
+    },
+    "2": {
+      "name": "burn",
+      "origin": "Sailor Moon",
+      "category": "Physical",
+      "type": "Light",
+      "random": 5,
+      "acc": 100,
+      "power": 50,
+      "info": "Deals damage.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0
+      ],
+      "status": [
+        "burn",
+        100
+      ],
+      "effect": "cause_status",
+      "image": "",
+      "effect2": "",
+      "text": ""
+    },
+    "3": {
+      "name": "sleeep",
+      "origin": "Sailor Moon",
+      "category": "Physical",
+      "type": "Light",
+      "random": 5,
+      "acc": 100,
+      "power": 50,
+      "info": "Deals damage.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0
+      ],
+      "status": [
+        "sleep",
+        100
+      ],
+      "effect": "cause_status",
+      "image": "",
+      "effect2": "",
+      "text": ""
+    },
+    "4": {
+      "name": "confuse",
+      "origin": "Sailor Moon",
+      "category": "Physical",
+      "type": "Light",
+      "random": 5,
+      "acc": 100,
+      "power": 50,
+      "info": "Deals damage.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        100
+      ],
+      "status": [
+        "confuse",
+        100
+      ],
+      "effect": "cause_status",
+      "image": "",
+      "effect2": "",
+      "text": ""
+    },
+    "5": {
+      "name": "reflect",
+      "origin": "Sailor Moon",
+      "category": "Status",
+      "type": "Light",
+      "random": 5,
+      "acc": 100,
+      "power": 50,
+      "info": "Deals damage.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        100
+      ],
+      "status": [
+        "reflect",
+        100
+      ],
+      "effect": "reflect",
+      "image": "",
+      "effect2": "",
+      "text": ""
+    },
+    "6": {
+      "name": "protect",
+      "origin": "Sailor Moon",
+      "category": "Status",
+      "type": "Light",
+      "random": 5,
+      "acc": 100,
+      "power": 50,
+      "info": "Deals damage.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        100
+      ],
+      "status": [
+        "protect",
+        100
+      ],
+      "effect": "protect",
+      "image": "",
+      "effect2": "",
+      "text": ""
+    },
+    "7": {
+      "name": "freeze",
+      "origin": "Sailor Moon",
+      "category": "Physical",
+      "type": "Light",
+      "random": 5,
+      "acc": 100,
+      "power": 50,
+      "info": "Deals damage.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        100
+      ],
+      "status": [
+        "freeze",
+        100
+      ],
+      "effect": "cause_status",
+      "image": "",
+      "effect2": "",
+      "text": ""
+    },
+    "8": {
+      "name": "para",
+      "origin": "Sailor Moon",
+      "category": "Physical",
+      "type": "Light",
+      "random": 5,
+      "acc": 100,
+      "power": 50,
+      "info": "Deals damage.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        100
+      ],
+      "status": [
+        "para",
+        100
+      ],
+      "effect": "cause_status",
+      "image": "",
+      "effect2": "",
+      "text": ""
+    },
+    "9": {
+      "name": "sleep",
+      "origin": "Sailor Moon",
+      "category": "Physical",
+      "type": "Light",
+      "random": 5,
+      "acc": 100,
+      "power": 50,
+      "info": "Deals damage.",
+      "crit": 10,
+      "affected_stat": [
+        "stat",
+        0,
+        100
+      ],
+      "status": [
+        "sleep",
+        100
+      ],
+      "effect": "cause_status",
+      "image": "",
       "effect2": "",
       "text": ""
     }

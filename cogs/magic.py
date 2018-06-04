@@ -162,11 +162,20 @@ class Magic:
                     await asyncio.sleep(1)
                 if canattack == True:
                     embed=discord.Embed(color=p1_color) #initialize panel
-                    if p1_stats['class'] == "all": #detect class
-                        moveclass = random.choice(["pokemon","sakura","harrypotter","ffxv","sailormoon","test"])
+                    if p1 in self.bosses:
+                        if p1_stats['moveset'] == 'all':
+                            moveclass = p1_stats['class']
+                            moveid = random.choice(list(self.moves[moveclass]))
+                        else:
+                            move_choice = random.choice(p1_stats['moveset'])
+                            moveclass = movechoice[0]
+                            moveid = movechoice[1]
                     else:
-                        moveclass = p1_stats['class']
-                    moveid = random.choice(list(self.moves[moveclass])) #choose move
+                        if p1_stats['class'] == "all": #detect class
+                            moveclass = random.choice(["pokemon","sakura","harrypotter","ffxv","sailormoon"])
+                        else:
+                            moveclass = p1_stats['class']
+                        moveid = random.choice(list(self.moves[moveclass])) #choose move
                     if moveclass == "harrypotter" or moveclass == "sakura": #change the verb
                         verb = "cast"
                     else:
@@ -182,6 +191,14 @@ class Magic:
                         if hit_chance >  self.moves[moveclass][moveid]['acc']*current_buffs_p1['acc']:
                             hit = 0
                             msg2 += "The attack missed!"
+                    try:
+                        if hit ==1 and p2_stats['evasion']:
+                            evade_chance = random.randint(1,100) #accuracy check
+                            if evade_chance < p2_stats['evasion']:
+                                hit = 0
+                                msg2 += p2_name +" evaded the attack!"
+                    except KeyError:
+                        pass
                     if hit == 1: #if the move hits
                         if self.moves[moveclass][moveid]['category'] == "Status":
                             if current_buffs_p2['protected'] == 1 and self.moves[moveclass][moveid]['effect'] not in ["heal","protect","reflect","refresh","stat_self"]:
@@ -635,7 +652,7 @@ class Magic:
         price = 50 + (self.stats[user.id]['buff']**2)*2500
         await self.bot.say("You currently have buff **level " + str(self.stats[user.id]['buff']) +"** with a max BST of **" + str(self.stats[user.id]['bst']) + "**. Would you like to purchase a buff for **" + str(price) + "** PMP?\n"
                             + "A buff will increase your BST by **50**, and min and max stat values by **5** and **10**. Type *yes* to confirm. (30s)")
-        answer = await self.bot.wait_for_message(timeout=30, author=ctx.message.author)
+        answer = await self.bot.wait_for_message(timeout=30, author=ctx.message.author,channel=ctx.message.channel)
         if answer is None:
             await self.bot.say('Purchase cancelled due to timeout.')
             return
@@ -687,7 +704,7 @@ class Magic:
     async def setclass(self, ctx):
         user= ctx.message.author
         await self.bot.say('Currently available classes are and the following: ' + str(self.classes) + ". Type a class name to change to.")
-        answer = await self.bot.wait_for_message(timeout=30, author=ctx.message.author)
+        answer = await self.bot.wait_for_message(timeout=30, author=ctx.message.author,channel=ctx.message.channel)
         if answer is None:
             await self.bot.say('Cancelled due to timeout.')
             return

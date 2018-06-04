@@ -83,7 +83,7 @@ class Pets:
         petid = self.pet_stats[user.id]['current_pet']
         if item == None:
             await self.bot.say(self.pet_stats[user.id]['pets'][petid]['name'] + "'s hunger is currently " + str(self.pet_stats[user.id]['pets'][petid]['hunger'])+". Would you like to feed it a biscuit for 20PMP? (30s) (next time type ;pet feed biscuit to skip this message.)")
-            answer = await self.bot.wait_for_message(timeout=30, author=ctx.message.author)
+            answer = await self.bot.wait_for_message(timeout=30, author=ctx.message.author,channel=ctx.message.channel)
             if answer is None:
                 await self.bot.say('Purchase cancelled due to timeout.')
                 return
@@ -107,8 +107,8 @@ class Pets:
     async def moodsetup(self, ctx):
         user = ctx.message.author
         petid = self.pet_stats[user.id]['current_pet']
-        await self.bot.say("Welcome to Mood Setup. Here you can provide different image links for your pet's different moods aside from default. If you don't have an image for a specific mood, type ``skip`` and you will move to the next one. There are currently 8 moods in total.\nYou will be setting up moods for "+self.pet_stats[user.id]['pets'][petid]['name']+". Type ``next`` to begin. At any time you can type ``exit`` to quit.")
-        cfm = await self.bot.wait_for_message(author=ctx.message.author)
+        await self.bot.say("Welcome to Mood Setup. Here you can provide different image links for your pet's different moods aside from default. \nIf you don't have an image for a specific mood, type ``skip`` and you will move to the next one. There are currently **8** moods in total.\nYou will be setting up moods for **"+self.pet_stats[user.id]['pets'][petid]['name']+"**. Type ``next`` to begin. At any time you can type ``exit`` to quit.")
+        cfm = await self.bot.wait_for_message(author=ctx.message.author,channel=ctx.message.channel)
         if cfm.content != 'next':
             await self.bot.say("Mood setup cancelled.")
             return
@@ -117,11 +117,11 @@ class Pets:
             for mood in ['love','happy2','happy1','bored','sad','angry','shy','asleep']:
                 step +=1
                 await self.bot.say("Provide an url for the **" + self.moodnames[mood] + "** mood. (" + str(step) + "/8)")
-                imgurl = await self.bot.wait_for_message(author=ctx.message.author)
+                imgurl = await self.bot.wait_for_message(author=ctx.message.author,channel=ctx.message.channel)
                 imgg = str(imgurl.content)
                 while imgg[0:4] != 'http' and imgg.lower() not in ['exit','skip'] :
                     await self.bot.say("Not an url! Try again.")
-                    imgurl = await self.bot.wait_for_message(author=ctx.message.author)
+                    imgurl = await self.bot.wait_for_message(author=ctx.message.author,channel=ctx.message.channel)
                     imgg = str(imgurl.content)
                 if imgg.lower() == 'exit':
                     await self.bot.say("Mood setup cancelled. Any changes already made will be saved.")
@@ -157,7 +157,7 @@ class Pets:
             mood_url = self.pet_stats[user.id]['pets'][petid]['images']['default']
         embed.set_thumbnail(url=mood_url)
         if reaction == "love":
-            pet_action = random.choice(['loved it!','jumped at {} in affection!','ran to hug {}!','became super duper happy!','was elated!','was esctatic about it!'])
+            pet_action = random.choice(['loved it!','jumped at {} in happiness!','ran to hug {}!','became super duper happy!','was elated!','was esctatic about it!'])
             msg1 =self.pet_stats[user.id]['pets'][petid]['name'] +" "+  pet_action.format(user.display_name)
             msg2 = "Its affection increased by 20! " +user.display_name + " got 200 PMP!"
             self.owner_stats[user.id]['money'] += 200
@@ -217,34 +217,34 @@ class Pets:
     @pet.command(pass_context=True)
     async def avatar(self, ctx, imgg:str=None):
         user = ctx.message.author
-        await self.bot.say("Specify a new avatar url for **"+ self.pet_stats[user.id][self.pet_stats[user.id]['current_pet']]['name'] +"**. (exit to cancel.)")
-        imgurl = await self.bot.wait_for_message(author=ctx.message.author)
+        await self.bot.say("Specify a new avatar url for **"+ self.pet_stats[user.id]['pets'][self.pet_stats[user.id]['current_pet']]['name'] +"**. (exit to cancel.)")
+        imgurl = await self.bot.wait_for_message(author=ctx.message.author,channel=ctx.message.channel)
         imgg = str(imgurl.content)
         while imgg[0:4] != 'http' and imgg.lower() != 'exit':
             await self.bot.say(imgg[0:7]+"Not an url! Try again.")
-            imgurl = await self.bot.wait_for_message(author=ctx.message.author)
+            imgurl = await self.bot.wait_for_message(author=ctx.message.author,channel=ctx.message.channel)
             imgg = str(imgurl.content)
         if imgg.lower() == 'exit':
             await self.bot.say("Avatar change cancelled.")
             return
         else:
-            self.pet_stats[user.id][self.pet_stats[user.id]['current_pet']]['image'] = imgg
+            self.pet_stats[user.id]['pets'][self.pet_stats[user.id]['current_pet']]['images']['default'] = imgg
             self.save_pet_stats()
             await self.bot.say("Avatar changed.")
 
     @pet.command(pass_context=True)
-    async def name(self, ctx, imgg:str=None):
+    async def name(self, ctx,*, nem:str=None):
         user = ctx.message.author
-        await self.bot.say("Specify a new name for **"+ self.pet_stats[user.id][self.pet_stats[user.id]['current_pet']]['name'] +"**. (exit to cancel.)")
-        imgurl = await self.bot.wait_for_message(author=ctx.message.author)
-        imgg = str(imgurl.content)
-        if imgg.lower() == 'exit':
-            await self.bot.say("Avatar change cancelled.")
-            return
-        else:
-            self.pet_stats[user.id][self.pet_stats[user.id]['current_pet']]['name'] = imgg
-            self.save_pet_stats()
-            await self.bot.say("Name changed.")
+        if nem == None:
+            await self.bot.say("Specify a new name for **"+ self.pet_stats[user.id]['pets'][self.pet_stats[user.id]['current_pet']]['name'] +"**. (exit to cancel.)")
+            imgurl = await self.bot.wait_for_message(author=ctx.message.author,channel=ctx.message.channel)
+            nem = str(imgurl.content)
+            if nem.lower() == 'exit':
+                await self.bot.say("Name change cancelled.")
+                return
+        self.pet_stats[user.id]['pets'][self.pet_stats[user.id]['current_pet']]['name'] = nem
+        self.save_pet_stats()
+        await self.bot.say("Name changed.")
 
     @pet.command(pass_context=True)
     async def select(self, ctx, number:int=None):
@@ -287,25 +287,25 @@ class Pets:
                                                               "images": {"default":"","love": "","happy2": "","happy1": "","sad": "","angry": "","shy": "","bored": "","asleep": ""},
                                                               "name": ""}
         await self.bot.say("Welcome to create-a-pet! You're creating your pet no. " + str(pet_current) + ". Type ``exit`` to quit anytime.\nFirst, let's give your pet a name:")
-        nick = await self.bot.wait_for_message(author=ctx.message.author)
+        nick = await self.bot.wait_for_message(author=ctx.message.author,channel=ctx.message.channel)
         if nick.content.lower() == 'exit':
             await self.bot.say("Pet creation cancelled.")
             return
         else:
             self.pet_stats[user.id]['pets'][pet_current]['name'] = nick.content
         await self.bot.say("Your pet's name is **"+ self.pet_stats[user.id]['pets'][pet_current]['name'] +"**.\nNext, let's have an image for your pet! Give a **direct** link of your pet's default image.")
-        imgurl = await self.bot.wait_for_message(author=ctx.message.author)
+        imgurl = await self.bot.wait_for_message(author=ctx.message.author,channel=ctx.message.channel)
         imgg = str(imgurl.content)
         while imgg[0:4] != 'http' and imgg.lower() != 'exit':
             await self.bot.say("Not an url! Try again.")
-            imgurl = await self.bot.wait_for_message(author=ctx.message.author)
+            imgurl = await self.bot.wait_for_message(author=ctx.message.author,channel=ctx.message.channel)
             imgg = str(imgurl.content)
         if imgg.lower() == 'exit':
             await self.bot.say("Pet creation cancelled.")
             return
         self.pet_stats[user.id]['pets'][pet_current]['images']['default'] = imgg
         await self.bot.say("Done. Later you can use ;pet moodsetup to set more images of your pet like happy, sad, bored, angry, etc. if you want.\nNext, set the types for your pet. It can be any 1 or 2 types from the Pokemon games. ex: fire fighting. Type ``random`` to randomly set types.")
-        types = await self.bot.wait_for_message(author=ctx.message.author)
+        types = await self.bot.wait_for_message(author=ctx.message.author,channel=ctx.message.channel)
         if types.content == 'exit':
             await self.bot.say("Pet creation cancelled.")
             return
@@ -317,7 +317,7 @@ class Pets:
         else:
             while len(types.content.split()) > 2:
                 await self.bot.say("Too many types! Try again.")
-                types = await self.bot.wait_for_message(author=ctx.message.author)
+                types = await self.bot.wait_for_message(author=ctx.message.author,channel=ctx.message.channel)
             types_list = types.content.split()
             type1 = types_list[0][0].upper() + types_list[0][1:]
             if len(types_list) < 2:
@@ -326,7 +326,7 @@ class Pets:
                 type2 = types_list[1][0].upper() + types_list[1][1:]
             while type1 not in self.typelist or type2 not in self.typelist:
                 await self.bot.say("Invalid type! Try again.")
-                types = await self.bot.wait_for_message(author=ctx.message.author)
+                types = await self.bot.wait_for_message(author=ctx.message.author,channel=ctx.message.channel)
                 types_list = types.content.split()
                 type1 = types_list[0][0].upper() + types_list[0][1:]
                 if len(types_list) < 2:
@@ -340,7 +340,7 @@ class Pets:
         else:
             ty = "type is **" + type1
         await self.bot.say("You're about to create **" + self.pet_stats[user.id]['pets'][pet_current]['name'] + "**, whose " + ty + "**. Are you sure? Type ``yes`` to confirm, others to exit.")
-        cfm = await self.bot.wait_for_message(author=ctx.message.author)
+        cfm = await self.bot.wait_for_message(author=ctx.message.author,channel=ctx.message.channel)
         if cfm.content.lower() == 'yes':
             while True:
                 bufflv = self.pet_stats[user.id]['pets'][pet_current]['stats']['buff']
@@ -388,7 +388,7 @@ class Pets:
     async def attack(self, ctx, *,target:discord.Member=None):
         if not target:
             await self.bot.say("Please specify target.")
-        elif str(ctx.message.author.id) not in self.pet_stats or str(target.id) not in self.pet_stats:
+        elif str(ctx.message.author.id) not in self.pet_stats or str(target.id) not in self.owner_stats:
             await self.bot.say(self.errornotexist)
         else:
             mode = "petvshuman"
@@ -777,8 +777,8 @@ class Pets:
 ### END OF PET DUEL
     async def output_pet_stats(self, user, petid):
         embed=discord.Embed(title=self.pet_stats[user.id]['pets'][petid]['name'] + "\'s stats")
-        embed.set_thumbnail(user.avatar_url)#(url=self.pet_stats[user.id]['pets'][petid]['image'])
-        embed.set_image(url=self.pet_stats[user.id]['pets'][petid]['image'])
+        embed.set_thumbnail(url=user.avatar_url)#(url=self.pet_stats[user.id]['pets'][petid]['image'])
+        embed.set_image(url=self.pet_stats[user.id]['pets'][petid]['images']['default'])
         embed.add_field(name="Name", value=self.pet_stats[user.id]['pets'][petid]['name'], inline=True)
         embed.add_field(name="Affection", value=self.pet_stats[user.id]['pets'][petid]['affection'], inline=True)
         embed.add_field(name="Hunger", value=self.pet_stats[user.id]['pets'][petid]['hunger'], inline=True)
