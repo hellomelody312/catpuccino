@@ -18,8 +18,10 @@ class Magic:
         self.ownerid = "293041932542672896"
         self.stats_url = requests.get("https://api.jsonbin.io/b/5b081b310fb4d74cdf23e613/latest")
         self.moves_url = requests.get("https://api.jsonbin.io/b/5b080ed07a973f4ce5784717/latest")
+        self.bosses_url = requests.get("https://api.jsonbin.io/b/5b1463390fb4d74cdf23f0af/latest")
         self.stats = self.stats_url.json()
         self.moves = self.moves_url.json()
+        self.bosses = self.bosses_url.json()
         self.types = dataIO.load_json('data/magic/types.json')
         self.typelist = ["Light","Normal","Fire","Fighting","Water","Flying","Grass","Poison","Electric","Ground","Psychic","Rock","Ice","Bug","Dragon","Ghost","Dark","Steel","Fairy"]
         self.errornotexist = "One or both of you do not have stats in the database! Set your stats using ``;stat`` first."
@@ -29,278 +31,306 @@ class Magic:
         self.statuses = ["poison","burn","flinch","confused","reflect","protect","freeze","para","sleep"]
         self.stat_names = {"atk":"Attack","defe":"Defense","spa":"Special Attack","spd":"Special Defense","acc":"Accuracy"}
 
+    def refresh(self):
+        self.stats = self.stats_url.json()
 
     def save_stats(self):
         requests.put("https://api.jsonbin.io/b/5b081b310fb4d74cdf23e613", json=self.stats)
 
+    def save_boss_stats(self):
+        requests.put("https://api.jsonbin.io/b/5b1463390fb4d74cdf23f0af", json=self.bosses)
+
+    #        if target[0] != '<':
+        #        p2 = target
+        #        p2_name = p2_stats['displayname']
+        #        p2_color = p2_stats['color']
 
     @commands.command(pass_context=True)
-    async def duel(self, ctx, *,target=None):
+    async def duel(self, ctx, *,target:discord.Member=None):
         if not target:
             await self.bot.say("Please specify target.")
-        elif target.strip('<>@!') not in self.stats:
-             await self.bot.say("Invalid opponent.")
-        elif target.strip('<>@!') == ctx.message.author.id:
-            await self.bot.say("Trying to cheat PMP??")
-        elif str(ctx.message.author.id) not in self.stats or target.strip('<>@!') not in self.stats:
+        elif str(ctx.message.author.id) not in self.stats or str(target.id) not in self.stats:
             await self.bot.say(self.errornotexist)
         else:
-            p1 = ctx.message.author.id
+            p1 = ctx.message.author
             p1_name = ctx.message.author.display_name
             p1_color = ctx.message.author.color
-            if target[0] != '<':
-                p2 = target
-                p2_name = self.stats[p2]['displayname']
-                p2_color = self.stats[p2]['color']
-            else:
-                p2u = ctx.message.author.server.get_member(target.strip('<>@!'))
-                p2 = str(p2u.id)
-                p2_color = p2u.color
-                p2_name = p2u.display_name
-            embed=discord.Embed(title=":sparkles: **Magical Duel Starts** :sparkles:", color=0xe90169) #start battle
-            p1_hp = 100+round(self.stats[p1]['hp']*round(random.uniform(1.5,2), 2))
-            p2_hp = 100+round(self.stats[p2]['hp']*round(random.uniform(1.5,2), 2))
-            p1_remaininghp = p1_hp
-            p2_remaininghp = p2_hp
-            current_buffs_p1 = dict(self.p1_buffs)
-            current_buffs_p2 = dict(self.p2_buffs)
-            #user_status
-            if self.stats[p1]['spe'] < self.stats[p2]['spe']:
-                embed.add_field(name=p1_name + " tries to attack!", value="*"+p2_name + " goes first due to higher Speed!*", inline=True)
-                p1, p2 = p2, p1
-                p1_hp, p2_hp = p2_hp, p1_hp
-                p1_name, p2_name = p2_name, p1_name
-                p1_remaininghp, p2_remaininghp = p2_remaininghp, p1_remaininghp
-                p1_color, p2_color = p2_color, p1_color
-            await self.bot.say(embed=embed)
-            while p2_remaininghp > 0 and p1_remaininghp > 0:
-                try:
-                    msg2 = ""
-                    msg1 = ""
-                    swapped = 0
-                    canattack = True
-                    if current_buffs_p1['status'] not in ["none","burn","poison"]: ##check pre-move status conditions
-                        if current_buffs_p1['status'] == "freeze":
-                            if current_buffs_p1['turns'] == 0:
-                                embed2=discord.Embed(description=p1_name + " thawed out! :sweat_drops:",color=p1_color)
-                                await self.bot.say(embed=embed2)
-                                current_buffs_p1['status'] = "none"
-                                current_buffs_p1['statused'] = 0
-                            else:
-                                embed2=discord.Embed(description=p1_name + " is frozen solid! :snowflake:",color=p1_color)
-                                await self.bot.say(embed=embed2)
-                                canattack = False
-                        if current_buffs_p1['status'] == "flinch":
-                            canattack = False
-                            embed2=discord.Embed(description=p1_name + " flinched from the attack! ",color=p1_color)
+            p1_stats = self.stats[ctx.message.author.id]
+            p2 = target
+            p2_color = target.color
+            p2_name = target.display_name
+            p2_stats = self.stats[target.id]
+            await self.duelscript(p1,p2,p1_name,p1_color,p1_stats,p2_name,p2_color,p2_stats)
+
+    @commands.command(pass_context=True)
+    async def duelboss(self, ctx, *,target:str=None):
+        if not target:
+            await self.bot.say("List of available bosses: " + str(list(self.bosses)).strip('[]'))
+        elif str(ctx.message.author.id) not in self.stats or target not in self.bosses:
+            await self.bot.say(self.errornotexist)
+        else:
+            p1 = ctx.message.author
+            p1_name = ctx.message.author.display_name
+            p1_color = ctx.message.author.color
+            p1_stats = self.stats[ctx.message.author.id]
+            p2 = target
+            p2_stats = self.bosses[target]
+            p2_name = p2_stats['displayname']
+            p2_color = p2_stats['color']
+            await self.duelscript(p1,p2,p1_name,p1_color,p1_stats,p2_name,p2_color,p2_stats)
+            self.save_boss_stats()
+
+    async def duelscript(self,p1,p2,p1_name,p1_color,p1_stats,p2_name,p2_color,p2_stats):
+        embed=discord.Embed(title="**"+p1_name+ self.types[p1_stats['type1']]['icon'] +self.types[p1_stats['type2']]['icon']+" vs. " + p2_name + self.types[p2_stats['type1']]['icon'] +self.types[p2_stats['type2']]['icon']+"**", color=0xe90169) #start battle
+        p1_hp = 100+round(p1_stats['hp']*round(random.uniform(1.5,2), 2))
+        p2_hp = 100+round(p2_stats['hp']*round(random.uniform(1.5,2), 2))
+        p1_remaininghp = p1_hp
+        p2_remaininghp = p2_hp
+        current_buffs_p1 = dict(self.p1_buffs)
+        current_buffs_p2 = dict(self.p2_buffs)
+        #user_status
+        if p1_stats['spe'] < p2_stats['spe']:
+            embed.add_field(name=p1_name + " tries to attack!", value="*"+p2_name + " goes first due to higher Speed!*", inline=True)
+            p1, p2 = p2, p1
+            p1_hp, p2_hp = p2_hp, p1_hp
+            p1_name, p2_name = p2_name, p1_name
+            p1_remaininghp, p2_remaininghp = p2_remaininghp, p1_remaininghp
+            p1_color, p2_color = p2_color, p1_color
+            p1_stats,p2_stats = p2_stats, p1_stats
+        await self.bot.say(embed=embed)
+        while p2_remaininghp > 0 and p1_remaininghp > 0:
+            try:
+                msg2 = ""
+                msg1 = ""
+                swapped = 0
+                canattack = True
+                if current_buffs_p1['status'] not in ["none","burn","poison"]: ##check pre-move status conditions
+                    if current_buffs_p1['status'] == "freeze":
+                        if current_buffs_p1['turns'] == 0:
+                            embed2=discord.Embed(description=p1_name + " thawed out! :sweat_drops:",color=p1_color)
                             await self.bot.say(embed=embed2)
                             current_buffs_p1['status'] = "none"
                             current_buffs_p1['statused'] = 0
-                        if current_buffs_p1['status'] == "confuse":
-                            if current_buffs_p1['turns'] == 0:
-                                embed2=discord.Embed(description=p1_name + " snapped out of confusion!",color=p1_color)
-                                await self.bot.say(embed=embed2)
-                                current_buffs_p1['status'] = "none"
-                                current_buffs_p1['statused'] = 0
-                            else:
-                                embed2=discord.Embed(description=p1_name + " is confused! :dizzy:",color=p1_color)
-                                await self.bot.say(embed=embed2)
-                                q = random.randint(1,100)
-                                if q < 33:
-                                    canattack = False
-                                    confuse_dmg = round(math.floor(math.floor(50  * 50 * self.stats[p1]['atk'] / self.stats[p1]['defe']) / 50) + 2)
-                                    p1_remaininghp -= confuse_dmg
-                                    embed3=discord.Embed(description=p1_name + " hurt themselves in confusion! :boom: (" + str(round(dmg / (p1_hp)*100)) + "\%) ("+str(p1_remaininghp)+"/"+str(p1_hp)+" HP)",color=p1_color)
-                                    await self.bot.say(embed=embed3)
-                                else:
-                                    canattack = True
-                        if current_buffs_p1['status'] == "para":
+                        else:
+                            embed2=discord.Embed(description=p1_name + " is frozen solid! :snowflake:",color=p1_color)
+                            await self.bot.say(embed=embed2)
+                            canattack = False
+                    if current_buffs_p1['status'] == "flinch":
+                        canattack = False
+                        embed2=discord.Embed(description=p1_name + " flinched from the attack! ",color=p1_color)
+                        await self.bot.say(embed=embed2)
+                        current_buffs_p1['status'] = "none"
+                        current_buffs_p1['statused'] = 0
+                    if current_buffs_p1['status'] == "confuse":
+                        if current_buffs_p1['turns'] == 0:
+                            embed2=discord.Embed(description=p1_name + " snapped out of confusion!",color=p1_color)
+                            await self.bot.say(embed=embed2)
+                            current_buffs_p1['status'] = "none"
+                            current_buffs_p1['statused'] = 0
+                        else:
+                            embed2=discord.Embed(description=p1_name + " is confused! :dizzy:",color=p1_color)
+                            await self.bot.say(embed=embed2)
                             q = random.randint(1,100)
-                            if q < 40:
+                            if q < 33:
                                 canattack = False
-                                embed2=discord.Embed(description=p1_name + " can't move due to paralysis! :zap:",color=p1_color)
-                                await self.bot.say(embed=embed2)
+                                confuse_dmg = round(math.floor(math.floor(50  * 50 * p1_stats['atk'] / p1_stats['defe']) / 50) + 2)
+                                p1_remaininghp -= confuse_dmg
+                                embed3=discord.Embed(description=p1_name + " hurt themselves in confusion! :boom: (" + str(round(dmg / (p1_hp)*100)) + "\%) ("+str(p1_remaininghp)+"/"+str(p1_hp)+" HP)",color=p1_color)
+                                await self.bot.say(embed=embed3)
                             else:
                                 canattack = True
-                        if current_buffs_p1['status'] == "sleep":
-                            if current_buffs_p1['turns'] == 0:
-                                embed2=discord.Embed(description=p1_name + " woke up! ",color=p1_color)
-                                await self.bot.say(embed=embed2)
-                                current_buffs_p1['status'] = "none"
-                                current_buffs_p1['statused'] = 0
+                    if current_buffs_p1['status'] == "para":
+                        q = random.randint(1,100)
+                        if q < 40:
+                            canattack = False
+                            embed2=discord.Embed(description=p1_name + " can't move due to paralysis! :zap:",color=p1_color)
+                            await self.bot.say(embed=embed2)
+                        else:
+                            canattack = True
+                    if current_buffs_p1['status'] == "sleep":
+                        if current_buffs_p1['turns'] == 0:
+                            embed2=discord.Embed(description=p1_name + " woke up! ",color=p1_color)
+                            await self.bot.say(embed=embed2)
+                            current_buffs_p1['status'] = "none"
+                            current_buffs_p1['statused'] = 0
+                        else:
+                            canattack = False
+                            embed2=discord.Embed(description=p1_name + " is fast asleep. :zzz:",color=p1_color)
+                            await self.bot.say(embed=embed2)
+                    if current_buffs_p1['turns'] > 0:
+                        current_buffs_p1['turns'] -= 1
+                    await asyncio.sleep(1)
+                if canattack == True:
+                    embed=discord.Embed(color=p1_color) #initialize panel
+                    if p1_stats['class'] == "all": #detect class
+                        moveclass = random.choice(["pokemon","sakura","harrypotter","ffxv","sailormoon","test"])
+                    else:
+                        moveclass = p1_stats['class']
+                    moveid = random.choice(list(self.moves[moveclass])) #choose move
+                    if moveclass == "harrypotter" or moveclass == "sakura": #change the verb
+                        verb = "cast"
+                    else:
+                        verb = "used"
+                    msg1 += "**"+p1_name + "** "+ verb +" **"+ self.moves[moveclass][moveid]['name']+"** " + self.types[self.moves[moveclass][moveid]['type']]['icon']
+                    if self.moves[moveclass][moveid]['text']:
+                        msg1 = msg1 +" to "+ self.moves[moveclass][moveid]['text'] + "!\n"
+                    else:
+                        msg1 = msg1 +"!\n" # write used move to do sth
+                    hit = 1
+                    if self.moves[moveclass][moveid]['acc'] > 0:
+                        hit_chance = random.randint(1,100) #accuracy check
+                        if hit_chance >  self.moves[moveclass][moveid]['acc']*current_buffs_p1['acc']:
+                            hit = 0
+                            msg2 += "The attack missed!"
+                    if hit == 1: #if the move hits
+                        if self.moves[moveclass][moveid]['category'] == "Status":
+                            if current_buffs_p2['protected'] == 1 and self.moves[moveclass][moveid]['effect'] not in ["heal","protect","reflect","refresh","stat_self"]:
+                                current_buffs_p2['protected'] = 0
+                                msg2 += p2_name + " protected themselves from the attack!"
+                            elif  self.moves[moveclass][moveid]['effect'] == "protect":
+                                current_buffs_p1['protected'] = 1
+                                msg2 += p1_name + " protected themselves!"
+                            elif  self.moves[moveclass][moveid]['effect'] == "reflect":
+                                current_buffs_p1['reflected'] = 1
+                                msg2 += p1_name + " is ready to reflect the next attack!"
                             else:
-                                canattack = False
-                                embed2=discord.Embed(description=p1_name + " is fast asleep. :zzz:",color=p1_color)
-                                await self.bot.say(embed=embed2)
-                        if current_buffs_p1['turns'] > 0:
-                            current_buffs_p1['turns'] -= 1
-                        await asyncio.sleep(1)
-                    if canattack == True:
-                        embed=discord.Embed(color=p1_color) #initialize panel
-                        if self.stats[p1]['class'] == "all": #detect class
-                            moveclass = random.choice(["pokemon","sakura","harrypotter","ffxv","sailormoon","test"])
+                                msg2,current_buffs_p1,current_buffs_p2,p1_remaininghp = self.check_if_cause_status(moveclass,moveid,msg2,current_buffs_p1,current_buffs_p2,p1_name,p2_name,p1_remaininghp,p1_hp)
                         else:
-                            moveclass = self.stats[p1]['class']
-                        moveid = str(random.randint(1,len(self.moves[moveclass]))) #choose move
-                        if moveclass == "harrypotter" or moveclass == "sakura": #change the verb
-                            verb = "cast"
-                        else:
-                            verb = "used"
-                        msg1 += "**"+p1_name + "** "+ verb +" **"+ self.moves[moveclass][moveid]['name']+"** " + self.types[self.moves[moveclass][moveid]['type']]['icon']
-                        if self.moves[moveclass][moveid]['text']:
-                            msg1 = msg1 +" to "+ self.moves[moveclass][moveid]['text'] + "!\n"
-                        else:
-                            msg1 = msg1 +"!\n" # write used move to do sth
-                        hit = 1
-                        if self.moves[moveclass][moveid]['acc'] > 0:
-                            hit_chance = random.randint(1,100) #accuracy check
-                            if hit_chance >  self.moves[moveclass][moveid]['acc']*current_buffs_p1['acc']:
-                                hit = 0
-                                msg2 += "The attack missed!"
-                        if hit == 1: #if the move hits
-                            if self.moves[moveclass][moveid]['category'] == "Status":
-                                if current_buffs_p2['protected'] == 1 and self.moves[moveclass][moveid]['effect'] not in ["heal","protect","reflect","refresh","stat_self"]:
-                                    current_buffs_p2['protected'] = 0
-                                    msg2 += p2_name + " protected themselves from the attack!"
-                                if  self.moves[moveclass][moveid]['effect'] == "protect":
-                                    current_buffs_p1['protected'] = 1
-                                    msg2 += p1_name + " protected themselves!"
-                                elif  self.moves[moveclass][moveid]['effect'] == "reflect":
-                                    current_buffs_p1['reflected'] = 1
-                                    msg2 += p1_name + " is ready to reflect the next attack!"
-                                else:
-                                    msg2,current_buffs_p1,current_buffs_p2,p1_remaininghp = self.check_if_cause_status(moveclass,moveid,msg2,current_buffs_p1,current_buffs_p2,p1_name,p2_name,p1_remaininghp,p1_hp)
+                            if current_buffs_p2['protected'] == 1:
+                                current_buffs_p2['protected'] = 0
+                                msg2 += p2_name + " protected themselves from the attack!"
                             else:
-                                if current_buffs_p2['protected'] == 1:
-                                    current_buffs_p2['protected'] = 0
-                                    msg2 += p2_name + " protected themselves from the attack!"
-                                else:
-                                    power = abs(random.randint(self.moves[moveclass][moveid]['power']-self.moves[moveclass][moveid]['random'],self.moves[moveclass][moveid]['power']+self.moves[moveclass][moveid]['random']))
-                                    if current_buffs_p2['reflected'] == 1:
-                                        swapped = 1
-                                        current_buffs_p2['reflected'] = 0
-                                        msg2 += p2_name + " reflected the attack!\n"
-                                        p3 = p2
-                                        p2 = p1
-                                        p3_hp = p2_hp
-                                        p2_hp = p1_hp
-                                        p3_name = p2_name
-                                        p2_name = p1_name
-                                        p3_remaininghp = p2_remaininghp
-                                        p2_remaininghp = p1_remaininghp
-                                        current_buffs_p2temp = {}
-                                        current_buffs_p2temp = deepcopy(current_buffs_p2)
-                                        current_buffs_p2.clear()
-                                        current_buffs_p2 = deepcopy(current_buffs_p1)
-                                        current_buffs_p1.clear()
-                                        current_buffs_p1 = deepcopy(current_buffs_p2temp)
-                                    if self.moves[moveclass][moveid]['category'] == "Physical":
-                                        if current_buffs_p1['status'][0] == "burn":
-                                            atk = self.stats[p1]['atk']*0.5*current_buffs_p1['atk']
-                                        else:
-                                            atk = self.stats[p1]['atk']*current_buffs_p1['atk']
-                                        defe = self.stats[p2]['defe']*current_buffs_p2['defe']
+                                power = abs(random.randint(self.moves[moveclass][moveid]['power']-self.moves[moveclass][moveid]['random'],self.moves[moveclass][moveid]['power']+self.moves[moveclass][moveid]['random']))
+                                if current_buffs_p2['reflected'] == 1:
+                                    swapped = 1
+                                    current_buffs_p2['reflected'] = 0
+                                    msg2 += p2_name + " reflected the attack!\n"
+                                    p3 = p2
+                                    p2 = p1
+                                    p3_hp = p2_hp
+                                    p2_hp = p1_hp
+                                    p3_name = p2_name
+                                    p2_name = p1_name
+                                    p3_remaininghp = p2_remaininghp
+                                    p2_remaininghp = p1_remaininghp
+                                    p1_stats,p2_stats = p2_stats, p1_stats
+                                    current_buffs_p2temp = {}
+                                    current_buffs_p2temp = deepcopy(current_buffs_p2)
+                                    current_buffs_p2.clear()
+                                    current_buffs_p2 = deepcopy(current_buffs_p1)
+                                    current_buffs_p1.clear()
+                                    current_buffs_p1 = deepcopy(current_buffs_p2temp)
+                                if self.moves[moveclass][moveid]['category'] == "Physical":
+                                    if current_buffs_p1['status'][0] == "burn":
+                                        atk = p1_stats['atk']*0.5*current_buffs_p1['atk']
                                     else:
-                                        atk = self.stats[p1]['spa']*current_buffs_p1['spa']
-                                        defe = self.stats[p2]['spd']*current_buffs_p2['spd']
-                                    mul = 1
-                                    for typy in ['type1','type2']: #check type effectiveness
-                                        if self.moves[moveclass][moveid]['type'] in self.types[self.stats[p2][typy]]['supereffective']:
-                                            mul *= 2
-                                        elif self.moves[moveclass][moveid]['type'] in self.types[self.stats[p2][typy]]['notveryeffective']:
-                                            mul *= 0.5
-                                        elif self.moves[moveclass][moveid]['type'] in self.types[self.stats[p2][typy]]['noteffective']:
-                                            mul *= 0
-                                    if self.moves[moveclass][moveid]['type'] in [self.stats[p1]['type1'],self.stats[p1]['type2']]: #check STAB
-                                        power *= 1.5
-                                    if mul >1:
-                                        msg2 = msg2 + ":small_red_triangle: It's super effective! \n"
-                                    elif 0 <mul <1:
-                                        msg2 = msg2 + ":small_red_triangle_down: It's not very effective... \n"
-                                    elif 0 == mul:
-                                        msg2 = msg2 + ":x: It had no effect!\n"
-                                    if mul > 0:
-                                        rand = 0.01*random.randint(85,115)
-                                        dmg = round(math.floor(math.floor(64  * power * atk / defe) / 50) + 2 * mul * rand)
-                                        critchance = random.randint(1,100)
-                                        if critchance <= self.moves[moveclass][moveid]['crit']:
-                                            dmg *+ 1.5
-                                            msg2 += "**A critical hit!**\n"
-                                        p2_remaininghp = round(p2_remaininghp - dmg)
-                                        msg2 += p2_name + " took " + str(dmg) + " damage! (" + str(round(dmg / (p2_hp)*100)) + "\%) ("+str(p2_remaininghp)+"/"+str(p2_hp)+" HP)\n"
-                                        if p2_remaininghp <= 0:
-                                            msg2 = msg2  + "\n***" + p2_name + " has fainted!***"
+                                        atk = p1_stats['atk']*current_buffs_p1['atk']
+                                    defe = p2_stats['defe']*current_buffs_p2['defe']
+                                else:
+                                    atk = p1_stats['spa']*current_buffs_p1['spa']
+                                    defe = p2_stats['spd']*current_buffs_p2['spd']
+                                mul = 1
+                                for typy in ['type1','type2']: #check type effectiveness
+                                    if self.moves[moveclass][moveid]['type'] in self.types[p2_stats[typy]]['supereffective']:
+                                        mul *= 2
+                                    elif self.moves[moveclass][moveid]['type'] in self.types[p2_stats[typy]]['notveryeffective']:
+                                        mul *= 0.5
+                                    elif self.moves[moveclass][moveid]['type'] in self.types[p2_stats[typy]]['noteffective']:
+                                        mul *= 0
+                                if self.moves[moveclass][moveid]['type'] in [p1_stats['type1'],p1_stats['type2']]: #check STAB
+                                    power *= 1.5
+                                if mul >1:
+                                    msg2 = msg2 + ":small_red_triangle: It's super effective! \n"
+                                elif 0 <mul <1:
+                                    msg2 = msg2 + ":small_red_triangle_down: It's not very effective... \n"
+                                elif 0 == mul:
+                                    msg2 = msg2 + ":x: It had no effect!\n"
+                                if mul > 0:
+                                    rand = 0.01*random.randint(85,115)
+                                    dmg = round(math.floor(math.floor(64  * power * atk / defe) / 50) + 2 * mul * rand)
+                                    critchance = random.randint(1,100)
+                                    if critchance <= self.moves[moveclass][moveid]['crit']:
+                                        dmg *+ 1.5
+                                        msg2 += "**A critical hit!**\n"
+                                    p2_remaininghp = round(p2_remaininghp - dmg)
+                                    msg2 += p2_name + " took " + str(dmg) + " damage! (" + str(round(dmg / (p2_hp)*100)) + "\%) ("+str(p2_remaininghp)+"/"+str(p2_hp)+" HP)\n"
+                                    if p2_remaininghp <= 0:
+                                        msg2 = msg2  + "\n***" + p2_name + " has fainted!***"
+                                    else:
+                                        if self.moves[moveclass][moveid]['effect'] == "recoil":
+                                            recoil_dmg =  round(dmg *self.moves[moveclass][moveid]['affected_stat'][1]/100)
+                                            p1_remaininghp -= recoil_dmg
+                                            msg2 += p1_name + " took " + str(recoil_dmg) + " recoil damage! (" + str(round(recoil_dmg / (p1_hp)*100)) + "\%) ("+str(p1_remaininghp)+"/"+str(p1_hp)+" HP)\n"
+                                            if p1_remaininghp <=0:
+                                                msg2 += "\n***" + p1_name + " has fainted!***"
+                                        elif self.moves[moveclass][moveid]['effect'] == "drain":
+                                            drain_dmg =  round(dmg *self.moves[moveclass][moveid]['affected_stat'][1]/100)
+                                            p1_remaininghp += drain_dmg
+                                            msg2 += p1_name + " drained " + str(drain_dmg) + " HP! (" + str(round(drain_dmg / (p1_hp)*100)) + "\%) ("+str(p1_remaininghp)+"/"+str(p1_hp)+" HP)\n"
                                         else:
-                                            if self.moves[moveclass][moveid]['effect'] == "recoil":
-                                                recoil_dmg =  round(dmg *self.moves[moveclass][moveid]['affected_stat'][1]/100)
-                                                p1_remaininghp -= recoil_dmg
-                                                msg2 += p1_name + " took " + str(recoil_dmg) + " recoil damage! (" + str(round(recoil_dmg / (p1_hp)*100)) + "\%) ("+str(p1_remaininghp)+"/"+str(p1_hp)+" HP)\n"
-                                                if p1_remaininghp <=0:
-                                                    msg2 += "\n***" + p1_name + " has fainted!***"
-                                            elif self.moves[moveclass][moveid]['effect'] == "drain":
-                                                drain_dmg =  round(dmg *self.moves[moveclass][moveid]['affected_stat'][1]/100)
-                                                p1_remaininghp += drain_dmg
-                                                msg2 += p1_name + " drained " + str(drain_dmg) + " HP! (" + str(round(drain_dmg / (p1_hp)*100)) + "\%) ("+str(p1_remaininghp)+"/"+str(p1_hp)+" HP)\n"
-                                            else:
-                                                msg2,current_buffs_p1,current_buffs_p2,p1_remaininghp = self.check_if_cause_status(moveclass,moveid,msg2,current_buffs_p1,current_buffs_p2,p1_name,p2_name,p1_remaininghp,p1_hp)
+                                            msg2,current_buffs_p1,current_buffs_p2,p1_remaininghp = self.check_if_cause_status(moveclass,moveid,msg2,current_buffs_p1,current_buffs_p2,p1_name,p2_name,p1_remaininghp,p1_hp)
 
-                                    if swapped == 1: #swaps back after reflection
-                                        swapped = 0
-                                        p1_remaininghp = p2_remaininghp
-                                        p2 = p3
-                                        p2_hp = p3_hp
-                                        p2_name = p3_name
-                                        p2_remaininghp = p3_remaininghp
-                                        current_buffs_p2temp = {}
-                                        current_buffs_p2temp = deepcopy(current_buffs_p2)
-                                        current_buffs_p2.clear()
-                                        current_buffs_p2 = deepcopy(current_buffs_p1)
-                                        current_buffs_p1.clear()
-                                        current_buffs_p1 = deepcopy(current_buffs_p2temp)
+                                if swapped == 1: #swaps back after reflection
+                                    swapped = 0
+                                    p1_remaininghp = p2_remaininghp
+                                    p2 = p3
+                                    p2_hp = p3_hp
+                                    p2_name = p3_name
+                                    p2_remaininghp = p3_remaininghp
+                                    p1_stats,p2_stats = p2_stats, p1_stats
+                                    current_buffs_p2temp = {}
+                                    current_buffs_p2temp = deepcopy(current_buffs_p2)
+                                    current_buffs_p2.clear()
+                                    current_buffs_p2 = deepcopy(current_buffs_p1)
+                                    current_buffs_p1.clear()
+                                    current_buffs_p1 = deepcopy(current_buffs_p2temp)
 
-                        if p2_remaininghp > 0: #if p2 is not fainted yet, check if p1 is burned or poisoned, then hceck if p1 fainted, then switch p1 and p2
-                            if current_buffs_p1['statused'] == 1:
-                                if current_buffs_p1['status'] == "burn":
-                                    burn_dmg = round(p1_hp/16)
-                                    p1_remaininghp -= burn_dmg
-                                    msg2 += "\n*"+p1_name + " lost " + str(burn_dmg) + " HP from the burn!* :fire: (" + str(round(burn_dmg / (p1_hp)*100)) + "\%) ("+str(p1_remaininghp)+"/"+str(p1_hp)+" HP)"
-                                elif current_buffs_p1['status'] == "poison":
-                                    poison_dmg = round(p1_hp/8)
-                                    p1_remaininghp -= poison_dmg
-                                    msg2 += "\n*"+p1_name + " lost " + str(poison_dmg) + " HP from poison!* :skull_crossbones: (" + str(round(poison_dmg / (p1_hp)*100)) + "\%) ("+str(p1_remaininghp)+"/"+str(p1_hp)+" HP)"
-                                if p1_remaininghp <=0:
-                                    msg2 += "\n***" + p1_name + " has fainted!***"
+                    if p2_remaininghp > 0: #if p2 is not fainted yet, check if p1 is burned or poisoned, then hceck if p1 fainted, then switch p1 and p2
+                        if current_buffs_p1['statused'] == 1:
+                            if current_buffs_p1['status'] == "burn":
+                                burn_dmg = round(p1_hp/16)
+                                p1_remaininghp -= burn_dmg
+                                msg2 += "\n*"+p1_name + " lost " + str(burn_dmg) + " HP from the burn!* :fire: (" + str(round(burn_dmg / (p1_hp)*100)) + "\%) ("+str(p1_remaininghp)+"/"+str(p1_hp)+" HP)"
+                            elif current_buffs_p1['status'] == "poison":
+                                poison_dmg = round(p1_hp/8)
+                                p1_remaininghp -= poison_dmg
+                                msg2 += "\n*"+p1_name + " lost " + str(poison_dmg) + " HP from poison!* :skull_crossbones: (" + str(round(poison_dmg / (p1_hp)*100)) + "\%) ("+str(p1_remaininghp)+"/"+str(p1_hp)+" HP)"
+                            if p1_remaininghp <=0:
+                                msg2 += "\n***" + p1_name + " has fainted!***"
 
-                        embed.add_field(name=msg1.replace("{}",p2_name), value=msg2, inline=False)
-                        await self.bot.say(embed=embed)
-                        await asyncio.sleep(2)
+                    embed.add_field(name=msg1.replace("{}",p2_name), value=msg2, inline=False)
+                    await self.bot.say(embed=embed)
+                    await asyncio.sleep(2)
 
-                    if p2_remaininghp >0:
-                        p1, p2 = p2, p1
-                        p1_hp, p2_hp = p2_hp, p1_hp
-                        p1_remaininghp, p2_remaininghp = p2_remaininghp, p1_remaininghp
-                        p1_name, p2_name = p2_name, p1_name
-                        p1_color, p2_color = p2_color, p1_color
+                if p2_remaininghp >0:
+                    p1, p2 = p2, p1
+                    p1_hp, p2_hp = p2_hp, p1_hp
+                    p1_remaininghp, p2_remaininghp = p2_remaininghp, p1_remaininghp
+                    p1_name, p2_name = p2_name, p1_name
+                    p1_color, p2_color = p2_color, p1_color
+                    p1_stats,p2_stats = p2_stats, p1_stats
+                    current_buffs_p2temp = {}
+                    current_buffs_p2temp = deepcopy(current_buffs_p2)
+                    current_buffs_p2.clear()
+                    current_buffs_p2 = deepcopy(current_buffs_p1)
+                    current_buffs_p1.clear()
+                    current_buffs_p1 = deepcopy(current_buffs_p2temp)
 
-                        current_buffs_p2temp = {}
-                        current_buffs_p2temp = deepcopy(current_buffs_p2)
-                        current_buffs_p2.clear()
-                        current_buffs_p2 = deepcopy(current_buffs_p1)
-                        current_buffs_p1.clear()
-                        current_buffs_p1 = deepcopy(current_buffs_p2temp)
-
-                except discord.errors.HTTPException:
-                    embed4=discord.Embed(description="Discord is being a bitch again and is throwing HTTP400 errors. \nThis battle may be bugged for the rest of its duration.")
-                    await self.bot.say(embed=embed4)
+            except discord.errors.HTTPException:
+                embed4=discord.Embed(description="Discord is being a bitch again and is throwing HTTP400 errors. \nThis battle may be bugged for the rest of its duration.")
+                await self.bot.say(embed=embed4)
+        if p2 == p1:
+            embed = discord.Embed(color=p1_color,title=p1_name + " well played themselves! Congratulations!")
+        else:
             prize = random.randint(50,200)
-            if self.stats[p2]['buff']-self.stats[p1]['buff'] > 0:
-                prize += int(1500*(self.stats[p2]['buff']-self.stats[p1]['buff']))
+            if p2_stats['buff']-p1_stats['buff'] > 0:
+                prize += int(1500*(p2_stats['buff']-p1_stats['buff']))
             embed = discord.Embed(color=p1_color,title=p1_name + " received " + str(prize) + " PMP for winning! Congratulations!")
-            self.stats[p1]['money'] = self.stats[p1]['money'] + prize
-            self.stats[p1]['win'] = self.stats[p1]['win'] + 1
-            self.stats[p2]['lose'] = self.stats[p2]['lose'] + 1
+            p1_stats['money'] = p1_stats['money'] + prize
+            p1_stats['win'] = p1_stats['win'] + 1
+            p2_stats['lose'] = p2_stats['lose'] + 1
             self.save_stats()
-            await self.bot.say(embed=embed)
+        await self.bot.say(embed=embed)
 
     def check_if_cause_status(self,moveclass,moveid,msg2,current_buffs_p1,current_buffs_p2,p1_name,p2_name,p1_remaininghp,p1_hp):
         if self.moves[moveclass][moveid]['effect'] == "stat_self":
@@ -325,26 +355,29 @@ class Magic:
                 if current_buffs_p2[self.moves[moveclass][moveid]['affected_stat'][0]] == 0:
                     current_buffs_p2[self.moves[moveclass][moveid]['affected_stat'][0]] += 0.1
                 msg2 += veve[0] + p2_name + "\'s " + self.stat_names[self.moves[moveclass][moveid]['affected_stat'][0]] + veve[1] + str(abs(self.moves[moveclass][moveid]['affected_stat'][1])) + "%!*"
-        elif self.moves[moveclass][moveid]['effect'] == "cause_status" and current_buffs_p2['statused'] == 0: #check if move causes status
-            status_chance = random.randint(1,100)
-            if status_chance <= self.moves[moveclass][moveid]['status'][1]:
-                current_buffs_p2['statused'] = 1
-                current_buffs_p2['status'] = self.moves[moveclass][moveid]['status'][0]
-                if self.moves[moveclass][moveid]['status'][0] in ["confuse","sleep","freeze"]:
-                    turns = random.randint(1,3)
-                    current_buffs_p2['turns'] = turns
-                if current_buffs_p2['status'] == "confuse":
-                    msg2 += "\n**"+ p2_name + " became confused!** :dizzy:"
-                elif current_buffs_p2['status'] == "poison":
-                    msg2 += "\n**"+ p2_name + " was poisoned!** :skull_crossbones:"
-                elif current_buffs_p2['status'] == "burn":
-                    msg2 +="\n**"+  p2_name + " was burned! **:fire:"
-                elif current_buffs_p2['status'] == "freeze":
-                    msg2 += "\n**"+ p2_name + " was frozen solid! **:snowflake:"
-                elif current_buffs_p2['status'] == "para":
-                    msg2 += "\n**"+  p2_name + " became paralysed! **:zap:"
-                elif current_buffs_p2['status'] == "sleep":
-                    msg2 += "\n**"+  p2_name + " fell asleep! **:zzz:"
+        elif self.moves[moveclass][moveid]['effect'] == "cause_status":
+            if current_buffs_p2['statused'] == 0: #check if move causes status
+                status_chance = random.randint(1,100)
+                if status_chance <= self.moves[moveclass][moveid]['status'][1]:
+                    current_buffs_p2['statused'] = 1
+                    current_buffs_p2['status'] = self.moves[moveclass][moveid]['status'][0]
+                    if self.moves[moveclass][moveid]['status'][0] in ["confuse","sleep","freeze"]:
+                        turns = random.randint(1,3)
+                        current_buffs_p2['turns'] = turns
+                    if current_buffs_p2['status'] == "confuse":
+                        msg2 += "\n**"+ p2_name + " became confused!** :dizzy:"
+                    elif current_buffs_p2['status'] == "poison":
+                        msg2 += "\n**"+ p2_name + " was poisoned!** :skull_crossbones:"
+                    elif current_buffs_p2['status'] == "burn":
+                        msg2 +="\n**"+  p2_name + " was burned! **:fire:"
+                    elif current_buffs_p2['status'] == "freeze":
+                        msg2 += "\n**"+ p2_name + " was frozen solid! **:snowflake:"
+                    elif current_buffs_p2['status'] == "para":
+                        msg2 += "\n**"+  p2_name + " became paralysed! **:zap:"
+                    elif current_buffs_p2['status'] == "sleep":
+                        msg2 += "\n**"+  p2_name + " fell asleep! **:zzz:"
+            else:
+                msg2 += "It failed to inflict a status!"
         elif  self.moves[moveclass][moveid]['effect'] == "refresh":
             current_buffs_p1['status'] = "none"
             current_buffs_p1['statused'] = 0
@@ -385,6 +418,7 @@ class Magic:
 
     @commands.command(pass_context=True)
     async def pmp(self, ctx, target:discord.Member=None):
+        self.refresh()
         if target:
             user = target
         else:
@@ -419,6 +453,7 @@ class Magic:
     async def givepmp(self, ctx, target:discord.Member=None, amount:int=0):
         user= ctx.message.author
         if target:
+            self.refresh()
             if str(user.id) not in self.stats or str(target.id) not in self.stats:
                 await self.bot.say(self.errornotexist)
             else:
