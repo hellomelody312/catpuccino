@@ -303,7 +303,7 @@ class Pets:
         if imgg.lower() == 'exit':
             await self.bot.say("Pet creation cancelled.")
             return
-        self.pet_stats[user.id]['pets'][pet_current]['image'] = imgg
+        self.pet_stats[user.id]['pets'][pet_current]['images']['default'] = imgg
         await self.bot.say("Done. Later you can use ;pet moodsetup to set more images of your pet like happy, sad, bored, angry, etc. if you want.\nNext, set the types for your pet. It can be any 1 or 2 types from the Pokemon games. ex: fire fighting. Type ``random`` to randomly set types.")
         types = await self.bot.wait_for_message(author=ctx.message.author)
         if types.content == 'exit':
@@ -777,7 +777,7 @@ class Pets:
 ### END OF PET DUEL
     async def output_pet_stats(self, user, petid):
         embed=discord.Embed(title=self.pet_stats[user.id]['pets'][petid]['name'] + "\'s stats")
-        embed.set_thumbnail(url=self.pet_stats[user.id]['pets'][petid]['image'])
+        embed.set_thumbnail(user.avatar_url)#(url=self.pet_stats[user.id]['pets'][petid]['image'])
         embed.set_image(url=self.pet_stats[user.id]['pets'][petid]['image'])
         embed.add_field(name="Name", value=self.pet_stats[user.id]['pets'][petid]['name'], inline=True)
         embed.add_field(name="Affection", value=self.pet_stats[user.id]['pets'][petid]['affection'], inline=True)
