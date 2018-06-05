@@ -127,12 +127,12 @@
       "origin": "FFXV",
       "category": "Physical",
       "type": "Fairy",
-      "random": 10,
+      "random": 20,
       "acc": 100,
-      "power": 100,
+      "power": 90,
       "effect2": "",
       "effect": "",
-      "image": "",
+      "image": "https://vignette.wikia.nocookie.net/finalfantasy/images/7/73/Leviathan-Battle-FFXV.png/revision/latest?cb=20170825201749",
       "status": [
         "status",
         0
@@ -143,7 +143,7 @@
         0
       ],
       "crit": 10,
-      "info": "Deals damage.",
+      "info": "Wields the Royal Arms all at once.",
       "text": "hurl all 13 Royal Arms at {}"
     },
     "2": {
@@ -151,12 +151,12 @@
       "origin": "FFXV",
       "category": "Physical",
       "type": "Water",
-      "random": 10,
-      "acc": 100,
+      "random": 5,
+      "acc": 90,
       "power": 105,
       "effect2": "",
       "effect": "",
-      "image": "",
+      "image": "https://i.imgur.com/zgqq0m1.gif",
       "status": [
         "status",
         0
@@ -167,20 +167,20 @@
         0
       ],
       "crit": 10,
-      "info": "Deals damage.",
+      "info": "Takes a stance and summons spectral versions of the Royal Arms around the user. For a limited time, the Royal Arms will continously rain down on enemies for additional damage as the user uses normal attacks.",
       "text": "summon Royal Arms to rain down on {}"
     },
     "3": {
-      "name": "Bite",
-      "origin": "Made up",
-      "category": "Physical",
-      "type": "Normal",
+      "name": "Legacy of the Lucii",
+      "origin": "FFXV",
+      "category": "Special",
+      "type": "Ground",
       "random": 5,
-      "acc": 100,
-      "power": 60,
+      "acc": 90,
+      "power": 110,
       "effect2": "",
       "effect": "",
-      "image": "",
+      "image": "https://vignette.wikia.nocookie.net/finalfantasy/images/d/da/Legacy-of-the-Lucii-FFXV.png/revision/latest?cb=20180402163850",
       "status": [
         "status",
         0
@@ -191,8 +191,8 @@
         0
       ],
       "crit": 10,
-      "info": "Deals damage.",
-      "text": ""
+      "info": "Executes a devastating combo using the Royal Arms and finishes with a massive magic attack on the ground.",
+      "text": "summon Royal Arms and do a massive magic attack on {}'s place"
     },
     "4": {
       "name": "Armiger Unleashed",
@@ -215,20 +215,20 @@
         0
       ],
       "crit": 10,
-      "info": "Deals damage.",
-      "text": "hurl all 13 Royal Arms with the true power of kings at {}"
+      "info": "More powerful than the standard Armiger. Wields the 13 Royal Arms, the Engine Blade, and the Ring of the Lucii in a slew of devastating combos and techniques.",
+      "text": "hurl all 13 Royal Arms at {} with the true power of kings"
     },
     "5": {
       "name": "Royal Cleave",
       "origin": "FFXV",
       "category": "Physical",
       "type": "Psychic",
-      "random": 10,
-      "acc": 100,
-      "power": 90,
+      "random": 5,
+      "acc": 95,
+      "power": 95,
       "effect2": "",
       "effect": "",
-      "image": "",
+      "image": "https://vignette.wikia.nocookie.net/finalfantasy/images/8/8a/Royal-Cleave-FFXV.png/revision/latest?cb=20180402163222",
       "status": [
         "status",
         0
@@ -239,20 +239,20 @@
         0
       ],
       "crit": 10,
-      "info": "Deals damage.",
+      "info": "Cloaks the Engine Blade in a huge magic aura and slashes forward once.",
       "text": "cloak Engine Blade in magic aura and slash {}"
     },
     "6": {
       "name": "Apocalypsis",
       "origin": "FFXV",
       "category": "Physical",
-      "type": "Steel",
-      "random": 10,
-      "acc": 100,
+      "type": "Electric",
+      "random": 5,
+      "acc": 95,
       "power": 100,
       "effect2": "",
       "effect": "",
-      "image": "",
+      "image": "https://vignette.wikia.nocookie.net/finalfantasy/images/3/30/Apocalypsis-FFXV.png/revision/latest?cb=20180402163503",
       "status": [
         "status",
         0
@@ -263,22 +263,97 @@
         0
       ],
       "crit": 10,
-      "info": "Deals damage.",
-      "text": "draw Royal Arms as multiple bolts in a cylindrical formation and shoot {}"
+      "info": "Brings the Royal Arms in front of the user in a cylindrical formation that damages foes and shoots it forward, splitting into multiple bolts that home in on enemies for additional damage.",
+      "text": "draw Royal Arms and shoot {}"
     },
     "7": {
-      "name": "Gungnir",
-      "origin": "Granblue Fantasy",
-      "category": "Special",
-      "type": "Electric",
-      "random": 10,
+      "name": "Quick Recipeh",
+      "origin": "FFXV",
+      "category": "Status",
+      "type": "Fire",
+      "random": 0,
+      "acc": 0,
+      "power": 0,
+      "effect2": "stat_self",
+      "effect": "heal",
+      "image": "http://i0.kym-cdn.com/photos/images/original/001/322/219/436.gif",
+      "status": [
+        "status",
+        "affected_stat"
+      ],
+      "affected_stat": [
+        "hp",
+        20,
+        "",
+        "atk",
+        20,
+        100
+      ],
+      "crit": 0,
+      "info": "Allows the user to cook a meal mid-battle. Heals 20% HP, raises Attack.",
+      "text": "cook a quick meal"
+    },
+    "8": {
+      "name": "Venom Fang",
+      "origin": "FFXV",
+      "category": "Physical",
+      "type": "Poison",
+      "random": 5,
       "acc": 100,
-      "power": 95,
+      "power": 50,
+      "effect2": "",
+      "effect": "cause_status",
+      "image": "",
+      "status": [
+        "poison",
+        30
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
+      "info": "Uses daggers to attack with a chance to poison the foe.",
+      "text": "attack {} with poisonous daggers"
+    },
+    "9": {
+      "name": "Virulent Venom",
+      "origin": "FFXV",
+      "category": "Physical",
+      "type": "Poison",
+      "random": 5,
+      "acc": 100,
+      "power": 75,
+      "effect2": "",
+      "effect": "cause_status",
+      "image": "",
+      "status": [
+        "poison",
+        20
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
+      "info": "More powerful Venom Fang with a chance to poison the foe.",
+      "text": "attack {} with poisonous daggers"
+    },
+    "10": {
+      "name": "Take a Selfie",
+      "origin": "FFXV",
+      "category": "Status",
+      "type": "Steel",
+      "random": 0,
+      "acc": 0,
+      "power": 0,
       "effect2": "",
       "effect": "",
       "image": "",
       "status": [
-        "status",
+        0,
         0
       ],
       "affected_stat": [
@@ -286,9 +361,204 @@
         0,
         0
       ],
+      "crit": 0,
+      "info": "Takes a selfie for nothing with the foe then edits it to make the foe so stupid.",
+      "text": "take a selfie with {} as a nerd background"
+    },
+    "11": {
+      "name": "Army of One",
+      "origin": "FFXIII",
+      "category": "Physical",
+      "type": "Normal",
+      "random": 5,
+      "acc": 90,
+      "power": 100,
+      "effect2": "",
+      "effect": "cause_status",
+      "image": "https://redbirdmenace.files.wordpress.com/2014/12/lightning.gif?w=800",
+      "status": [
+        "para",
+        30
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 50,
+      "info": "Lunges at the enemy and performs multiple hits rapidly with high critical ratio.",
+      "text": "slash {} repeatedly"
+    },
+    "12": {
+      "name": "Legion of One",
+      "origin": "FFXIII",
+      "category": "Physical",
+      "type": "Normal",
+      "random": 10,
+      "acc": 100,
+      "power": 120,
+      "effect2": "",
+      "effect": "cause_status",
+      "image": "https://vignette.wikia.nocookie.net/finalfantasy/images/2/22/FFXIII-2_RoTG_Legion_of_One.png/revision/latest?cb=20160507075902",
+      "status": [
+        "para",
+        30
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 30,
+      "info": "More powerful Army of One. Chance to paralyze the foe.",
+      "text": "slash {} repeatedly"
+    },
+    "13": {
+      "name": "Ballistic",
+      "origin": "FFXV",
+      "category": "Special",
+      "type": "Fire",
+      "random": 15,
+      "acc": 100,
+      "power": 40,
+      "effect2": "",
+      "effect": "cause_status",
+      "image": "",
+      "status": [
+        "burn",
+        20
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
       "crit": 10,
-      "info": "Deals damage.",
-      "text": "summon Odin to hurl Gungnir with incredible force at {}"
+      "info": "Unleashs a firearm barrage on an area.",
+      "text": "unleash a firearm barrage on {}'s place"
+    },
+    "14": {
+      "name": "Scintilla",
+      "origin": "FFXV",
+      "category": "Special",
+      "type": "Fire",
+      "random": 20,
+      "acc": 100,
+      "power": 30,
+      "effect2": "",
+      "effect": "cause_status",
+      "image": "",
+      "status": [
+        "flinch",
+        50
+      ],
+      "affected_stat": [
+        "stat",
+        0,
+        0
+      ],
+      "crit": 10,
+      "info": "Counterattack with a firearm. High chance to make the foe flinch.",
+      "text": "attack {} with a firearm"
+    },
+    "15": {
+      "name": "Lancet",
+      "origin": "FFXV",
+      "category": "Physical",
+      "type": "Steel",
+      "random": 30,
+      "acc": 100,
+      "power": 35,
+      "effect2": "",
+      "effect": "heal",
+      "image": "",
+      "status": [
+        "",
+        ""
+      ],
+      "affected_stat": [
+        "hp",
+        20,
+        0
+      ],
+      "crit": 10,
+      "info": "Attacks with a polearm to drain the foe. Heal 20% HP.",
+      "text": "attack {} with a firearm"
+    },
+    "16": {
+      "name": "Mark",
+      "origin": "FFXV",
+      "category": "Physical",
+      "type": "Steel",
+      "random": 20,
+      "acc": 100,
+      "power": 25,
+      "effect2": "",
+      "effect": "stat_enemy",
+      "image": "",
+      "status": [
+        "",
+        ""
+      ],
+      "affected_stat": [
+        "def",
+        -20,
+        50
+      ],
+      "crit": 50,
+      "info": "Tosses daggers at all enemies on the field with high critical ratio. Has a high chance to decrease their Defense.",
+      "text": "toss daggers at {}"
+    },
+    "17": {
+      "name": "Enchantment",
+      "origin": "FFXV",
+      "category": "Status",
+      "type": "Psychic",
+      "random": 0,
+      "acc": 0,
+      "power": 0,
+      "effect2": "",
+      "effect": "stat_self",
+      "image": "",
+      "status": [
+        "affected_stat",
+        ""
+      ],
+      "affected_stat": [
+        "spa",
+        20,
+        100,
+        "atk",
+        20,
+        100
+      ],
+      "crit": 0,
+      "info": "Pulls out a Magic Flask imbue weapon. Raises Attack and Special Attack.",
+      "text": "cast magic to self-buff"
+    },
+    "18": {
+      "name": "Zantetsuken",
+      "origin": "FFXIII",
+      "category": "Physical",
+      "type": "Flying",
+      "random": 10,
+      "acc": 100,
+      "power": 60,
+      "effect2": "",
+      "effect": "stat_self",
+      "image": "https://media.giphy.com/media/ZCrPALGU9IvCw/giphy.gif",
+      "status": [
+        "affected_stat",
+        ""
+      ],
+      "affected_stat": [
+        "def",
+        -20,
+        30
+      ],
+      "crit": 10,
+      "info": "Wields 2 swords while riding a horse which is transformed by Odin. Chance to decrease the target's Defense.",
+      "text": "slash {}"
     }
   },
   "pokemon": {
